@@ -64,8 +64,10 @@ def main():
                 warnings.append(f'{where} : `confidence` manquante ou inconnue')
 
     for cid, club in clubs.items():
-        if not club.get("crest"):
-            warnings.append(f'{cid} : pas de fichier de blason')
+        # Sans titre d'article et sans fichier épinglé, un club ne peut afficher
+        # qu'une pastille : c'est bloquant, pas un simple avertissement.
+        if not club.get("wiki") and not club.get("crest"):
+            errors.append(f'{cid} : ni `wiki` ni `crest`, aucun blason possible')
         if club.get("needsCheck"):
             warnings.append(f'{cid} : marqué needsCheck ({club["name"]})')
 

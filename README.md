@@ -87,14 +87,29 @@ sources manquantes et les entrées marquées `needsCheck`.
 
 ### Blasons
 
-Les blasons sont chargés depuis Wikimedia Commons via `Special:FilePath`. Si un
-fichier a été renommé ou n'existe pas, le jeu bascule automatiquement sur une
-pastille aux couleurs du club avec son monogramme — la composition n'a jamais
-de trou.
+Le blason est résolu à partir du champ **`wiki`**, le titre de l'article
+Wikipédia anglophone du club. Au chargement, le jeu interroge l'API
+`prop=pageimages` en un seul appel pour tous les clubs — elle renvoie l'image
+principale de l'article, c'est-à-dire l'écusson. Le résultat est mis en cache
+dans le navigateur, donc l'appel n'a lieu qu'une fois.
 
-`tools/crest-check.html` liste tous les clubs et surligne en rouge ceux dont le
-blason ne charge pas, en jaune ceux marqués `needsCheck`. C'est le moyen le plus
-rapide de corriger les noms de fichiers.
+Une première version devinait des noms de fichiers Wikimedia : **44 sur 55
+étaient faux**. Le titre d'article est bien plus prévisible, et les redirections
+de Wikipédia absorbent les écarts restants.
+
+Le champ **`crest`** reste disponible pour épingler un fichier Wikimedia précis.
+Il l'emporte sur `wiki`, ce qui sert quand l'article a une image principale qui
+n'est pas l'écusson.
+
+Si rien ne charge — mauvais titre, article sans image, ou simplement pas de
+réseau — le jeu affiche une pastille aux couleurs du club avec son monogramme.
+La composition n'a jamais de trou.
+
+`tools/crest-check.html` affiche l'état de chaque club : bordure gauche verte si
+le blason charge, rouge sinon, et liseré jaune pour les clubs marqués
+`needsCheck`. Les deux états sont indépendants — un club à vérifier peut aussi
+échouer au chargement. La page fournit en bas un bloc copiable listant
+exactement ce qui n'a pas résolu.
 
 ## État des données
 

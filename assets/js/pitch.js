@@ -70,6 +70,7 @@ const Pitch = (() => {
 
     if (!club.url) {
       badge.appendChild(mono);
+      badge.dataset.fallback = 'true';
       return badge;
     }
 

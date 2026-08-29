@@ -1,60 +1,569 @@
 {
-  "_comment": "Référentiel des clubs. `crest` est un nom de fichier Wikimedia résolu via Special:FilePath. Si le blason ne charge pas, le jeu affiche automatiquement une pastille aux couleurs du club. Utiliser tools/crest-check.html pour repérer les blasons cassés.",
+  "_comment": "Référentiel des clubs. Le blason est résolu par `wiki`, le titre de l'article Wikipédia anglophone : l'API pageimages renvoie l'image principale de l'article, soit l'écusson. `crest` est un nom de fichier Wikimedia optionnel qui prend le pas quand il est présent. Sans blason, le jeu affiche une pastille aux couleurs du club.",
   "clubs": {
-    "ac-milan":        { "name": "AC Milan",                  "country": "Italie",       "colors": ["#FB090B", "#000000"], "mono": "MIL", "crest": "Logo of AC Milan.svg" },
-    "al-qadsiah":      { "name": "Al-Qadsiah",                "country": "Arabie saoudite", "colors": ["#C8102E", "#FFFFFF"], "mono": "QAD", "crest": "Al-Qadsiah FC logo.svg", "needsCheck": true },
-    "angers":          { "name": "Angers SCO",                "country": "France",       "colors": ["#000000", "#FFFFFF"], "mono": "SCO", "crest": "Angers SCO logo.svg" },
-    "arsenal":         { "name": "Arsenal",                   "country": "Angleterre",   "colors": ["#EF0107", "#FFFFFF"], "mono": "ARS", "crest": "Arsenal FC.svg" },
-    "athletic-club":   { "name": "Athletic Bilbao",           "country": "Espagne",      "colors": ["#EE2523", "#FFFFFF"], "mono": "ATH", "crest": "Club Athletic Bilbao logo.svg" },
-    "aston-villa":     { "name": "Aston Villa",               "country": "Angleterre",   "colors": ["#670E36", "#95BFE5"], "mono": "AVL", "crest": "Aston Villa FC new crest.svg" },
-    "atalanta":        { "name": "Atalanta",                  "country": "Italie",       "colors": ["#1D1D1B", "#0057B8"], "mono": "ATA", "crest": "AtalantaBC.svg" },
-    "atletico-madrid": { "name": "Atlético Madrid",           "country": "Espagne",      "colors": ["#CB3524", "#FFFFFF"], "mono": "ATM", "crest": "Atletico Madrid 2017 logo.svg" },
-    "az-alkmaar":      { "name": "AZ Alkmaar",                "country": "Pays-Bas",     "colors": ["#D2122E", "#FFFFFF"], "mono": "AZ",  "crest": "AZ Alkmaar logo.svg" },
-    "barcelona":       { "name": "FC Barcelone",              "country": "Espagne",      "colors": ["#A50044", "#004D98"], "mono": "FCB", "crest": "FC Barcelona (crest).svg" },
-    "bayern":          { "name": "Bayern Munich",             "country": "Allemagne",    "colors": ["#DC052D", "#0066B2"], "mono": "BAY", "crest": "FC Bayern München logo (2017).svg" },
-    "benfica":         { "name": "Benfica",                   "country": "Portugal",     "colors": ["#E30613", "#FFFFFF"], "mono": "SLB", "crest": "SL Benfica logo.svg" },
-    "besiktas":        { "name": "Beşiktaş",                  "country": "Turquie",      "colors": ["#000000", "#FFFFFF"], "mono": "BJK", "crest": "Beşiktaş JK logo.svg", "needsCheck": true },
-    "brighton":        { "name": "Brighton",                  "country": "Angleterre",   "colors": ["#0057B8", "#FFCD00"], "mono": "BHA", "crest": "Brighton & Hove Albion logo.svg" },
-    "celtic":          { "name": "Celtic",                    "country": "Écosse",       "colors": ["#018749", "#FFFFFF"], "mono": "CEL", "crest": "Celtic FC.svg" },
-    "chelsea":         { "name": "Chelsea",                   "country": "Angleterre",   "colors": ["#034694", "#FFFFFF"], "mono": "CHE", "crest": "Chelsea FC.svg" },
-    "chivas":          { "name": "CD Guadalajara",            "country": "Mexique",      "colors": ["#C8102E", "#00205B"], "mono": "CHI", "crest": "Deportivo Guadalajara.svg", "needsCheck": true },
-    "club-america":    { "name": "Club América",              "country": "Mexique",      "colors": ["#FFE600", "#00205B"], "mono": "AME", "crest": "Club America logo.svg", "needsCheck": true },
-    "dinamo-zagreb":   { "name": "Dinamo Zagreb",             "country": "Croatie",      "colors": ["#0067B1", "#FFFFFF"], "mono": "DIN", "crest": "GNK Dinamo Zagreb.svg" },
-    "dortmund":        { "name": "Borussia Dortmund",         "country": "Allemagne",    "colors": ["#FDE100", "#000000"], "mono": "BVB", "crest": "Borussia Dortmund logo.svg" },
-    "eintracht":       { "name": "Eintracht Francfort",       "country": "Allemagne",    "colors": ["#E1000F", "#000000"], "mono": "SGE", "crest": "Eintracht Frankfurt Logo.svg" },
-    "everton":         { "name": "Everton",                   "country": "Angleterre",   "colors": ["#003399", "#FFFFFF"], "mono": "EVE", "crest": "Everton FC logo.svg" },
-    "fenerbahce":      { "name": "Fenerbahçe",                "country": "Turquie",      "colors": ["#FFED00", "#00285E"], "mono": "FEN", "crest": "Fenerbahçe SK.svg", "needsCheck": true },
-    "fiorentina":      { "name": "Fiorentina",                "country": "Italie",       "colors": ["#592C82", "#FFFFFF"], "mono": "FIO", "crest": "ACF Fiorentina - logo (Italy, 2022).svg" },
-    "fulham":          { "name": "Fulham",                    "country": "Angleterre",   "colors": ["#000000", "#FFFFFF"], "mono": "FUL", "crest": "Fulham FC (shield).svg" },
-    "genoa":           { "name": "Genoa",                     "country": "Italie",       "colors": ["#8B1A1A", "#0B2C6F"], "mono": "GEN", "crest": "Genoa CFC crest.svg", "needsCheck": true },
-    "gladbach":        { "name": "Borussia Mönchengladbach",  "country": "Allemagne",    "colors": ["#000000", "#00A34A"], "mono": "BMG", "crest": "Borussia Mönchengladbach logo.svg" },
-    "hoffenheim":      { "name": "Hoffenheim",                "country": "Allemagne",    "colors": ["#1C63B7", "#FFFFFF"], "mono": "TSG", "crest": "Logo TSG Hoffenheim.svg" },
-    "inter":           { "name": "Inter Milan",               "country": "Italie",       "colors": ["#0068A8", "#000000"], "mono": "INT", "crest": "FC Internazionale Milano 2021.svg" },
-    "juventus":        { "name": "Juventus",                  "country": "Italie",       "colors": ["#000000", "#FFFFFF"], "mono": "JUV", "crest": "Juventus FC 2017 logo.svg" },
-    "lazio":           { "name": "Lazio",                     "country": "Italie",       "colors": ["#87D8F7", "#FFFFFF"], "mono": "LAZ", "crest": "S.S. Lazio badge.svg" },
-    "leipzig":         { "name": "RB Leipzig",                "country": "Allemagne",    "colors": ["#DD0741", "#001F47"], "mono": "RBL", "crest": "RB Leipzig 2014 logo.svg" },
-    "liverpool":       { "name": "Liverpool",                 "country": "Angleterre",   "colors": ["#C8102E", "#00B2A9"], "mono": "LIV", "crest": "Liverpool FC.svg" },
-    "lyon":            { "name": "Olympique Lyonnais",        "country": "France",       "colors": ["#132B5F", "#E4002B"], "mono": "OL",  "crest": "Olympique Lyonnais (logo).svg" },
-    "man-city":        { "name": "Manchester City",           "country": "Angleterre",   "colors": ["#6CABDD", "#1C2C5B"], "mono": "MCI", "crest": "Manchester City FC badge.svg" },
-    "man-utd":         { "name": "Manchester United",         "country": "Angleterre",   "colors": ["#DA291C", "#FBE122"], "mono": "MUN", "crest": "Manchester United FC crest.svg" },
-    "monaco":          { "name": "AS Monaco",                 "country": "France",       "colors": ["#E63946", "#FFFFFF"], "mono": "ASM", "crest": "AS Monaco FC.svg" },
-    "porto":           { "name": "FC Porto",                  "country": "Portugal",     "colors": ["#004A99", "#FFFFFF"], "mono": "POR", "crest": "FC Porto.svg" },
-    "psg":             { "name": "Paris Saint-Germain",       "country": "France",       "colors": ["#004170", "#DA291C"], "mono": "PSG", "crest": "Paris Saint-Germain F.C..svg" },
-    "psv":             { "name": "PSV Eindhoven",             "country": "Pays-Bas",     "colors": ["#EE2223", "#FFFFFF"], "mono": "PSV", "crest": "PSV Eindhoven.svg" },
-    "real-betis":      { "name": "Real Betis",                "country": "Espagne",      "colors": ["#00954C", "#FFFFFF"], "mono": "BET", "crest": "Real betis logo.svg" },
-    "real-madrid":     { "name": "Real Madrid",               "country": "Espagne",      "colors": ["#FEBE10", "#FFFFFF"], "mono": "RMA", "crest": "Real Madrid CF.svg" },
-    "real-sociedad":   { "name": "Real Sociedad",             "country": "Espagne",      "colors": ["#0067B1", "#FFFFFF"], "mono": "RSO", "crest": "Real Sociedad logo.svg" },
-    "sampdoria":       { "name": "Sampdoria",                 "country": "Italie",       "colors": ["#1B5AA7", "#FFFFFF"], "mono": "SAM", "crest": "UC Sampdoria logo.svg" },
-    "schalke":         { "name": "Schalke 04",                "country": "Allemagne",    "colors": ["#004D9D", "#FFFFFF"], "mono": "S04", "crest": "FC Schalke 04 Logo.svg" },
-    "sevilla":         { "name": "Séville FC",                "country": "Espagne",      "colors": ["#D81920", "#FFFFFF"], "mono": "SEV", "crest": "Sevilla FC logo.svg" },
-    "standard-liege":  { "name": "Standard de Liège",         "country": "Belgique",     "colors": ["#E30613", "#FFFFFF"], "mono": "STA", "crest": "Standard Liège.svg" },
-    "stuttgart":       { "name": "VfB Stuttgart",             "country": "Allemagne",    "colors": ["#E32219", "#FFFFFF"], "mono": "VFB", "crest": "VfB Stuttgart 1893 Logo.svg" },
-    "tottenham":       { "name": "Tottenham",                 "country": "Angleterre",   "colors": ["#132257", "#FFFFFF"], "mono": "TOT", "crest": "Tottenham Hotspur.svg" },
-    "toluca":          { "name": "Deportivo Toluca",          "country": "Mexique",      "colors": ["#C8102E", "#FFFFFF"], "mono": "TOL", "crest": "Deportivo Toluca FC logo.svg", "needsCheck": true },
-    "valencia":        { "name": "Valence CF",                "country": "Espagne",      "colors": ["#F5820D", "#000000"], "mono": "VAL", "crest": "Valenciacf.svg" },
-    "villarreal":      { "name": "Villarreal",                "country": "Espagne",      "colors": ["#FFE667", "#005187"], "mono": "VIL", "crest": "Villarreal CF logo-en.svg" },
-    "west-ham":        { "name": "West Ham",                  "country": "Angleterre",   "colors": ["#7A263A", "#1BB1E7"], "mono": "WHU", "crest": "West Ham United FC logo.svg" },
-    "wolves":          { "name": "Wolverhampton",             "country": "Angleterre",   "colors": ["#FDB913", "#231F20"], "mono": "WOL", "crest": "Wolverhampton Wanderers.svg" },
-    "zenit":           { "name": "Zénith Saint-Pétersbourg",  "country": "Russie",       "colors": ["#0B4EA2", "#87CEEB"], "mono": "ZEN", "crest": "FC Zenit (2015) logo.svg" }
+    "ac-milan": {
+      "name": "AC Milan",
+      "country": "Italie",
+      "colors": [
+        "#FB090B",
+        "#000000"
+      ],
+      "mono": "MIL",
+      "wiki": "AC Milan"
+    },
+    "al-qadsiah": {
+      "name": "Al-Qadsiah",
+      "country": "Arabie saoudite",
+      "colors": [
+        "#C8102E",
+        "#FFFFFF"
+      ],
+      "mono": "QAD",
+      "needsCheck": true,
+      "wiki": "Al-Qadsiah FC"
+    },
+    "angers": {
+      "name": "Angers SCO",
+      "country": "France",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "mono": "SCO",
+      "wiki": "Angers SCO"
+    },
+    "arsenal": {
+      "name": "Arsenal",
+      "country": "Angleterre",
+      "colors": [
+        "#EF0107",
+        "#FFFFFF"
+      ],
+      "mono": "ARS",
+      "wiki": "Arsenal F.C."
+    },
+    "athletic-club": {
+      "name": "Athletic Bilbao",
+      "country": "Espagne",
+      "colors": [
+        "#EE2523",
+        "#FFFFFF"
+      ],
+      "mono": "ATH",
+      "wiki": "Athletic Bilbao"
+    },
+    "aston-villa": {
+      "name": "Aston Villa",
+      "country": "Angleterre",
+      "colors": [
+        "#670E36",
+        "#95BFE5"
+      ],
+      "mono": "AVL",
+      "wiki": "Aston Villa F.C."
+    },
+    "atalanta": {
+      "name": "Atalanta",
+      "country": "Italie",
+      "colors": [
+        "#1D1D1B",
+        "#0057B8"
+      ],
+      "mono": "ATA",
+      "wiki": "Atalanta B.C."
+    },
+    "atletico-madrid": {
+      "name": "Atlético Madrid",
+      "country": "Espagne",
+      "colors": [
+        "#CB3524",
+        "#FFFFFF"
+      ],
+      "mono": "ATM",
+      "wiki": "Atlético Madrid"
+    },
+    "az-alkmaar": {
+      "name": "AZ Alkmaar",
+      "country": "Pays-Bas",
+      "colors": [
+        "#D2122E",
+        "#FFFFFF"
+      ],
+      "mono": "AZ",
+      "wiki": "AZ Alkmaar"
+    },
+    "barcelona": {
+      "name": "FC Barcelone",
+      "country": "Espagne",
+      "colors": [
+        "#A50044",
+        "#004D98"
+      ],
+      "mono": "FCB",
+      "wiki": "FC Barcelona"
+    },
+    "bayern": {
+      "name": "Bayern Munich",
+      "country": "Allemagne",
+      "colors": [
+        "#DC052D",
+        "#0066B2"
+      ],
+      "mono": "BAY",
+      "wiki": "FC Bayern Munich"
+    },
+    "benfica": {
+      "name": "Benfica",
+      "country": "Portugal",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "mono": "SLB",
+      "wiki": "S.L. Benfica"
+    },
+    "besiktas": {
+      "name": "Beşiktaş",
+      "country": "Turquie",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "mono": "BJK",
+      "needsCheck": true,
+      "wiki": "Beşiktaş J.K."
+    },
+    "brighton": {
+      "name": "Brighton",
+      "country": "Angleterre",
+      "colors": [
+        "#0057B8",
+        "#FFCD00"
+      ],
+      "mono": "BHA",
+      "wiki": "Brighton & Hove Albion F.C."
+    },
+    "celtic": {
+      "name": "Celtic",
+      "country": "Écosse",
+      "colors": [
+        "#018749",
+        "#FFFFFF"
+      ],
+      "mono": "CEL",
+      "wiki": "Celtic F.C."
+    },
+    "chelsea": {
+      "name": "Chelsea",
+      "country": "Angleterre",
+      "colors": [
+        "#034694",
+        "#FFFFFF"
+      ],
+      "mono": "CHE",
+      "wiki": "Chelsea F.C."
+    },
+    "chivas": {
+      "name": "CD Guadalajara",
+      "country": "Mexique",
+      "colors": [
+        "#C8102E",
+        "#00205B"
+      ],
+      "mono": "CHI",
+      "needsCheck": true,
+      "wiki": "C.D. Guadalajara"
+    },
+    "club-america": {
+      "name": "Club América",
+      "country": "Mexique",
+      "colors": [
+        "#FFE600",
+        "#00205B"
+      ],
+      "mono": "AME",
+      "needsCheck": true,
+      "wiki": "Club América"
+    },
+    "dinamo-zagreb": {
+      "name": "Dinamo Zagreb",
+      "country": "Croatie",
+      "colors": [
+        "#0067B1",
+        "#FFFFFF"
+      ],
+      "mono": "DIN",
+      "wiki": "GNK Dinamo Zagreb"
+    },
+    "dortmund": {
+      "name": "Borussia Dortmund",
+      "country": "Allemagne",
+      "colors": [
+        "#FDE100",
+        "#000000"
+      ],
+      "mono": "BVB",
+      "wiki": "Borussia Dortmund"
+    },
+    "eintracht": {
+      "name": "Eintracht Francfort",
+      "country": "Allemagne",
+      "colors": [
+        "#E1000F",
+        "#000000"
+      ],
+      "mono": "SGE",
+      "wiki": "Eintracht Frankfurt"
+    },
+    "everton": {
+      "name": "Everton",
+      "country": "Angleterre",
+      "colors": [
+        "#003399",
+        "#FFFFFF"
+      ],
+      "mono": "EVE",
+      "wiki": "Everton F.C."
+    },
+    "fenerbahce": {
+      "name": "Fenerbahçe",
+      "country": "Turquie",
+      "colors": [
+        "#FFED00",
+        "#00285E"
+      ],
+      "mono": "FEN",
+      "needsCheck": true,
+      "wiki": "Fenerbahçe S.K. (football)"
+    },
+    "fiorentina": {
+      "name": "Fiorentina",
+      "country": "Italie",
+      "colors": [
+        "#592C82",
+        "#FFFFFF"
+      ],
+      "mono": "FIO",
+      "crest": "ACF Fiorentina - logo (Italy, 2022).svg",
+      "wiki": "ACF Fiorentina"
+    },
+    "fulham": {
+      "name": "Fulham",
+      "country": "Angleterre",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "mono": "FUL",
+      "wiki": "Fulham F.C."
+    },
+    "genoa": {
+      "name": "Genoa",
+      "country": "Italie",
+      "colors": [
+        "#8B1A1A",
+        "#0B2C6F"
+      ],
+      "mono": "GEN",
+      "needsCheck": true,
+      "wiki": "Genoa C.F.C."
+    },
+    "gladbach": {
+      "name": "Borussia Mönchengladbach",
+      "country": "Allemagne",
+      "colors": [
+        "#000000",
+        "#00A34A"
+      ],
+      "mono": "BMG",
+      "wiki": "Borussia Mönchengladbach"
+    },
+    "hoffenheim": {
+      "name": "Hoffenheim",
+      "country": "Allemagne",
+      "colors": [
+        "#1C63B7",
+        "#FFFFFF"
+      ],
+      "mono": "TSG",
+      "crest": "Logo TSG Hoffenheim.svg",
+      "wiki": "TSG 1899 Hoffenheim"
+    },
+    "inter": {
+      "name": "Inter Milan",
+      "country": "Italie",
+      "colors": [
+        "#0068A8",
+        "#000000"
+      ],
+      "mono": "INT",
+      "crest": "FC Internazionale Milano 2021.svg",
+      "wiki": "Inter Milan"
+    },
+    "juventus": {
+      "name": "Juventus",
+      "country": "Italie",
+      "colors": [
+        "#000000",
+        "#FFFFFF"
+      ],
+      "mono": "JUV",
+      "crest": "Juventus FC 2017 logo.svg",
+      "wiki": "Juventus FC"
+    },
+    "lazio": {
+      "name": "Lazio",
+      "country": "Italie",
+      "colors": [
+        "#87D8F7",
+        "#FFFFFF"
+      ],
+      "mono": "LAZ",
+      "wiki": "S.S. Lazio"
+    },
+    "leipzig": {
+      "name": "RB Leipzig",
+      "country": "Allemagne",
+      "colors": [
+        "#DD0741",
+        "#001F47"
+      ],
+      "mono": "RBL",
+      "wiki": "RB Leipzig"
+    },
+    "liverpool": {
+      "name": "Liverpool",
+      "country": "Angleterre",
+      "colors": [
+        "#C8102E",
+        "#00B2A9"
+      ],
+      "mono": "LIV",
+      "wiki": "Liverpool F.C."
+    },
+    "lyon": {
+      "name": "Olympique Lyonnais",
+      "country": "France",
+      "colors": [
+        "#132B5F",
+        "#E4002B"
+      ],
+      "mono": "OL",
+      "wiki": "Olympique Lyonnais"
+    },
+    "man-city": {
+      "name": "Manchester City",
+      "country": "Angleterre",
+      "colors": [
+        "#6CABDD",
+        "#1C2C5B"
+      ],
+      "mono": "MCI",
+      "wiki": "Manchester City F.C."
+    },
+    "man-utd": {
+      "name": "Manchester United",
+      "country": "Angleterre",
+      "colors": [
+        "#DA291C",
+        "#FBE122"
+      ],
+      "mono": "MUN",
+      "wiki": "Manchester United F.C."
+    },
+    "monaco": {
+      "name": "AS Monaco",
+      "country": "France",
+      "colors": [
+        "#E63946",
+        "#FFFFFF"
+      ],
+      "mono": "ASM",
+      "wiki": "AS Monaco FC"
+    },
+    "porto": {
+      "name": "FC Porto",
+      "country": "Portugal",
+      "colors": [
+        "#004A99",
+        "#FFFFFF"
+      ],
+      "mono": "POR",
+      "wiki": "FC Porto"
+    },
+    "psg": {
+      "name": "Paris Saint-Germain",
+      "country": "France",
+      "colors": [
+        "#004170",
+        "#DA291C"
+      ],
+      "mono": "PSG",
+      "wiki": "Paris Saint-Germain F.C."
+    },
+    "psv": {
+      "name": "PSV Eindhoven",
+      "country": "Pays-Bas",
+      "colors": [
+        "#EE2223",
+        "#FFFFFF"
+      ],
+      "mono": "PSV",
+      "wiki": "PSV Eindhoven"
+    },
+    "real-betis": {
+      "name": "Real Betis",
+      "country": "Espagne",
+      "colors": [
+        "#00954C",
+        "#FFFFFF"
+      ],
+      "mono": "BET",
+      "wiki": "Real Betis"
+    },
+    "real-madrid": {
+      "name": "Real Madrid",
+      "country": "Espagne",
+      "colors": [
+        "#FEBE10",
+        "#FFFFFF"
+      ],
+      "mono": "RMA",
+      "crest": "Real Madrid CF.svg",
+      "wiki": "Real Madrid CF"
+    },
+    "real-sociedad": {
+      "name": "Real Sociedad",
+      "country": "Espagne",
+      "colors": [
+        "#0067B1",
+        "#FFFFFF"
+      ],
+      "mono": "RSO",
+      "wiki": "Real Sociedad"
+    },
+    "sampdoria": {
+      "name": "Sampdoria",
+      "country": "Italie",
+      "colors": [
+        "#1B5AA7",
+        "#FFFFFF"
+      ],
+      "mono": "SAM",
+      "wiki": "U.C. Sampdoria"
+    },
+    "schalke": {
+      "name": "Schalke 04",
+      "country": "Allemagne",
+      "colors": [
+        "#004D9D",
+        "#FFFFFF"
+      ],
+      "mono": "S04",
+      "crest": "FC Schalke 04 Logo.svg",
+      "wiki": "FC Schalke 04"
+    },
+    "sevilla": {
+      "name": "Séville FC",
+      "country": "Espagne",
+      "colors": [
+        "#D81920",
+        "#FFFFFF"
+      ],
+      "mono": "SEV",
+      "wiki": "Sevilla FC"
+    },
+    "standard-liege": {
+      "name": "Standard de Liège",
+      "country": "Belgique",
+      "colors": [
+        "#E30613",
+        "#FFFFFF"
+      ],
+      "mono": "STA",
+      "wiki": "Standard Liège"
+    },
+    "stuttgart": {
+      "name": "VfB Stuttgart",
+      "country": "Allemagne",
+      "colors": [
+        "#E32219",
+        "#FFFFFF"
+      ],
+      "mono": "VFB",
+      "crest": "VfB Stuttgart 1893 Logo.svg",
+      "wiki": "VfB Stuttgart"
+    },
+    "tottenham": {
+      "name": "Tottenham",
+      "country": "Angleterre",
+      "colors": [
+        "#132257",
+        "#FFFFFF"
+      ],
+      "mono": "TOT",
+      "wiki": "Tottenham Hotspur F.C."
+    },
+    "toluca": {
+      "name": "Deportivo Toluca",
+      "country": "Mexique",
+      "colors": [
+        "#C8102E",
+        "#FFFFFF"
+      ],
+      "mono": "TOL",
+      "needsCheck": true,
+      "wiki": "Deportivo Toluca F.C."
+    },
+    "valencia": {
+      "name": "Valence CF",
+      "country": "Espagne",
+      "colors": [
+        "#F5820D",
+        "#000000"
+      ],
+      "mono": "VAL",
+      "wiki": "Valencia CF"
+    },
+    "villarreal": {
+      "name": "Villarreal",
+      "country": "Espagne",
+      "colors": [
+        "#FFE667",
+        "#005187"
+      ],
+      "mono": "VIL",
+      "wiki": "Villarreal CF"
+    },
+    "west-ham": {
+      "name": "West Ham",
+      "country": "Angleterre",
+      "colors": [
+        "#7A263A",
+        "#1BB1E7"
+      ],
+      "mono": "WHU",
+      "wiki": "West Ham United F.C."
+    },
+    "wolves": {
+      "name": "Wolverhampton",
+      "country": "Angleterre",
+      "colors": [
+        "#FDB913",
+        "#231F20"
+      ],
+      "mono": "WOL",
+      "wiki": "Wolverhampton Wanderers F.C."
+    },
+    "zenit": {
+      "name": "Zénith Saint-Pétersbourg",
+      "country": "Russie",
+      "colors": [
+        "#0B4EA2",
+        "#87CEEB"
+      ],
+      "mono": "ZEN",
+      "wiki": "FC Zenit Saint Petersburg"
+    }
   }
 }
