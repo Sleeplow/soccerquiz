@@ -56,6 +56,9 @@ def resolve(titles, api):
         query = urllib.parse.urlencode({
             "action": "query", "format": "json", "formatversion": "2",
             "prop": "pageimages", "piprop": "thumbnail", "pithumbsize": str(THUMB),
+            # Sans `pilicense=any`, l'API retient par défaut les seules images
+            # libres et écarte silencieusement les écussons en usage loyal.
+            "pilicense": "any",
             "redirects": "1", "titles": "|".join(chunk),
         })
         try:

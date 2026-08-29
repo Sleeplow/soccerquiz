@@ -98,6 +98,13 @@ Le blason d'un club est cherché dans cet ordre :
    l'API `prop=pageimages`, qui renvoie l'image principale de l'article, en un
    seul appel pour tous les clubs concernés, avec mise en cache navigateur.
 
+> **`pilicense=any` n'est pas optionnel.** Par défaut, `pageimages` ne retient
+> que les images sous licence libre et écarte silencieusement les écussons en
+> usage loyal — sans erreur, juste un article sans image. C'est le cas de la
+> plupart des clubs anglais, espagnols et portugais : sans ce paramètre,
+> 33 blasons sur 55 restaient introuvables alors que les titres d'articles
+> étaient corrects.
+
 Quand tous les clubs ont un `file`, le jeu ne fait **aucune requête externe**.
 
 #### Rapatrier les blasons
