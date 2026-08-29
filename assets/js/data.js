@@ -41,6 +41,129 @@ const Data = (() => {
     } catch { /* quota ou stockage refusé : le cache est un confort, pas un besoin */ }
   }
 
+  /* Un article de club contient des dizaines de fichiers : maillots, drapeaux,
+     logos de compétition, icônes d'interface. Ces motifs écartent le bruit
+     avant de chercher l'écusson — les maillots sont les pires pièges, leur nom
+     contenant celui du club. */
+  const FILE_NOISE = new RegExp([
+    'kit[ _](body|shorts|socks|left|right|arm)', '^kit[ _]', '_kit',
+    'flag[ _]of', '^flag', 'location[ _]map', '^map[ _]', 'stadium', 'panorama',
+    'commons-logo', 'wikimedia', 'wikipedia', 'wiki[ _]letter',
+    'premier[ _]league', 'uefa', 'la[ _]liga', 'bundesliga', 'serie[ _]a',
+    'ligue[ _]1', 'eredivisie', 'pictogram', 'soccer[ _]ball', 'football[ _]ball',
+    'padlock', 'question', 'folder', 'edit-', 'ambox', 'symbol', 'red[ _]pog',
+    'star[ _]full', 'increase', 'decrease', '\\.ogg$', '\\.oga$', '\\.webm$'
+  ].join('|'), 'i');
+
+  const FILE_GOOD = /(crest|logo|badge|escudo|shield|emblem|wappen)/i;
+
+  // Trop courants dans les noms de clubs pour distinguer quoi que ce soit.
+  const STOPWORDS = new Set(['club', 'football', 'fussball', 'deportivo', 'sport',
+    'sporting', 'sportif', 'association', 'athletic', 'atletico', 'real', 'the',
+    'saint', 'city', 'united', 'town', 'olympique', 'olympic']);
+
+  /** Jetons distinctifs du nom d'un club, pour reconnaître son fichier. */
+  function clubTokens(club) {
+    return [...new Set(
+      `${club.wiki || ''} ${club.name || ''}`
+        .split(/[\s.,()'’\-]+/)
+        .map((w) => normalize(w))
+        .filter((w) => w.length >= 4 && !STOPWORDS.has(w))
+    )];
+  }
+
+  function scoreFile(filename, tokens) {
+    const bare = filename.replace(/^File:/i, '');
+    if (FILE_NOISE.test(bare)) return -1;
+
+    const flat = normalize(bare);
+    let score = 0;
+    for (const token of tokens) if (flat.includes(token)) score += 3;
+    if (!score) return -1;                 // rien qui rattache le fichier au club
+    if (FILE_GOOD.test(bare)) score += 4;
+    if (/\.svg$/i.test(bare)) score += 1;
+    return score;
+  }
+
+  async function query(params) {
+    const res = await fetch(`${WIKI_API}?${new URLSearchParams(
+      { action: 'query', format: 'json', formatversion: '2', origin: '*', ...params })}`);
+    if (!res.ok) throw new Error(String(res.status));
+    return res.json();
+  }
+
+  /**
+   * Repli groupé : liste les fichiers de chaque article, retient le meilleur
+   * candidat par club, puis demande les vignettes en une seule fois.
+   */
+  async function resolveFromPageFiles(titles, clubs) {
+    const byTitle = {};
+    for (const club of Object.values(clubs)) {
+      if (club.wiki) byTitle[club.wiki] = club;
+    }
+
+    const chosen = {};       // titre d'article -> nom de fichier retenu
+    const FILE_BATCH = 20;   // articles par requête, pour borner la réponse
+
+    for (let i = 0; i < titles.length; i += FILE_BATCH) {
+      const chunk = titles.slice(i, i + FILE_BATCH);
+      const best = {};
+      let cont = {};
+
+      try {
+        for (let round = 0; round < 5; round++) {
+          const json = await query({
+            prop: 'images', imlimit: '500', redirects: '1',
+            titles: chunk.join('|'), ...cont
+          });
+
+          const alias = {};
+          for (const r of json.query?.redirects || []) alias[r.to] = r.from;
+
+          for (const page of json.query?.pages || []) {
+            const key = alias[page.title] || page.title;
+            const club = byTitle[key];
+            if (!club) continue;
+            const tokens = clubTokens(club);
+            for (const image of page.images || []) {
+              const score = scoreFile(image.title, tokens);
+              if (score > (best[key]?.score ?? 0)) best[key] = { score, file: image.title };
+            }
+          }
+
+          if (!json.continue) break;
+          cont = json.continue;
+        }
+      } catch {
+        continue;   // ce lot reste en pastille, les autres passent quand même
+      }
+
+      for (const [title, pick] of Object.entries(best)) chosen[title] = pick.file;
+    }
+
+    // Une seule requête pour convertir les fichiers retenus en vignettes.
+    const files = [...new Set(Object.values(chosen))];
+    const thumbs = {};
+    for (let i = 0; i < files.length; i += BATCH) {
+      try {
+        const json = await query({
+          prop: 'imageinfo', iiprop: 'url', iiurlwidth: String(THUMB),
+          titles: files.slice(i, i + BATCH).join('|')
+        });
+        for (const page of json.query?.pages || []) {
+          const info = page.imageinfo?.[0];
+          if (info) thumbs[page.title] = info.thumburl || info.url;
+        }
+      } catch { /* les vignettes manquantes retombent en pastille */ }
+    }
+
+    const resolved = {};
+    for (const [title, file] of Object.entries(chosen)) {
+      if (thumbs[file]) resolved[title] = thumbs[file];
+    }
+    return resolved;
+  }
+
   /**
    * Demande à Wikipédia l'image principale de chaque article de club. Seules
    * les résolutions réussies sont mises en cache : un échec réseau ne fige
@@ -88,6 +211,14 @@ const Data = (() => {
       } catch {
         // Hors ligne ou API injoignable : les pastilles de repli prennent le relais.
       }
+    }
+
+    // pageimages n'indexe pas de façon fiable les écussons en usage loyal :
+    // pour ce qu'il laisse vide, on liste les fichiers de l'article et on
+    // choisit le meilleur candidat. Deux requêtes groupées, pas une par club.
+    const stillMissing = titles.filter((t) => !cache[t]);
+    if (stillMissing.length) {
+      Object.assign(cache, await resolveFromPageFiles(stillMissing, clubs));
     }
 
     writeCache(cache);
