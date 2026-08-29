@@ -7,13 +7,19 @@ const Data = (() => {
   const BATCH = 50;          // plafond de titres par requête pour un appel anonyme
   const THUMB = 200;         // largeur des vignettes demandées, en pixels
 
+  const LOCAL_CRESTS = 'assets/crests/';
+
   /**
-   * URL du blason. Un nom de fichier explicite l'emporte ; sinon on prend la
-   * vignette résolue depuis le titre d'article. Deviner des noms de fichiers
-   * Wikimedia s'est révélé peu fiable — 44 sur 55 étaient faux — d'où la
-   * résolution par article.
+   * URL du blason, par ordre de préférence :
+   *   1. `file`  — copie locale déposée par tools/fetch-crests.py, sans réseau
+   *   2. `crest` — nom de fichier Wikimedia épinglé à la main
+   *   3. la vignette résolue depuis le titre d'article
+   *
+   * Deviner des noms de fichiers Wikimedia s'est révélé peu fiable — 44 sur 55
+   * étaient faux — d'où la résolution par article, puis la copie locale.
    */
   function crestUrl(club, resolved) {
+    if (club.file) return LOCAL_CRESTS + encodeURIComponent(club.file);
     if (club.crest) return CREST_BASE + encodeURIComponent(club.crest) + `?width=${THUMB}`;
     return (resolved && club.wiki && resolved[club.wiki]) || null;
   }
@@ -41,9 +47,12 @@ const Data = (() => {
     const cache = readCache();
     const titles = [...new Set(
       Object.values(clubs)
-        .filter((club) => club.wiki && !club.crest && !cache[club.wiki])
+        .filter((club) => club.wiki && !club.file && !club.crest && !cache[club.wiki])
         .map((club) => club.wiki)
     )];
+
+    // Tous les blasons sont déjà servis localement : aucun appel réseau.
+    if (!titles.length) return cache;
 
     for (let i = 0; i < titles.length; i += BATCH) {
       const chunk = titles.slice(i, i + BATCH);

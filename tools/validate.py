@@ -66,8 +66,14 @@ def main():
     for cid, club in clubs.items():
         # Sans titre d'article et sans fichier épinglé, un club ne peut afficher
         # qu'une pastille : c'est bloquant, pas un simple avertissement.
-        if not club.get("wiki") and not club.get("crest"):
-            errors.append(f'{cid} : ni `wiki` ni `crest`, aucun blason possible')
+        if not club.get("wiki") and not club.get("crest") and not club.get("file"):
+            errors.append(f'{cid} : ni `file`, ni `crest`, ni `wiki` — aucun blason possible')
+
+        # Tout l'intérêt de la copie locale est d'être vérifiable : un `file`
+        # qui ne pointe sur rien vaut moins que pas de `file` du tout, puisqu'il
+        # court-circuite la résolution réseau.
+        if club.get("file") and not (ROOT / "assets" / "crests" / club["file"]).is_file():
+            errors.append(f'{cid} : `file` introuvable — assets/crests/{club["file"]}')
         if club.get("needsCheck"):
             warnings.append(f'{cid} : marqué needsCheck ({club["name"]})')
 
