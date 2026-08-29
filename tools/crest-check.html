@@ -42,6 +42,8 @@
   </p>
 
   <p id="summary">Chargement…</p>
+  <p id="build"></p>
+  <p><button id="clear-cache" type="button">Vider le cache et recharger</button></p>
   <p id="legend">
     <span class="sw ok"></span>chargé
     <span class="sw ko"></span>introuvable
@@ -60,6 +62,22 @@
 <script>
 (async () => {
   const { clubs } = await (await fetch('../data/clubs.json')).json();
+
+  // Un déploiement en retard ou un data.js gardé en cache par le navigateur
+  // donne exactement la même liste d'échecs qu'un vrai bug de résolution.
+  // On lit donc le code réellement exécuté, plutôt que de le supposer.
+  const source = Data.resolveCrests.toString();
+  const params = ['pilicense', 'pithumbsize', 'redirects']
+    .filter((p) => source.includes(p));
+  document.getElementById('build').textContent =
+    `Code chargé : resolveCrests envoie ${params.length ? params.join(', ') : 'aucun paramètre reconnu'}` +
+    (source.includes('pilicense') ? '' : ' — data.js est en retard sur le dépôt, vider le cache du navigateur');
+
+  document.getElementById('clear-cache').addEventListener('click', () => {
+    try { localStorage.removeItem('soccerquiz.crests.v1'); } catch {}
+    location.reload();
+  });
+
   const resolved = await Data.resolveCrests(clubs);
 
   const grid = document.getElementById('grid');

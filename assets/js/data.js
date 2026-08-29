@@ -1,7 +1,10 @@
 /* Chargement et normalisation des données du quiz. */
 
 const Data = (() => {
-  const CREST_BASE = 'https://commons.wikimedia.org/wiki/Special:FilePath/';
+  // Special:FilePath d'en.wikipedia résout les fichiers locaux *et* ceux de
+  // Commons. Passer par commons.wikimedia.org renvoie 404 pour les écussons en
+  // usage loyal, qui ne sont hébergés que localement — c'est-à-dire la plupart.
+  const CREST_BASE = 'https://en.wikipedia.org/wiki/Special:FilePath/';
   const WIKI_API = 'https://en.wikipedia.org/w/api.php';
   const CACHE_KEY = 'soccerquiz.crests.v1';
   const BATCH = 50;          // plafond de titres par requête pour un appel anonyme

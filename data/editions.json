@@ -19,7 +19,7 @@
             { "name": "Vega",     "first": "Alexis",   "club": "toluca" },
             { "name": "Vargas",   "first": "Obed",     "club": "atletico-madrid" },
             { "name": "Fidalgo",  "first": "Álvaro",   "club": "real-betis" },
-            { "name": "Quiñones", "first": "Julián",   "club": "al-qadsiah", "needsCheck": true },
+            { "name": "Quiñones", "first": "Julián",   "club": "al-qadsiah" },
             { "name": "Giménez",  "first": "Santiago", "club": "ac-milan" },
             { "name": "Jiménez",  "first": "Raúl",     "club": "fulham" }
           ]
