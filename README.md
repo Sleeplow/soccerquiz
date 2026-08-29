@@ -49,7 +49,7 @@ signale sinon, puisque le filtre donnerait la réponse.
 Trois fichiers dans `data/` :
 
 - **`clubs.json`** — le référentiel des clubs : nom, couleurs, monogramme de
-  repli, et le nom du fichier de blason sur Wikimedia Commons.
+  repli, et de quoi résoudre le blason (voir plus bas).
 - **`editions.json`** — une entrée par équipe, rattachée à une édition. Le
   `lineup` est ordonné : gardien d'abord, puis chaque ligne de la formation de
   gauche à droite. Le terrain est calculé à partir du champ `formation`, il n'y
@@ -98,12 +98,29 @@ Le blason d'un club est cherché dans cet ordre :
    l'API `prop=pageimages`, qui renvoie l'image principale de l'article, en un
    seul appel pour tous les clubs concernés, avec mise en cache navigateur.
 
-> **`pilicense=any` n'est pas optionnel.** Par défaut, `pageimages` ne retient
-> que les images sous licence libre et écarte silencieusement les écussons en
-> usage loyal — sans erreur, juste un article sans image. C'est le cas de la
-> plupart des clubs anglais, espagnols et portugais : sans ce paramètre,
-> 33 blasons sur 55 restaient introuvables alors que les titres d'articles
-> étaient corrects.
+> **`pageimages` ne suffit pas.** L'extension n'indexe pas de façon fiable les
+> écussons en usage loyal, même avec `pilicense=any` : l'article ressort sans
+> image, sans erreur, indistinguable d'un titre erroné. C'est le cas de la
+> plupart des clubs anglais, espagnols et portugais. `fetch-crests.py` retombe
+> donc sur le champ image de l'infobox, lu dans le wikitexte, qui nomme
+> l'écusson explicitement.
+
+> **Special:FilePath, côté en.wikipedia et pas Commons.** L'un résout les
+> fichiers locaux *et* ceux de Commons ; l'autre renvoie 404 pour les écussons
+> en usage loyal, qui ne sont hébergés que localement.
+
+#### Diagnostiquer un blason manquant
+
+```bash
+python3 tools/diagnose-crests.py              # échantillon représentatif
+python3 tools/diagnose-crests.py arsenal psg  # des clubs précis
+python3 tools/diagnose-crests.py --all
+```
+
+Pour chaque club, le script compare quatre voies de résolution — `pageimages`
+en licence libre puis en licence quelconque, les `pageprops` stockées, et
+l'infobox — et teste les deux hébergements de fichiers. Il dit donc *pourquoi*
+un écusson manque, au lieu de laisser le supposer.
 
 Quand tous les clubs ont un `file`, le jeu ne fait **aucune requête externe**.
 
@@ -175,6 +192,7 @@ assets/crests/        blasons rapatriés (optionnel, voir fetch-crests.py)
 data/                 clubs, éditions, sélections
 tools/validate.py     intégrité des données
 tools/fetch-crests.py rapatrie les blasons dans le dépôt
+tools/diagnose-crests.py pourquoi un blason ne résout pas
 tools/crest-check.html état de chargement des blasons
 ```
 

@@ -16,6 +16,7 @@ Bibliothèque standard uniquement, aucune installation nécessaire.
 
 import argparse
 import json
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -27,6 +28,9 @@ CRESTS = ROOT / "assets" / "crests"
 CLUBS = ROOT / "data" / "clubs.json"
 
 DEFAULT_API = "https://en.wikipedia.org/w/api.php"
+# Résout les fichiers locaux *et* ceux de Commons, contrairement à
+# commons.wikimedia.org qui ignore les écussons en usage loyal.
+EN_FILEPATH = "https://en.wikipedia.org/wiki/Special:FilePath/"
 BATCH = 50          # plafond de titres par requête pour un appel anonyme
 THUMB = 256         # largeur demandée, en pixels
 TIMEOUT = 30
@@ -46,6 +50,39 @@ def get(url):
     request = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
         return response.read(), response.headers.get("Content-Type", "")
+
+
+def infobox_images(titles, api):
+    """Titre d'article -> fichier de l'infobox, lu dans le wikitexte.
+
+    Recours quand pageimages ne rend rien : l'extension n'indexe pas toujours
+    les écussons en usage loyal, alors que l'infobox les nomme explicitement.
+    """
+    found = {}
+    for title in titles:
+        query = urllib.parse.urlencode({
+            "action": "query", "format": "json", "formatversion": "2",
+            "prop": "revisions", "rvprop": "content", "rvslots": "main",
+            "rvsection": "0", "redirects": "1", "titles": title,
+        })
+        try:
+            raw, _ = get(f"{api}?{query}")
+            pages = json.loads(raw).get("query", {}).get("pages", [])
+            revisions = pages[0].get("revisions") if pages else None
+            if not revisions:
+                continue
+            text = revisions[0]["slots"]["main"]["content"]
+            match = re.search(
+                r"^\s*\|\s*(?:image|logo|crest|badge)\s*=\s*"
+                r"(?:\[\[)?(?:File:|Image:)?([^\n|\]}]+)",
+                text, re.IGNORECASE | re.MULTILINE)
+            if match:
+                name = match.group(1).strip()
+                found[title] = EN_FILEPATH + urllib.parse.quote(name.replace(" ", "_")) \
+                    + f"?width={THUMB}"
+        except Exception:
+            continue
+    return found
 
 
 def resolve(titles, api):
@@ -103,6 +140,12 @@ def main():
     print(f"{len(todo)} club(s) à traiter sur {len(clubs)}.")
     titles = sorted({clubs[cid]["wiki"] for cid in todo})
     resolved = resolve(titles, args.api)
+
+    unresolved = [t for t in titles if t not in resolved]
+    if unresolved:
+        print(f"  {len(unresolved)} article(s) sans image via pageimages,"
+              f" lecture de l'infobox…")
+        resolved.update(infobox_images(unresolved, args.api))
 
     if not args.dry_run:
         CRESTS.mkdir(parents=True, exist_ok=True)
