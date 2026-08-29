@@ -1,0 +1,269 @@
+{
+  "_comment": "Une entrée par équipe, rattachée à une édition. `lineup` est ordonné : gardien d'abord, puis chaque ligne de la formation de gauche à droite. `source` et `confidence` documentent la provenance — toute équipe ajoutée doit les renseigner.",
+  "editions": [
+    {
+      "year": 2026,
+      "host": "Canada / Mexique / États-Unis",
+      "teams": [
+        {
+          "country": "Mexique",
+          "formation": "4-4-2",
+          "source": "Capture d'écran fournie par l'utilisateur (composition diffusée)",
+          "confidence": "high",
+          "lineup": [
+            { "name": "Rangel",   "first": "Raúl",     "club": "chivas" },
+            { "name": "Chávez",   "first": "Mateo",    "club": "az-alkmaar" },
+            { "name": "Vásquez",  "first": "Johan",    "club": "genoa" },
+            { "name": "Álvarez",  "first": "Edson",    "club": "fenerbahce" },
+            { "name": "Reyes",    "first": "Israel",   "club": "club-america" },
+            { "name": "Vega",     "first": "Alexis",   "club": "toluca" },
+            { "name": "Vargas",   "first": "Obed",     "club": "atletico-madrid" },
+            { "name": "Fidalgo",  "first": "Álvaro",   "club": "real-betis" },
+            { "name": "Quiñones", "first": "Julián",   "club": "al-qadsiah", "needsCheck": true },
+            { "name": "Giménez",  "first": "Santiago", "club": "ac-milan" },
+            { "name": "Jiménez",  "first": "Raúl",     "club": "fulham" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "host": "Qatar",
+      "teams": [
+        {
+          "country": "Argentine",
+          "formation": "4-3-3",
+          "note": "Onze aligné en finale",
+          "source": "Connaissance du modèle",
+          "confidence": "high",
+          "lineup": [
+            { "name": "E. Martínez", "first": "Emiliano", "club": "aston-villa" },
+            { "name": "Molina",      "first": "Nahuel",  "club": "atletico-madrid" },
+            { "name": "Romero",      "first": "Cristian","club": "tottenham" },
+            { "name": "Otamendi",    "first": "Nicolás", "club": "benfica" },
+            { "name": "Tagliafico",  "first": "Nicolás", "club": "lyon" },
+            { "name": "De Paul",     "first": "Rodrigo", "club": "atletico-madrid" },
+            { "name": "Fernández",   "first": "Enzo",    "club": "benfica" },
+            { "name": "Mac Allister","first": "Alexis",  "club": "brighton" },
+            { "name": "Di María",    "first": "Ángel",   "club": "juventus" },
+            { "name": "Messi",       "first": "Lionel",  "club": "psg" },
+            { "name": "J. Álvarez",  "first": "Julián",  "club": "man-city" }
+          ]
+        },
+        {
+          "country": "France",
+          "formation": "4-2-3-1",
+          "note": "Onze aligné en finale",
+          "source": "Connaissance du modèle",
+          "confidence": "high",
+          "lineup": [
+            { "name": "Lloris",     "first": "Hugo",     "club": "tottenham" },
+            { "name": "Koundé",     "first": "Jules",    "club": "barcelona" },
+            { "name": "Varane",     "first": "Raphaël",  "club": "man-utd" },
+            { "name": "Upamecano",  "first": "Dayot",    "club": "bayern" },
+            { "name": "T. Hernández","first": "Theo",    "club": "ac-milan" },
+            { "name": "Tchouaméni", "first": "Aurélien", "club": "real-madrid" },
+            { "name": "Rabiot",     "first": "Adrien",   "club": "juventus" },
+            { "name": "Dembélé",    "first": "Ousmane",  "club": "barcelona" },
+            { "name": "Griezmann",  "first": "Antoine",  "club": "atletico-madrid" },
+            { "name": "Mbappé",     "first": "Kylian",   "club": "psg" },
+            { "name": "Giroud",     "first": "Olivier",  "club": "ac-milan" }
+          ]
+        },
+        {
+          "country": "Brésil",
+          "formation": "4-3-3",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            { "name": "Alisson",     "first": "Alisson",  "club": "liverpool" },
+            { "name": "Danilo",      "first": "Danilo",   "club": "juventus" },
+            { "name": "Marquinhos",  "first": "Marquinhos","club": "psg" },
+            { "name": "Thiago Silva","first": "Thiago",   "club": "chelsea" },
+            { "name": "Militão",     "first": "Éder",     "club": "real-madrid" },
+            { "name": "Casemiro",    "first": "Carlos",   "club": "man-utd" },
+            { "name": "Paquetá",     "first": "Lucas",    "club": "west-ham" },
+            { "name": "Neymar",      "first": "Neymar",   "club": "psg" },
+            { "name": "Raphinha",    "first": "Raphinha", "club": "barcelona" },
+            { "name": "Richarlison", "first": "Richarlison","club": "tottenham" },
+            { "name": "Vinícius Jr", "first": "Vinícius", "club": "real-madrid" }
+          ]
+        },
+        {
+          "country": "Angleterre",
+          "formation": "4-3-3",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            { "name": "Pickford",   "first": "Jordan",  "club": "everton" },
+            { "name": "Walker",     "first": "Kyle",    "club": "man-city" },
+            { "name": "Stones",     "first": "John",    "club": "man-city" },
+            { "name": "Maguire",    "first": "Harry",   "club": "man-utd" },
+            { "name": "Shaw",       "first": "Luke",    "club": "man-utd" },
+            { "name": "Henderson",  "first": "Jordan",  "club": "liverpool" },
+            { "name": "Rice",       "first": "Declan",  "club": "west-ham" },
+            { "name": "Bellingham", "first": "Jude",    "club": "dortmund" },
+            { "name": "Saka",       "first": "Bukayo",  "club": "arsenal" },
+            { "name": "Kane",       "first": "Harry",   "club": "tottenham" },
+            { "name": "Foden",      "first": "Phil",    "club": "man-city" }
+          ]
+        },
+        {
+          "country": "Croatie",
+          "formation": "4-3-3",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            { "name": "Livaković", "first": "Dominik", "club": "dinamo-zagreb" },
+            { "name": "Juranović", "first": "Josip",   "club": "celtic" },
+            { "name": "Lovren",    "first": "Dejan",   "club": "zenit" },
+            { "name": "Gvardiol",  "first": "Joško",   "club": "leipzig" },
+            { "name": "Sosa",      "first": "Borna",   "club": "stuttgart" },
+            { "name": "Modrić",    "first": "Luka",    "club": "real-madrid" },
+            { "name": "Brozović",  "first": "Marcelo", "club": "inter" },
+            { "name": "Kovačić",   "first": "Mateo",   "club": "chelsea" },
+            { "name": "Pašalić",   "first": "Mario",   "club": "atalanta" },
+            { "name": "Kramarić",  "first": "Andrej",  "club": "hoffenheim" },
+            { "name": "Perišić",   "first": "Ivan",    "club": "tottenham" }
+          ]
+        },
+        {
+          "country": "Maroc",
+          "formation": "4-3-3",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            { "name": "Bounou",    "first": "Yassine", "club": "sevilla" },
+            { "name": "Hakimi",    "first": "Achraf",  "club": "psg" },
+            { "name": "Saïss",     "first": "Romain",  "club": "besiktas" },
+            { "name": "Aguerd",    "first": "Nayef",   "club": "west-ham" },
+            { "name": "Mazraoui",  "first": "Noussair","club": "bayern" },
+            { "name": "Amrabat",   "first": "Sofyan",  "club": "fiorentina" },
+            { "name": "Ounahi",    "first": "Azzedine","club": "angers" },
+            { "name": "Amallah",   "first": "Selim",   "club": "standard-liege" },
+            { "name": "Ziyech",    "first": "Hakim",   "club": "chelsea" },
+            { "name": "En-Nesyri", "first": "Youssef", "club": "sevilla" },
+            { "name": "Boufal",    "first": "Sofiane", "club": "angers" }
+          ]
+        },
+        {
+          "country": "Espagne",
+          "formation": "4-3-3",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            { "name": "Unai Simón", "first": "Unai",    "club": "athletic-club" },
+            { "name": "Azpilicueta","first": "César",   "club": "chelsea" },
+            { "name": "Rodri",      "first": "Rodrigo", "club": "man-city" },
+            { "name": "Laporte",    "first": "Aymeric", "club": "man-city" },
+            { "name": "Jordi Alba", "first": "Jordi",   "club": "barcelona" },
+            { "name": "Gavi",       "first": "Pablo",   "club": "barcelona" },
+            { "name": "Busquets",   "first": "Sergio",  "club": "barcelona" },
+            { "name": "Pedri",      "first": "Pedri",   "club": "barcelona" },
+            { "name": "Ferran Torres","first": "Ferran","club": "barcelona" },
+            { "name": "Morata",     "first": "Álvaro",  "club": "atletico-madrid" },
+            { "name": "Dani Olmo",  "first": "Dani",    "club": "leipzig" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "host": "Russie",
+      "teams": [
+        {
+          "country": "France",
+          "formation": "4-2-3-1",
+          "note": "Onze aligné en finale",
+          "source": "Connaissance du modèle",
+          "confidence": "high",
+          "lineup": [
+            { "name": "Lloris",     "first": "Hugo",     "club": "tottenham" },
+            { "name": "Pavard",     "first": "Benjamin", "club": "stuttgart" },
+            { "name": "Varane",     "first": "Raphaël",  "club": "real-madrid" },
+            { "name": "Umtiti",     "first": "Samuel",   "club": "barcelona" },
+            { "name": "L. Hernández","first": "Lucas",   "club": "atletico-madrid" },
+            { "name": "Kanté",      "first": "N'Golo",   "club": "chelsea" },
+            { "name": "Pogba",      "first": "Paul",     "club": "man-utd" },
+            { "name": "Mbappé",     "first": "Kylian",   "club": "psg" },
+            { "name": "Griezmann",  "first": "Antoine",  "club": "atletico-madrid" },
+            { "name": "Matuidi",    "first": "Blaise",   "club": "juventus" },
+            { "name": "Giroud",     "first": "Olivier",  "club": "chelsea" }
+          ]
+        },
+        {
+          "country": "Croatie",
+          "formation": "4-2-3-1",
+          "note": "Onze aligné en finale",
+          "source": "Connaissance du modèle",
+          "confidence": "high",
+          "lineup": [
+            { "name": "Subašić",   "first": "Danijel", "club": "monaco" },
+            { "name": "Vrsaljko",  "first": "Šime",    "club": "atletico-madrid" },
+            { "name": "Lovren",    "first": "Dejan",   "club": "liverpool" },
+            { "name": "Vida",      "first": "Domagoj", "club": "besiktas" },
+            { "name": "Strinić",   "first": "Ivan",    "club": "sampdoria" },
+            { "name": "Rakitić",   "first": "Ivan",    "club": "barcelona" },
+            { "name": "Brozović",  "first": "Marcelo", "club": "inter" },
+            { "name": "Rebić",     "first": "Ante",    "club": "eintracht" },
+            { "name": "Modrić",    "first": "Luka",    "club": "real-madrid" },
+            { "name": "Perišić",   "first": "Ivan",    "club": "inter" },
+            { "name": "Mandžukić", "first": "Mario",   "club": "juventus" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "host": "Brésil",
+      "teams": [
+        {
+          "country": "Allemagne",
+          "formation": "4-3-3",
+          "note": "Onze aligné en finale",
+          "source": "Connaissance du modèle",
+          "confidence": "high",
+          "lineup": [
+            { "name": "Neuer",        "first": "Manuel",    "club": "bayern" },
+            { "name": "Lahm",         "first": "Philipp",   "club": "bayern" },
+            { "name": "Boateng",      "first": "Jérôme",    "club": "bayern" },
+            { "name": "Hummels",      "first": "Mats",      "club": "dortmund" },
+            { "name": "Höwedes",      "first": "Benedikt",  "club": "schalke" },
+            { "name": "Schweinsteiger","first": "Bastian",  "club": "bayern" },
+            { "name": "Kroos",        "first": "Toni",      "club": "bayern" },
+            { "name": "Khedira",      "first": "Sami",      "club": "real-madrid" },
+            { "name": "Müller",       "first": "Thomas",    "club": "bayern" },
+            { "name": "Klose",        "first": "Miroslav",  "club": "lazio" },
+            { "name": "Özil",         "first": "Mesut",     "club": "arsenal" }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "host": "Afrique du Sud",
+      "teams": [
+        {
+          "country": "Espagne",
+          "formation": "4-3-3",
+          "note": "Onze aligné en finale",
+          "source": "Connaissance du modèle",
+          "confidence": "high",
+          "lineup": [
+            { "name": "Casillas",    "first": "Iker",    "club": "real-madrid" },
+            { "name": "Ramos",       "first": "Sergio",  "club": "real-madrid" },
+            { "name": "Piqué",       "first": "Gerard",  "club": "barcelona" },
+            { "name": "Puyol",       "first": "Carles",  "club": "barcelona" },
+            { "name": "Capdevila",   "first": "Joan",    "club": "villarreal" },
+            { "name": "Xabi Alonso", "first": "Xabi",    "club": "real-madrid" },
+            { "name": "Busquets",    "first": "Sergio",  "club": "barcelona" },
+            { "name": "Xavi",        "first": "Xavi",    "club": "barcelona" },
+            { "name": "Pedro",       "first": "Pedro",   "club": "barcelona" },
+            { "name": "Villa",       "first": "David",   "club": "barcelona", "needsCheck": true },
+            { "name": "Iniesta",     "first": "Andrés",  "club": "barcelona" }
+          ]
+        }
+      ]
+    }
+  ]
+}

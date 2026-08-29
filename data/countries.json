@@ -1,0 +1,22 @@
+{
+  "_comment": "Sélections ayant disputé au moins une Coupe du monde. Sert uniquement à l'autocomplétion : la liste doit rester bien plus large que le jeu de questions, sinon elle révèle les réponses.",
+  "countries": [
+    "Afrique du Sud", "Algérie", "Allemagne", "Angleterre", "Angola", "Arabie saoudite",
+    "Argentine", "Australie", "Autriche", "Belgique", "Bolivie", "Bosnie-Herzégovine",
+    "Brésil", "Bulgarie", "Cameroun", "Canada", "Chili", "Chine", "Colombie",
+    "Corée du Nord", "Corée du Sud", "Costa Rica", "Côte d'Ivoire", "Croatie", "Cuba",
+    "Curaçao", "Danemark", "Écosse", "Égypte", "Émirats arabes unis", "Équateur",
+    "Espagne", "États-Unis", "France", "Ghana", "Grèce", "Haïti", "Honduras", "Hongrie",
+    "Indonésie", "Irak", "Iran", "Irlande", "Irlande du Nord", "Islande", "Israël",
+    "Italie", "Jamaïque", "Japon", "Jordanie", "Koweït", "Maroc", "Mexique",
+    "Nigeria", "Norvège", "Nouvelle-Zélande", "Ouzbékistan", "Panama", "Paraguay",
+    "Pays-Bas", "Pays de Galles", "Pérou", "Pologne", "Portugal", "Qatar",
+    "République tchèque", "Roumanie", "Russie", "Sénégal", "Serbie", "Slovaquie",
+    "Slovénie", "Suède", "Suisse", "Togo", "Trinité-et-Tobago", "Tunisie", "Turquie",
+    "Ukraine", "Uruguay", "Venezuela"
+  ],
+  "worldCupYears": [
+    1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 1970, 1974, 1978, 1982, 1986,
+    1990, 1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026
+  ]
+}
