@@ -16,6 +16,23 @@ python3 -m http.server 8000
 Ouvrir `index.html` directement depuis le disque ne marche pas : `fetch()`
 refuse le protocole `file://`. La page le signale si ça arrive.
 
+## Publier sur GitHub Pages
+
+Le site est servi tel quel depuis la racine du dépôt, sans build. Deux réglages,
+à faire une seule fois dans l'interface GitHub :
+
+1. **Settings → General → Default branch** : basculer sur `main`.
+2. **Settings → Pages → Build and deployment** : source `Deploy from a branch`,
+   branche `main`, dossier `/ (root)`.
+
+Le site sort sur `https://sleeplow.github.io/soccerquiz/`. Tous les chemins du
+projet sont relatifs, il fonctionne donc sous ce sous-dossier sans réglage
+supplémentaire.
+
+Choisir `Deploy from a branch` plutôt que `GitHub Actions` : il n'y a rien à
+compiler, et ça évite de consommer des minutes de CI. Le fichier `.nojekyll`
+court-circuite le passage par Jekyll, inutile ici.
+
 ## Modes
 
 | Mode | Question | Barème |
