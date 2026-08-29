@@ -7,61 +7,106 @@
   <style>
     body { font-family: system-ui, sans-serif; margin: 0; padding: 24px; background: #10143a; color: #eef; }
     h1 { margin: 0 0 6px; }
-    p.lede { margin: 0 0 20px; color: #a9b2df; max-width: 62ch; line-height: 1.5; }
-    #summary { margin-bottom: 18px; font-weight: 700; }
-    .grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
-    .item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 10px; padding: 10px; display: flex; gap: 10px; align-items: center; }
-    .item.ko { border-color: #ff5f6d; background: rgba(255,95,109,.12); }
+    p.lede { margin: 0 0 18px; color: #a9b2df; max-width: 68ch; line-height: 1.5; }
+    #summary { margin: 0 0 6px; font-weight: 700; font-size: 1.05rem; }
+    #legend { margin: 0 0 18px; color: #a9b2df; font-size: .85rem; }
+    .sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; vertical-align: middle; margin: 0 4px 2px 12px; }
+    .sw.ok { background: #35d07f; } .sw.ko { background: #ff5f6d; } .sw.flag { background: #ffd233; }
+    .grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+    .item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14);
+            border-left-width: 5px; border-radius: 10px; padding: 10px; display: flex; gap: 10px; align-items: center; }
+    .item.ok { border-left-color: #35d07f; }
+    .item.ko { border-left-color: #ff5f6d; background: rgba(255,95,109,.12); }
     .item.flag { border-color: #ffd233; }
-    .thumb { width: 44px; height: 44px; flex: none; background: #fff; border-radius: 50%; display: grid; place-items: center; overflow: hidden; }
+    .thumb { width: 46px; height: 46px; flex: none; background: #fff; border-radius: 50%; display: grid; place-items: center; overflow: hidden; }
     .thumb img { width: 78%; height: 78%; object-fit: contain; }
     .meta { min-width: 0; }
-    .name { font-weight: 600; font-size: .9rem; }
-    .file { font-size: .72rem; color: #a9b2df; word-break: break-all; }
+    .name { font-weight: 600; font-size: .92rem; }
+    .via { font-size: .72rem; color: #a9b2df; word-break: break-word; }
     code { background: rgba(0,0,0,.3); padding: 1px 5px; border-radius: 4px; }
+    #failing { margin-top: 24px; }
+    textarea { width: 100%; min-height: 130px; background: rgba(0,0,0,.35); color: #eef;
+               border: 1px solid rgba(255,255,255,.16); border-radius: 8px; padding: 10px;
+               font-family: ui-monospace, monospace; font-size: .8rem; }
   </style>
 </head>
 <body>
   <h1>Vérification des blasons</h1>
   <p class="lede">
-    Chaque blason est chargé depuis Wikimedia Commons. Les cartes en rouge n'ont pas
-    chargé : le nom de fichier dans <code>data/clubs.json</code> est faux ou le fichier a
-    été renommé. Les cartes en jaune sont marquées <code>needsCheck</code> dans les
-    données — le blason charge, mais l'exactitude du club reste à confirmer.
+    Le blason est résolu par le titre d'article Wikipédia du club
+    (<code>prop=pageimages</code>), sauf quand un nom de fichier Wikimedia est
+    épinglé dans <code>crest</code>. Une carte en rouge n'a rien pu charger : le
+    titre d'article est faux, ou l'article n'a pas d'image principale. Le liseré
+    jaune signale un club marqué <code>needsCheck</code> — le blason peut très
+    bien charger, c'est l'exactitude du club qui reste à confirmer.
   </p>
+
   <p id="summary">Chargement…</p>
+  <p id="legend">
+    <span class="sw ok"></span>chargé
+    <span class="sw ko"></span>introuvable
+    <span class="sw flag"></span>à vérifier
+  </p>
+
   <div class="grid" id="grid"></div>
+
+  <div id="failing" hidden>
+    <h2>Clubs à corriger</h2>
+    <p class="lede">Copie ce bloc et colle-le, il liste ce qui n'a pas résolu.</p>
+    <textarea id="failing-text" readonly></textarea>
+  </div>
 
 <script src="../assets/js/data.js"></script>
 <script>
 (async () => {
-  const res = await fetch('../data/clubs.json');
-  const { clubs } = await res.json();
-  const grid = document.getElementById('grid');
-  const entries = Object.entries(clubs).sort((a, b) => a[1].name.localeCompare(b[1].name));
+  const { clubs } = await (await fetch('../data/clubs.json')).json();
+  const resolved = await Data.resolveCrests(clubs);
 
-  let ko = 0, flagged = 0;
-  let settled = 0;
+  const grid = document.getElementById('grid');
+  const entries = Object.entries(clubs).sort((a, b) => a[1].name.localeCompare(b[1].name, 'fr'));
+
+  let ok = 0, ko = 0;
+  const flagged = entries.filter(([, c]) => c.needsCheck).length;
+  const failures = [];
 
   const report = () => {
     document.getElementById('summary').textContent =
-      `${entries.length} clubs · ${ko} blason(s) introuvable(s) · ${flagged} club(s) à vérifier`;
+      `${entries.length} clubs · ${ok} chargés · ${ko} introuvables · ${flagged} à vérifier`;
+    const box = document.getElementById('failing');
+    box.hidden = failures.length === 0;
+    document.getElementById('failing-text').value = failures
+      .slice().sort()
+      .map((f) => `${f.id} — ${f.name} — wiki: ${f.wiki}`).join('\n');
   };
 
   for (const [id, club] of entries) {
+    const url = Data.crestUrl(club, resolved);
+
     const item = document.createElement('div');
     item.className = 'item' + (club.needsCheck ? ' flag' : '');
     item.innerHTML =
       `<div class="thumb"></div>` +
-      `<div class="meta"><div class="name">${club.name}</div><div class="file">${club.crest || '—'}</div></div>`;
+      `<div class="meta"><div class="name">${club.name}</div>` +
+      `<div class="via">${club.crest ? 'fichier : ' + club.crest : 'article : ' + club.wiki}</div></div>`;
     grid.appendChild(item);
-    if (club.needsCheck) flagged++;
+
+    // Un club marqué needsCheck peut échouer aussi : l'état de chargement est
+    // porté par la bordure gauche, distincte du liseré jaune, pour qu'aucun
+    // des deux ne masque l'autre.
+    const fail = () => {
+      item.classList.add('ko');
+      ko++;
+      failures.push({ id, name: club.name, wiki: club.wiki });
+      report();
+    };
+
+    if (!url) { fail(); continue; }
 
     const img = new Image();
     img.alt = club.name;
-    img.src = Data.crestUrl(club);
-    img.onload = () => { item.querySelector('.thumb').appendChild(img); settled++; report(); };
-    img.onerror = () => { item.classList.add('ko'); ko++; settled++; report(); };
+    img.src = url;
+    img.onload = () => { item.querySelector('.thumb').appendChild(img); item.classList.add('ok'); ok++; report(); };
+    img.onerror = fail;
   }
   report();
 })();

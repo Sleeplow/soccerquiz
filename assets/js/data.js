@@ -2,11 +2,80 @@
 
 const Data = (() => {
   const CREST_BASE = 'https://commons.wikimedia.org/wiki/Special:FilePath/';
+  const WIKI_API = 'https://en.wikipedia.org/w/api.php';
+  const CACHE_KEY = 'soccerquiz.crests.v1';
+  const BATCH = 50;          // plafond de titres par requête pour un appel anonyme
+  const THUMB = 200;         // largeur des vignettes demandées, en pixels
 
-  /** URL du blason, redimensionnée côté Wikimedia pour éviter de tirer des SVG lourds. */
-  function crestUrl(club) {
-    if (!club.crest) return null;
-    return CREST_BASE + encodeURIComponent(club.crest) + '?width=160';
+  /**
+   * URL du blason. Un nom de fichier explicite l'emporte ; sinon on prend la
+   * vignette résolue depuis le titre d'article. Deviner des noms de fichiers
+   * Wikimedia s'est révélé peu fiable — 44 sur 55 étaient faux — d'où la
+   * résolution par article.
+   */
+  function crestUrl(club, resolved) {
+    if (club.crest) return CREST_BASE + encodeURIComponent(club.crest) + `?width=${THUMB}`;
+    return (resolved && club.wiki && resolved[club.wiki]) || null;
+  }
+
+  function readCache() {
+    try {
+      return JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
+    } catch {
+      return {};   // navigation privée, stockage bloqué : on refera l'appel
+    }
+  }
+
+  function writeCache(cache) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+    } catch { /* quota ou stockage refusé : le cache est un confort, pas un besoin */ }
+  }
+
+  /**
+   * Demande à Wikipédia l'image principale de chaque article de club. Seules
+   * les résolutions réussies sont mises en cache : un échec réseau ne fige
+   * donc pas un club en pastille pour toujours.
+   */
+  async function resolveCrests(clubs) {
+    const cache = readCache();
+    const titles = [...new Set(
+      Object.values(clubs)
+        .filter((club) => club.wiki && !club.crest && !cache[club.wiki])
+        .map((club) => club.wiki)
+    )];
+
+    for (let i = 0; i < titles.length; i += BATCH) {
+      const chunk = titles.slice(i, i + BATCH);
+      const params = new URLSearchParams({
+        action: 'query', format: 'json', formatversion: '2', origin: '*',
+        prop: 'pageimages', piprop: 'thumbnail', pithumbsize: String(THUMB),
+        redirects: '1', titles: chunk.join('|')
+      });
+
+      try {
+        const res = await fetch(`${WIKI_API}?${params}`);
+        if (!res.ok) continue;
+        const json = await res.json();
+
+        // `redirects=1` renvoie le titre d'arrivée : on recolle l'alias pour
+        // retrouver le titre tel qu'il est écrit dans clubs.json.
+        const alias = {};
+        for (const r of json.query?.redirects || []) alias[r.to] = r.from;
+
+        for (const page of json.query?.pages || []) {
+          const src = page.thumbnail?.source;
+          if (!src) continue;
+          cache[page.title] = src;
+          if (alias[page.title]) cache[alias[page.title]] = src;
+        }
+      } catch {
+        // Hors ligne ou API injoignable : les pastilles de repli prennent le relais.
+      }
+    }
+
+    writeCache(cache);
+    return cache;
   }
 
   /** Retire accents et casse pour comparer les saisies. */
@@ -37,6 +106,10 @@ const Data = (() => {
     ]);
 
     const clubs = clubsFile.clubs;
+    // La résolution des blasons ne doit jamais retarder le jeu : elle est
+    // tentée ici, et son échec se traduit simplement par des pastilles.
+    const resolved = await resolveCrests(clubs);
+
     const questions = [];
     const problems = [];
 
@@ -52,7 +125,7 @@ const Data = (() => {
             name: player.name,
             first: player.first || '',
             needsCheck: !!(player.needsCheck || club.needsCheck),
-            club: { id: player.club, ...club, url: crestUrl(club) }
+            club: { id: player.club, ...club, url: crestUrl(club, resolved) }
           };
         });
 
@@ -84,5 +157,5 @@ const Data = (() => {
     };
   }
 
-  return { load, normalize, crestUrl };
+  return { load, normalize, crestUrl, resolveCrests };
 })();
