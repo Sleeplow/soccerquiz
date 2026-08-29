@@ -87,19 +87,38 @@ sources manquantes et les entrées marquées `needsCheck`.
 
 ### Blasons
 
-Le blason est résolu à partir du champ **`wiki`**, le titre de l'article
-Wikipédia anglophone du club. Au chargement, le jeu interroge l'API
-`prop=pageimages` en un seul appel pour tous les clubs — elle renvoie l'image
-principale de l'article, c'est-à-dire l'écusson. Le résultat est mis en cache
-dans le navigateur, donc l'appel n'a lieu qu'une fois.
+Le blason d'un club est cherché dans cet ordre :
+
+1. **`file`** — une copie dans `assets/crests/`, servie avec le site. Aucun
+   réseau, aucune latence, et le fichier est vérifiable : `validate.py` refuse
+   un `file` qui ne pointe sur rien.
+2. **`crest`** — un nom de fichier Wikimedia épinglé à la main. Utile quand
+   l'article a une image principale qui n'est pas l'écusson.
+3. **`wiki`** — le titre de l'article Wikipédia anglophone. Le jeu interroge
+   l'API `prop=pageimages`, qui renvoie l'image principale de l'article, en un
+   seul appel pour tous les clubs concernés, avec mise en cache navigateur.
+
+Quand tous les clubs ont un `file`, le jeu ne fait **aucune requête externe**.
+
+#### Rapatrier les blasons
+
+```bash
+python3 tools/fetch-crests.py            # ignore les clubs déjà pourvus
+python3 tools/fetch-crests.py --force    # refait tout
+python3 tools/fetch-crests.py --dry-run  # résout sans écrire
+```
+
+Le script résout les titres d'article, télécharge les images dans
+`assets/crests/`, et renseigne `file` dans `data/clubs.json`. Bibliothèque
+standard uniquement. Les clubs qu'il n'a pas su résoudre sont listés en fin
+d'exécution.
+
+Héberger les écussons dans le dépôt plutôt que d'y pointer est un choix qui
+t'appartient : ce sont des marques déposées, appartenant à leurs clubs.
 
 Une première version devinait des noms de fichiers Wikimedia : **44 sur 55
-étaient faux**. Le titre d'article est bien plus prévisible, et les redirections
-de Wikipédia absorbent les écarts restants.
-
-Le champ **`crest`** reste disponible pour épingler un fichier Wikimedia précis.
-Il l'emporte sur `wiki`, ce qui sert quand l'article a une image principale qui
-n'est pas l'écusson.
+étaient faux**. Le titre d'article est bien plus prévisible, et la copie locale
+supprime la question.
 
 Si rien ne charge — mauvais titre, article sans image, ou simplement pas de
 réseau — le jeu affiche une pastille aux couleurs du club avec son monogramme.
@@ -145,8 +164,10 @@ assets/css/style.css
 assets/js/data.js     chargement, normalisation, résolution des clubs
 assets/js/pitch.js    placement des onze à partir de la formation
 assets/js/app.js      déroulé, chrono, score, autocomplétion
+assets/crests/        blasons rapatriés (optionnel, voir fetch-crests.py)
 data/                 clubs, éditions, sélections
 tools/validate.py     intégrité des données
+tools/fetch-crests.py rapatrie les blasons dans le dépôt
 tools/crest-check.html état de chargement des blasons
 ```
 
