@@ -101,9 +101,22 @@ Le blason d'un club est cherché dans cet ordre :
 > **`pageimages` ne suffit pas.** L'extension n'indexe pas de façon fiable les
 > écussons en usage loyal, même avec `pilicense=any` : l'article ressort sans
 > image, sans erreur, indistinguable d'un titre erroné. C'est le cas de la
-> plupart des clubs anglais, espagnols et portugais. `fetch-crests.py` retombe
-> donc sur le champ image de l'infobox, lu dans le wikitexte, qui nomme
-> l'écusson explicitement.
+> plupart des clubs anglais, espagnols et portugais — 33 sur 55 ici.
+
+Pour ces articles, le jeu passe à une **seconde résolution groupée** : `prop=images`
+liste les fichiers de chaque page (20 pages par requête), un score retient le
+meilleur candidat, puis `prop=imageinfo` convertit les fichiers retenus en
+vignettes. Deux requêtes de plus au total, pas une par club.
+
+Le score écarte d'abord le bruit — maillots, drapeaux, logos de compétition,
+photos de stade, icônes d'interface — puis récompense les fichiers dont le nom
+contient un mot distinctif du club et un terme d'écusson. **Les maillots sont le
+piège principal** : leur nom contient celui du club (`Kit body arsenal2425.png`)
+et ils passeraient sans exclusion explicite.
+
+`fetch-crests.py` utilise une voie plus directe pour la même impasse : le champ
+image de l'infobox, lu dans le wikitexte, qui nomme l'écusson sans heuristique.
+Une requête par article, acceptable pour un script, pas au chargement du jeu.
 
 > **Special:FilePath, côté en.wikipedia et pas Commons.** L'un résout les
 > fichiers locaux *et* ceux de Commons ; l'autre renvoie 404 pour les écussons
