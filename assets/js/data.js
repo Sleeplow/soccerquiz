@@ -59,6 +59,10 @@ const Data = (() => {
       const params = new URLSearchParams({
         action: 'query', format: 'json', formatversion: '2', origin: '*',
         prop: 'pageimages', piprop: 'thumbnail', pithumbsize: String(THUMB),
+        // Sans `pilicense=any`, l'API retient par défaut les seules images
+        // libres et écarte silencieusement les écussons en usage loyal —
+        // c'est-à-dire la plupart des clubs anglais, espagnols et portugais.
+        pilicense: 'any',
         redirects: '1', titles: chunk.join('|')
       });
 
