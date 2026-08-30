@@ -8,6 +8,7 @@ joueurs, et que sa formation correspond bien à ce compte. Sort en code 1 si
 une erreur bloquante est trouvée ; les avertissements ne font pas échouer.
 """
 
+import collections
 import json
 import sys
 from pathlib import Path
@@ -34,17 +35,35 @@ def main():
         for team in edition["teams"]:
             teams += 1
             where = f'{team["country"]} {year}'
-            lineup = team["lineup"]
 
-            if len(lineup) != 11:
-                errors.append(f"{where} : {len(lineup)} joueurs au lieu de 11")
+            # Une équipe porte soit une composition figée de onze, soit un
+            # effectif dont le jeu tire un onze à chaque partie.
+            lineup = team.get("lineup")
+            squad = team.get("squad")
+            if (lineup is None) == (squad is None):
+                errors.append(f"{where} : il faut exactement l'un de `lineup` ou `squad`")
+                continue
 
-            outfield = sum(int(n) for n in str(team["formation"]).split("-"))
-            if outfield != len(lineup) - 1:
-                errors.append(
-                    f'{where} : formation {team["formation"]} '
-                    f"({outfield} joueurs de champ) incompatible avec {len(lineup)} joueurs"
-                )
+            if lineup is not None:
+                if len(lineup) != 11:
+                    errors.append(f"{where} : {len(lineup)} joueurs au lieu de 11")
+
+                outfield = sum(int(n) for n in str(team["formation"]).split("-"))
+                if outfield != len(lineup) - 1:
+                    errors.append(
+                        f'{where} : formation {team["formation"]} '
+                        f"({outfield} joueurs de champ) incompatible avec {len(lineup)} joueurs"
+                    )
+            else:
+                lineup = squad
+                # Le tirage vise 1 gardien, 4 défenseurs, 3 milieux, 3 attaquants :
+                # sans ces effectifs minimaux, le onze serait bancal.
+                counts = collections.Counter(
+                    str(p.get("pos", "")).upper() for p in squad)
+                for pos, needed in (("GK", 1), ("DF", 4), ("MF", 3), ("FW", 3)):
+                    if counts[pos] < needed:
+                        errors.append(
+                            f"{where} : {counts[pos]} {pos} dans l'effectif, {needed} nécessaires")
 
             if team["country"] not in countries:
                 errors.append(
@@ -79,9 +98,12 @@ def main():
 
     # Deux clubs partageant un monogramme deviennent indiscernables dès qu'un
     # blason ne charge pas et bascule sur la pastille de repli.
+    # Les clubs importés en masse n'ont pas de monogramme : le repli dérive
+    # alors les initiales du nom, et il n'y a rien à contrôler.
     monos = {}
     for cid, club in clubs.items():
-        monos.setdefault(club.get("mono", ""), []).append(club["name"])
+        if club.get("mono"):
+            monos.setdefault(club["mono"], []).append(club["name"])
     for mono, names in sorted(monos.items()):
         if len(names) > 1:
             errors.append(f'monogramme "{mono}" partagé par {" / ".join(sorted(names))}')
