@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Importer des effectifs</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 20px; background: #10143a; color: #eef; }
+    h1 { margin: 0 0 6px; font-size: 1.5rem; }
+    p.lede { margin: 0 0 18px; color: #a9b2df; max-width: 66ch; line-height: 1.5; }
+    label { display: block; margin: 12px 0 4px; font-size: .8rem; letter-spacing: .1em;
+            text-transform: uppercase; color: #a9b2df; font-weight: 600; }
+    input, textarea { width: 100%; font: inherit; color: #eef; background: rgba(0,0,0,.35);
+                      border: 1px solid rgba(255,255,255,.18); border-radius: 8px; padding: 10px; }
+    textarea { font-family: ui-monospace, monospace; font-size: .74rem; min-height: 220px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+    .row > div { flex: 1 1 180px; }
+    button { font: inherit; font-weight: 700; border: 0; border-radius: 8px; padding: 12px 18px;
+             background: #ffd233; color: #14163a; cursor: pointer; margin-top: 14px; }
+    button.ghost { background: transparent; color: #a9b2df; border: 1px solid rgba(255,255,255,.18); }
+    button:disabled { opacity: .5; cursor: default; }
+    #status { margin: 16px 0 0; font-weight: 600; min-height: 1.4em; }
+    #report { margin: 10px 0 0; color: #a9b2df; font-size: .86rem; line-height: 1.55; }
+    #report b { color: #eef; }
+    .warn { color: #ffd233; }
+    .bad { color: #ff5f6d; }
+    code { background: rgba(0,0,0,.3); padding: 1px 5px; border-radius: 4px; }
+    details { margin-top: 14px; }
+    summary { cursor: pointer; color: #a9b2df; }
+  </style>
+</head>
+<body>
+  <h1>Importer des effectifs</h1>
+  <p class="lede">
+    Cette page lit une page « squads » de Wikipédia depuis <em>ton</em> navigateur,
+    en extrait les joueurs, leur poste et leur club, et produit un bloc prêt à
+    être ajouté au dépôt. Elle ne modifie rien : elle affiche un résultat à copier.
+  </p>
+
+  <div class="row">
+    <div>
+      <label for="article">Article Wikipédia (en)</label>
+      <input id="article" value="2026 FIFA World Cup squads">
+    </div>
+    <div style="flex: 0 0 110px">
+      <label for="year">Année</label>
+      <input id="year" value="2026" inputmode="numeric">
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label for="host">Pays hôte</label>
+      <input id="host" value="Canada / Mexique / États-Unis">
+    </div>
+    <div>
+      <label for="only">Limiter à (facultatif, séparé par des virgules)</label>
+      <input id="only" placeholder="Mexico, Brazil, France — vide = toutes">
+    </div>
+  </div>
+
+  <button id="go">Extraire</button>
+  <button id="copy" class="ghost" disabled>Copier le résultat</button>
+
+  <p id="status"></p>
+  <div id="report"></div>
+
+  <details id="out-wrap" hidden>
+    <summary>Résultat à copier</summary>
+    <label for="out">Bloc JSON</label>
+    <textarea id="out" readonly></textarea>
+  </details>
+
+<script src="../assets/js/data.js"></script>
+<script>
+const API = 'https://en.wikipedia.org/w/api.php';
+
+const el = (id) => document.getElementById(id);
+const status = (msg, cls = '') => { el('status').className = cls; el('status').textContent = msg; };
+
+/** Découpe les paramètres d'un modèle en respectant [[liens]] et {{modèles}}. */
+function splitParams(body) {
+  const parts = [];
+  let depth = 0, current = '';
+  for (let i = 0; i < body.length; i++) {
+    const two = body.slice(i, i + 2);
+    if (two === '[[' || two === '{{') { depth++; current += two; i++; continue; }
+    if (two === ']]' || two === '}}') { depth--; current += two; i++; continue; }
+    if (body[i] === '|' && depth === 0) { parts.push(current); current = ''; continue; }
+    current += body[i];
+  }
+  parts.push(current);
+  return parts;
+}
+
+/**
+ * Corps des modèles dont le nom correspond, en suivant l'imbrication.
+ * Une expression régulière ne convient pas : `{{nat fs player}}` contient un
+ * `{{birth date and age2}}` avant le club, et s'arrêter au premier `}}`
+ * tronquerait le paramètre qui nous intéresse.
+ */
+function findTemplates(text, namePattern) {
+  const bodies = [];
+  for (let i = 0; i < text.length - 1; i++) {
+    if (text[i] !== '{' || text[i + 1] !== '{') continue;
+
+    let depth = 0, end = -1;
+    for (let j = i; j < text.length - 1; j++) {
+      if (text[j] === '{' && text[j + 1] === '{') { depth++; j++; continue; }
+      if (text[j] === '}' && text[j + 1] === '}') {
+        depth--; j++;
+        if (depth === 0) { end = j + 1; break; }
+      }
+    }
+    if (end === -1) break;
+
+    const inner = text.slice(i + 2, end - 2);
+    const pipe = inner.indexOf('|');
+    const name = (pipe === -1 ? inner : inner.slice(0, pipe)).trim();
+    if (namePattern.test(name) && pipe !== -1) bodies.push(inner.slice(pipe + 1));
+    i = end - 1;
+  }
+  return bodies;
+}
+
+/** "[[Fulham F.C.|Fulham]]" -> { title: "Fulham F.C.", label: "Fulham" } */
+function parseLink(raw) {
+  const value = String(raw || '').trim();
+  const link = value.match(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/);
+  if (link) return { title: link[1].trim(), label: (link[2] || link[1]).trim() };
+  const plain = value.replace(/\{\{[^}]*\}\}/g, '').replace(/''+/g, '').trim();
+  return plain ? { title: plain, label: plain } : null;
+}
+
+/** Identifiant stable et lisible, dérivé du titre d'article du club. */
+function slug(title) {
+  return Data.normalize(title)
+    .replace(/(fc|cf|sc|ac|afc|sk|jk|bc)$/, '')
+    .slice(0, 40) || 'club';
+}
+
+function parseWikitext(text) {
+  const teams = [];
+  // Les équipes sont des titres de niveau 3 ; les groupes, de niveau 2.
+  const sections = text.split(/\n(?===+[^=])/);
+
+  for (const section of sections) {
+    const heading = section.match(/^===\s*([^=\n]+?)\s*===/);
+    if (!heading) continue;
+    const country = heading[1].replace(/\[\[|\]\]/g, '').trim();
+
+    const players = [];
+    for (const body of findTemplates(section, /nat fs (?:g )?player/i)) {
+      const params = {};
+      for (const part of splitParams(body)) {
+        const eq = part.indexOf('=');
+        if (eq === -1) continue;
+        params[part.slice(0, eq).trim().toLowerCase()] = part.slice(eq + 1).trim();
+      }
+      const name = parseLink(params.name);
+      const club = parseLink(params.club);
+      if (!name || !club) continue;
+      players.push({
+        name: name.label,
+        pos: (params.pos || '').toUpperCase().replace(/[^A-Z]/g, ''),
+        clubTitle: club.title,
+        clubLabel: club.label
+      });
+    }
+
+    if (players.length >= 11) teams.push({ country, players });
+  }
+  return teams;
+}
+
+async function run() {
+  el('go').disabled = true;
+  el('copy').disabled = true;
+  el('report').innerHTML = '';
+  status('Téléchargement du wikitexte…');
+
+  const article = el('article').value.trim();
+  const params = new URLSearchParams({
+    action: 'query', format: 'json', formatversion: '2', origin: '*',
+    prop: 'revisions', rvprop: 'content', rvslots: 'main', redirects: '1', titles: article
+  });
+
+  let text;
+  try {
+    const res = await fetch(`${API}?${params}`);
+    const json = await res.json();
+    const page = json.query?.pages?.[0];
+    text = page?.revisions?.[0]?.slots?.main?.content;
+    if (!text) throw new Error(page?.missing ? 'article introuvable' : 'pas de contenu');
+  } catch (err) {
+    status(`Échec : ${err.message}`, 'bad');
+    el('go').disabled = false;
+    return;
+  }
+
+  status('Analyse…');
+  let teams = parseWikitext(text);
+
+  const only = el('only').value.split(',').map((s) => s.trim()).filter(Boolean);
+  if (only.length) {
+    const wanted = only.map((s) => Data.normalize(s));
+    teams = teams.filter((t) => wanted.includes(Data.normalize(t.country)));
+  }
+
+  if (!teams.length) {
+    status('Aucune équipe reconnue — la page n’a peut-être pas la structure attendue.', 'bad');
+    el('go').disabled = false;
+    return;
+  }
+
+  // Référentiel existant : on ne réémet pas un club déjà connu.
+  const known = (await (await fetch('../data/clubs.json')).json()).clubs;
+  const byWiki = {};
+  for (const [id, club] of Object.entries(known)) if (club.wiki) byWiki[club.wiki] = id;
+
+  const newClubs = {};
+  const out = { year: Number(el('year').value), host: el('host').value.trim(), teams: [] };
+  let players = 0;
+
+  for (const team of teams) {
+    const squad = team.players.map((p) => {
+      let id = byWiki[p.clubTitle];
+      if (!id) {
+        id = slug(p.clubTitle);
+        let n = 2;
+        while ((known[id] && known[id].wiki !== p.clubTitle) ||
+               (newClubs[id] && newClubs[id].wiki !== p.clubTitle)) id = slug(p.clubTitle) + n++;
+        newClubs[id] = { name: p.clubLabel, wiki: p.clubTitle };
+        byWiki[p.clubTitle] = id;
+      }
+      return { name: p.name, pos: p.pos, club: id };
+    });
+    players += squad.length;
+    out.teams.push({
+      country: team.country,
+      source: `Wikipédia, ${article}`,
+      confidence: 'high',
+      squad
+    });
+  }
+
+  const missingPos = out.teams.filter((t) => {
+    const c = {};
+    for (const p of t.squad) c[p.pos] = (c[p.pos] || 0) + 1;
+    return !(c.GK >= 1 && c.DF >= 4 && c.MF >= 3 && c.FW >= 3);
+  }).map((t) => t.country);
+
+  el('out').value = JSON.stringify({ edition: out, newClubs }, null, 0);
+  el('out-wrap').hidden = false;
+  el('copy').disabled = false;
+  el('go').disabled = false;
+
+  status(`${out.teams.length} équipes, ${players} joueurs, ${Object.keys(newClubs).length} nouveaux clubs.`);
+  el('report').innerHTML =
+    `<p>Équipes : <b>${out.teams.map((t) => t.country).join(', ')}</b></p>` +
+    (missingPos.length
+      ? `<p class="warn">Postes insuffisants pour tirer un onze : ${missingPos.join(', ')} — ` +
+        `ces équipes seront refusées par <code>validate.py</code>.</p>`
+      : '<p>Toutes les équipes ont de quoi tirer un onze cohérent.</p>') +
+    `<p>Copie le bloc et colle-le dans la conversation.</p>`;
+}
+
+el('go').addEventListener('click', run);
+el('copy').addEventListener('click', async () => {
+  const text = el('out').value;
+  try {
+    await navigator.clipboard.writeText(text);
+    status('Copié.');
+  } catch {
+    el('out').select();
+    status('Copie automatique refusée — le texte est sélectionné, copie-le à la main.', 'warn');
+  }
+});
+</script>
+</body>
+</html>

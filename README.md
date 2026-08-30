@@ -58,6 +58,33 @@ Trois fichiers dans `data/` :
   liste des années de Coupe du monde. Cette liste doit rester **bien plus large
   que le jeu de questions**, sinon elle révèle les réponses.
 
+### Importer une édition entière depuis Wikipédia
+
+C'est la voie normale pour ajouter des équipes en nombre.
+
+1. Ouvrir **`tools/import-squads.html`** dans un navigateur, indiquer l'article
+   (`2026 FIFA World Cup squads`), l'année et le pays hôte. La page lit le
+   wikitexte, en extrait chaque joueur avec son poste et le lien vers l'article
+   de son club, et produit un bloc JSON.
+2. Copier le bloc, puis l'appliquer :
+
+```bash
+python3 tools/apply-import.py bloc.json
+python3 tools/validate.py
+```
+
+Le script traduit les noms de pays, complète l'autocomplétion, ajoute les clubs
+inconnus au référentiel et fusionne l'édition. Il **ne remplace jamais une
+composition saisie à la main** par un effectif brut — `--replace-curated` force
+ce cas.
+
+Les nouveaux clubs arrivent avec leur titre d'article, donc leur blason se
+résout tout seul. Ils n'ont ni couleurs ni monogramme : la pastille de repli
+dérive alors une couleur stable de leur nom.
+
+L'import tourne dans *le navigateur*, pas dans un script : c'est ce qui permet
+de l'utiliser depuis un environnement qui n'a pas d'accès réseau vers Wikipédia.
+
 ### Ajouter une équipe
 
 ```jsonc
@@ -73,6 +100,12 @@ Trois fichiers dans `data/` :
   ]
 }
 ```
+
+Une équipe porte soit `lineup` — onze joueurs figés, dans l'ordre de la
+formation — soit `squad`, un effectif complet dont chaque entrée précise son
+poste (`GK`, `DF`, `MF`, `FW`). Dans ce second cas le jeu tire un onze cohérent
+à chaque partie, ce qui donne de la variété mais suppose au moins 1 gardien,
+4 défenseurs, 3 milieux et 3 attaquants.
 
 Puis :
 
@@ -204,6 +237,8 @@ assets/js/app.js      déroulé, chrono, score, autocomplétion
 assets/crests/        blasons rapatriés (optionnel, voir fetch-crests.py)
 data/                 clubs, éditions, sélections
 tools/validate.py     intégrité des données
+tools/import-squads.html importe une édition depuis Wikipédia
+tools/apply-import.py  intègre le bloc importé dans data/
 tools/fetch-crests.py rapatrie les blasons dans le dépôt
 tools/diagnose-crests.py pourquoi un blason ne résout pas
 tools/crest-check.html état de chargement des blasons

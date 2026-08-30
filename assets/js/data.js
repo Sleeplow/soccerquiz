@@ -234,6 +234,54 @@ const Data = (() => {
       .replace(/['’\-\s.]/g, '');
   }
 
+  const DEFAULT_FORMATION = '4-3-3';
+  // Un 4-3-3 : le gardien, puis quatre défenseurs, trois milieux, trois attaquants.
+  const SHAPE = [['GK', 1], ['DF', 4], ['MF', 3], ['FW', 3]];
+
+  /**
+   * Ramène un effectif de Coupe du monde à un onze plausible. Les données
+   * publiques donnent les 26 sélectionnés et leur poste, pas la composition
+   * alignée : on tire donc un onze cohérent, différent à chaque partie.
+   */
+  function pickEleven(squad) {
+    if (!squad.length) return [];
+    const pools = {};
+    for (const player of squad) {
+      const pos = String(player.pos || '').toUpperCase();
+      (pools[pos] = pools[pos] || []).push(player);
+    }
+    for (const pool of Object.values(pools)) {
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+    }
+
+    const eleven = [];
+    for (const [pos, count] of SHAPE) {
+      eleven.push(...(pools[pos] || []).splice(0, count));
+    }
+    // Poste manquant ou effectif déséquilibré : on complète avec le reste,
+    // plutôt que de perdre la question.
+    if (eleven.length < 11) {
+      const rest = Object.values(pools).flat().filter((p) => !eleven.includes(p));
+      eleven.push(...rest.slice(0, 11 - eleven.length));
+    }
+    return eleven.slice(0, 11);
+  }
+
+  /**
+   * Couleur déterministe tirée du nom, pour les clubs dont on n'a pas les
+   * vraies couleurs — un référentiel de plusieurs centaines de clubs ne peut
+   * pas être colorié à la main, et la pastille de repli doit rester lisible.
+   */
+  function derivedColor(name) {
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) | 0;
+    const hue = Math.abs(hash) % 360;
+    return `hsl(${hue} 55% 38%)`;
+  }
+
   async function loadJSON(path) {
     const res = await fetch(path);
     if (!res.ok) throw new Error(`${path} : ${res.status} ${res.statusText}`);
@@ -262,7 +310,15 @@ const Data = (() => {
 
     for (const edition of editionsFile.editions) {
       for (const team of edition.teams) {
-        const lineup = team.lineup.map((player) => {
+        // Un effectif de 26 (données de Coupe du monde) est ramené à un onze
+        // plausible ; une composition déjà figée est prise telle quelle.
+        const selection = team.lineup || pickEleven(team.squad || []);
+        if (selection.length !== 11) {
+          problems.push(`${team.country} ${edition.year} — ${selection.length} joueurs retenus au lieu de 11`);
+          continue;
+        }
+
+        const lineup = selection.map((player) => {
           const club = clubs[player.club];
           if (!club) {
             problems.push(`${team.country} ${edition.year} — club inconnu : "${player.club}"`);
@@ -272,7 +328,12 @@ const Data = (() => {
             name: player.name,
             first: player.first || '',
             needsCheck: !!(player.needsCheck || club.needsCheck),
-            club: { id: player.club, ...club, url: crestUrl(club, resolved) }
+            club: {
+              id: player.club,
+              ...club,
+              colors: club.colors || [derivedColor(club.name), '#ffffff'],
+              url: crestUrl(club, resolved)
+            }
           };
         });
 
@@ -283,7 +344,7 @@ const Data = (() => {
           year: edition.year,
           host: edition.host,
           country: team.country,
-          formation: team.formation,
+          formation: team.formation || DEFAULT_FORMATION,
           note: team.note || '',
           source: team.source || '',
           confidence: team.confidence || 'unknown',
