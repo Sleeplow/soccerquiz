@@ -85,6 +85,11 @@ dérive alors une couleur stable de leur nom.
 L'import tourne dans *le navigateur*, pas dans un script : c'est ce qui permet
 de l'utiliser depuis un environnement qui n'a pas d'accès réseau vers Wikipédia.
 
+La même page offre un **inspecteur de wikitexte** : article plus motif à
+chercher, il affiche l'extrait brut autour de la première occurrence. Sert à
+découvrir la structure d'une page inconnue avant d'écrire de quoi l'analyser,
+plutôt que de la supposer.
+
 ### Ajouter une équipe
 
 ```jsonc
@@ -101,11 +106,25 @@ de l'utiliser depuis un environnement qui n'a pas d'accès réseau vers Wikipéd
 }
 ```
 
-Une équipe porte soit `lineup` — onze joueurs figés, dans l'ordre de la
-formation — soit `squad`, un effectif complet dont chaque entrée précise son
-poste (`GK`, `DF`, `MF`, `FW`). Dans ce second cas le jeu tire un onze cohérent
-à chaque partie, ce qui donne de la variété mais suppose au moins 1 gardien,
-4 défenseurs, 3 milieux et 3 attaquants.
+Une équipe porte soit `lineup` — onze joueurs figés — soit `squad`, un effectif
+complet. Dans ce second cas le jeu tire un onze cohérent à chaque partie, ce qui
+suppose au moins 1 gardien, 4 défenseurs, 3 milieux et 3 attaquants.
+
+### Placement sur le terrain
+
+Chaque joueur d'un `lineup` porte un **poste précis** : `GK`, `RB`, `CB`, `LB`,
+`RWB`, `LWB`, `DM`, `RM`, `CM`, `LM`, `AM`, `RW`, `LW`, `SS`, `ST`. Le terrain
+place alors chacun à son vrai emplacement, et le dispositif se lit directement
+sur l'image — un 4-2-3-1 ne ressemble pas à un 4-4-2.
+
+Les lignes réellement utilisées sont réparties uniformément sur la hauteur : un
+dispositif à six lignes n'écrase pas ses libellés contre ceux de la ligne
+voisine, et la taille des pastilles suit ce nombre de lignes.
+
+Si un seul poste manque ou n'est pas reconnu, l'équipe bascule sur une
+répartition par lignes déduite de `formation` — mieux vaut un terrain cohérent
+qu'un terrain à moitié juste. C'est ce qui arrive aux équipes importées en
+`squad`, dont les codes (`DF`, `MF`, `FW`) désignent des rôles, pas des postes.
 
 Puis :
 

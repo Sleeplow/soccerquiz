@@ -219,8 +219,8 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .pitch {
   position: relative;
-  aspect-ratio: 5 / 6;
-  max-height: 62vh;
+  aspect-ratio: 5 / 7;
+  max-height: 72vh;
   margin: 0 auto;
   border-radius: var(--radius);
   background: linear-gradient(180deg, var(--pitch-1) 0%, var(--pitch-2) 100%);
@@ -234,8 +234,8 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 .slot {
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 22%;
-  max-width: 118px;
+  width: var(--slot-w, 17%);
+  max-width: 104px;
   text-align: center;
 }
 
@@ -264,8 +264,8 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .slot-label {
   display: inline-block;
-  margin-top: 5px;
-  padding: 2px 7px;
+  margin-top: 3px;
+  padding: 1px 6px;
   border-radius: 5px;
   background: var(--accent);
   color: #14163a;
@@ -273,7 +273,7 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .02em;
-  max-width: 100%;
+  max-width: 140%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -283,8 +283,8 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .slot-sub {
   display: block;
-  margin-top: 2px;
-  font-size: clamp(.46rem, 1.6vw, .62rem);
+  margin-top: 1px;
+  font-size: clamp(.44rem, 1.5vw, .58rem);
   color: rgba(255, 255, 255, .72);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -357,7 +357,13 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .site-foot p { margin: 0; }
 
+/* Sous cette largeur, le nom du club sous chaque joueur ne tient plus sans
+   chevaucher la ligne voisine. Il reste lisible dans la légende et l'infobulle. */
+@media (max-width: 560px) {
+  .slot-sub { display: none; }
+}
+
 @media (max-width: 480px) {
-  .pitch { aspect-ratio: 4 / 5; max-height: none; }
+  .pitch { aspect-ratio: 5 / 7; max-height: none; }
   .btn-lg { width: 100%; }
 }

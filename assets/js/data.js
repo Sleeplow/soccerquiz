@@ -327,6 +327,7 @@ const Data = (() => {
           return {
             name: player.name,
             first: player.first || '',
+            pos: player.pos || '',
             needsCheck: !!(player.needsCheck || club.needsCheck),
             club: {
               id: player.club,
@@ -345,6 +346,8 @@ const Data = (() => {
           host: edition.host,
           country: team.country,
           formation: team.formation || DEFAULT_FORMATION,
+          // Distingue un dispositif documenté d'un simple repli d'affichage.
+          declaredFormation: team.formation || null,
           note: team.note || '',
           source: team.source || '',
           confidence: team.confidence || 'unknown',

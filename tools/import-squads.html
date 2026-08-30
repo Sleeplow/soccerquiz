@@ -72,6 +72,31 @@
     <textarea id="out" readonly></textarea>
   </details>
 
+  <hr style="margin: 28px 0; border: 0; border-top: 1px solid rgba(255,255,255,.14)">
+
+  <h1 style="font-size: 1.2rem">Inspecter un article</h1>
+  <p class="lede">
+    Affiche un extrait du wikitexte brut autour d'un motif. Sert à découvrir la
+    structure d'une page inconnue — un rapport de match, par exemple — avant
+    d'écrire de quoi l'analyser.
+  </p>
+
+  <div class="row">
+    <div>
+      <label for="probe-article">Article</label>
+      <input id="probe-article" value="2026 FIFA World Cup Group A">
+    </div>
+    <div style="flex: 0 0 200px">
+      <label for="probe-needle">Motif à chercher</label>
+      <input id="probe-needle" value="football box">
+    </div>
+  </div>
+
+  <button id="probe">Afficher l'extrait</button>
+  <button id="copy-probe" class="ghost" disabled>Copier l'extrait</button>
+  <p id="probe-status"></p>
+  <textarea id="probe-out" readonly hidden></textarea>
+
 <script src="../assets/js/data.js"></script>
 <script>
 const API = 'https://en.wikipedia.org/w/api.php';
@@ -265,6 +290,60 @@ async function run() {
       : '<p>Toutes les équipes ont de quoi tirer un onze cohérent.</p>') +
     `<p>Copie le bloc et colle-le dans la conversation.</p>`;
 }
+
+/** Récupère le wikitexte d'un article, ou lève une erreur explicite. */
+async function fetchWikitext(article) {
+  const params = new URLSearchParams({
+    action: 'query', format: 'json', formatversion: '2', origin: '*',
+    prop: 'revisions', rvprop: 'content', rvslots: 'main', redirects: '1', titles: article
+  });
+  const res = await fetch(`${API}?${params}`);
+  const json = await res.json();
+  const page = json.query?.pages?.[0];
+  const text = page?.revisions?.[0]?.slots?.main?.content;
+  if (!text) throw new Error(page?.missing ? 'article introuvable' : 'pas de contenu');
+  return text;
+}
+
+el('probe').addEventListener('click', async () => {
+  const probeStatus = el('probe-status');
+  probeStatus.className = '';
+  probeStatus.textContent = 'Téléchargement…';
+  el('copy-probe').disabled = true;
+
+  try {
+    const text = await fetchWikitext(el('probe-article').value.trim());
+    const needle = el('probe-needle').value.trim();
+    const at = needle ? text.toLowerCase().indexOf(needle.toLowerCase()) : 0;
+
+    if (at === -1) {
+      probeStatus.className = 'warn';
+      probeStatus.textContent =
+        `Motif absent. L'article fait ${text.length} caractères ; voici son début.`;
+    } else {
+      probeStatus.textContent =
+        `Article de ${text.length} caractères, motif trouvé à la position ${at}.`;
+    }
+
+    const from = Math.max(0, (at === -1 ? 0 : at) - 400);
+    el('probe-out').value = text.slice(from, from + 2600);
+    el('probe-out').hidden = false;
+    el('copy-probe').disabled = false;
+  } catch (err) {
+    probeStatus.className = 'bad';
+    probeStatus.textContent = `Échec : ${err.message}`;
+  }
+});
+
+el('copy-probe').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(el('probe-out').value);
+    el('probe-status').textContent = 'Extrait copié.';
+  } catch {
+    el('probe-out').select();
+    el('probe-status').textContent = 'Copie refusée — le texte est sélectionné.';
+  }
+});
 
 el('go').addEventListener('click', run);
 el('copy').addEventListener('click', async () => {

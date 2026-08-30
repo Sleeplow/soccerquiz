@@ -11,17 +11,72 @@
           "source": "Capture d'écran fournie par l'utilisateur (composition diffusée)",
           "confidence": "high",
           "lineup": [
-            { "name": "Rangel",   "first": "Raúl",     "club": "chivas" },
-            { "name": "Chávez",   "first": "Mateo",    "club": "az-alkmaar" },
-            { "name": "Vásquez",  "first": "Johan",    "club": "genoa" },
-            { "name": "Álvarez",  "first": "Edson",    "club": "fenerbahce" },
-            { "name": "Reyes",    "first": "Israel",   "club": "club-america" },
-            { "name": "Vega",     "first": "Alexis",   "club": "toluca" },
-            { "name": "Vargas",   "first": "Obed",     "club": "atletico-madrid" },
-            { "name": "Fidalgo",  "first": "Álvaro",   "club": "real-betis" },
-            { "name": "Quiñones", "first": "Julián",   "club": "al-qadsiah" },
-            { "name": "Giménez",  "first": "Santiago", "club": "ac-milan" },
-            { "name": "Jiménez",  "first": "Raúl",     "club": "fulham" }
+            {
+              "name": "Rangel",
+              "first": "Raúl",
+              "club": "chivas",
+              "pos": "GK"
+            },
+            {
+              "name": "Chávez",
+              "first": "Mateo",
+              "club": "az-alkmaar",
+              "pos": "LB"
+            },
+            {
+              "name": "Vásquez",
+              "first": "Johan",
+              "club": "genoa",
+              "pos": "CB"
+            },
+            {
+              "name": "Álvarez",
+              "first": "Edson",
+              "club": "fenerbahce",
+              "pos": "CB"
+            },
+            {
+              "name": "Reyes",
+              "first": "Israel",
+              "club": "club-america",
+              "pos": "RB"
+            },
+            {
+              "name": "Vega",
+              "first": "Alexis",
+              "club": "toluca",
+              "pos": "LM"
+            },
+            {
+              "name": "Vargas",
+              "first": "Obed",
+              "club": "atletico-madrid",
+              "pos": "CM"
+            },
+            {
+              "name": "Fidalgo",
+              "first": "Álvaro",
+              "club": "real-betis",
+              "pos": "CM"
+            },
+            {
+              "name": "Quiñones",
+              "first": "Julián",
+              "club": "al-qadsiah",
+              "pos": "RM"
+            },
+            {
+              "name": "Giménez",
+              "first": "Santiago",
+              "club": "ac-milan",
+              "pos": "ST"
+            },
+            {
+              "name": "Jiménez",
+              "first": "Raúl",
+              "club": "fulham",
+              "pos": "ST"
+            }
           ]
         }
       ]
@@ -37,17 +92,72 @@
           "source": "Connaissance du modèle",
           "confidence": "high",
           "lineup": [
-            { "name": "E. Martínez", "first": "Emiliano", "club": "aston-villa" },
-            { "name": "Molina",      "first": "Nahuel",  "club": "atletico-madrid" },
-            { "name": "Romero",      "first": "Cristian","club": "tottenham" },
-            { "name": "Otamendi",    "first": "Nicolás", "club": "benfica" },
-            { "name": "Tagliafico",  "first": "Nicolás", "club": "lyon" },
-            { "name": "De Paul",     "first": "Rodrigo", "club": "atletico-madrid" },
-            { "name": "Fernández",   "first": "Enzo",    "club": "benfica" },
-            { "name": "Mac Allister","first": "Alexis",  "club": "brighton" },
-            { "name": "Di María",    "first": "Ángel",   "club": "juventus" },
-            { "name": "Messi",       "first": "Lionel",  "club": "psg" },
-            { "name": "J. Álvarez",  "first": "Julián",  "club": "man-city" }
+            {
+              "name": "E. Martínez",
+              "first": "Emiliano",
+              "club": "aston-villa",
+              "pos": "GK"
+            },
+            {
+              "name": "Molina",
+              "first": "Nahuel",
+              "club": "atletico-madrid",
+              "pos": "RB"
+            },
+            {
+              "name": "Romero",
+              "first": "Cristian",
+              "club": "tottenham",
+              "pos": "CB"
+            },
+            {
+              "name": "Otamendi",
+              "first": "Nicolás",
+              "club": "benfica",
+              "pos": "CB"
+            },
+            {
+              "name": "Tagliafico",
+              "first": "Nicolás",
+              "club": "lyon",
+              "pos": "LB"
+            },
+            {
+              "name": "De Paul",
+              "first": "Rodrigo",
+              "club": "atletico-madrid",
+              "pos": "CM"
+            },
+            {
+              "name": "Fernández",
+              "first": "Enzo",
+              "club": "benfica",
+              "pos": "DM"
+            },
+            {
+              "name": "Mac Allister",
+              "first": "Alexis",
+              "club": "brighton",
+              "pos": "CM"
+            },
+            {
+              "name": "Di María",
+              "first": "Ángel",
+              "club": "juventus",
+              "pos": "LW"
+            },
+            {
+              "name": "Messi",
+              "first": "Lionel",
+              "club": "psg",
+              "pos": "RW"
+            },
+            {
+              "name": "J. Álvarez",
+              "first": "Julián",
+              "club": "man-city",
+              "pos": "ST"
+            }
           ]
         },
         {
@@ -57,17 +167,72 @@
           "source": "Connaissance du modèle",
           "confidence": "high",
           "lineup": [
-            { "name": "Lloris",     "first": "Hugo",     "club": "tottenham" },
-            { "name": "Koundé",     "first": "Jules",    "club": "barcelona" },
-            { "name": "Varane",     "first": "Raphaël",  "club": "man-utd" },
-            { "name": "Upamecano",  "first": "Dayot",    "club": "bayern" },
-            { "name": "T. Hernández","first": "Theo",    "club": "ac-milan" },
-            { "name": "Tchouaméni", "first": "Aurélien", "club": "real-madrid" },
-            { "name": "Rabiot",     "first": "Adrien",   "club": "juventus" },
-            { "name": "Dembélé",    "first": "Ousmane",  "club": "barcelona" },
-            { "name": "Griezmann",  "first": "Antoine",  "club": "atletico-madrid" },
-            { "name": "Mbappé",     "first": "Kylian",   "club": "psg" },
-            { "name": "Giroud",     "first": "Olivier",  "club": "ac-milan" }
+            {
+              "name": "Lloris",
+              "first": "Hugo",
+              "club": "tottenham",
+              "pos": "GK"
+            },
+            {
+              "name": "Koundé",
+              "first": "Jules",
+              "club": "barcelona",
+              "pos": "RB"
+            },
+            {
+              "name": "Varane",
+              "first": "Raphaël",
+              "club": "man-utd",
+              "pos": "CB"
+            },
+            {
+              "name": "Upamecano",
+              "first": "Dayot",
+              "club": "bayern",
+              "pos": "CB"
+            },
+            {
+              "name": "T. Hernández",
+              "first": "Theo",
+              "club": "ac-milan",
+              "pos": "LB"
+            },
+            {
+              "name": "Tchouaméni",
+              "first": "Aurélien",
+              "club": "real-madrid",
+              "pos": "DM"
+            },
+            {
+              "name": "Rabiot",
+              "first": "Adrien",
+              "club": "juventus",
+              "pos": "DM"
+            },
+            {
+              "name": "Dembélé",
+              "first": "Ousmane",
+              "club": "barcelona",
+              "pos": "RW"
+            },
+            {
+              "name": "Griezmann",
+              "first": "Antoine",
+              "club": "atletico-madrid",
+              "pos": "AM"
+            },
+            {
+              "name": "Mbappé",
+              "first": "Kylian",
+              "club": "psg",
+              "pos": "LW"
+            },
+            {
+              "name": "Giroud",
+              "first": "Olivier",
+              "club": "ac-milan",
+              "pos": "ST"
+            }
           ]
         },
         {
@@ -76,17 +241,72 @@
           "source": "Connaissance du modèle",
           "confidence": "medium",
           "lineup": [
-            { "name": "Alisson",     "first": "Alisson",  "club": "liverpool" },
-            { "name": "Danilo",      "first": "Danilo",   "club": "juventus" },
-            { "name": "Marquinhos",  "first": "Marquinhos","club": "psg" },
-            { "name": "Thiago Silva","first": "Thiago",   "club": "chelsea" },
-            { "name": "Militão",     "first": "Éder",     "club": "real-madrid" },
-            { "name": "Casemiro",    "first": "Carlos",   "club": "man-utd" },
-            { "name": "Paquetá",     "first": "Lucas",    "club": "west-ham" },
-            { "name": "Neymar",      "first": "Neymar",   "club": "psg" },
-            { "name": "Raphinha",    "first": "Raphinha", "club": "barcelona" },
-            { "name": "Richarlison", "first": "Richarlison","club": "tottenham" },
-            { "name": "Vinícius Jr", "first": "Vinícius", "club": "real-madrid" }
+            {
+              "name": "Alisson",
+              "first": "Alisson",
+              "club": "liverpool",
+              "pos": "GK"
+            },
+            {
+              "name": "Danilo",
+              "first": "Danilo",
+              "club": "juventus",
+              "pos": "LB"
+            },
+            {
+              "name": "Marquinhos",
+              "first": "Marquinhos",
+              "club": "psg",
+              "pos": "CB"
+            },
+            {
+              "name": "Thiago Silva",
+              "first": "Thiago",
+              "club": "chelsea",
+              "pos": "CB"
+            },
+            {
+              "name": "Militão",
+              "first": "Éder",
+              "club": "real-madrid",
+              "pos": "RB"
+            },
+            {
+              "name": "Casemiro",
+              "first": "Carlos",
+              "club": "man-utd",
+              "pos": "DM"
+            },
+            {
+              "name": "Paquetá",
+              "first": "Lucas",
+              "club": "west-ham",
+              "pos": "CM"
+            },
+            {
+              "name": "Neymar",
+              "first": "Neymar",
+              "club": "psg",
+              "pos": "AM"
+            },
+            {
+              "name": "Raphinha",
+              "first": "Raphinha",
+              "club": "barcelona",
+              "pos": "RW"
+            },
+            {
+              "name": "Richarlison",
+              "first": "Richarlison",
+              "club": "tottenham",
+              "pos": "ST"
+            },
+            {
+              "name": "Vinícius Jr",
+              "first": "Vinícius",
+              "club": "real-madrid",
+              "pos": "LW"
+            }
           ]
         },
         {
@@ -95,17 +315,72 @@
           "source": "Connaissance du modèle",
           "confidence": "medium",
           "lineup": [
-            { "name": "Pickford",   "first": "Jordan",  "club": "everton" },
-            { "name": "Walker",     "first": "Kyle",    "club": "man-city" },
-            { "name": "Stones",     "first": "John",    "club": "man-city" },
-            { "name": "Maguire",    "first": "Harry",   "club": "man-utd" },
-            { "name": "Shaw",       "first": "Luke",    "club": "man-utd" },
-            { "name": "Henderson",  "first": "Jordan",  "club": "liverpool" },
-            { "name": "Rice",       "first": "Declan",  "club": "west-ham" },
-            { "name": "Bellingham", "first": "Jude",    "club": "dortmund" },
-            { "name": "Saka",       "first": "Bukayo",  "club": "arsenal" },
-            { "name": "Kane",       "first": "Harry",   "club": "tottenham" },
-            { "name": "Foden",      "first": "Phil",    "club": "man-city" }
+            {
+              "name": "Pickford",
+              "first": "Jordan",
+              "club": "everton",
+              "pos": "GK"
+            },
+            {
+              "name": "Walker",
+              "first": "Kyle",
+              "club": "man-city",
+              "pos": "RB"
+            },
+            {
+              "name": "Stones",
+              "first": "John",
+              "club": "man-city",
+              "pos": "CB"
+            },
+            {
+              "name": "Maguire",
+              "first": "Harry",
+              "club": "man-utd",
+              "pos": "CB"
+            },
+            {
+              "name": "Shaw",
+              "first": "Luke",
+              "club": "man-utd",
+              "pos": "LB"
+            },
+            {
+              "name": "Henderson",
+              "first": "Jordan",
+              "club": "liverpool",
+              "pos": "CM"
+            },
+            {
+              "name": "Rice",
+              "first": "Declan",
+              "club": "west-ham",
+              "pos": "DM"
+            },
+            {
+              "name": "Bellingham",
+              "first": "Jude",
+              "club": "dortmund",
+              "pos": "CM"
+            },
+            {
+              "name": "Saka",
+              "first": "Bukayo",
+              "club": "arsenal",
+              "pos": "RW"
+            },
+            {
+              "name": "Kane",
+              "first": "Harry",
+              "club": "tottenham",
+              "pos": "ST"
+            },
+            {
+              "name": "Foden",
+              "first": "Phil",
+              "club": "man-city",
+              "pos": "LW"
+            }
           ]
         },
         {
@@ -114,17 +389,72 @@
           "source": "Connaissance du modèle",
           "confidence": "medium",
           "lineup": [
-            { "name": "Livaković", "first": "Dominik", "club": "dinamo-zagreb" },
-            { "name": "Juranović", "first": "Josip",   "club": "celtic" },
-            { "name": "Lovren",    "first": "Dejan",   "club": "zenit" },
-            { "name": "Gvardiol",  "first": "Joško",   "club": "leipzig" },
-            { "name": "Sosa",      "first": "Borna",   "club": "stuttgart" },
-            { "name": "Modrić",    "first": "Luka",    "club": "real-madrid" },
-            { "name": "Brozović",  "first": "Marcelo", "club": "inter" },
-            { "name": "Kovačić",   "first": "Mateo",   "club": "chelsea" },
-            { "name": "Pašalić",   "first": "Mario",   "club": "atalanta" },
-            { "name": "Kramarić",  "first": "Andrej",  "club": "hoffenheim" },
-            { "name": "Perišić",   "first": "Ivan",    "club": "tottenham" }
+            {
+              "name": "Livaković",
+              "first": "Dominik",
+              "club": "dinamo-zagreb",
+              "pos": "GK"
+            },
+            {
+              "name": "Juranović",
+              "first": "Josip",
+              "club": "celtic",
+              "pos": "RB"
+            },
+            {
+              "name": "Lovren",
+              "first": "Dejan",
+              "club": "zenit",
+              "pos": "CB"
+            },
+            {
+              "name": "Gvardiol",
+              "first": "Joško",
+              "club": "leipzig",
+              "pos": "CB"
+            },
+            {
+              "name": "Sosa",
+              "first": "Borna",
+              "club": "stuttgart",
+              "pos": "LB"
+            },
+            {
+              "name": "Modrić",
+              "first": "Luka",
+              "club": "real-madrid",
+              "pos": "CM"
+            },
+            {
+              "name": "Brozović",
+              "first": "Marcelo",
+              "club": "inter",
+              "pos": "DM"
+            },
+            {
+              "name": "Kovačić",
+              "first": "Mateo",
+              "club": "chelsea",
+              "pos": "CM"
+            },
+            {
+              "name": "Pašalić",
+              "first": "Mario",
+              "club": "atalanta",
+              "pos": "RW"
+            },
+            {
+              "name": "Kramarić",
+              "first": "Andrej",
+              "club": "hoffenheim",
+              "pos": "ST"
+            },
+            {
+              "name": "Perišić",
+              "first": "Ivan",
+              "club": "tottenham",
+              "pos": "LW"
+            }
           ]
         },
         {
@@ -133,17 +463,72 @@
           "source": "Connaissance du modèle",
           "confidence": "medium",
           "lineup": [
-            { "name": "Bounou",    "first": "Yassine", "club": "sevilla" },
-            { "name": "Hakimi",    "first": "Achraf",  "club": "psg" },
-            { "name": "Saïss",     "first": "Romain",  "club": "besiktas" },
-            { "name": "Aguerd",    "first": "Nayef",   "club": "west-ham" },
-            { "name": "Mazraoui",  "first": "Noussair","club": "bayern" },
-            { "name": "Amrabat",   "first": "Sofyan",  "club": "fiorentina" },
-            { "name": "Ounahi",    "first": "Azzedine","club": "angers" },
-            { "name": "Amallah",   "first": "Selim",   "club": "standard-liege" },
-            { "name": "Ziyech",    "first": "Hakim",   "club": "chelsea" },
-            { "name": "En-Nesyri", "first": "Youssef", "club": "sevilla" },
-            { "name": "Boufal",    "first": "Sofiane", "club": "angers" }
+            {
+              "name": "Bounou",
+              "first": "Yassine",
+              "club": "sevilla",
+              "pos": "GK"
+            },
+            {
+              "name": "Hakimi",
+              "first": "Achraf",
+              "club": "psg",
+              "pos": "RB"
+            },
+            {
+              "name": "Saïss",
+              "first": "Romain",
+              "club": "besiktas",
+              "pos": "CB"
+            },
+            {
+              "name": "Aguerd",
+              "first": "Nayef",
+              "club": "west-ham",
+              "pos": "CB"
+            },
+            {
+              "name": "Mazraoui",
+              "first": "Noussair",
+              "club": "bayern",
+              "pos": "LB"
+            },
+            {
+              "name": "Amrabat",
+              "first": "Sofyan",
+              "club": "fiorentina",
+              "pos": "DM"
+            },
+            {
+              "name": "Ounahi",
+              "first": "Azzedine",
+              "club": "angers",
+              "pos": "CM"
+            },
+            {
+              "name": "Amallah",
+              "first": "Selim",
+              "club": "standard-liege",
+              "pos": "CM"
+            },
+            {
+              "name": "Ziyech",
+              "first": "Hakim",
+              "club": "chelsea",
+              "pos": "RW"
+            },
+            {
+              "name": "En-Nesyri",
+              "first": "Youssef",
+              "club": "sevilla",
+              "pos": "ST"
+            },
+            {
+              "name": "Boufal",
+              "first": "Sofiane",
+              "club": "angers",
+              "pos": "LW"
+            }
           ]
         },
         {
@@ -152,17 +537,72 @@
           "source": "Connaissance du modèle",
           "confidence": "medium",
           "lineup": [
-            { "name": "Unai Simón", "first": "Unai",    "club": "athletic-club" },
-            { "name": "Azpilicueta","first": "César",   "club": "chelsea" },
-            { "name": "Rodri",      "first": "Rodrigo", "club": "man-city" },
-            { "name": "Laporte",    "first": "Aymeric", "club": "man-city" },
-            { "name": "Jordi Alba", "first": "Jordi",   "club": "barcelona" },
-            { "name": "Gavi",       "first": "Pablo",   "club": "barcelona" },
-            { "name": "Busquets",   "first": "Sergio",  "club": "barcelona" },
-            { "name": "Pedri",      "first": "Pedri",   "club": "barcelona" },
-            { "name": "Ferran Torres","first": "Ferran","club": "barcelona" },
-            { "name": "Morata",     "first": "Álvaro",  "club": "atletico-madrid" },
-            { "name": "Dani Olmo",  "first": "Dani",    "club": "leipzig" }
+            {
+              "name": "Unai Simón",
+              "first": "Unai",
+              "club": "athletic-club",
+              "pos": "GK"
+            },
+            {
+              "name": "Azpilicueta",
+              "first": "César",
+              "club": "chelsea",
+              "pos": "RB"
+            },
+            {
+              "name": "Rodri",
+              "first": "Rodrigo",
+              "club": "man-city",
+              "pos": "CB"
+            },
+            {
+              "name": "Laporte",
+              "first": "Aymeric",
+              "club": "man-city",
+              "pos": "CB"
+            },
+            {
+              "name": "Jordi Alba",
+              "first": "Jordi",
+              "club": "barcelona",
+              "pos": "LB"
+            },
+            {
+              "name": "Gavi",
+              "first": "Pablo",
+              "club": "barcelona",
+              "pos": "CM"
+            },
+            {
+              "name": "Busquets",
+              "first": "Sergio",
+              "club": "barcelona",
+              "pos": "DM"
+            },
+            {
+              "name": "Pedri",
+              "first": "Pedri",
+              "club": "barcelona",
+              "pos": "CM"
+            },
+            {
+              "name": "Ferran Torres",
+              "first": "Ferran",
+              "club": "barcelona",
+              "pos": "RW"
+            },
+            {
+              "name": "Morata",
+              "first": "Álvaro",
+              "club": "atletico-madrid",
+              "pos": "ST"
+            },
+            {
+              "name": "Dani Olmo",
+              "first": "Dani",
+              "club": "leipzig",
+              "pos": "LW"
+            }
           ]
         }
       ]
@@ -178,17 +618,72 @@
           "source": "Connaissance du modèle",
           "confidence": "high",
           "lineup": [
-            { "name": "Lloris",     "first": "Hugo",     "club": "tottenham" },
-            { "name": "Pavard",     "first": "Benjamin", "club": "stuttgart" },
-            { "name": "Varane",     "first": "Raphaël",  "club": "real-madrid" },
-            { "name": "Umtiti",     "first": "Samuel",   "club": "barcelona" },
-            { "name": "L. Hernández","first": "Lucas",   "club": "atletico-madrid" },
-            { "name": "Kanté",      "first": "N'Golo",   "club": "chelsea" },
-            { "name": "Pogba",      "first": "Paul",     "club": "man-utd" },
-            { "name": "Mbappé",     "first": "Kylian",   "club": "psg" },
-            { "name": "Griezmann",  "first": "Antoine",  "club": "atletico-madrid" },
-            { "name": "Matuidi",    "first": "Blaise",   "club": "juventus" },
-            { "name": "Giroud",     "first": "Olivier",  "club": "chelsea" }
+            {
+              "name": "Lloris",
+              "first": "Hugo",
+              "club": "tottenham",
+              "pos": "GK"
+            },
+            {
+              "name": "Pavard",
+              "first": "Benjamin",
+              "club": "stuttgart",
+              "pos": "RB"
+            },
+            {
+              "name": "Varane",
+              "first": "Raphaël",
+              "club": "real-madrid",
+              "pos": "CB"
+            },
+            {
+              "name": "Umtiti",
+              "first": "Samuel",
+              "club": "barcelona",
+              "pos": "CB"
+            },
+            {
+              "name": "L. Hernández",
+              "first": "Lucas",
+              "club": "atletico-madrid",
+              "pos": "LB"
+            },
+            {
+              "name": "Kanté",
+              "first": "N'Golo",
+              "club": "chelsea",
+              "pos": "DM"
+            },
+            {
+              "name": "Pogba",
+              "first": "Paul",
+              "club": "man-utd",
+              "pos": "DM"
+            },
+            {
+              "name": "Mbappé",
+              "first": "Kylian",
+              "club": "psg",
+              "pos": "RW"
+            },
+            {
+              "name": "Griezmann",
+              "first": "Antoine",
+              "club": "atletico-madrid",
+              "pos": "AM"
+            },
+            {
+              "name": "Matuidi",
+              "first": "Blaise",
+              "club": "juventus",
+              "pos": "LW"
+            },
+            {
+              "name": "Giroud",
+              "first": "Olivier",
+              "club": "chelsea",
+              "pos": "ST"
+            }
           ]
         },
         {
@@ -198,17 +693,72 @@
           "source": "Connaissance du modèle",
           "confidence": "high",
           "lineup": [
-            { "name": "Subašić",   "first": "Danijel", "club": "monaco" },
-            { "name": "Vrsaljko",  "first": "Šime",    "club": "atletico-madrid" },
-            { "name": "Lovren",    "first": "Dejan",   "club": "liverpool" },
-            { "name": "Vida",      "first": "Domagoj", "club": "besiktas" },
-            { "name": "Strinić",   "first": "Ivan",    "club": "sampdoria" },
-            { "name": "Rakitić",   "first": "Ivan",    "club": "barcelona" },
-            { "name": "Brozović",  "first": "Marcelo", "club": "inter" },
-            { "name": "Rebić",     "first": "Ante",    "club": "eintracht" },
-            { "name": "Modrić",    "first": "Luka",    "club": "real-madrid" },
-            { "name": "Perišić",   "first": "Ivan",    "club": "inter" },
-            { "name": "Mandžukić", "first": "Mario",   "club": "juventus" }
+            {
+              "name": "Subašić",
+              "first": "Danijel",
+              "club": "monaco",
+              "pos": "GK"
+            },
+            {
+              "name": "Vrsaljko",
+              "first": "Šime",
+              "club": "atletico-madrid",
+              "pos": "RB"
+            },
+            {
+              "name": "Lovren",
+              "first": "Dejan",
+              "club": "liverpool",
+              "pos": "CB"
+            },
+            {
+              "name": "Vida",
+              "first": "Domagoj",
+              "club": "besiktas",
+              "pos": "CB"
+            },
+            {
+              "name": "Strinić",
+              "first": "Ivan",
+              "club": "sampdoria",
+              "pos": "LB"
+            },
+            {
+              "name": "Rakitić",
+              "first": "Ivan",
+              "club": "barcelona",
+              "pos": "DM"
+            },
+            {
+              "name": "Brozović",
+              "first": "Marcelo",
+              "club": "inter",
+              "pos": "DM"
+            },
+            {
+              "name": "Rebić",
+              "first": "Ante",
+              "club": "eintracht",
+              "pos": "RW"
+            },
+            {
+              "name": "Modrić",
+              "first": "Luka",
+              "club": "real-madrid",
+              "pos": "AM"
+            },
+            {
+              "name": "Perišić",
+              "first": "Ivan",
+              "club": "inter",
+              "pos": "LW"
+            },
+            {
+              "name": "Mandžukić",
+              "first": "Mario",
+              "club": "juventus",
+              "pos": "ST"
+            }
           ]
         }
       ]
@@ -224,17 +774,72 @@
           "source": "Connaissance du modèle",
           "confidence": "high",
           "lineup": [
-            { "name": "Neuer",        "first": "Manuel",    "club": "bayern" },
-            { "name": "Lahm",         "first": "Philipp",   "club": "bayern" },
-            { "name": "Boateng",      "first": "Jérôme",    "club": "bayern" },
-            { "name": "Hummels",      "first": "Mats",      "club": "dortmund" },
-            { "name": "Höwedes",      "first": "Benedikt",  "club": "schalke" },
-            { "name": "Schweinsteiger","first": "Bastian",  "club": "bayern" },
-            { "name": "Kroos",        "first": "Toni",      "club": "bayern" },
-            { "name": "Khedira",      "first": "Sami",      "club": "real-madrid" },
-            { "name": "Müller",       "first": "Thomas",    "club": "bayern" },
-            { "name": "Klose",        "first": "Miroslav",  "club": "lazio" },
-            { "name": "Özil",         "first": "Mesut",     "club": "arsenal" }
+            {
+              "name": "Neuer",
+              "first": "Manuel",
+              "club": "bayern",
+              "pos": "GK"
+            },
+            {
+              "name": "Lahm",
+              "first": "Philipp",
+              "club": "bayern",
+              "pos": "RB"
+            },
+            {
+              "name": "Boateng",
+              "first": "Jérôme",
+              "club": "bayern",
+              "pos": "CB"
+            },
+            {
+              "name": "Hummels",
+              "first": "Mats",
+              "club": "dortmund",
+              "pos": "CB"
+            },
+            {
+              "name": "Höwedes",
+              "first": "Benedikt",
+              "club": "schalke",
+              "pos": "LB"
+            },
+            {
+              "name": "Schweinsteiger",
+              "first": "Bastian",
+              "club": "bayern",
+              "pos": "DM"
+            },
+            {
+              "name": "Kroos",
+              "first": "Toni",
+              "club": "bayern",
+              "pos": "CM"
+            },
+            {
+              "name": "Khedira",
+              "first": "Sami",
+              "club": "real-madrid",
+              "pos": "CM"
+            },
+            {
+              "name": "Müller",
+              "first": "Thomas",
+              "club": "bayern",
+              "pos": "RW"
+            },
+            {
+              "name": "Klose",
+              "first": "Miroslav",
+              "club": "lazio",
+              "pos": "ST"
+            },
+            {
+              "name": "Özil",
+              "first": "Mesut",
+              "club": "arsenal",
+              "pos": "LW"
+            }
           ]
         }
       ]
@@ -250,17 +855,73 @@
           "source": "Connaissance du modèle",
           "confidence": "high",
           "lineup": [
-            { "name": "Casillas",    "first": "Iker",    "club": "real-madrid" },
-            { "name": "Ramos",       "first": "Sergio",  "club": "real-madrid" },
-            { "name": "Piqué",       "first": "Gerard",  "club": "barcelona" },
-            { "name": "Puyol",       "first": "Carles",  "club": "barcelona" },
-            { "name": "Capdevila",   "first": "Joan",    "club": "villarreal" },
-            { "name": "Xabi Alonso", "first": "Xabi",    "club": "real-madrid" },
-            { "name": "Busquets",    "first": "Sergio",  "club": "barcelona" },
-            { "name": "Xavi",        "first": "Xavi",    "club": "barcelona" },
-            { "name": "Pedro",       "first": "Pedro",   "club": "barcelona" },
-            { "name": "Villa",       "first": "David",   "club": "barcelona", "needsCheck": true },
-            { "name": "Iniesta",     "first": "Andrés",  "club": "barcelona" }
+            {
+              "name": "Casillas",
+              "first": "Iker",
+              "club": "real-madrid",
+              "pos": "GK"
+            },
+            {
+              "name": "Ramos",
+              "first": "Sergio",
+              "club": "real-madrid",
+              "pos": "RB"
+            },
+            {
+              "name": "Piqué",
+              "first": "Gerard",
+              "club": "barcelona",
+              "pos": "CB"
+            },
+            {
+              "name": "Puyol",
+              "first": "Carles",
+              "club": "barcelona",
+              "pos": "CB"
+            },
+            {
+              "name": "Capdevila",
+              "first": "Joan",
+              "club": "villarreal",
+              "pos": "LB"
+            },
+            {
+              "name": "Xabi Alonso",
+              "first": "Xabi",
+              "club": "real-madrid",
+              "pos": "CM"
+            },
+            {
+              "name": "Busquets",
+              "first": "Sergio",
+              "club": "barcelona",
+              "pos": "DM"
+            },
+            {
+              "name": "Xavi",
+              "first": "Xavi",
+              "club": "barcelona",
+              "pos": "CM"
+            },
+            {
+              "name": "Pedro",
+              "first": "Pedro",
+              "club": "barcelona",
+              "pos": "RW"
+            },
+            {
+              "name": "Villa",
+              "first": "David",
+              "club": "barcelona",
+              "needsCheck": true,
+              "pos": "ST"
+            },
+            {
+              "name": "Iniesta",
+              "first": "Andrés",
+              "club": "barcelona",
+              "pos": "LW"
+            }
           ]
         }
       ]
