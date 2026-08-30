@@ -41,7 +41,17 @@
     finalScore: el('final-score'),
     recap: el('recap'),
     replayBtn: el('replay-btn'),
-    homeBtn: el('home-btn')
+    homeBtn: el('home-btn'),
+
+    scoreEntry: el('score-entry'),
+    scoreEntryLead: el('score-entry-lead'),
+    playerName: el('player-name'),
+    endBoard: el('end-board'),
+    boardBtn: el('board-btn'),
+    boardTabs: el('board-tabs'),
+    boardBody: el('board-body'),
+    boardBack: el('board-back'),
+    boardClear: el('board-clear')
   };
 
   let data = null;
@@ -53,6 +63,7 @@
     score: 0,
     results: [],
     years: [],
+    run: null,
     hintUsed: false,
     deadline: 0,
     tick: null
@@ -284,9 +295,33 @@
   }
 
   function endGame() {
-    const max = state.queue.length * (POINTS.country + POINTS.speedMax +
-      (state.mode === 'expert' ? POINTS.yearExact : 0));
+    // Sans chrono, la prime de rapidité est hors d'atteinte : l'inclure dans
+    // le maximum afficherait un plafond que personne ne peut toucher.
+    const perQuestion = POINTS.country
+      + (state.duration ? POINTS.speedMax : 0)
+      + (state.mode === 'expert' ? POINTS.yearExact : 0);
+    const max = state.queue.length * perQuestion;
     dom.finalScore.textContent = `${state.score} pts sur ${max} possibles`;
+
+    state.run = {
+      score: state.score,
+      max,
+      questions: state.queue.length,
+      correct: state.results.filter((r) => r.countryOk).length,
+      years: state.years
+    };
+
+    // Le nom n'est demandé que si le score entre effectivement au classement.
+    const eligible = Scores.qualifies(state.mode, state.score);
+    dom.scoreEntry.hidden = !eligible;
+    if (eligible) {
+      const rank = Scores.list(state.mode).filter((e) => e.score >= state.score).length + 1;
+      dom.scoreEntryLead.textContent =
+        `${ordinal(rank)} place du classement ${state.mode === 'expert' ? 'expert' : 'normal'} — ` +
+        'entre ton nom pour le garder.';
+      dom.playerName.value = lastName();
+    }
+    renderBoard(dom.endBoard, state.mode, 0);
 
     dom.recap.innerHTML = '';
     for (const r of state.results) {
@@ -439,6 +474,123 @@
     hintBtn.disabled = false;
     hintBtn.textContent = HINT_LABEL;
   }
+
+  /* ── Classement ─────────────────────────── */
+
+  const LAST_NAME_KEY = 'soccerquiz.lastName';
+
+  function lastName() {
+    try { return localStorage.getItem(LAST_NAME_KEY) || ''; } catch { return ''; }
+  }
+
+  function rememberName(name) {
+    try { localStorage.setItem(LAST_NAME_KEY, name); } catch { /* stockage refusé */ }
+  }
+
+  /** « 1re », « 2e », « 3e »… */
+  function ordinal(rank) {
+    return rank === 1 ? '1re' : `${rank}e`;
+  }
+
+  /**
+   * @param {HTMLElement} host
+   * @param {'normal'|'expert'} mode
+   * @param {number} highlightRank — rang à mettre en avant, 0 pour aucun.
+   *        On compare le rang et non l'objet : la liste est relue depuis le
+   *        stockage, ses entrées n'ont donc plus la même identité.
+   */
+  function renderBoard(host, mode, highlightRank) {
+    const entries = Scores.list(mode);
+    host.innerHTML = '';
+
+    const title = document.createElement('h3');
+    title.className = 'board-title';
+    title.textContent = mode === 'expert' ? 'Classement expert' : 'Classement normal';
+    host.appendChild(title);
+
+    if (!entries.length) {
+      const empty = document.createElement('p');
+      empty.className = 'hint';
+      empty.textContent = 'Aucun score enregistré pour ce mode.';
+      host.appendChild(empty);
+      return;
+    }
+
+    const table = document.createElement('ol');
+    table.className = 'board';
+    entries.forEach((entry, index) => {
+      const li = document.createElement('li');
+      if (highlightRank && index + 1 === highlightRank) li.className = 'is-new';
+
+      const name = document.createElement('span');
+      name.className = 'board-name';
+      name.textContent = entry.name;          // jamais interprété comme du HTML
+
+      const score = document.createElement('span');
+      score.className = 'board-score';
+      score.textContent = `${entry.score} pts`;
+
+      const detail = document.createElement('span');
+      detail.className = 'board-detail';
+      const editions = entry.years?.length ? entry.years.join(', ') : '—';
+      detail.textContent =
+        `${entry.correct}/${entry.questions} trouvées · ${editions}` +
+        (entry.date ? ` · ${entry.date}` : '');
+
+      li.append(name, score, detail);
+      table.appendChild(li);
+    });
+    host.appendChild(table);
+  }
+
+  let boardMode = 'normal';
+
+  function showBoardScreen() {
+    dom.boardTabs.innerHTML = '';
+    for (const mode of Scores.MODES) {
+      const label = document.createElement('label');
+      label.className = 'chip';
+      label.innerHTML =
+        `<input type="radio" name="board-mode" value="${mode}"${mode === boardMode ? ' checked' : ''}>` +
+        `<span>${mode === 'expert' ? 'Expert' : 'Normal'} <small>(${Scores.list(mode).length})</small></span>`;
+      dom.boardTabs.appendChild(label);
+    }
+    renderBoard(dom.boardBody, boardMode, 0);
+    show('screen-board');
+  }
+
+  dom.boardTabs.addEventListener('change', (event) => {
+    boardMode = event.target.value;
+    renderBoard(dom.boardBody, boardMode, 0);
+  });
+
+  dom.boardBtn.addEventListener('click', showBoardScreen);
+  dom.boardBack.addEventListener('click', () => show('screen-home'));
+  dom.boardClear.addEventListener('click', () => {
+    Scores.clear(boardMode);
+    showBoardScreen();
+  });
+
+  dom.scoreEntry.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const name = dom.playerName.value.trim();
+    if (!name) return dom.playerName.focus();
+
+    rememberName(name);
+    const { rank, stored } = Scores.add(state.mode, { name, ...state.run });
+    dom.scoreEntry.hidden = true;
+    renderBoard(dom.endBoard, state.mode, rank);
+
+    if (!stored) {
+      const warn = document.createElement('p');
+      warn.className = 'hint';
+      warn.textContent =
+        'Le navigateur refuse le stockage : ce score ne survivra pas au rechargement.';
+      dom.endBoard.appendChild(warn);
+    } else if (rank) {
+      dom.finalScore.textContent += ` — ${ordinal(rank)} place`;
+    }
+  });
 
   /* ── Câblage ────────────────────────────── */
 

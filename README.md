@@ -44,6 +44,27 @@ L'aide « afficher les noms des clubs » coûte 30 points. Le mode expert
 n'a de sens qu'avec au moins deux éditions sélectionnées — l'interface le
 signale sinon, puisque le filtre donnerait la réponse.
 
+Sans chrono, la prime de rapidité est hors d'atteinte et n'entre pas dans le
+maximum affiché.
+
+## Meilleurs scores
+
+Un classement de dix places par mode. En fin de partie, un score qui y entre
+demande un nom ; l'entrée retenue est mise en avant. À score égal, la partie la
+plus courte passe devant.
+
+Ces scores vivent dans le **`localStorage` du navigateur**, et nulle part
+ailleurs. Le site est statique : sans serveur, il n'y a pas d'endroit où
+déposer un classement commun à plusieurs joueurs. Chacun voit donc le sien,
+et rien ne circule.
+
+Le rendre partagé demanderait un service tiers — une base hébergée et une clé
+d'API — plus une protection contre les scores fabriqués, puisque tout le code
+tourne côté client. C'est un projet à part entière, pas une option à cocher.
+
+Le module lit le stockage comme une source non fiable : une entrée mal formée
+est écartée, un nom est tronqué et rendu en texte, jamais interprété.
+
 ## Données
 
 Trois fichiers dans `data/` :

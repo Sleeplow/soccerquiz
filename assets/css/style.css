@@ -360,6 +360,67 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .end-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
+/* ── Classement ────────────────────────────── */
+
+.home-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+
+.score-entry {
+  margin: 0 0 22px;
+  padding: 16px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: rgba(255, 210, 51, .08);
+}
+
+.score-entry p { margin: 0 0 12px; font-weight: 600; }
+.score-entry input { flex: 1 1 180px; }
+
+.board-title {
+  margin: 22px 0 10px;
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.board {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+  counter-reset: rank;
+  display: grid;
+  gap: 6px;
+}
+
+.board li {
+  counter-increment: rank;
+  display: grid;
+  grid-template-columns: 2.2rem 1fr auto;
+  grid-template-areas: "rank name score" ". detail detail";
+  gap: 2px 10px;
+  align-items: baseline;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.board li::before {
+  grid-area: rank;
+  content: counter(rank);
+  font-weight: 800;
+  color: var(--ink-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.board li:nth-child(1)::before { color: var(--accent); }
+
+.board li.is-new { border-color: var(--accent); background: rgba(255, 210, 51, .12); }
+
+.board-name { grid-area: name; font-weight: 700; overflow-wrap: anywhere; }
+.board-score { grid-area: score; font-weight: 800; font-variant-numeric: tabular-nums; }
+.board-detail { grid-area: detail; font-size: .8rem; color: var(--ink-dim); }
+
 /* ── Pied de page ──────────────────────────── */
 
 .site-foot {
