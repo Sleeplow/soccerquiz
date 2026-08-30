@@ -281,6 +281,26 @@ Trois chemins pour combler ça :
    sélections sont presque entièrement composées de joueurs du championnat
    national, ce qui rend la question triviale.
 
+## Tests
+
+La suite couvre le jeu de bout en bout dans un vrai navigateur : réglages,
+déroulé d'une partie, liste des sélections, placement sur le terrain,
+classement, blasons, accessibilité et chemins de clic.
+
+```
+npm install
+npx playwright install chromium   # une seule fois
+npm test                          # 72 tests, bureau + mobile
+npm run test:ui                   # mode interactif
+```
+
+Playwright lance lui-même `python3 -m http.server` : rien à démarrer à côté.
+Les tests coupent l'accès à Wikipédia et attendent le repli en pastilles — le
+réseau ne décide jamais du résultat d'un test. Sur une machine où Chromium est
+déjà installé ailleurs, `PLAYWRIGHT_CHROMIUM_PATH` évite un second
+téléchargement. Les nouvelles tentatives sont désactivées : un test instable
+est un bug, pas un aléa à masquer.
+
 ## Structure
 
 ```
@@ -297,6 +317,9 @@ tools/apply-import.py  intègre le bloc importé dans data/
 tools/fetch-crests.py rapatrie les blasons dans le dépôt
 tools/diagnose-crests.py pourquoi un blason ne résout pas
 tools/crest-check.html état de chargement des blasons
+tests/pages/          modèles Page Object
+tests/e2e/            spécifications de bout en bout
+playwright.config.js  serveur local, projets bureau et mobile
 ```
 
 Les blasons appartiennent à leurs clubs respectifs. Projet non commercial.

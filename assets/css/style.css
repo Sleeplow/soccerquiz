@@ -144,7 +144,7 @@ select, input[type="text"] {
 
 select option { color: #111; }
 
-input[type="text"]::placeholder { color: rgba(255, 255, 255, .4); }
+input[type="text"]::placeholder { color: rgba(255, 255, 255, .55); }
 
 input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 
@@ -180,6 +180,13 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .btn-ghost { background: transparent; color: var(--ink-dim); border-color: var(--line); }
 .btn-ghost:hover { color: var(--ink); }
+
+/* Bouton armé : le second clic détruit, la couleur doit le dire. */
+.btn.is-armed {
+  color: #ffd9d2;
+  border-color: rgba(255, 120, 96, .75);
+  background: rgba(255, 90, 66, .18);
+}
 
 .btn-lg { padding: 15px 26px; font-size: 1.02rem; justify-self: start; }
 
@@ -427,7 +434,7 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
   padding: 22px clamp(16px, 4vw, 36px);
   text-align: center;
   font-size: .78rem;
-  color: rgba(255, 255, 255, .35);
+  color: rgba(255, 255, 255, .55);
 }
 
 .site-foot p { margin: 0; }
