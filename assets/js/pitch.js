@@ -229,6 +229,16 @@ const Pitch = (() => {
 
       host.appendChild(slot);
     });
+
+    /* Le terrain est une image pour l'arbre d'accessibilité : sans description
+       de son contenu, la question est vide pour un lecteur d'écran. Les clubs
+       *sont* l'énoncé — les nommer équivaut à voir les écussons. */
+    host.setAttribute('role', 'img');
+    const clubs = question.lineup.map((p) => p.club.name);
+    host.setAttribute('aria-label', labels === 'players'
+      ? `Composition de ${question.country} en ${question.year} : ` +
+        question.lineup.map((p) => `${p.name}, ${p.club.name}`).join(' ; ')
+      : `Onze clubs à identifier : ${clubs.join(', ')}`);
   }
 
   return { render, readableOn };

@@ -64,6 +64,7 @@
     results: [],
     years: [],
     run: null,
+    awaiting: false,
     hintUsed: false,
     deadline: 0,
     tick: null
@@ -89,7 +90,8 @@
         `<span>${year} <small>(${count})</small></span>`;
       dom.editionFilter.appendChild(label);
     }
-    dom.editionFilter.addEventListener('change', refreshSetup);
+    // `#edition-filter` est à l'intérieur de `#setup` : un écouteur sur le
+    // formulaire reçoit déjà les cases à cocher par propagation.
     dom.setup.addEventListener('change', refreshSetup);
   }
 
@@ -175,6 +177,7 @@
     dom.yearInput.value = '';
     show('screen-play');
     dom.countryInput.focus();
+    state.awaiting = true;
     startTimer();
   }
 
@@ -220,6 +223,12 @@
 
   /** @param {{country: string, year: number|null}|null} answer — null = abandon ou temps écoulé. */
   function submitAnswer(answer) {
+    /* Le chrono et le joueur peuvent viser la même question : si un clic est
+       déjà dans la file quand le temps expire, il arrive après le changement
+       d'écran et compterait la question deux fois — deux lignes au récapitulatif
+       et des points en double. Un verrou par question ferme la porte. */
+    if (!state.awaiting) return;
+    state.awaiting = false;
     stopTimer();
     const q = current();
     const speedBonus = Math.round(POINTS.speedMax * remainingRatio());
@@ -427,9 +436,9 @@
   }
 
   dom.countryInput.addEventListener('input', refreshList);
-  // La liste s'ouvre entière au clic : c'est un menu déroulant, la saisie ne
-  // sert qu'à le réduire quand il est long.
-  dom.countryInput.addEventListener('focus', refreshList);
+  // La liste s'ouvre entière au clic, jamais sur un simple focus : le jeu
+  // place le curseur dans le champ à chaque question, et une liste ouverte
+  // d'office recouvrirait les boutons situés dessous.
   dom.countryInput.addEventListener('click', refreshList);
 
   // En expert, choisir l'année restreint les sélections proposées.
@@ -443,7 +452,10 @@
   });
 
   dom.countryInput.addEventListener('keydown', (e) => {
-    if (dom.countryList.hidden) return;
+    if (dom.countryList.hidden) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); refreshList(); }
+      return;
+    }
     if (e.key === 'ArrowDown') { e.preventDefault(); highlight(1); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); highlight(-1); }
     else if (e.key === 'Escape') { closeList(); }
@@ -458,6 +470,9 @@
 
   const hintBtn = document.createElement('button');
   hintBtn.type = 'button';
+  // Le libellé change une fois l'aide utilisée : un identifiant stable évite
+  // que tout ce qui vise ce bouton dépende de son texte.
+  hintBtn.id = 'hint-btn';
   hintBtn.className = 'btn btn-ghost';
   hintBtn.textContent = HINT_LABEL;
   dom.skipBtn.parentNode.insertBefore(hintBtn, dom.skipBtn);
@@ -556,17 +571,41 @@
       dom.boardTabs.appendChild(label);
     }
     renderBoard(dom.boardBody, boardMode, 0);
+    disarmClear();
     show('screen-board');
   }
 
   dom.boardTabs.addEventListener('change', (event) => {
     boardMode = event.target.value;
+    // Le bouton armé visait l'autre classement : changer d'onglet le désarme.
+    disarmClear();
     renderBoard(dom.boardBody, boardMode, 0);
   });
 
+  /* Effacer un classement est sans retour : rien, dans un site statique, ne
+     permet de le retrouver. Le bouton se charge d'abord, et n'efface qu'au
+     second clic ; toute sortie de l'écran le désarme. */
+  const CLEAR_LABEL = dom.boardClear.textContent;
+  let clearArmed = false;
+
+  function disarmClear() {
+    clearArmed = false;
+    dom.boardClear.textContent = CLEAR_LABEL;
+    dom.boardClear.classList.remove('is-armed');
+  }
+
   dom.boardBtn.addEventListener('click', showBoardScreen);
-  dom.boardBack.addEventListener('click', () => show('screen-home'));
+  dom.boardBack.addEventListener('click', () => {
+    disarmClear();
+    show('screen-home');
+  });
   dom.boardClear.addEventListener('click', () => {
+    if (!clearArmed) {
+      clearArmed = true;
+      dom.boardClear.textContent = 'Confirmer : tout effacer';
+      dom.boardClear.classList.add('is-armed');
+      return;
+    }
     Scores.clear(boardMode);
     showBoardScreen();
   });

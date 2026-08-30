@@ -42,7 +42,7 @@
             </span>
           </label>
         </div>
-        <p id="expert-warning" class="warning" hidden></p>
+        <p id="expert-warning" class="warning" role="status" hidden></p>
       </fieldset>
 
       <fieldset class="field">
@@ -74,7 +74,7 @@
         <button type="submit" class="btn btn-primary btn-lg">Commencer</button>
         <button type="button" id="board-btn" class="btn btn-ghost">Meilleurs scores</button>
       </div>
-      <p id="pool-info" class="hint"></p>
+      <p id="pool-info" class="hint" role="status"></p>
     </form>
   </section>
 
@@ -83,12 +83,12 @@
     <div class="hud">
       <span class="hud-badge" id="hud-index">1</span>
       <div class="timer" id="timer" aria-hidden="true"><span class="timer-fill"></span></div>
-      <span class="hud-score" id="hud-score">0 pt</span>
+      <span class="hud-score" id="hud-score" role="status" aria-label="Score">0 pt</span>
     </div>
 
     <div class="pitch-wrap">
-      <div class="pitch" id="pitch" role="img" aria-label="Terrain de football avec onze blasons de clubs"></div>
-      <p class="pitch-caption" id="pitch-caption"></p>
+      <div class="pitch" id="pitch"></div>
+      <p class="pitch-caption" id="pitch-caption" role="status"></p>
     </div>
 
     <form id="answer-form" class="answer">
@@ -108,7 +108,7 @@
 
   <!-- ═══════════════ Révélation ═══════════════ -->
   <section id="screen-reveal" class="screen">
-    <div class="verdict" id="verdict"></div>
+    <div class="verdict" id="verdict" role="status"></div>
 
     <div class="pitch-wrap">
       <div class="pitch" id="pitch-reveal"></div>
@@ -124,10 +124,10 @@
   <!-- ═══════════════ Fin ═══════════════ -->
   <section id="screen-end" class="screen">
     <h2>Terminé</h2>
-    <p class="final-score" id="final-score"></p>
+    <p class="final-score" id="final-score" role="status"></p>
 
     <form id="score-entry" class="score-entry" hidden>
-      <p id="score-entry-lead"></p>
+      <p id="score-entry-lead" role="status"></p>
       <div class="answer-row">
         <input id="player-name" type="text" maxlength="16" autocomplete="nickname"
                placeholder="Ton nom" aria-label="Ton nom pour le classement">
