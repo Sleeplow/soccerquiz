@@ -22,6 +22,88 @@ const Pitch = (() => {
       </g>
     </svg>`;
 
+  /* Ancrage de chaque poste sur le terrain. x va de 0 (gauche) à 100 (droite),
+     y de 0 (but adverse) à 100 (son propre but). C'est la vue classique d'une
+     composition diffusée : l'équipe attaque vers le haut. */
+  const SPOTS = {
+    GK:  { x: 50, y: 88 },
+    RB:  { x: 88, y: 73 }, CB: { x: 50, y: 73 }, LB: { x: 12, y: 73 },
+    RWB: { x: 90, y: 63 }, LWB: { x: 10, y: 63 },
+    DM:  { x: 50, y: 56 },
+    RM:  { x: 86, y: 45 }, CM: { x: 50, y: 45 }, LM: { x: 14, y: 45 },
+    AM:  { x: 50, y: 34 },
+    RW:  { x: 84, y: 26 }, LW: { x: 16, y: 26 },
+    SS:  { x: 50, y: 22 },
+    CF:  { x: 50, y: 14 }, ST: { x: 50, y: 14 }
+  };
+
+  // Synonymes rencontrés dans les sources, ramenés aux codes ci-dessus.
+  const SPOT_ALIASES = {
+    RCB: 'CB', LCB: 'CB', SW: 'CB', RWB: 'RWB', LWB: 'LWB',
+    CDM: 'DM', RDM: 'DM', LDM: 'DM',
+    RCM: 'CM', LCM: 'CM',
+    CAM: 'AM', RAM: 'AM', LAM: 'AM',
+    RF: 'RW', LF: 'LW', CS: 'ST'
+  };
+  // `DF`, `MF` et `FW` sont absents à dessein : ce sont les codes grossiers des
+  // listes d'effectif, pas des postes. Une équipe qui n'a que ceux-là bascule
+  // sur la répartition par lignes.
+
+  /** Écartement horizontal quand plusieurs joueurs partagent un poste. */
+  function spread(count) {
+    return count === 2 ? 32 : count === 3 ? 25 : 20;
+  }
+
+  /**
+   * Place chaque joueur à son poste réel. Renvoie null si un seul poste est
+   * inconnu : mieux vaut la répartition par lignes, cohérente, qu'un terrain
+   * à moitié juste.
+   */
+  function coordsByPosition(lineup) {
+    const codes = lineup.map((player) => {
+      const raw = String(player.pos || '').toUpperCase().replace(/[^A-Z]/g, '');
+      const code = SPOTS[raw] ? raw : SPOT_ALIASES[raw];
+      return SPOTS[code] ? code : null;
+    });
+    if (codes.includes(null)) return null;
+
+    /* Les ancrages ci-dessus donnent l'ordre des lignes, pas leur écartement.
+       Un 4-2-3-1 en occupe six, un 4-4-2 quatre : on répartit donc uniformément
+       les lignes réellement utilisées sur la hauteur disponible, sinon deux
+       lignes voisines se chevauchent dès que les libellés s'en mêlent. */
+    const levels = [...new Set(codes.map((c) => SPOTS[c].y))]
+      .filter((y) => y !== SPOTS.GK.y)
+      .sort((a, b) => a - b);
+
+    const rowY = {};
+    levels.forEach((level, index) => {
+      rowY[level] = levels.length === 1
+        ? (LAST_LINE_Y + FIRST_LINE_Y) / 2
+        : LAST_LINE_Y + (index / (levels.length - 1)) * (FIRST_LINE_Y - LAST_LINE_Y);
+    });
+    rowY[SPOTS.GK.y] = GK_Y;
+    coordsByPosition.rows = levels.length + 1;
+
+    // Deux défenseurs centraux occupent le même ancrage : on les écarte
+    // symétriquement, dans l'ordre où ils apparaissent.
+    const groups = {};
+    codes.forEach((code, index) => (groups[code] = groups[code] || []).push(index));
+
+    const coords = [];
+    for (const [code, members] of Object.entries(groups)) {
+      const spot = SPOTS[code];
+      const step = spread(members.length);
+      members.forEach((index, rank) => {
+        const offset = members.length > 1 ? (rank - (members.length - 1) / 2) * step : 0;
+        coords[index] = {
+          x: Math.max(8, Math.min(92, spot.x + offset)),
+          y: rowY[spot.y]
+        };
+      });
+    }
+    return coords;
+  }
+
   /** "4-2-3-1" → [[0], [1,2,3,4], [5,6], [7,8,9], [10]] (indices dans lineup). */
   function bandsFor(formation, size) {
     const counts = String(formation)
@@ -114,8 +196,17 @@ const Pitch = (() => {
   function render(host, question, labels) {
     host.innerHTML = MARKINGS;
 
-    const bands = bandsFor(question.formation, question.lineup.length);
-    const coords = coordsFor(bands);
+    // Les postes réels priment ; la répartition par lignes reste le recours
+    // pour les équipes dont on n'a pas le détail.
+    coordsByPosition.rows = 0;
+    const positional = coordsByPosition(question.lineup);
+    const bands = positional ? null : bandsFor(question.formation, question.lineup.length);
+    const coords = positional || coordsFor(bands);
+
+    // Plus il y a de lignes, moins chacune a de hauteur : les pastilles
+    // rétrécissent en conséquence, sinon les libellés se chevauchent.
+    const rows = positional ? coordsByPosition.rows : bands.length;
+    host.style.setProperty('--slot-w', rows >= 6 ? '13%' : rows === 5 ? '16.5%' : '19%');
 
     question.lineup.forEach((player, index) => {
       const { x, y } = coords[index] || { x: 50, y: 50 };

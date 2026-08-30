@@ -260,7 +260,9 @@
 
     Pitch.render(dom.pitchReveal, q, 'players');
     dom.revealCaption.textContent =
-      `${q.country} — Coupe du monde ${q.year} (${q.host})` + (q.note ? ` · ${q.note}` : '');
+      `${q.country} — Coupe du monde ${q.year} (${q.host})` +
+      (q.declaredFormation ? ` · ${q.declaredFormation}` : '') +
+      (q.note ? ` · ${q.note}` : '');
 
     const flags = q.lineup.filter((p) => p.needsCheck).map((p) => p.name);
     dom.revealSource.textContent =
