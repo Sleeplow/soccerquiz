@@ -70,7 +70,10 @@
         </label>
       </div>
 
-      <button type="submit" class="btn btn-primary btn-lg">Commencer</button>
+      <div class="home-actions">
+        <button type="submit" class="btn btn-primary btn-lg">Commencer</button>
+        <button type="button" id="board-btn" class="btn btn-ghost">Meilleurs scores</button>
+      </div>
       <p id="pool-info" class="hint"></p>
     </form>
   </section>
@@ -122,10 +125,37 @@
   <section id="screen-end" class="screen">
     <h2>Terminé</h2>
     <p class="final-score" id="final-score"></p>
+
+    <form id="score-entry" class="score-entry" hidden>
+      <p id="score-entry-lead"></p>
+      <div class="answer-row">
+        <input id="player-name" type="text" maxlength="16" autocomplete="nickname"
+               placeholder="Ton nom" aria-label="Ton nom pour le classement">
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </form>
+
+    <div id="end-board"></div>
+
     <ol class="recap" id="recap"></ol>
     <div class="end-actions">
       <button type="button" id="replay-btn" class="btn btn-primary">Rejouer</button>
       <button type="button" id="home-btn" class="btn btn-ghost">Changer les réglages</button>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Classement ═══════════════ -->
+  <section id="screen-board" class="screen">
+    <h2>Meilleurs scores</h2>
+    <p class="lede">
+      Ces scores sont gardés dans ce navigateur seulement : le site est statique,
+      il n'y a pas de serveur pour les partager entre plusieurs joueurs.
+    </p>
+    <div id="board-tabs" class="chips"></div>
+    <div id="board-body"></div>
+    <div class="end-actions">
+      <button type="button" id="board-back" class="btn btn-primary">Retour</button>
+      <button type="button" id="board-clear" class="btn btn-ghost">Effacer ce classement</button>
     </div>
   </section>
 
@@ -139,6 +169,7 @@
 </footer>
 
 <script src="assets/js/data.js"></script>
+<script src="assets/js/scores.js"></script>
 <script src="assets/js/pitch.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
