@@ -32,6 +32,19 @@ def main():
 
     for edition in editions:
         year = edition["year"]
+        participants = edition.get("participants") or []
+
+        # La liste de réponses proposée au joueur est celle des participants :
+        # un nom inconnu ne serait jamais sélectionnable.
+        unknown = [c for c in participants if c not in countries]
+        if unknown:
+            errors.append(f"{year} : participants absents de countries.json — {', '.join(unknown)}")
+        if len(participants) != len(set(participants)):
+            errors.append(f"{year} : doublons dans la liste des participants")
+        if not participants:
+            warnings.append(f"{year} : pas de liste de participants, la réponse "
+                            "sera cherchée dans le référentiel complet")
+
         for team in edition["teams"]:
             teams += 1
             where = f'{team["country"]} {year}'
@@ -68,7 +81,14 @@ def main():
             if team["country"] not in countries:
                 errors.append(
                     f'{where} : "{team["country"]}" absent de countries.json, '
-                    "l'autocomplétion ne proposera jamais la bonne réponse"
+                    "la liste ne proposera jamais la bonne réponse"
+                )
+            # Une équipe hors de la liste des participants de son édition rend
+            # la question insoluble : la bonne réponse ne serait pas proposée.
+            if participants and team["country"] not in participants:
+                errors.append(
+                    f'{where} : absent des participants de {year}, '
+                    "la bonne réponse serait introuvable dans la liste"
                 )
 
             for player in lineup:

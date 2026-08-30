@@ -360,9 +360,18 @@ const Data = (() => {
 
     const years = [...new Set(questions.map((q) => q.year))].sort((a, b) => b - a);
 
+    // Les sélections réellement engagées dans chaque édition. C'est ce qui
+    // alimente la liste de réponses : la restreindre aux équipes dont on a une
+    // question donnerait la réponse.
+    const participants = {};
+    for (const edition of editionsFile.editions) {
+      if (edition.participants?.length) participants[edition.year] = edition.participants;
+    }
+
     return {
       questions,
       years,
+      participants,
       countries: countriesFile.countries,
       worldCupYears: countriesFile.worldCupYears
     };

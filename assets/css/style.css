@@ -300,7 +300,21 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 .answer-row { display: flex; flex-wrap: wrap; gap: 10px; width: 100%; }
 
 .combo { position: relative; flex: 1 1 220px; }
-.combo input { width: 100%; }
+.combo input { width: 100%; padding-right: 32px; }
+
+/* Chevron : signale que le champ ouvre une liste, la saisie ne servant
+   qu'à la réduire. */
+.combo::after {
+  content: "";
+  position: absolute;
+  right: 13px; top: 50%;
+  width: 8px; height: 8px;
+  margin-top: -6px;
+  border-right: 2px solid var(--ink-dim);
+  border-bottom: 2px solid var(--ink-dim);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
 
 .combo-list {
   position: absolute;
@@ -310,7 +324,7 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
   margin: 0;
   padding: 4px;
   list-style: none;
-  max-height: 210px;
+  max-height: 260px;
   overflow-y: auto;
   background: #1a2159;
   border: 1px solid var(--line);
