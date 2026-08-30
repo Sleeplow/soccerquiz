@@ -20,6 +20,7 @@
     timerSeconds: el('timer-seconds'),
 
     hudIndex: el('hud-index'),
+    hudYear: el('hud-year'),
     hudScore: el('hud-score'),
     timer: el('timer'),
     timerFill: document.querySelector('.timer-fill'),
@@ -166,11 +167,17 @@
     dom.hudIndex.textContent = String(state.index + 1);
     dom.hudScore.textContent = `${state.score} pt${Math.abs(state.score) > 1 ? 's' : ''}`;
 
+    // En expert, l'année est ce qu'on cherche : ni affichée, ni écrite dans la
+    // page — un coup d'œil au code donnerait la réponse.
+    const showYear = state.mode !== 'expert';
+    dom.hudYear.hidden = !showYear;
+    dom.hudYear.textContent = showYear ? `Coupe du monde ${q.year}` : '';
+
     Pitch.render(dom.pitch, q, 'none');
     dom.pitchCaption.textContent =
       state.mode === 'expert'
         ? 'Quelle sélection, et à quelle Coupe du monde ?'
-        : `Coupe du monde ${q.year} — quelle sélection ?`;
+        : 'Quelle sélection ?';
 
     dom.countryInput.value = '';
     closeList();
@@ -287,8 +294,14 @@
       (q.note ? ` · ${q.note}` : '');
 
     const flags = q.lineup.filter((p) => p.needsCheck).map((p) => p.name);
+    /* Une composition saisie vient d'un match précis ; un onze reconstitué est
+       tiré de l'effectif du tournoi. Annoncer la même fiabilité pour les deux
+       ferait passer une déduction pour une source. */
     dom.revealSource.textContent =
-      `Source : ${q.source || 'non renseignée'} · fiabilité : ${q.confidence}` +
+      `Source : ${q.source || 'non renseignée'} · ` +
+      (q.derived
+        ? "onze reconstitué depuis l'effectif du tournoi, pas la composition d'un match"
+        : `composition d'un match · fiabilité : ${q.confidence}`) +
       (flags.length ? ` · à vérifier : ${flags.join(', ')}` : '');
 
     dom.nextBtn.textContent =

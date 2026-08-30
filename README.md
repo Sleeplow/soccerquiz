@@ -4,7 +4,12 @@ On affiche les blasons des clubs des onze titulaires d'une sélection, tels
 qu'ils étaient **au moment de la Coupe du monde**. Le chrono tourne. À toi de
 retrouver le pays.
 
-Site statique, sans dépendance ni étape de build.
+Le terrain est cadré sur les **trois quarts** de la longueur — but de l'équipe
+en bas, ligne médiane vers le haut. Un terrain entier tasse les onze dans le
+bas de l'image et fait passer un défenseur pour un milieu.
+
+Cinq éditions, 59 sélections, 452 clubs. Site statique, sans dépendance ni
+étape de build.
 
 ## Lancer
 
@@ -170,8 +175,23 @@ python3 tools/validate.py
 
 Le validateur refuse un club inconnu, une composition qui n'a pas onze joueurs,
 une formation incompatible avec le nombre de joueurs, un pays absent de
-l'autocomplétion, et deux clubs qui partagent un monogramme. Il avertit sur les
-sources manquantes et les entrées marquées `needsCheck`.
+l'autocomplétion, deux clubs qui partagent un monogramme, et un même club
+présent sous deux identifiants — « Toluca FC » d'un côté, « Deportivo Toluca
+F.C. » de l'autre, ce que produit un import en masse et qui coûte un blason.
+Il avertit sur les sources manquantes et les entrées marquées `needsCheck`.
+
+### Composition saisie ou reconstituée
+
+Une édition peut fournir soit une `lineup` — le onze aligné dans un match
+précis, saisi à la main, avec les postes réels — soit un `squad`, l'effectif
+complet du tournoi. Dans le second cas le jeu retient les premiers de chaque
+poste, dans l'ordre des numéros, et le place par lignes.
+
+C'est une **reconstitution, pas une composition** : la révélation le dit en
+toutes lettres plutôt que d'annoncer une fiabilité qu'elle n'a pas. Les postes
+d'un effectif sont grossiers (`GK`, `DF`, `MF`, `FW`), donc le placement passe
+par les lignes ; une `lineup` avec de vrais postes (`RB`, `DM`, `LW`…) est
+placée au poste près.
 
 ### Blasons
 
@@ -189,7 +209,7 @@ Le blason d'un club est cherché dans cet ordre :
 > **`pageimages` ne suffit pas.** L'extension n'indexe pas de façon fiable les
 > écussons en usage loyal, même avec `pilicense=any` : l'article ressort sans
 > image, sans erreur, indistinguable d'un titre erroné. C'est le cas de la
-> plupart des clubs anglais, espagnols et portugais — 33 sur 55 ici.
+> plupart des clubs anglais, espagnols et portugais — 33 sur les 55 premiers.
 
 Pour ces articles, le jeu passe à une **seconde résolution groupée** : `prop=images`
 liste les fichiers de chaque page (20 pages par requête), un score retient le

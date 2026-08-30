@@ -10,7 +10,9 @@ une erreur bloquante est trouvée ; les avertissements ne font pas échouer.
 
 import collections
 import json
+import re
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -19,6 +21,34 @@ ROOT = Path(__file__).resolve().parent.parent
 def load(name):
     with open(ROOT / "data" / name, encoding="utf-8") as fh:
         return json.load(fh)
+
+
+# Mots que les sources ajoutent ou omettent librement autour d'un nom de club.
+CLUB_NOISE = {
+    "fc", "sc", "cf", "ac", "afc", "bc", "cfc", "sfc", "uc", "se", "sk", "fk",
+    "nk", "hnk", "kv", "krc", "kaa", "rc", "rcd", "ca", "cd", "club", "sad",
+    "deportivo", "real", "jk", "ksv", "football", "de", "du", "ud", "cp", "gd",
+    "scu", "pfc", "ff", "if", "aif", "fbpa", "cr", "ss", "ssc", "us", "asd",
+    "sv", "vfl", "vfb",
+}
+
+
+def club_key(text):
+    """Nom de club réduit à ce qui l'identifie vraiment."""
+    flat = "".join(c for c in unicodedata.normalize("NFD", text.lower())
+                   if unicodedata.category(c) != "Mn")
+    # Les sigles ponctués (« F.C. ») se découpent en lettres isolées : on les
+    # écarte comme le reste du bruit.
+    words = [w for w in re.split(r"[^a-z0-9]+", flat)
+             if len(w) > 1 and w not in CLUB_NOISE]
+    return "".join(words)
+
+
+def duplicate_clubs(clubs):
+    groups = collections.defaultdict(list)
+    for cid, club in clubs.items():
+        groups[club_key(club.get("wiki") or club["name"])].append(cid)
+    return {key: ids for key, ids in groups.items() if len(ids) > 1}
 
 
 def main():
@@ -127,6 +157,14 @@ def main():
     for mono, names in sorted(monos.items()):
         if len(names) > 1:
             errors.append(f'monogramme "{mono}" partagé par {" / ".join(sorted(names))}')
+
+    # Un même club sous deux identifiants, c'est deux blasons à résoudre, un
+    # monogramme perdu et deux écussons différents pour la même équipe sur le
+    # terrain. Les imports en masse en produisent : « Toluca FC » d'un côté,
+    # « Deportivo Toluca F.C. » de l'autre.
+    for ids in duplicate_clubs(clubs).values():
+        titles = " / ".join(clubs[i].get("wiki") or clubs[i]["name"] for i in ids)
+        errors.append(f'même club sous plusieurs identifiants : {" + ".join(ids)} ({titles})')
 
     orphans = sorted(set(clubs) - used_clubs)
 

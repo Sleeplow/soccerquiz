@@ -250,12 +250,9 @@ const Data = (() => {
       const pos = String(player.pos || '').toUpperCase();
       (pools[pos] = pools[pos] || []).push(player);
     }
-    for (const pool of Object.values(pools)) {
-      for (let i = pool.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [pool[i], pool[j]] = [pool[j], pool[i]];
-      }
-    }
+    /* On garde l'ordre de l'effectif, qui est celui des numéros : les premiers
+       de chaque poste sont les titulaires habituels. Tirer au sort donnait un
+       onze différent à chaque rechargement — et un remplaçant dans les buts. */
 
     const eleven = [];
     for (const [pos, count] of SHAPE) {
@@ -312,6 +309,10 @@ const Data = (() => {
       for (const team of edition.teams) {
         // Un effectif de 26 (données de Coupe du monde) est ramené à un onze
         // plausible ; une composition déjà figée est prise telle quelle.
+        // Une composition saisie est celle d'un match ; un onze tiré de
+        // l'effectif n'est qu'une reconstitution, et doit se présenter comme
+        // telle plutôt que de passer pour une source.
+        const derived = !team.lineup;
         const selection = team.lineup || pickEleven(team.squad || []);
         if (selection.length !== 11) {
           problems.push(`${team.country} ${edition.year} — ${selection.length} joueurs retenus au lieu de 11`);
@@ -351,6 +352,8 @@ const Data = (() => {
           note: team.note || '',
           source: team.source || '',
           confidence: team.confidence || 'unknown',
+          // Onze reconstitué depuis l'effectif, pas la composition d'un match.
+          derived,
           lineup
         });
       }

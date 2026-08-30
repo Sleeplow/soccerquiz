@@ -52,14 +52,41 @@ test.describe('Liste des réponses', () => {
     await expect(quiz.countryInput).toHaveValue('');
   });
 
-  test('une édition sans participants connus retombe sur le référentiel complet', async ({ page }) => {
+  test('2026 propose ses quarante-huit qualifiés', async ({ page }) => {
     const quiz = new QuizPage(page);
     await quiz.goto();
     await quiz.start({ years: [2026] });
 
     const options = await quiz.openCountryList();
-    // 2026 n'a pas encore de liste de participants : la réponse ne doit pas
-    // pour autant se déduire d'une liste courte.
+    expect(options).toHaveLength(48);
+    // Le tournoi passe de 32 à 48 équipes : des sélections absentes en 2022
+    // apparaissent, et la liste doit les proposer.
+    expect(options).toContain('Curaçao');
+    expect(options).toContain('Ouzbékistan');
+    // L'Italie a encore manqué la qualification.
+    expect(options).not.toContain('Italie');
+  });
+
+  test('une édition sans participants connus retombe sur le référentiel complet', async ({ page }) => {
+    /* Toutes les éditions ont aujourd'hui leur liste de qualifiés. Le repli
+       reste indispensable pour la prochaine édition importée sans elle : on
+       sert donc une donnée amputée plutôt que d'attendre qu'elle survienne. */
+    await page.route('**/data/editions.json', async (route) => {
+      const response = await route.fetch();
+      const document = await response.json();
+      for (const edition of document.editions) {
+        if (edition.year === 2026) delete edition.participants;
+      }
+      await route.fulfill({ response, json: document });
+    });
+
+    const quiz = new QuizPage(page);
+    await quiz.goto();
+    await quiz.start({ years: [2026] });
+
+    const options = await quiz.openCountryList();
+    // Sans repli, la liste tomberait aux seules équipes ayant une question :
+    // la réponse se lirait dedans.
     expect(options.length).toBeGreaterThan(60);
   });
 });

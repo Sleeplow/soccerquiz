@@ -66,4 +66,27 @@ test.describe('Déroulé d\'une partie', () => {
     // 5 questions × 100 points : la prime, inatteignable, ne doit pas compter.
     await expect(quiz.finalScore).toContainText('sur 500 possibles');
   });
+
+  test('l\'année se lit d\'un coup d\'œil en normal, et reste cachée en expert', async ({ page }) => {
+    const quiz = new QuizPage(page);
+    await quiz.goto();
+    await quiz.start({ years: [2022] });
+
+    // Reléguée dans la légende sous le terrain, l'année passait inaperçue.
+    const year = page.locator('#hud-year');
+    await expect(year).toBeVisible();
+    await expect(year).toHaveText('Coupe du monde 2022');
+
+    const size = await year.evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+    const body = await page.evaluate(() => parseFloat(getComputedStyle(document.body).fontSize));
+    expect(size).toBeGreaterThanOrEqual(body);
+
+    // « Changer les réglages » n'existe qu'à la fin d'une partie : on repart
+    // d'une page neuve pour observer le mode expert.
+    await quiz.goto();
+    await quiz.start({ mode: 'expert', years: [2022, 2018] });
+    // En expert l'année est la question : ni affichée, ni écrite dans la page.
+    await expect(year).toBeHidden();
+    await expect(year).toHaveText('');
+  });
 });

@@ -1,6 +1,26 @@
 {
   "_comment": "Référentiel des clubs. Le blason est résolu par `wiki`, le titre de l'article Wikipédia anglophone : l'API pageimages renvoie l'image principale de l'article, soit l'écusson. `crest` est un nom de fichier Wikimedia optionnel qui prend le pas quand il est présent. Sans blason, le jeu affiche une pastille aux couleurs du club.",
   "clubs": {
+    "1fctatranpresov": {
+      "name": "Tatran Prešov",
+      "wiki": "1. FC Tatran Prešov"
+    },
+    "1fcunionberlin": {
+      "name": "Union Berlin",
+      "wiki": "1. FC Union Berlin"
+    },
+    "1fsvmainz05": {
+      "name": "Mainz 05",
+      "wiki": "1. FSV Mainz 05"
+    },
+    "aarhusgymnastikforening": {
+      "name": "AGF",
+      "wiki": "Aarhus Gymnastikforening"
+    },
+    "abhaclub": {
+      "name": "Abha",
+      "wiki": "Abha Club"
+    },
     "ac-milan": {
       "name": "AC Milan",
       "country": "Italie",
@@ -10,6 +30,54 @@
       ],
       "mono": "MIL",
       "wiki": "AC Milan"
+    },
+    "academiapuertocabello": {
+      "name": "Puerto Cabello",
+      "wiki": "Academia Puerto Cabello"
+    },
+    "accraheartsofoak": {
+      "name": "Hearts of Oak",
+      "wiki": "Accra Hearts of Oak S.C."
+    },
+    "acomonia": {
+      "name": "Omonia",
+      "wiki": "AC Omonia"
+    },
+    "acspartaprague": {
+      "name": "Sparta Prague",
+      "wiki": "AC Sparta Prague"
+    },
+    "aekathens": {
+      "name": "AEK Athens",
+      "wiki": "AEK Athens F.C."
+    },
+    "aekifisi": {
+      "name": "Kifisia",
+      "wiki": "A.E. Kifisia F.C."
+    },
+    "aeklarnac": {
+      "name": "AEK Larnaca",
+      "wiki": "AEK Larnaca FC"
+    },
+    "aellimassol": {
+      "name": "AEL Limassol",
+      "wiki": "AEL Limassol"
+    },
+    "afcajax": {
+      "name": "Ajax",
+      "wiki": "AFC Ajax"
+    },
+    "afcbournemouth": {
+      "name": "Bournemouth",
+      "wiki": "AFC Bournemouth"
+    },
+    "aikfotboll": {
+      "name": "AIK",
+      "wiki": "AIK Fotboll"
+    },
+    "ajauxerre": {
+      "name": "Auxerre",
+      "wiki": "AJ Auxerre"
     },
     "al-qadsiah": {
       "name": "Al-Qadsiah",
@@ -21,6 +89,150 @@
       "mono": "QAD",
       "wiki": "Al-Qadsiah FC"
     },
+    "alahlisaudi": {
+      "name": "Al-Ahli",
+      "wiki": "Al-Ahli Saudi FC"
+    },
+    "alahly": {
+      "name": "Al Ahly",
+      "wiki": "Al Ahly SC"
+    },
+    "alain": {
+      "name": "Al Ain",
+      "wiki": "Al Ain FC"
+    },
+    "alanyaspor": {
+      "name": "Alanyaspor",
+      "wiki": "Alanyaspor"
+    },
+    "alarabisc(qatar)": {
+      "name": "Al-Arabi",
+      "wiki": "Al-Arabi SC (Qatar)"
+    },
+    "albataehclub": {
+      "name": "Al Bataeh",
+      "wiki": "Al Bataeh Club"
+    },
+    "albirexniigata": {
+      "name": "Albirex Niigata",
+      "wiki": "Albirex Niigata"
+    },
+    "aldhafr": {
+      "name": "Al Dhafra",
+      "wiki": "Al Dhafra FC"
+    },
+    "alduhail": {
+      "name": "Al-Duhail",
+      "wiki": "Al Duhail SC"
+    },
+    "alettifaqclub": {
+      "name": "Al-Ettifaq",
+      "wiki": "Al-Ettifaq Club"
+    },
+    "alfaisaly": {
+      "name": "Al-Faisaly",
+      "wiki": "Al-Faisaly SC"
+    },
+    "alfateh": {
+      "name": "Al-Fateh",
+      "wiki": "Al Fateh SC"
+    },
+    "alfayhaclub": {
+      "name": "Al-Fayha",
+      "wiki": "Al-Fayha Club"
+    },
+    "algharafa": {
+      "name": "Al-Gharafa",
+      "wiki": "Al-Gharafa SC"
+    },
+    "alhilals": {
+      "name": "Al-Hilal",
+      "wiki": "Al Hilal SFC"
+    },
+    "alhusseinsc(irbid)": {
+      "name": "Al-Hussein",
+      "wiki": "Al-Hussein SC (Irbid)"
+    },
+    "alittihadclub(jeddah)": {
+      "name": "Al-Ittihad",
+      "wiki": "Al-Ittihad Club (Jeddah)"
+    },
+    "aljaziraclub": {
+      "name": "Al Jazira",
+      "wiki": "Al Jazira Club"
+    },
+    "alkarma": {
+      "name": "Al-Karma",
+      "wiki": "Al-Karma SC"
+    },
+    "almerecity": {
+      "name": "Almere City",
+      "wiki": "Almere City FC"
+    },
+    "alnajmasc(saudiarabia)": {
+      "name": "Al-Najma",
+      "wiki": "Al-Najma SC (Saudi Arabia)"
+    },
+    "alnasrsc(dubai)": {
+      "name": "Al Nasr",
+      "wiki": "Al-Nasr SC (Dubai)"
+    },
+    "alnassr": {
+      "name": "Al-Nassr",
+      "wiki": "Al-Nassr FC"
+    },
+    "alquwaaljawiya": {
+      "name": "Al-Quwa Al-Jawiya",
+      "wiki": "Al-Quwa Al-Jawiya"
+    },
+    "alrayyan": {
+      "name": "Al-Rayyan",
+      "wiki": "Al-Rayyan SC"
+    },
+    "alsadd": {
+      "name": "Al-Sadd",
+      "wiki": "Al Sadd SC"
+    },
+    "alsailiya": {
+      "name": "Al-Sailiya",
+      "wiki": "Al-Sailiya SC"
+    },
+    "alshababclub": {
+      "name": "Al-Shabab",
+      "wiki": "Al Shabab Club"
+    },
+    "alshamal": {
+      "name": "Al-Shamal",
+      "wiki": "Al-Shamal SC"
+    },
+    "alshorta": {
+      "name": "Al-Shorta",
+      "wiki": "Al-Shorta SC"
+    },
+    "altalaba": {
+      "name": "Al-Talaba",
+      "wiki": "Al-Talaba SC"
+    },
+    "alul": {
+      "name": "Al-Ula",
+      "wiki": "Al-Ula FC"
+    },
+    "alwahd": {
+      "name": "Al Wahda",
+      "wiki": "Al Wahda FC"
+    },
+    "alwakrah": {
+      "name": "Al-Wakrah",
+      "wiki": "Al-Wakrah SC"
+    },
+    "alwehdat": {
+      "name": "Al-Wehdat",
+      "wiki": "Al-Wehdat SC"
+    },
+    "alzawraa": {
+      "name": "Al-Zawraa",
+      "wiki": "Al-Zawraa SC"
+    },
     "angers": {
       "name": "Angers SCO",
       "country": "France",
@@ -30,6 +242,18 @@
       ],
       "mono": "SCO",
       "wiki": "Angers SCO"
+    },
+    "apoel": {
+      "name": "APOEL",
+      "wiki": "APOEL FC"
+    },
+    "apollonlimassol": {
+      "name": "Apollon Limassol",
+      "wiki": "Apollon Limassol FC"
+    },
+    "arislimassol": {
+      "name": "Aris Limassol",
+      "wiki": "Aris Limassol FC"
     },
     "arsenal": {
       "name": "Arsenal",
@@ -41,15 +265,21 @@
       "mono": "ARS",
       "wiki": "Arsenal F.C."
     },
-    "athletic-club": {
-      "name": "Athletic Bilbao",
-      "country": "Espagne",
-      "colors": [
-        "#EE2523",
-        "#FFFFFF"
-      ],
-      "mono": "ATH",
-      "wiki": "Athletic Bilbao"
+    "asfar": {
+      "name": "AS FAR",
+      "wiki": "AS FAR"
+    },
+    "asnancylorraine": {
+      "name": "Nancy",
+      "wiki": "AS Nancy Lorraine"
+    },
+    "asroma": {
+      "name": "Roma",
+      "wiki": "AS Roma"
+    },
+    "assaintetienne": {
+      "name": "Saint-Étienne",
+      "wiki": "AS Saint-Étienne"
     },
     "aston-villa": {
       "name": "Aston Villa",
@@ -71,6 +301,28 @@
       "mono": "ATA",
       "wiki": "Atalanta B.C."
     },
+    "athletic-club": {
+      "name": "Athletic Bilbao",
+      "country": "Espagne",
+      "colors": [
+        "#EE2523",
+        "#FFFFFF"
+      ],
+      "mono": "ATH",
+      "wiki": "Athletic Bilbao"
+    },
+    "athlitikienosilariss": {
+      "name": "AEL",
+      "wiki": "Athlitiki Enosi Larissa F.C."
+    },
+    "atlantaunited": {
+      "name": "Atlanta United FC",
+      "wiki": "Atlanta United FC"
+    },
+    "atlas": {
+      "name": "Atlas",
+      "wiki": "Atlas F.C."
+    },
     "atletico-madrid": {
       "name": "Atlético Madrid",
       "country": "Espagne",
@@ -80,6 +332,22 @@
       ],
       "mono": "ATM",
       "wiki": "Atlético Madrid"
+    },
+    "atleticonacional": {
+      "name": "Atlético Nacional",
+      "wiki": "Atlético Nacional"
+    },
+    "atromitos": {
+      "name": "Atromitos",
+      "wiki": "Atromitos F.C."
+    },
+    "auckland": {
+      "name": "Auckland FC",
+      "wiki": "Auckland FC"
+    },
+    "austin": {
+      "name": "Austin FC",
+      "wiki": "Austin FC"
     },
     "az-alkmaar": {
       "name": "AZ Alkmaar",
@@ -91,6 +359,10 @@
       "mono": "AZ",
       "wiki": "AZ Alkmaar"
     },
+    "baniyasclub": {
+      "name": "Baniyas",
+      "wiki": "Baniyas Club"
+    },
     "barcelona": {
       "name": "FC Barcelone",
       "country": "Espagne",
@@ -100,6 +372,14 @@
       ],
       "mono": "FCB",
       "wiki": "FC Barcelona"
+    },
+    "barnsley": {
+      "name": "Barnsley",
+      "wiki": "Barnsley F.C."
+    },
+    "bayer04leverkusen": {
+      "name": "Bayer Leverkusen",
+      "wiki": "Bayer 04 Leverkusen"
     },
     "bayern": {
       "name": "Bayern Munich",
@@ -132,6 +412,30 @@
       "needsCheck": true,
       "wiki": "Beşiktaş J.K."
     },
+    "birminghamcity": {
+      "name": "Birmingham City",
+      "wiki": "Birmingham City F.C."
+    },
+    "bocajuniors": {
+      "name": "Boca Juniors",
+      "wiki": "Boca Juniors"
+    },
+    "bolognafc1909": {
+      "name": "Bologna",
+      "wiki": "Bologna FC 1909"
+    },
+    "botafogofr": {
+      "name": "Botafogo",
+      "wiki": "Botafogo FR"
+    },
+    "braintreetown": {
+      "name": "Braintree Town",
+      "wiki": "Braintree Town F.C."
+    },
+    "brentford": {
+      "name": "Brentford",
+      "wiki": "Brentford F.C."
+    },
     "brighton": {
       "name": "Brighton",
       "country": "Angleterre",
@@ -141,6 +445,58 @@
       ],
       "mono": "BHA",
       "wiki": "Brighton & Hove Albion F.C."
+    },
+    "brøndbyif": {
+      "name": "Brøndby",
+      "wiki": "Brøndby IF"
+    },
+    "bscyoungboys": {
+      "name": "Young Boys",
+      "wiki": "BSC Young Boys"
+    },
+    "burnley": {
+      "name": "Burnley",
+      "wiki": "Burnley F.C."
+    },
+    "cagliaricalcio": {
+      "name": "Cagliari",
+      "wiki": "Cagliari Calcio"
+    },
+    "caosasuna": {
+      "name": "Osasuna",
+      "wiki": "CA Osasuna"
+    },
+    "casapia": {
+      "name": "Casa Pia",
+      "wiki": "Casa Pia A.C."
+    },
+    "caykurrizespor": {
+      "name": "Çaykur Rizespor",
+      "wiki": "Çaykur Rizespor"
+    },
+    "cdcastellon": {
+      "name": "Castellón",
+      "wiki": "CD Castellón"
+    },
+    "cdmarathon": {
+      "name": "Marathón",
+      "wiki": "C.D. Marathón"
+    },
+    "cdplazaamador": {
+      "name": "Plaza Amador",
+      "wiki": "C.D. Plaza Amador"
+    },
+    "cdtondela": {
+      "name": "Tondela",
+      "wiki": "C.D. Tondela"
+    },
+    "cduniversidadcatolica(ecuador)": {
+      "name": "Universidad Católica",
+      "wiki": "C.D. Universidad Católica (Ecuador)"
+    },
+    "cduniversidaddeconcepcion": {
+      "name": "Universidad de Concepción",
+      "wiki": "C.D. Universidad de Concepción"
     },
     "celtic": {
       "name": "Celtic",
@@ -152,6 +508,34 @@
       "mono": "CEL",
       "wiki": "Celtic F.C."
     },
+    "cerclebruggeksv": {
+      "name": "Cercle Brugge",
+      "wiki": "Cercle Brugge KSV"
+    },
+    "cerroporteno": {
+      "name": "Cerro Porteño",
+      "wiki": "Cerro Porteño"
+    },
+    "cfestreladaamadora": {
+      "name": "Estrela Amadora",
+      "wiki": "C.F. Estrela da Amadora"
+    },
+    "cfmonterrey": {
+      "name": "Monterrey",
+      "wiki": "C.F. Monterrey"
+    },
+    "cfpachuca": {
+      "name": "Pachuca",
+      "wiki": "C.F. Pachuca"
+    },
+    "charlotte": {
+      "name": "Charlotte FC",
+      "wiki": "Charlotte FC"
+    },
+    "charltonathletic": {
+      "name": "Charlton Athletic",
+      "wiki": "Charlton Athletic F.C."
+    },
     "chelsea": {
       "name": "Chelsea",
       "country": "Angleterre",
@@ -161,6 +545,10 @@
       ],
       "mono": "CHE",
       "wiki": "Chelsea F.C."
+    },
+    "chicagofire": {
+      "name": "Chicago Fire FC",
+      "wiki": "Chicago Fire FC"
     },
     "chivas": {
       "name": "CD Guadalajara",
@@ -183,6 +571,126 @@
       "mono": "AME",
       "needsCheck": true,
       "wiki": "Club América"
+    },
+    "clubafricain": {
+      "name": "Club Africain",
+      "wiki": "Club Africain"
+    },
+    "clubathleticoparanaense": {
+      "name": "Athletico Paranaense",
+      "wiki": "Club Athletico Paranaense"
+    },
+    "clubatleticohuracan": {
+      "name": "Huracán",
+      "wiki": "Club Atlético Huracán"
+    },
+    "clubatleticoindependiente": {
+      "name": "Independiente",
+      "wiki": "Club Atlético Independiente"
+    },
+    "clubatleticolanus": {
+      "name": "Lanús",
+      "wiki": "Club Atlético Lanús"
+    },
+    "clubatleticoriverplate": {
+      "name": "River Plate",
+      "wiki": "Club Atlético River Plate"
+    },
+    "clubatleticovelezsarsfield": {
+      "name": "Vélez Sarsfield",
+      "wiki": "Club Atlético Vélez Sarsfield"
+    },
+    "clubbruggekv": {
+      "name": "Club Brugge",
+      "wiki": "Club Brugge KV"
+    },
+    "clubeatleticomineiro": {
+      "name": "Atlético Mineiro",
+      "wiki": "Clube Atlético Mineiro"
+    },
+    "clubleon": {
+      "name": "León",
+      "wiki": "Club León"
+    },
+    "clubnacionaldefootball": {
+      "name": "Nacional",
+      "wiki": "Club Nacional de Football"
+    },
+    "clubolimpia": {
+      "name": "Olimpia",
+      "wiki": "Club Olimpia"
+    },
+    "clubtijuana": {
+      "name": "Tijuana",
+      "wiki": "Club Tijuana"
+    },
+    "cobresal": {
+      "name": "Cobresal",
+      "wiki": "Cobresal"
+    },
+    "coloradorapids": {
+      "name": "Colorado Rapids",
+      "wiki": "Colorado Rapids"
+    },
+    "coloradospringsswitchbacks": {
+      "name": "Colorado Springs Switchbacks FC",
+      "wiki": "Colorado Springs Switchbacks FC"
+    },
+    "columbuscrew": {
+      "name": "Columbus Crew",
+      "wiki": "Columbus Crew"
+    },
+    "como1907": {
+      "name": "Como",
+      "wiki": "Como 1907"
+    },
+    "coventrycity": {
+      "name": "Coventry City",
+      "wiki": "Coventry City F.C."
+    },
+    "crflamengo": {
+      "name": "Flamengo",
+      "wiki": "CR Flamengo"
+    },
+    "cruzazul": {
+      "name": "Cruz Azul",
+      "wiki": "Cruz Azul"
+    },
+    "crvascodagama": {
+      "name": "Vasco da Gama",
+      "wiki": "CR Vasco da Gama"
+    },
+    "crystalpalace": {
+      "name": "Crystal Palace",
+      "wiki": "Crystal Palace F.C."
+    },
+    "cssfaxien": {
+      "name": "CS Sfaxien",
+      "wiki": "CS Sfaxien"
+    },
+    "culturalydeportivaleonesa": {
+      "name": "Cultural Leonesa",
+      "wiki": "Cultural y Deportiva Leonesa"
+    },
+    "daejeonhanacitizen": {
+      "name": "Daejeon Hana Citizen",
+      "wiki": "Daejeon Hana Citizen"
+    },
+    "deportivolaguair": {
+      "name": "Deportivo La Guaira",
+      "wiki": "Deportivo La Guaira F.C."
+    },
+    "deportivosaprissa": {
+      "name": "Saprissa",
+      "wiki": "Deportivo Saprissa"
+    },
+    "derbycounty": {
+      "name": "Derby County",
+      "wiki": "Derby County F.C."
+    },
+    "dibb": {
+      "name": "Dibba",
+      "wiki": "Dibba FC"
     },
     "dinamo-zagreb": {
       "name": "Dinamo Zagreb",
@@ -214,6 +722,34 @@
       "mono": "SGE",
       "wiki": "Eintracht Frankfurt"
     },
+    "elche": {
+      "name": "Elche",
+      "wiki": "Elche CF"
+    },
+    "elgoun": {
+      "name": "El Gouna",
+      "wiki": "El Gouna FC"
+    },
+    "elpasolocomotive": {
+      "name": "El Paso Locomotive FC",
+      "wiki": "El Paso Locomotive FC"
+    },
+    "esperancesportivedetunis": {
+      "name": "Espérance de Tunis",
+      "wiki": "Espérance Sportive de Tunis"
+    },
+    "esteghlal": {
+      "name": "Esteghlal",
+      "wiki": "Esteghlal F.C."
+    },
+    "estudiantesdelaplata": {
+      "name": "Estudiantes",
+      "wiki": "Estudiantes de La Plata"
+    },
+    "etoilesportivedusahel": {
+      "name": "Étoile du Sahel",
+      "wiki": "Étoile Sportive du Sahel"
+    },
     "everton": {
       "name": "Everton",
       "country": "Angleterre",
@@ -223,6 +759,198 @@
       ],
       "mono": "EVE",
       "wiki": "Everton F.C."
+    },
+    "fcagmk": {
+      "name": "AGMK",
+      "wiki": "FC AGMK"
+    },
+    "fcakrontolyatti": {
+      "name": "Akron Tolyatti",
+      "wiki": "FC Akron Tolyatti"
+    },
+    "fcastana": {
+      "name": "Astana",
+      "wiki": "FC Astana"
+    },
+    "fcaugsburg": {
+      "name": "FC Augsburg",
+      "wiki": "FC Augsburg"
+    },
+    "fcbarcelonaatletic": {
+      "name": "Barcelona B",
+      "wiki": "FC Barcelona Atlètic"
+    },
+    "fcbukhara": {
+      "name": "Bukhara",
+      "wiki": "FC Bukhara"
+    },
+    "fccincinnati": {
+      "name": "FC Cincinnati",
+      "wiki": "FC Cincinnati"
+    },
+    "fccopenhagen": {
+      "name": "Copenhagen",
+      "wiki": "F.C. Copenhagen"
+    },
+    "fccosmoskoblenz": {
+      "name": "Cosmos Koblenz",
+      "wiki": "FC Cosmos Koblenz"
+    },
+    "fcdallas": {
+      "name": "FC Dallas",
+      "wiki": "FC Dallas"
+    },
+    "fcdenbosch": {
+      "name": "Den Bosch",
+      "wiki": "FC Den Bosch"
+    },
+    "fcdinamosamarqand": {
+      "name": "Dinamo Samarqand",
+      "wiki": "FC Dinamo Samarqand"
+    },
+    "fcdynamomakhachkala": {
+      "name": "Dynamo Makhachkala",
+      "wiki": "FC Dynamo Makhachkala"
+    },
+    "fcdynamomoscow": {
+      "name": "Dynamo Moscow",
+      "wiki": "FC Dynamo Moscow"
+    },
+    "fchradeckralove": {
+      "name": "Hradec Králové",
+      "wiki": "FC Hradec Králové"
+    },
+    "fcjuarez": {
+      "name": "Juárez",
+      "wiki": "FC Juárez"
+    },
+    "fckrasnodar": {
+      "name": "Krasnodar",
+      "wiki": "FC Krasnodar"
+    },
+    "fclokomotivmoscow": {
+      "name": "Lokomotiv Moscow",
+      "wiki": "FC Lokomotiv Moscow"
+    },
+    "fclorient": {
+      "name": "Lorient",
+      "wiki": "FC Lorient"
+    },
+    "fclugano": {
+      "name": "Lugano",
+      "wiki": "FC Lugano"
+    },
+    "fcmachidazelvia": {
+      "name": "Machida Zelvia",
+      "wiki": "FC Machida Zelvia"
+    },
+    "fcmidtjylland": {
+      "name": "Midtjylland",
+      "wiki": "FC Midtjylland"
+    },
+    "fcnantes": {
+      "name": "Nantes",
+      "wiki": "FC Nantes"
+    },
+    "fcnasaf": {
+      "name": "Nasaf",
+      "wiki": "FC Nasaf"
+    },
+    "fcneftchifergana": {
+      "name": "Neftchi Fergana",
+      "wiki": "FC Neftchi Fergana"
+    },
+    "fcnoah": {
+      "name": "Noah",
+      "wiki": "FC Noah"
+    },
+    "fcnordsjælland": {
+      "name": "Nordsjælland",
+      "wiki": "FC Nordsjælland"
+    },
+    "fcparinizhnynovgorod": {
+      "name": "Pari Nizhny Novgorod",
+      "wiki": "FC Pari Nizhny Novgorod"
+    },
+    "fcredbullsalzburg": {
+      "name": "Red Bull Salzburg",
+      "wiki": "FC Red Bull Salzburg"
+    },
+    "fcrostov": {
+      "name": "Rostov",
+      "wiki": "FC Rostov"
+    },
+    "fcsb": {
+      "name": "FCSB",
+      "wiki": "FCSB"
+    },
+    "fcseoul": {
+      "name": "FC Seoul",
+      "wiki": "FC Seoul"
+    },
+    "fcslovanliberec": {
+      "name": "Slovan Liberec",
+      "wiki": "FC Slovan Liberec"
+    },
+    "fcsochauxmontbeliard": {
+      "name": "Sochaux",
+      "wiki": "FC Sochaux-Montbéliard"
+    },
+    "fcspartakmoscow": {
+      "name": "Spartak Moscow",
+      "wiki": "FC Spartak Moscow"
+    },
+    "fcstadenyonnais": {
+      "name": "Stade Nyonnais",
+      "wiki": "FC Stade Nyonnais"
+    },
+    "fcstgallen": {
+      "name": "St. Gallen",
+      "wiki": "FC St. Gallen"
+    },
+    "fcstpauli": {
+      "name": "FC St. Pauli",
+      "wiki": "FC St. Pauli"
+    },
+    "fcsurkhon": {
+      "name": "Surkhon Termiz",
+      "wiki": "FC Surkhon"
+    },
+    "fctokyo": {
+      "name": "FC Tokyo",
+      "wiki": "FC Tokyo"
+    },
+    "fctwente": {
+      "name": "Twente",
+      "wiki": "FC Twente"
+    },
+    "fcuniversitateacluj": {
+      "name": "Universitatea Cluj",
+      "wiki": "FC Universitatea Cluj"
+    },
+    "fcutrecht": {
+      "name": "Utrecht",
+      "wiki": "FC Utrecht"
+    },
+    "fcvdendereh": {
+      "name": "Dender EH",
+      "wiki": "FCV Dender EH"
+    },
+    "fcviktoriaplzen": {
+      "name": "Viktoria Plzeň",
+      "wiki": "FC Viktoria Plzeň"
+    },
+    "fcvizela": {
+      "name": "Vizela",
+      "wiki": "F.C. Vizela"
+    },
+    "fcvolendam": {
+      "name": "Volendam",
+      "wiki": "FC Volendam"
+    },
+    "fczurich": {
+      "name": "Zürich",
+      "wiki": "FC Zürich"
     },
     "fenerbahce": {
       "name": "Fenerbahçe",
@@ -235,6 +963,14 @@
       "needsCheck": true,
       "wiki": "Fenerbahçe S.K. (football)"
     },
+    "ferencvarositc": {
+      "name": "Ferencváros",
+      "wiki": "Ferencvárosi TC"
+    },
+    "feyenoord": {
+      "name": "Feyenoord",
+      "wiki": "Feyenoord"
+    },
     "fiorentina": {
       "name": "Fiorentina",
       "country": "Italie",
@@ -246,6 +982,34 @@
       "crest": "ACF Fiorentina - logo (Italy, 2022).svg",
       "wiki": "ACF Fiorentina"
     },
+    "fkaustriawien": {
+      "name": "Austria Wien",
+      "wiki": "FK Austria Wien"
+    },
+    "fkbodø/glimt": {
+      "name": "Bodø/Glimt",
+      "wiki": "FK Bodø/Glimt"
+    },
+    "fkboracbanjaluka": {
+      "name": "Borac Banja Luka",
+      "wiki": "FK Borac Banja Luka"
+    },
+    "fluminense": {
+      "name": "Fluminense",
+      "wiki": "Fluminense FC"
+    },
+    "foolad": {
+      "name": "Foolad",
+      "wiki": "Foolad F.C."
+    },
+    "fortunadusseldorf": {
+      "name": "Fortuna Düsseldorf",
+      "wiki": "Fortuna Düsseldorf"
+    },
+    "frosinonecalcio": {
+      "name": "Frosinone",
+      "wiki": "Frosinone Calcio"
+    },
     "fulham": {
       "name": "Fulham",
       "country": "Angleterre",
@@ -255,6 +1019,22 @@
       ],
       "mono": "FUL",
       "wiki": "Fulham F.C."
+    },
+    "galatasaraysk(football)": {
+      "name": "Galatasaray",
+      "wiki": "Galatasaray S.K. (football)"
+    },
+    "gangwon": {
+      "name": "Gangwon FC",
+      "wiki": "Gangwon FC"
+    },
+    "gaziantepfk": {
+      "name": "Gaziantep",
+      "wiki": "Gaziantep F.K."
+    },
+    "gdchaves": {
+      "name": "Chaves",
+      "wiki": "G.D. Chaves"
     },
     "genoa": {
       "name": "Genoa",
@@ -267,6 +1047,14 @@
       "needsCheck": true,
       "wiki": "Genoa C.F.C."
     },
+    "gilvicente": {
+      "name": "Gil Vicente",
+      "wiki": "Gil Vicente F.C."
+    },
+    "giron": {
+      "name": "Girona",
+      "wiki": "Girona FC"
+    },
     "gladbach": {
       "name": "Borussia Mönchengladbach",
       "country": "Allemagne",
@@ -276,6 +1064,58 @@
       ],
       "mono": "BMG",
       "wiki": "Borussia Mönchengladbach"
+    },
+    "granada": {
+      "name": "Granada",
+      "wiki": "Granada CF"
+    },
+    "grazerak": {
+      "name": "Grazer AK",
+      "wiki": "Grazer AK"
+    },
+    "gremiofbpa": {
+      "name": "Grêmio",
+      "wiki": "Grêmio FBPA"
+    },
+    "gyorieto": {
+      "name": "Győri ETO",
+      "wiki": "Győri ETO FC"
+    },
+    "hamburgersv": {
+      "name": "Hamburger SV",
+      "wiki": "Hamburger SV"
+    },
+    "hannover96": {
+      "name": "Hannover 96",
+      "wiki": "Hannover 96"
+    },
+    "hapoelironikiryatshmon": {
+      "name": "Ironi Kiryat Shmona",
+      "wiki": "Hapoel Ironi Kiryat Shmona F.C."
+    },
+    "heartofmidlothian": {
+      "name": "Heart of Midlothian",
+      "wiki": "Heart of Midlothian F.C."
+    },
+    "hellasveron": {
+      "name": "Hellas Verona",
+      "wiki": "Hellas Verona FC"
+    },
+    "heraclesalmelo": {
+      "name": "Heracles Almelo",
+      "wiki": "Heracles Almelo"
+    },
+    "hibernian": {
+      "name": "Hibernian",
+      "wiki": "Hibernian F.C."
+    },
+    "hnkhajduksplit": {
+      "name": "Hajduk Split",
+      "wiki": "HNK Hajduk Split"
+    },
+    "hnkrijeka": {
+      "name": "Rijeka",
+      "wiki": "HNK Rijeka"
     },
     "hoffenheim": {
       "name": "Hoffenheim",
@@ -288,6 +1128,30 @@
       "crest": "Logo TSG Hoffenheim.svg",
       "wiki": "TSG 1899 Hoffenheim"
     },
+    "holsteinkiel": {
+      "name": "Holstein Kiel",
+      "wiki": "Holstein Kiel"
+    },
+    "hullcity": {
+      "name": "Hull City",
+      "wiki": "Hull City A.F.C."
+    },
+    "ifknorrkoping": {
+      "name": "IFK Norrköping",
+      "wiki": "IFK Norrköping"
+    },
+    "igdırfk": {
+      "name": "Iğdır",
+      "wiki": "Iğdır F.K."
+    },
+    "independientedelvalle": {
+      "name": "Independiente del Valle",
+      "wiki": "Independiente del Valle"
+    },
+    "independienterivadavia": {
+      "name": "Independiente Rivadavia",
+      "wiki": "Independiente Rivadavia"
+    },
     "inter": {
       "name": "Inter Milan",
       "country": "Italie",
@@ -298,6 +1162,30 @@
       "mono": "INT",
       "crest": "FC Internazionale Milano 2021.svg",
       "wiki": "Inter Milan"
+    },
+    "intermiami": {
+      "name": "Inter Miami CF",
+      "wiki": "Inter Miami CF"
+    },
+    "ipswichtown": {
+      "name": "Ipswich Town",
+      "wiki": "Ipswich Town F.C."
+    },
+    "istanbulbasaksehirfk": {
+      "name": "İstanbul Başakşehir",
+      "wiki": "İstanbul Başakşehir F.K."
+    },
+    "jagielloniabiałystok": {
+      "name": "Jagiellonia Białystok",
+      "wiki": "Jagiellonia Białystok"
+    },
+    "jeonbukhyundaimotors": {
+      "name": "Jeonbuk Hyundai Motors",
+      "wiki": "Jeonbuk Hyundai Motors"
+    },
+    "jskabylie": {
+      "name": "JS Kabylie",
+      "wiki": "JS Kabylie"
     },
     "juventus": {
       "name": "Juventus",
@@ -310,6 +1198,58 @@
       "crest": "Juventus FC 2017 logo.svg",
       "wiki": "Juventus FC"
     },
+    "kaagent": {
+      "name": "Gent",
+      "wiki": "KAA Gent"
+    },
+    "kaizerchiefs": {
+      "name": "Kaizer Chiefs",
+      "wiki": "Kaizer Chiefs F.C."
+    },
+    "kalb": {
+      "name": "Kalba",
+      "wiki": "Kalba FC"
+    },
+    "karlsruher": {
+      "name": "Karlsruher SC",
+      "wiki": "Karlsruher SC"
+    },
+    "kashimaantlers": {
+      "name": "Kashima Antlers",
+      "wiki": "Kashima Antlers"
+    },
+    "kasımpasa": {
+      "name": "Kasımpaşa",
+      "wiki": "Kasımpaşa S.K."
+    },
+    "kayserispor": {
+      "name": "Kayserispor",
+      "wiki": "Kayserispor"
+    },
+    "kilmarnock": {
+      "name": "Kilmarnock",
+      "wiki": "Kilmarnock F.C."
+    },
+    "konyaspor": {
+      "name": "Konyaspor",
+      "wiki": "Konyaspor"
+    },
+    "krcgenk": {
+      "name": "Genk",
+      "wiki": "KRC Genk"
+    },
+    "kscracovia": {
+      "name": "Cracovia",
+      "wiki": "KS Cracovia"
+    },
+    "kvmechelen": {
+      "name": "Mechelen",
+      "wiki": "KV Mechelen"
+    },
+    "la": {
+      "name": "LASK",
+      "wiki": "LASK"
+    },
     "lazio": {
       "name": "Lazio",
       "country": "Italie",
@@ -319,6 +1259,26 @@
       ],
       "mono": "LAZ",
       "wiki": "S.S. Lazio"
+    },
+    "lduquito": {
+      "name": "LDU Quito",
+      "wiki": "LDU Quito"
+    },
+    "lechiagdan": {
+      "name": "Lechia Gdańsk",
+      "wiki": "Lechia Gdańsk"
+    },
+    "leedsunited": {
+      "name": "Leeds United",
+      "wiki": "Leeds United F.C."
+    },
+    "lehavre": {
+      "name": "Le Havre",
+      "wiki": "Le Havre AC"
+    },
+    "leicestercity": {
+      "name": "Leicester City",
+      "wiki": "Leicester City F.C."
     },
     "leipzig": {
       "name": "RB Leipzig",
@@ -330,6 +1290,14 @@
       "mono": "RBL",
       "wiki": "RB Leipzig"
     },
+    "levanteud": {
+      "name": "Levante",
+      "wiki": "Levante UD"
+    },
+    "lilleo": {
+      "name": "Lille",
+      "wiki": "Lille OSC"
+    },
     "liverpool": {
       "name": "Liverpool",
       "country": "Angleterre",
@@ -340,6 +1308,14 @@
       "mono": "LIV",
       "wiki": "Liverpool F.C."
     },
+    "losangeles": {
+      "name": "Los Angeles FC",
+      "wiki": "Los Angeles FC"
+    },
+    "lutontown": {
+      "name": "Luton Town",
+      "wiki": "Luton Town F.C."
+    },
     "lyon": {
       "name": "Olympique Lyonnais",
       "country": "France",
@@ -349,6 +1325,26 @@
       ],
       "mono": "OL",
       "wiki": "Olympique Lyonnais"
+    },
+    "maccabihaif": {
+      "name": "Maccabi Haifa",
+      "wiki": "Maccabi Haifa F.C."
+    },
+    "maccabitelaviv": {
+      "name": "Maccabi Tel Aviv",
+      "wiki": "Maccabi Tel Aviv F.C."
+    },
+    "malavan": {
+      "name": "Malavan",
+      "wiki": "Malavan F.C."
+    },
+    "malmoff": {
+      "name": "Malmö FF",
+      "wiki": "Malmö FF"
+    },
+    "mamelodisundowns": {
+      "name": "Mamelodi Sundowns",
+      "wiki": "Mamelodi Sundowns F.C."
     },
     "man-city": {
       "name": "Manchester City",
@@ -370,6 +1366,42 @@
       "mono": "MUN",
       "wiki": "Manchester United F.C."
     },
+    "mazatlan": {
+      "name": "Mazatlán",
+      "wiki": "Mazatlán F.C."
+    },
+    "melbournecity": {
+      "name": "Melbourne City",
+      "wiki": "Melbourne City FC"
+    },
+    "melbournevictory": {
+      "name": "Melbourne Victory",
+      "wiki": "Melbourne Victory FC"
+    },
+    "miami": {
+      "name": "Miami FC",
+      "wiki": "Miami FC"
+    },
+    "middlesbrough": {
+      "name": "Middlesbrough",
+      "wiki": "Middlesbrough F.C."
+    },
+    "millwall": {
+      "name": "Millwall",
+      "wiki": "Millwall F.C."
+    },
+    "minnesotaunited": {
+      "name": "Minnesota United FC",
+      "wiki": "Minnesota United FC"
+    },
+    "mjallbyaif": {
+      "name": "Mjällby AIF",
+      "wiki": "Mjällby AIF"
+    },
+    "moldefk": {
+      "name": "Molde",
+      "wiki": "Molde FK"
+    },
     "monaco": {
       "name": "AS Monaco",
       "country": "France",
@@ -380,6 +1412,146 @@
       "mono": "ASM",
       "wiki": "AS Monaco FC"
     },
+    "montpellierh": {
+      "name": "Montpellier",
+      "wiki": "Montpellier HSC"
+    },
+    "motherwell": {
+      "name": "Motherwell",
+      "wiki": "Motherwell F.C."
+    },
+    "nashville": {
+      "name": "Nashville SC",
+      "wiki": "Nashville SC"
+    },
+    "necnijmegen": {
+      "name": "NEC",
+      "wiki": "NEC Nijmegen"
+    },
+    "neom": {
+      "name": "Neom",
+      "wiki": "Neom SC"
+    },
+    "newcastlejets": {
+      "name": "Newcastle Jets",
+      "wiki": "Newcastle Jets FC"
+    },
+    "newcastleunited": {
+      "name": "Newcastle United",
+      "wiki": "Newcastle United F.C."
+    },
+    "newenglandrevolution": {
+      "name": "New England Revolution",
+      "wiki": "New England Revolution"
+    },
+    "newyorkcity": {
+      "name": "New York City FC",
+      "wiki": "New York City FC"
+    },
+    "nkmaribor": {
+      "name": "Maribor",
+      "wiki": "NK Maribor"
+    },
+    "norwichcity": {
+      "name": "Norwich City",
+      "wiki": "Norwich City F.C."
+    },
+    "nottinghamforest": {
+      "name": "Nottingham Forest",
+      "wiki": "Nottingham Forest F.C."
+    },
+    "ogcnice": {
+      "name": "Nice",
+      "wiki": "OGC Nice"
+    },
+    "olympiacos": {
+      "name": "Olympiacos",
+      "wiki": "Olympiacos F.C."
+    },
+    "olympiquedemarseille": {
+      "name": "Marseille",
+      "wiki": "Olympique de Marseille"
+    },
+    "orlandocity": {
+      "name": "Orlando City SC",
+      "wiki": "Orlando City SC"
+    },
+    "orlandopirates": {
+      "name": "Orlando Pirates",
+      "wiki": "Orlando Pirates F.C."
+    },
+    "pafos": {
+      "name": "Pafos",
+      "wiki": "Pafos FC"
+    },
+    "pakhtakor": {
+      "name": "Pakhtakor",
+      "wiki": "Pakhtakor FC"
+    },
+    "panathinaikos": {
+      "name": "Panathinaikos",
+      "wiki": "Panathinaikos F.C."
+    },
+    "paok": {
+      "name": "PAOK",
+      "wiki": "PAOK FC"
+    },
+    "paris": {
+      "name": "Paris FC",
+      "wiki": "Paris FC"
+    },
+    "parmacalcio1913": {
+      "name": "Parma",
+      "wiki": "Parma Calcio 1913"
+    },
+    "peczwolle": {
+      "name": "PEC Zwolle",
+      "wiki": "PEC Zwolle"
+    },
+    "persepolis": {
+      "name": "Persepolis",
+      "wiki": "Persepolis F.C."
+    },
+    "persibbandung": {
+      "name": "Persib",
+      "wiki": "Persib Bandung"
+    },
+    "pfcludogoretsrazgrad": {
+      "name": "Ludogorets Razgrad",
+      "wiki": "PFC Ludogorets Razgrad"
+    },
+    "pfcmontana": {
+      "name": "Montana",
+      "wiki": "PFC Montana"
+    },
+    "pfcnavbahornamangan": {
+      "name": "Navbahor Namangan",
+      "wiki": "PFC Navbahor Namangan"
+    },
+    "philadelphiaunion": {
+      "name": "Philadelphia Union",
+      "wiki": "Philadelphia Union"
+    },
+    "pisa": {
+      "name": "Pisa",
+      "wiki": "Pisa SC"
+    },
+    "pogonszczecin": {
+      "name": "Pogoń Szczecin",
+      "wiki": "Pogoń Szczecin"
+    },
+    "polokwanecity": {
+      "name": "Polokwane City",
+      "wiki": "Polokwane City F.C."
+    },
+    "port": {
+      "name": "Port",
+      "wiki": "Port F.C."
+    },
+    "portlandtimbers": {
+      "name": "Portland Timbers",
+      "wiki": "Portland Timbers"
+    },
     "porto": {
       "name": "FC Porto",
       "country": "Portugal",
@@ -389,6 +1561,14 @@
       ],
       "mono": "POR",
       "wiki": "FC Porto"
+    },
+    "portsmouth": {
+      "name": "Portsmouth",
+      "wiki": "Portsmouth F.C."
+    },
+    "portvale": {
+      "name": "Port Vale",
+      "wiki": "Port Vale F.C."
     },
     "psg": {
       "name": "Paris Saint-Germain",
@@ -409,6 +1589,62 @@
       ],
       "mono": "PSV",
       "wiki": "PSV Eindhoven"
+    },
+    "pumasunam": {
+      "name": "Pumas UNAM",
+      "wiki": "Pumas UNAM"
+    },
+    "puskasakademi": {
+      "name": "Puskás Akadémia",
+      "wiki": "Puskás Akadémia FC"
+    },
+    "pyramids": {
+      "name": "Pyramids",
+      "wiki": "Pyramids FC"
+    },
+    "qatar": {
+      "name": "Qatar SC",
+      "wiki": "Qatar SC"
+    },
+    "racingdesantander": {
+      "name": "Racing Santander",
+      "wiki": "Racing de Santander"
+    },
+    "rajaca": {
+      "name": "Raja Casablanca",
+      "wiki": "Raja CA"
+    },
+    "randers": {
+      "name": "Randers",
+      "wiki": "Randers FC"
+    },
+    "rangers": {
+      "name": "Rangers",
+      "wiki": "Rangers F.C."
+    },
+    "rayovallecano": {
+      "name": "Rayo Vallecano",
+      "wiki": "Rayo Vallecano"
+    },
+    "rcceltadevigo": {
+      "name": "Celta Vigo",
+      "wiki": "RC Celta de Vigo"
+    },
+    "rcdespanyol": {
+      "name": "Espanyol",
+      "wiki": "RCD Espanyol"
+    },
+    "rcdmallorca": {
+      "name": "Mallorca",
+      "wiki": "RCD Mallorca"
+    },
+    "rclens": {
+      "name": "Lens",
+      "wiki": "RC Lens"
+    },
+    "rcstrasbourgalsace": {
+      "name": "Strasbourg",
+      "wiki": "RC Strasbourg Alsace"
     },
     "real-betis": {
       "name": "Real Betis",
@@ -441,6 +1677,54 @@
       "mono": "RSO",
       "wiki": "Real Sociedad"
     },
+    "realoviedo": {
+      "name": "Oviedo",
+      "wiki": "Real Oviedo"
+    },
+    "realsaltlake": {
+      "name": "Real Salt Lake",
+      "wiki": "Real Salt Lake"
+    },
+    "redbullbragantino": {
+      "name": "Red Bull Bragantino",
+      "wiki": "Red Bull Bragantino"
+    },
+    "redstarbelgrade": {
+      "name": "Red Star Belgrade",
+      "wiki": "Red Star Belgrade"
+    },
+    "rkcwaalwi": {
+      "name": "RKC Waalwijk",
+      "wiki": "RKC Waalwijk"
+    },
+    "rosariocentral": {
+      "name": "Rosario Central",
+      "wiki": "Rosario Central"
+    },
+    "rotherhamunited": {
+      "name": "Rotherham United",
+      "wiki": "Rotherham United F.C."
+    },
+    "royalantwerp": {
+      "name": "Antwerp",
+      "wiki": "Royal Antwerp FC"
+    },
+    "royalcharleroi": {
+      "name": "Charleroi",
+      "wiki": "Royal Charleroi SC"
+    },
+    "royaleunionsaintgilloise": {
+      "name": "Union Saint-Gilloise",
+      "wiki": "Royale Union Saint-Gilloise"
+    },
+    "rsberkane": {
+      "name": "RS Berkane",
+      "wiki": "RS Berkane"
+    },
+    "rscanderlecht": {
+      "name": "Anderlecht",
+      "wiki": "RSC Anderlecht"
+    },
     "sampdoria": {
       "name": "Sampdoria",
       "country": "Italie",
@@ -450,6 +1734,58 @@
       ],
       "mono": "SAM",
       "wiki": "U.C. Sampdoria"
+    },
+    "samsunspor": {
+      "name": "Samsunspor",
+      "wiki": "Samsunspor"
+    },
+    "sandiego": {
+      "name": "San Diego FC",
+      "wiki": "San Diego FC"
+    },
+    "sanfreccehiroshima": {
+      "name": "Sanfrecce Hiroshima",
+      "wiki": "Sanfrecce Hiroshima"
+    },
+    "sanlorenzodealmagro": {
+      "name": "San Lorenzo",
+      "wiki": "San Lorenzo de Almagro"
+    },
+    "santos": {
+      "name": "Santos",
+      "wiki": "Santos FC"
+    },
+    "santoslaguna": {
+      "name": "Santos Laguna",
+      "wiki": "Santos Laguna"
+    },
+    "saopaulo": {
+      "name": "São Paulo",
+      "wiki": "São Paulo FC"
+    },
+    "sarpsborg08ff": {
+      "name": "Sarpsborg 08",
+      "wiki": "Sarpsborg 08 FF"
+    },
+    "scbastia": {
+      "name": "Bastia",
+      "wiki": "SC Bastia"
+    },
+    "scbraga": {
+      "name": "Braga",
+      "wiki": "S.C. Braga"
+    },
+    "sccorinthianspaulista": {
+      "name": "Corinthians",
+      "wiki": "SC Corinthians Paulista"
+    },
+    "scfarense": {
+      "name": "Farense",
+      "wiki": "S.C. Farense"
+    },
+    "scfreiburg": {
+      "name": "SC Freiburg",
+      "wiki": "SC Freiburg"
     },
     "schalke": {
       "name": "Schalke 04",
@@ -462,6 +1798,42 @@
       "crest": "FC Schalke 04 Logo.svg",
       "wiki": "FC Schalke 04"
     },
+    "scinternacional": {
+      "name": "Internacional",
+      "wiki": "SC Internacional"
+    },
+    "sctelstar": {
+      "name": "Telstar",
+      "wiki": "SC Telstar"
+    },
+    "scutorreense": {
+      "name": "Torreense",
+      "wiki": "S.C.U. Torreense"
+    },
+    "seattlesounders": {
+      "name": "Seattle Sounders FC",
+      "wiki": "Seattle Sounders FC"
+    },
+    "seinajoenjalkapallokerho": {
+      "name": "SJK",
+      "wiki": "Seinäjoen Jalkapallokerho"
+    },
+    "selangor": {
+      "name": "Selangor",
+      "wiki": "Selangor F.C."
+    },
+    "sepahan": {
+      "name": "Sepahan",
+      "wiki": "Sepahan S.C."
+    },
+    "sepalmeiras": {
+      "name": "Palmeiras",
+      "wiki": "SE Palmeiras"
+    },
+    "servette": {
+      "name": "Servette",
+      "wiki": "Servette FC"
+    },
     "sevilla": {
       "name": "Séville FC",
       "country": "Espagne",
@@ -472,6 +1844,70 @@
       "mono": "SEV",
       "wiki": "Sevilla FC"
     },
+    "shababalahliclub": {
+      "name": "Shabab Al Ahli",
+      "wiki": "Shabab Al Ahli Club"
+    },
+    "shamrockrovers": {
+      "name": "Shamrock Rovers",
+      "wiki": "Shamrock Rovers F.C."
+    },
+    "sheffieldunited": {
+      "name": "Sheffield United",
+      "wiki": "Sheffield United F.C."
+    },
+    "silkeborgif": {
+      "name": "Silkeborg",
+      "wiki": "Silkeborg IF"
+    },
+    "sinttruidensevv": {
+      "name": "Sint-Truiden",
+      "wiki": "Sint-Truidense VV"
+    },
+    "siwelele": {
+      "name": "Siwelele",
+      "wiki": "Siwelele F.C."
+    },
+    "skbeveren": {
+      "name": "Beveren",
+      "wiki": "SK Beveren"
+    },
+    "skslaviaprague": {
+      "name": "Slavia Prague",
+      "wiki": "SK Slavia Prague"
+    },
+    "skslovanbratislava": {
+      "name": "Slovan Bratislava",
+      "wiki": "ŠK Slovan Bratislava"
+    },
+    "sksturmgraz": {
+      "name": "Sturm Graz",
+      "wiki": "SK Sturm Graz"
+    },
+    "southampton": {
+      "name": "Southampton",
+      "wiki": "Southampton F.C."
+    },
+    "spartarotterdam": {
+      "name": "Sparta Rotterdam",
+      "wiki": "Sparta Rotterdam"
+    },
+    "sportingcp": {
+      "name": "Sporting CP",
+      "wiki": "Sporting CP"
+    },
+    "sscnapoli": {
+      "name": "Napoli",
+      "wiki": "SSC Napoli"
+    },
+    "stadedereims": {
+      "name": "Reims",
+      "wiki": "Stade de Reims"
+    },
+    "staderennais": {
+      "name": "Rennes",
+      "wiki": "Stade Rennais FC"
+    },
     "standard-liege": {
       "name": "Standard de Liège",
       "country": "Belgique",
@@ -481,6 +1917,14 @@
       ],
       "mono": "STA",
       "wiki": "Standard Liège"
+    },
+    "stokecity": {
+      "name": "Stoke City",
+      "wiki": "Stoke City F.C."
+    },
+    "stpatricksathletic": {
+      "name": "St Patrick's Athletic",
+      "wiki": "St Patrick's Athletic F.C."
     },
     "stuttgart": {
       "name": "VfB Stuttgart",
@@ -493,15 +1937,37 @@
       "crest": "VfB Stuttgart 1893 Logo.svg",
       "wiki": "VfB Stuttgart"
     },
-    "tottenham": {
-      "name": "Tottenham",
-      "country": "Angleterre",
-      "colors": [
-        "#132257",
-        "#FFFFFF"
-      ],
-      "mono": "TOT",
-      "wiki": "Tottenham Hotspur F.C."
+    "sunderland": {
+      "name": "Sunderland",
+      "wiki": "Sunderland A.F.C."
+    },
+    "svwerderbremen": {
+      "name": "Werder Bremen",
+      "wiki": "SV Werder Bremen"
+    },
+    "svzultewaregem": {
+      "name": "Zulte Waregem",
+      "wiki": "SV Zulte Waregem"
+    },
+    "swanseacity": {
+      "name": "Swansea City",
+      "wiki": "Swansea City A.F.C."
+    },
+    "sydney": {
+      "name": "Sydney FC",
+      "wiki": "Sydney FC"
+    },
+    "talleresdecordoba": {
+      "name": "Talleres",
+      "wiki": "Talleres de Córdoba"
+    },
+    "terengganu": {
+      "name": "Terengganu",
+      "wiki": "Terengganu FC"
+    },
+    "tigresuanl": {
+      "name": "Tigres UANL",
+      "wiki": "Tigres UANL"
     },
     "toluca": {
       "name": "Deportivo Toluca",
@@ -514,6 +1980,64 @@
       "needsCheck": true,
       "wiki": "Deportivo Toluca F.C."
     },
+    "torino": {
+      "name": "Torino",
+      "wiki": "Torino FC"
+    },
+    "toronto": {
+      "name": "Toronto FC",
+      "wiki": "Toronto FC"
+    },
+    "tottenham": {
+      "name": "Tottenham",
+      "country": "Angleterre",
+      "colors": [
+        "#132257",
+        "#FFFFFF"
+      ],
+      "mono": "TOT",
+      "wiki": "Tottenham Hotspur F.C."
+    },
+    "toulouse": {
+      "name": "Toulouse",
+      "wiki": "Toulouse FC"
+    },
+    "trabzonspor": {
+      "name": "Trabzonspor",
+      "wiki": "Trabzonspor"
+    },
+    "tractor": {
+      "name": "Tractor",
+      "wiki": "Tractor S.C."
+    },
+    "turantovuz": {
+      "name": "Turan Tovuz",
+      "wiki": "Turan Tovuz"
+    },
+    "udinesecalcio": {
+      "name": "Udinese",
+      "wiki": "Udinese Calcio"
+    },
+    "ulsanhd": {
+      "name": "Ulsan HD",
+      "wiki": "Ulsan HD FC"
+    },
+    "uscremonese": {
+      "name": "Cremonese",
+      "wiki": "US Cremonese"
+    },
+    "usmalger": {
+      "name": "USM Alger",
+      "wiki": "USM Alger"
+    },
+    "usmonastir(football)": {
+      "name": "US Monastir",
+      "wiki": "US Monastir (football)"
+    },
+    "ussassuolocalcio": {
+      "name": "Sassuolo",
+      "wiki": "US Sassuolo Calcio"
+    },
     "valencia": {
       "name": "Valence CF",
       "country": "Espagne",
@@ -523,6 +2047,22 @@
       ],
       "mono": "VAL",
       "wiki": "Valencia CF"
+    },
+    "vancouverwhitecaps": {
+      "name": "Vancouver Whitecaps FC",
+      "wiki": "Vancouver Whitecaps FC"
+    },
+    "venezi": {
+      "name": "Venezia",
+      "wiki": "Venezia FC"
+    },
+    "vflwolfsburg": {
+      "name": "VfL Wolfsburg",
+      "wiki": "VfL Wolfsburg"
+    },
+    "vikingfk": {
+      "name": "Viking",
+      "wiki": "Viking FK"
     },
     "villarreal": {
       "name": "Villarreal",
@@ -534,6 +2074,26 @@
       "mono": "VIL",
       "wiki": "Villarreal CF"
     },
+    "violette": {
+      "name": "Violette",
+      "wiki": "Violette AC"
+    },
+    "vitoria": {
+      "name": "Vitória de Guimarães",
+      "wiki": "Vitória S.C."
+    },
+    "vvvvenlo": {
+      "name": "VVV-Venlo",
+      "wiki": "VVV-Venlo"
+    },
+    "watford": {
+      "name": "Watford",
+      "wiki": "Watford F.C."
+    },
+    "wellingtonphoenix": {
+      "name": "Wellington Phoenix",
+      "wiki": "Wellington Phoenix FC"
+    },
     "west-ham": {
       "name": "West Ham",
       "country": "Angleterre",
@@ -543,6 +2103,18 @@
       ],
       "mono": "WHU",
       "wiki": "West Ham United F.C."
+    },
+    "westernsydneywanderers": {
+      "name": "Western Sydney Wanderers",
+      "wiki": "Western Sydney Wanderers FC"
+    },
+    "widzewłodz": {
+      "name": "Widzew Łódź",
+      "wiki": "Widzew Łódź"
+    },
+    "wolfsberger": {
+      "name": "Wolfsberger AC",
+      "wiki": "Wolfsberger AC"
     },
     "wolves": {
       "name": "Wolverhampton",
@@ -554,6 +2126,18 @@
       "mono": "WOL",
       "wiki": "Wolverhampton Wanderers F.C."
     },
+    "wrexham": {
+      "name": "Wrexham",
+      "wiki": "Wrexham A.F.C."
+    },
+    "zamalek": {
+      "name": "Zamalek",
+      "wiki": "Zamalek SC"
+    },
+    "zed": {
+      "name": "ZED",
+      "wiki": "ZED FC"
+    },
     "zenit": {
       "name": "Zénith Saint-Pétersbourg",
       "country": "Russie",
@@ -563,6 +2147,10 @@
       ],
       "mono": "ZEN",
       "wiki": "FC Zenit Saint Petersburg"
+    },
+    "zhejiangprofessional": {
+      "name": "Zhejiang",
+      "wiki": "Zhejiang Professional F.C."
     }
   }
 }
