@@ -92,4 +92,39 @@ test.describe('Placement sur le terrain', () => {
     expect(Math.max(...at('DM'))).toBeGreaterThan(Math.max(...at('AM')));
     expect(Math.max(...at('AM'))).toBeGreaterThan(Math.max(...at('ST')));
   });
+
+  test('le cadrage montre les trois quarts du terrain, pas le terrain entier', async ({ page }) => {
+    const quiz = new QuizPage(page);
+    await quiz.goto();
+    await quiz.start({ years: [2022, 2018] });
+
+    /* Sur un terrain complet, les onze se tassent dans le bas de l'image et
+       un défenseur se lit comme un milieu. Le cadre s'arrête donc au premier
+       quart du camp adverse : la surface de réparation d'en face est hors
+       champ, et la ligne médiane est visible. */
+    const marks = await page.evaluate(() => {
+      const svg = document.querySelector('#pitch svg.markings');
+      const box = svg.getAttribute('viewBox').split(' ').map(Number);
+      return {
+        height: box[3],
+        rects: [...svg.querySelectorAll('rect')].map((r) => Number(r.getAttribute('y'))),
+        lines: [...svg.querySelectorAll('line')].map((l) => Number(l.getAttribute('y1')))
+      };
+    });
+
+    // Une seule surface de réparation, et elle est dans la moitié basse.
+    expect(marks.rects).toHaveLength(2);
+    for (const y of marks.rects) expect(y).toBeGreaterThan(marks.height / 2);
+    // La ligne médiane est dans le champ, vers le haut.
+    expect(marks.lines).toHaveLength(1);
+    expect(marks.lines[0]).toBeGreaterThan(0);
+    expect(marks.lines[0]).toBeLessThan(marks.height / 2);
+
+    // Le gardien est près de sa ligne, les attaquants au-delà du milieu.
+    const ys = await page.evaluate(() =>
+      [...document.querySelectorAll('#pitch .slot')].map((s) => parseFloat(s.style.top)));
+    expect(Math.max(...ys)).toBeGreaterThan(85);
+    expect(Math.min(...ys)).toBeLessThan(marksMedianShare(marks));
+    function marksMedianShare(m) { return (m.lines[0] / m.height) * 100; }
+  });
 });

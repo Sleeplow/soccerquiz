@@ -205,6 +205,21 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
   flex: none;
 }
 
+/* L'année est la moitié de l'énoncé en mode normal : noyée dans la légende
+   sous le terrain, elle passait inaperçue. Ici elle est lue avant le terrain. */
+.hud-year {
+  flex: none;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 210, 51, .45);
+  background: rgba(255, 210, 51, .14);
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: .03em;
+  font-variant-numeric: tabular-nums;
+}
+
 .hud-score { font-weight: 700; font-variant-numeric: tabular-nums; flex: none; }
 
 .timer { flex: 1; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, .12); overflow: hidden; }
@@ -226,7 +241,7 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .pitch {
   position: relative;
-  aspect-ratio: 5 / 7;
+  aspect-ratio: 68 / 79;
   max-height: 72vh;
   margin: 0 auto;
   border-radius: var(--radius);
@@ -243,6 +258,13 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
   transform: translate(-50%, -50%);
   width: var(--slot-w, 17%);
   max-width: 104px;
+  /* En flux normal, un libellé plus large que son créneau ne se centre pas :
+     il démarre au bord gauche et déborde entièrement vers la droite, ce qui
+     envoyait les latéraux droits hors du terrain. La colonne flex, elle,
+     centre même ce qui dépasse. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -280,7 +302,9 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .02em;
-  max-width: 140%;
+  /* Le libellé déborde volontairement de la pastille : sa largeur est fixée
+     par le rendu, d'après l'écart réel avec le voisin de la même ligne. */
+  max-width: var(--label-w, 140%);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -446,6 +470,6 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 }
 
 @media (max-width: 480px) {
-  .pitch { aspect-ratio: 5 / 7; max-height: none; }
+  .pitch { aspect-ratio: 68 / 79; max-height: none; }
   .btn-lg { width: 100%; }
 }

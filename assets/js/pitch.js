@@ -1,24 +1,32 @@
 /* Rendu du terrain : place les onze pastilles à partir de la formation. */
 
 const Pitch = (() => {
-  /* Bandes verticales occupées par le gardien puis chaque ligne de la formation.
-     Le terrain va de y=0 (attaque, en haut) à y=100 (but, en bas). */
-  const GK_Y = 87;
-  const FIRST_LINE_Y = 71;
-  const LAST_LINE_Y = 14;
+  /* On ne montre pas le terrain entier. Une équipe au coup d'envoi tient dans
+     sa moitié plus le premier quart de celle d'en face : dessiner les 105 m
+     complets écrase les onze dans le bas de l'image et fait passer des
+     défenseurs pour des milieux. On cadre donc sur 3/4 de terrain — but propre
+     en bas, ligne médiane vers le haut, camp adverse à peine entamé.
 
+     Bandes verticales occupées par le gardien puis chaque ligne de la
+     formation, de y=0 (haut du cadre, camp adverse) à y=100 (ligne de but). */
+  const GK_Y = 91;
+  const FIRST_LINE_Y = 76;
+  const LAST_LINE_Y = 12;
+
+  /* Marquages à l'échelle : 68 m de large sur 78,75 m (les 3/4 de 105 m),
+     rendus dans un repère de 100 × 116 unités. La ligne du haut n'est pas
+     tracée — c'est une coupe, pas une limite du terrain. */
   const MARKINGS = `
-    <svg class="markings" viewBox="0 0 100 120" preserveAspectRatio="none" aria-hidden="true">
+    <svg class="markings" viewBox="0 0 100 116" preserveAspectRatio="none" aria-hidden="true">
       <g fill="none" stroke="rgba(255,255,255,.28)" stroke-width=".5">
-        <rect x="4" y="3" width="92" height="114"/>
-        <line x1="4" y1="60" x2="96" y2="60"/>
-        <circle cx="50" cy="60" r="14"/>
-        <rect x="24" y="97" width="52" height="20"/>
-        <rect x="38" y="109" width="24" height="8"/>
-        <path d="M 36 97 A 15 15 0 0 0 64 97"/>
-        <rect x="24" y="3" width="52" height="20"/>
-        <rect x="38" y="3" width="24" height="8"/>
-        <path d="M 36 23 A 15 15 0 0 1 64 23"/>
+        <path d="M 2 0 L 2 114 L 98 114 L 98 0"/>
+        <line x1="2" y1="37" x2="98" y2="37"/>
+        <circle cx="50" cy="37" r="13.5"/>
+        <circle cx="50" cy="37" r="1" fill="rgba(255,255,255,.28)"/>
+        <rect x="21.5" y="90" width="57" height="24"/>
+        <rect x="37" y="106" width="26" height="8"/>
+        <circle cx="50" cy="97.8" r="1" fill="rgba(255,255,255,.28)"/>
+        <path d="M 39 90 A 13.5 13.5 0 0 0 61 90"/>
       </g>
     </svg>`;
 
@@ -26,15 +34,15 @@ const Pitch = (() => {
      y de 0 (but adverse) à 100 (son propre but). C'est la vue classique d'une
      composition diffusée : l'équipe attaque vers le haut. */
   const SPOTS = {
-    GK:  { x: 50, y: 88 },
-    RB:  { x: 88, y: 73 }, CB: { x: 50, y: 73 }, LB: { x: 12, y: 73 },
-    RWB: { x: 90, y: 63 }, LWB: { x: 10, y: 63 },
-    DM:  { x: 50, y: 56 },
-    RM:  { x: 86, y: 45 }, CM: { x: 50, y: 45 }, LM: { x: 14, y: 45 },
+    GK:  { x: 50, y: 91 },
+    RB:  { x: 88, y: 76 }, CB: { x: 50, y: 76 }, LB: { x: 12, y: 76 },
+    RWB: { x: 90, y: 66 }, LWB: { x: 10, y: 66 },
+    DM:  { x: 50, y: 58 },
+    RM:  { x: 86, y: 46 }, CM: { x: 50, y: 46 }, LM: { x: 14, y: 46 },
     AM:  { x: 50, y: 34 },
-    RW:  { x: 84, y: 26 }, LW: { x: 16, y: 26 },
-    SS:  { x: 50, y: 22 },
-    CF:  { x: 50, y: 14 }, ST: { x: 50, y: 14 }
+    RW:  { x: 84, y: 24 }, LW: { x: 16, y: 24 },
+    SS:  { x: 50, y: 20 },
+    CF:  { x: 50, y: 12 }, ST: { x: 50, y: 12 }
   };
 
   // Synonymes rencontrés dans les sources, ramenés aux codes ci-dessus.
@@ -48,6 +56,52 @@ const Pitch = (() => {
   // `DF`, `MF` et `FW` sont absents à dessein : ce sont les codes grossiers des
   // listes d'effectif, pas des postes. Une équipe qui n'a que ceux-là bascule
   // sur la répartition par lignes.
+
+  /* Proportions du cadre, nécessaires pour convertir une largeur en hauteur :
+     le créneau est carré, or les coordonnées sont en pourcentage de chaque axe. */
+  const FRAME_RATIO = 68 / 79;
+  // Place occupée sous la pastille par le nom, puis par le club, en % de hauteur.
+  const LABEL_H = 7;
+
+  /**
+   * Dimensions à donner aux créneaux pour cette composition.
+   *
+   * Deux contraintes distinctes, longtemps confondues : la pastille est carrée,
+   * c'est donc la hauteur disponible entre deux lignes qui la borne ; le
+   * libellé, lui, ne s'étale qu'horizontalement et peut déborder largement du
+   * disque. Les lier revenait à tronquer « Griezmann » parce que la ligne
+   * au-dessus était proche.
+   *
+   * @returns {{badge: number, label: number}} largeur de la pastille en % de
+   *          la largeur du terrain, et largeur du libellé en % de la pastille.
+   */
+  function slotMetrics(coords) {
+    let gapX = 100;
+    let gapY = 100;
+    for (let i = 0; i < coords.length; i++) {
+      for (let j = i + 1; j < coords.length; j++) {
+        const dx = Math.abs(coords[i].x - coords[j].x);
+        const dy = Math.abs(coords[i].y - coords[j].y);
+        // Même ligne à quelques dixièmes près : c'est l'écart horizontal qui
+        // contraint. Lignes différentes : c'est l'écart vertical.
+        if (dy < 4) gapX = Math.min(gapX, dx);
+        else gapY = Math.min(gapY, dy);
+      }
+    }
+
+    const byWidth = gapX / 1.15;
+    const byHeight = Math.max(0, gapY - LABEL_H) / FRAME_RATIO;
+    const badge = Math.max(8.5, Math.min(19, byWidth, byHeight));
+
+    /* Le libellé prend tout l'écart horizontal — moins une marge, pour que deux
+       voisins ne se touchent pas — mais un latéral est collé à sa touche : sa
+       place vers l'extérieur est ce qui reste jusqu'au bord du terrain. */
+    const toEdge = Math.min(...coords.map((c) => Math.min(c.x, 100 - c.x)));
+    const byGap = (gapX * 0.92 / badge) * 100;
+    const byEdge = (2 * toEdge * 0.96 / badge) * 100;
+    const label = Math.min(230, Math.max(100, Math.min(byGap, byEdge)));
+    return { badge, label };
+  }
 
   /** Écartement horizontal quand plusieurs joueurs partagent un poste. */
   function spread(count) {
@@ -125,13 +179,28 @@ const Pitch = (() => {
     return bands;
   }
 
+  /* Profondeur de chaque ligne selon leur nombre, du plus reculé au plus
+     avancé. Étaler uniformément de la défense à l'attaque donne un 4-3-3 dont
+     les milieux jouent au-delà du rond central : ces valeurs sont celles d'une
+     composition telle qu'on la voit à la télévision. */
+  const LINE_DEPTHS = {
+    1: [46],
+    2: [72, 28],
+    3: [75, 51, 20],
+    4: [77, 60, 40, 18],
+    5: [78, 64, 48, 32, 16]
+  };
+
   function coordsFor(bands) {
-    const lineCount = bands.length - 1;
-    const step = lineCount > 1 ? (FIRST_LINE_Y - LAST_LINE_Y) / (lineCount - 1) : 0;
+    const lines = bands.length - 1;
+    const depths = LINE_DEPTHS[lines]
+      // Au-delà de cinq lignes, la table n'a plus rien à dire : on répartit.
+      || Array.from({ length: lines }, (_, i) =>
+        FIRST_LINE_Y - (i / (lines - 1)) * (FIRST_LINE_Y - LAST_LINE_Y));
 
     const coords = [];
     bands.forEach((band, bandIndex) => {
-      const y = bandIndex === 0 ? GK_Y : FIRST_LINE_Y - (bandIndex - 1) * step;
+      const y = bandIndex === 0 ? GK_Y : depths[bandIndex - 1];
       band.forEach((playerIndex, k) => {
         const x = ((k + 1) / (band.length + 1)) * 100;
         coords[playerIndex] = { x, y };
@@ -203,10 +272,11 @@ const Pitch = (() => {
     const bands = positional ? null : bandsFor(question.formation, question.lineup.length);
     const coords = positional || coordsFor(bands);
 
-    // Plus il y a de lignes, moins chacune a de hauteur : les pastilles
-    // rétrécissent en conséquence, sinon les libellés se chevauchent.
-    const rows = positional ? coordsByPosition.rows : bands.length;
-    host.style.setProperty('--slot-w', rows >= 6 ? '13%' : rows === 5 ? '16.5%' : '19%');
+    // Pastilles et libellés s'ajustent à la densité réelle de la composition,
+    // sinon les uns se chevauchent et les autres se tronquent.
+    const metrics = slotMetrics(coords);
+    host.style.setProperty('--slot-w', metrics.badge.toFixed(1) + '%');
+    host.style.setProperty('--label-w', metrics.label.toFixed(0) + '%');
 
     question.lineup.forEach((player, index) => {
       const { x, y } = coords[index] || { x: 50, y: 50 };

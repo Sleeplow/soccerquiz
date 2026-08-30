@@ -47,8 +47,13 @@ test.describe('Résolution des blasons', () => {
     await quiz.start();
     await expect(quiz.badges.first()).toBeVisible();
 
-    // Un lot par tranche de 50 titres, jamais une requête par club.
-    expect(calls.length).toBeLessThan(5);
+    /* Ce qui est vérifié, c'est le regroupement : un lot par tranche de
+       50 titres, jamais une requête par club. Le seuil se déduit du
+       référentiel pour ne pas se périmer à chaque édition importée. */
+    const clubCount = await page.evaluate(async () =>
+      Object.keys((await (await fetch('data/clubs.json')).json()).clubs).length);
+    expect(calls.length).toBeLessThanOrEqual(Math.ceil(clubCount / 50) + 1);
+    expect(calls.length).toBeLessThan(clubCount / 10);
     const cached = await page.evaluate(() =>
       Object.keys(JSON.parse(localStorage.getItem('soccerquiz.crests.v1') || '{}')).length);
     expect(cached).toBeGreaterThan(0);

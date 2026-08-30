@@ -28,10 +28,13 @@ COUNTRIES = ROOT / "data" / "countries.json"
 # Les données Wikipédia sont en anglais ; le jeu et l'autocomplétion, en français.
 FRENCH = {
     "Algeria": "Algérie", "Argentina": "Argentine", "Australia": "Australie",
-    "Austria": "Autriche", "Belgium": "Belgique", "Brazil": "Brésil",
+    "Austria": "Autriche", "Belgium": "Belgique",
+    "Bosnia and Herzegovina": "Bosnie-Herzégovine", "Brazil": "Brésil",
     "Cameroon": "Cameroun", "Canada": "Canada", "Cape Verde": "Cap-Vert",
     "Chile": "Chili", "Colombia": "Colombie", "Costa Rica": "Costa Rica",
-    "Croatia": "Croatie", "Curaçao": "Curaçao", "Denmark": "Danemark",
+    "Croatia": "Croatie", "Curaçao": "Curaçao", "Czech Republic": "Tchéquie",
+    "Denmark": "Danemark",
+    "DR Congo": "RD Congo",
     "Ecuador": "Équateur", "Egypt": "Égypte", "England": "Angleterre",
     "France": "France", "Germany": "Allemagne", "Ghana": "Ghana",
     "Greece": "Grèce", "Haiti": "Haïti", "Honduras": "Honduras",

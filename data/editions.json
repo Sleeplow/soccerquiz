@@ -4,7 +4,4304 @@
     {
       "year": 2026,
       "host": "Canada / Mexique / États-Unis",
+      "participants": [
+        "Afrique du Sud",
+        "Algérie",
+        "Allemagne",
+        "Angleterre",
+        "Arabie saoudite",
+        "Argentine",
+        "Australie",
+        "Autriche",
+        "Belgique",
+        "Bosnie-Herzégovine",
+        "Brésil",
+        "Canada",
+        "Cap-Vert",
+        "Colombie",
+        "Corée du Sud",
+        "Côte d'Ivoire",
+        "Croatie",
+        "Curaçao",
+        "Écosse",
+        "Égypte",
+        "Équateur",
+        "Espagne",
+        "États-Unis",
+        "France",
+        "Ghana",
+        "Haïti",
+        "Irak",
+        "Iran",
+        "Japon",
+        "Jordanie",
+        "Maroc",
+        "Mexique",
+        "Norvège",
+        "Nouvelle-Zélande",
+        "Ouzbékistan",
+        "Panama",
+        "Paraguay",
+        "Pays-Bas",
+        "Portugal",
+        "Qatar",
+        "RD Congo",
+        "Sénégal",
+        "Suède",
+        "Suisse",
+        "Tchéquie",
+        "Tunisie",
+        "Turquie",
+        "Uruguay"
+      ],
       "teams": [
+        {
+          "country": "Afrique du Sud",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Ronwen Williams",
+              "pos": "GK",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Thabang Matuludi",
+              "pos": "DF",
+              "club": "polokwanecity"
+            },
+            {
+              "name": "Khulumani Ndamane",
+              "pos": "DF",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Teboho Mokoena",
+              "pos": "MF",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Thalente Mbatha",
+              "pos": "MF",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Aubrey Modiba",
+              "pos": "DF",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Oswin Appollis",
+              "pos": "FW",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Tshepang Moremi",
+              "pos": "FW",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Lyle Foster",
+              "pos": "FW",
+              "club": "burnley"
+            },
+            {
+              "name": "Relebohile Mofokeng",
+              "pos": "FW",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Themba Zwane",
+              "pos": "MF",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Thapelo Maseko",
+              "pos": "FW",
+              "club": "aellimassol"
+            },
+            {
+              "name": "Sphephelo Sithole",
+              "pos": "MF",
+              "club": "cdtondela"
+            },
+            {
+              "name": "Mbekezeli Mbokazi",
+              "pos": "DF",
+              "club": "chicagofire"
+            },
+            {
+              "name": "Iqraam Rayners",
+              "pos": "FW",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Sipho Chaine",
+              "pos": "GK",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Evidence Makgopa",
+              "pos": "FW",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Samukele Kabini",
+              "pos": "DF",
+              "club": "moldefk"
+            },
+            {
+              "name": "Nkosinathi Sibisi",
+              "pos": "DF",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Khuliso Mudau",
+              "pos": "DF",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Ime Okon",
+              "pos": "DF",
+              "club": "hannover96"
+            },
+            {
+              "name": "Ricardo Goss",
+              "pos": "GK",
+              "club": "siwelele"
+            },
+            {
+              "name": "Jayden Adams",
+              "pos": "MF",
+              "club": "mamelodisundowns"
+            },
+            {
+              "name": "Olwethu Makhanya",
+              "pos": "DF",
+              "club": "philadelphiaunion"
+            },
+            {
+              "name": "Kamogelo Sebelebele",
+              "pos": "FW",
+              "club": "orlandopirates"
+            },
+            {
+              "name": "Bradley Cross",
+              "pos": "DF",
+              "club": "kaizerchiefs"
+            }
+          ]
+        },
+        {
+          "country": "Algérie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Melvin Mastil",
+              "pos": "GK",
+              "club": "fcstadenyonnais"
+            },
+            {
+              "name": "Aïssa Mandi",
+              "pos": "DF",
+              "club": "lilleo"
+            },
+            {
+              "name": "Achref Abada",
+              "pos": "DF",
+              "club": "usmalger"
+            },
+            {
+              "name": "Mohamed Amine Tougai",
+              "pos": "DF",
+              "club": "esperancesportivedetunis"
+            },
+            {
+              "name": "Zineddine Belaïd",
+              "pos": "DF",
+              "club": "jskabylie"
+            },
+            {
+              "name": "Ramiz Zerrouki",
+              "pos": "MF",
+              "club": "fctwente"
+            },
+            {
+              "name": "Riyad Mahrez",
+              "pos": "FW",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Houssem Aouar",
+              "pos": "MF",
+              "club": "alittihadclub(jeddah)"
+            },
+            {
+              "name": "Amine Gouiri",
+              "pos": "FW",
+              "club": "olympiquedemarseille"
+            },
+            {
+              "name": "Farès Chaïbi",
+              "pos": "MF",
+              "club": "eintracht"
+            },
+            {
+              "name": "Anis Hadj Moussa",
+              "pos": "FW",
+              "club": "feyenoord"
+            },
+            {
+              "name": "Nadhir Benbouali",
+              "pos": "FW",
+              "club": "gyorieto"
+            },
+            {
+              "name": "Jaouen Hadjam",
+              "pos": "DF",
+              "club": "bscyoungboys"
+            },
+            {
+              "name": "Hicham Boudaoui",
+              "pos": "MF",
+              "club": "ogcnice"
+            },
+            {
+              "name": "Rayan Aït-Nouri",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Oussama Benbot",
+              "pos": "GK",
+              "club": "usmalger"
+            },
+            {
+              "name": "Rafik Belghali",
+              "pos": "DF",
+              "club": "hellasveron"
+            },
+            {
+              "name": "Mohamed Amoura",
+              "pos": "FW",
+              "club": "vflwolfsburg"
+            },
+            {
+              "name": "Nabil Bentaleb",
+              "pos": "MF",
+              "club": "lilleo"
+            },
+            {
+              "name": "Adil Boulbina",
+              "pos": "FW",
+              "club": "alduhail"
+            },
+            {
+              "name": "Ramy Bensebaini",
+              "pos": "DF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Ibrahim Maza",
+              "pos": "MF",
+              "club": "bayer04leverkusen"
+            },
+            {
+              "name": "Luca Zidane",
+              "pos": "GK",
+              "club": "granada"
+            },
+            {
+              "name": "Yacine Titraoui",
+              "pos": "MF",
+              "club": "royalcharleroi"
+            },
+            {
+              "name": "Farès Ghedjemis",
+              "pos": "FW",
+              "club": "frosinonecalcio"
+            },
+            {
+              "name": "Samir Chergui",
+              "pos": "DF",
+              "club": "paris"
+            }
+          ]
+        },
+        {
+          "country": "Allemagne",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Manuel Neuer",
+              "pos": "GK",
+              "club": "bayern"
+            },
+            {
+              "name": "Antonio Rüdiger",
+              "pos": "DF",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Waldemar Anton",
+              "pos": "DF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Jonathan Tah",
+              "pos": "DF",
+              "club": "bayern"
+            },
+            {
+              "name": "Aleksandar Pavlović",
+              "pos": "MF",
+              "club": "bayern"
+            },
+            {
+              "name": "Joshua Kimmich",
+              "pos": "DF",
+              "club": "bayern"
+            },
+            {
+              "name": "Kai Havertz",
+              "pos": "FW",
+              "club": "arsenal"
+            },
+            {
+              "name": "Leon Goretzka",
+              "pos": "MF",
+              "club": "bayern"
+            },
+            {
+              "name": "Jamie Leweling",
+              "pos": "MF",
+              "club": "stuttgart"
+            },
+            {
+              "name": "Jamal Musiala",
+              "pos": "MF",
+              "club": "bayern"
+            },
+            {
+              "name": "Nick Woltemade",
+              "pos": "FW",
+              "club": "newcastleunited"
+            },
+            {
+              "name": "Oliver Baumann",
+              "pos": "GK",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "Pascal Groß",
+              "pos": "MF",
+              "club": "brighton"
+            },
+            {
+              "name": "Maximilian Beier",
+              "pos": "FW",
+              "club": "dortmund"
+            },
+            {
+              "name": "Nico Schlotterbeck",
+              "pos": "DF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Angelo Stiller",
+              "pos": "MF",
+              "club": "stuttgart"
+            },
+            {
+              "name": "Florian Wirtz",
+              "pos": "MF",
+              "club": "liverpool"
+            },
+            {
+              "name": "Nathaniel Brown",
+              "pos": "DF",
+              "club": "eintracht"
+            },
+            {
+              "name": "Leroy Sané",
+              "pos": "MF",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Nadiem Amiri",
+              "pos": "MF",
+              "club": "1fsvmainz05"
+            },
+            {
+              "name": "Alexander Nübel",
+              "pos": "GK",
+              "club": "stuttgart"
+            },
+            {
+              "name": "David Raum",
+              "pos": "DF",
+              "club": "leipzig"
+            },
+            {
+              "name": "Felix Nmecha",
+              "pos": "MF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Malick Thiaw",
+              "pos": "DF",
+              "club": "newcastleunited"
+            },
+            {
+              "name": "Assan Ouédraogo",
+              "pos": "MF",
+              "club": "leipzig"
+            },
+            {
+              "name": "Deniz Undav",
+              "pos": "FW",
+              "club": "stuttgart"
+            }
+          ]
+        },
+        {
+          "country": "Angleterre",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Jordan Pickford",
+              "pos": "GK",
+              "club": "everton"
+            },
+            {
+              "name": "Ezri Konsa",
+              "pos": "DF",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Nico O'Reilly",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Declan Rice",
+              "pos": "MF",
+              "club": "arsenal"
+            },
+            {
+              "name": "John Stones",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Marc Guéhi",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Bukayo Saka",
+              "pos": "FW",
+              "club": "arsenal"
+            },
+            {
+              "name": "Elliot Anderson",
+              "pos": "MF",
+              "club": "nottinghamforest"
+            },
+            {
+              "name": "Harry Kane",
+              "pos": "FW",
+              "club": "bayern"
+            },
+            {
+              "name": "Jude Bellingham",
+              "pos": "MF",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Marcus Rashford",
+              "pos": "FW",
+              "club": "barcelona"
+            },
+            {
+              "name": "Trevoh Chalobah",
+              "pos": "DF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Dean Henderson",
+              "pos": "GK",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Jordan Henderson",
+              "pos": "MF",
+              "club": "brentford"
+            },
+            {
+              "name": "Dan Burn",
+              "pos": "DF",
+              "club": "newcastleunited"
+            },
+            {
+              "name": "Kobbie Mainoo",
+              "pos": "MF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Morgan Rogers",
+              "pos": "MF",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Anthony Gordon",
+              "pos": "FW",
+              "club": "newcastleunited"
+            },
+            {
+              "name": "Ollie Watkins",
+              "pos": "FW",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Noni Madueke",
+              "pos": "FW",
+              "club": "arsenal"
+            },
+            {
+              "name": "Eberechi Eze",
+              "pos": "MF",
+              "club": "arsenal"
+            },
+            {
+              "name": "Ivan Toney",
+              "pos": "FW",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "James Trafford",
+              "pos": "GK",
+              "club": "man-city"
+            },
+            {
+              "name": "Reece James",
+              "pos": "DF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Djed Spence",
+              "pos": "DF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Jarell Quansah",
+              "pos": "DF",
+              "club": "bayer04leverkusen"
+            }
+          ]
+        },
+        {
+          "country": "Arabie saoudite",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Nawaf Al-Aqidi",
+              "pos": "GK",
+              "club": "alnassr"
+            },
+            {
+              "name": "Ali Majrashi",
+              "pos": "DF",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Ali Lajami",
+              "pos": "DF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Abdulelah Al-Amri",
+              "pos": "DF",
+              "club": "alnassr"
+            },
+            {
+              "name": "Hassan Al-Tambakti",
+              "pos": "DF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Nasser Al-Dawsari",
+              "pos": "MF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Musab Al-Juwayr",
+              "pos": "MF",
+              "club": "al-qadsiah"
+            },
+            {
+              "name": "Ayman Yahya",
+              "pos": "FW",
+              "club": "alnassr"
+            },
+            {
+              "name": "Firas Al-Buraikan",
+              "pos": "FW",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Salem Al-Dawsari",
+              "pos": "FW",
+              "club": "alhilals"
+            },
+            {
+              "name": "Saleh Al-Shehri",
+              "pos": "FW",
+              "club": "alittihadclub(jeddah)"
+            },
+            {
+              "name": "Saud Abdulhamid",
+              "pos": "DF",
+              "club": "rclens"
+            },
+            {
+              "name": "Nawaf Boushal",
+              "pos": "DF",
+              "club": "alnassr"
+            },
+            {
+              "name": "Hassan Kadesh",
+              "pos": "DF",
+              "club": "alittihadclub(jeddah)"
+            },
+            {
+              "name": "Abdullah Al-Khaibari",
+              "pos": "MF",
+              "club": "alnassr"
+            },
+            {
+              "name": "Ziyad Al-Johani",
+              "pos": "MF",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Khalid Al-Ghannam",
+              "pos": "FW",
+              "club": "alettifaqclub"
+            },
+            {
+              "name": "Alaa Al-Hejji",
+              "pos": "MF",
+              "club": "neom"
+            },
+            {
+              "name": "Abdullah Al-Hamdan",
+              "pos": "FW",
+              "club": "alnassr"
+            },
+            {
+              "name": "Sultan Mandash",
+              "pos": "FW",
+              "club": "alhilals"
+            },
+            {
+              "name": "Mohammed Al-Owais",
+              "pos": "GK",
+              "club": "alul"
+            },
+            {
+              "name": "Ahmed Al-Kassar",
+              "pos": "GK",
+              "club": "al-qadsiah"
+            },
+            {
+              "name": "Mohamed Kanno",
+              "pos": "MF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Moteb Al-Harbi",
+              "pos": "DF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Jehad Thakri",
+              "pos": "DF",
+              "club": "al-qadsiah"
+            },
+            {
+              "name": "Mohammed Abu Al-Shamat",
+              "pos": "DF",
+              "club": "al-qadsiah"
+            }
+          ]
+        },
+        {
+          "country": "Argentine",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Juan Musso",
+              "pos": "GK",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Marcos Senesi",
+              "pos": "DF",
+              "club": "afcbournemouth"
+            },
+            {
+              "name": "Nicolás Tagliafico",
+              "pos": "DF",
+              "club": "lyon"
+            },
+            {
+              "name": "Gonzalo Montiel",
+              "pos": "DF",
+              "club": "clubatleticoriverplate"
+            },
+            {
+              "name": "Leandro Paredes",
+              "pos": "MF",
+              "club": "bocajuniors"
+            },
+            {
+              "name": "Lisandro Martínez",
+              "pos": "DF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Rodrigo De Paul",
+              "pos": "MF",
+              "club": "intermiami"
+            },
+            {
+              "name": "Valentín Barco",
+              "pos": "MF",
+              "club": "rcstrasbourgalsace"
+            },
+            {
+              "name": "Julián Alvarez",
+              "pos": "FW",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Lionel Messi",
+              "pos": "FW",
+              "club": "intermiami"
+            },
+            {
+              "name": "Giovani Lo Celso",
+              "pos": "MF",
+              "club": "real-betis"
+            },
+            {
+              "name": "Gerónimo Rulli",
+              "pos": "GK",
+              "club": "olympiquedemarseille"
+            },
+            {
+              "name": "Cristian Romero",
+              "pos": "DF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Exequiel Palacios",
+              "pos": "MF",
+              "club": "bayer04leverkusen"
+            },
+            {
+              "name": "Nicolás González",
+              "pos": "MF",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Thiago Almada",
+              "pos": "FW",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Giuliano Simeone",
+              "pos": "FW",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Nico Paz",
+              "pos": "FW",
+              "club": "como1907"
+            },
+            {
+              "name": "Nicolás Otamendi",
+              "pos": "DF",
+              "club": "benfica"
+            },
+            {
+              "name": "Alexis Mac Allister",
+              "pos": "MF",
+              "club": "liverpool"
+            },
+            {
+              "name": "José Manuel López",
+              "pos": "FW",
+              "club": "sepalmeiras"
+            },
+            {
+              "name": "Lautaro Martínez",
+              "pos": "FW",
+              "club": "inter"
+            },
+            {
+              "name": "Emiliano Martínez",
+              "pos": "GK",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Enzo Fernández",
+              "pos": "MF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Facundo Medina",
+              "pos": "DF",
+              "club": "olympiquedemarseille"
+            },
+            {
+              "name": "Nahuel Molina",
+              "pos": "DF",
+              "club": "atletico-madrid"
+            }
+          ]
+        },
+        {
+          "country": "Australie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Mathew Ryan",
+              "pos": "GK",
+              "club": "levanteud"
+            },
+            {
+              "name": "Miloš Degenek",
+              "pos": "DF",
+              "club": "apoel"
+            },
+            {
+              "name": "Alessandro Circati",
+              "pos": "DF",
+              "club": "parmacalcio1913"
+            },
+            {
+              "name": "Jacob Italiano",
+              "pos": "DF",
+              "club": "grazerak"
+            },
+            {
+              "name": "Jordan Bos",
+              "pos": "DF",
+              "club": "feyenoord"
+            },
+            {
+              "name": "Jason Geria",
+              "pos": "DF",
+              "club": "albirexniigata"
+            },
+            {
+              "name": "Mathew Leckie",
+              "pos": "FW",
+              "club": "melbournecity"
+            },
+            {
+              "name": "Connor Metcalfe",
+              "pos": "MF",
+              "club": "fcstpauli"
+            },
+            {
+              "name": "Mohamed Touré",
+              "pos": "FW",
+              "club": "norwichcity"
+            },
+            {
+              "name": "Ajdin Hrustic",
+              "pos": "FW",
+              "club": "heraclesalmelo"
+            },
+            {
+              "name": "Awer Mabil",
+              "pos": "FW",
+              "club": "cdcastellon"
+            },
+            {
+              "name": "Paul Izzo",
+              "pos": "GK",
+              "club": "randers"
+            },
+            {
+              "name": "Aiden O'Neill",
+              "pos": "MF",
+              "club": "newyorkcity"
+            },
+            {
+              "name": "Cammy Devlin",
+              "pos": "MF",
+              "club": "heartofmidlothian"
+            },
+            {
+              "name": "Kai Trewin",
+              "pos": "DF",
+              "club": "newyorkcity"
+            },
+            {
+              "name": "Aziz Behich",
+              "pos": "DF",
+              "club": "melbournecity"
+            },
+            {
+              "name": "Nestory Irankunda",
+              "pos": "FW",
+              "club": "watford"
+            },
+            {
+              "name": "Patrick Beach",
+              "pos": "GK",
+              "club": "melbournecity"
+            },
+            {
+              "name": "Harry Souttar",
+              "pos": "DF",
+              "club": "leicestercity"
+            },
+            {
+              "name": "Cristian Volpato",
+              "pos": "FW",
+              "club": "ussassuolocalcio"
+            },
+            {
+              "name": "Cameron Burgess",
+              "pos": "DF",
+              "club": "swanseacity"
+            },
+            {
+              "name": "Jackson Irvine",
+              "pos": "MF",
+              "club": "fcstpauli"
+            },
+            {
+              "name": "Nishan Velupillay",
+              "pos": "FW",
+              "club": "melbournevictory"
+            },
+            {
+              "name": "Paul Okon-Engstler",
+              "pos": "MF",
+              "club": "sydney"
+            },
+            {
+              "name": "Lucas Herrington",
+              "pos": "DF",
+              "club": "coloradorapids"
+            },
+            {
+              "name": "Tete Yengi",
+              "pos": "FW",
+              "club": "fcmachidazelvia"
+            }
+          ]
+        },
+        {
+          "country": "Autriche",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Alexander Schlager",
+              "pos": "GK",
+              "club": "fcredbullsalzburg"
+            },
+            {
+              "name": "David Affengruber",
+              "pos": "DF",
+              "club": "elche"
+            },
+            {
+              "name": "Kevin Danso",
+              "pos": "DF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Xaver Schlager",
+              "pos": "MF",
+              "club": "leipzig"
+            },
+            {
+              "name": "Stefan Posch",
+              "pos": "DF",
+              "club": "1fsvmainz05"
+            },
+            {
+              "name": "Nicolas Seiwald",
+              "pos": "MF",
+              "club": "leipzig"
+            },
+            {
+              "name": "Marko Arnautović",
+              "pos": "FW",
+              "club": "redstarbelgrade"
+            },
+            {
+              "name": "David Alaba",
+              "pos": "DF",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Marcel Sabitzer",
+              "pos": "MF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Florian Grillitsch",
+              "pos": "MF",
+              "club": "scbraga"
+            },
+            {
+              "name": "Michael Gregoritsch",
+              "pos": "FW",
+              "club": "fcaugsburg"
+            },
+            {
+              "name": "Florian Wiegele",
+              "pos": "GK",
+              "club": "fcviktoriaplzen"
+            },
+            {
+              "name": "Patrick Pentz",
+              "pos": "GK",
+              "club": "brøndbyif"
+            },
+            {
+              "name": "Saša Kalajdžić",
+              "pos": "FW",
+              "club": "la"
+            },
+            {
+              "name": "Philipp Lienhart",
+              "pos": "DF",
+              "club": "scfreiburg"
+            },
+            {
+              "name": "Phillipp Mwene",
+              "pos": "DF",
+              "club": "1fsvmainz05"
+            },
+            {
+              "name": "Carney Chukwuemeka",
+              "pos": "MF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Romano Schmid",
+              "pos": "MF",
+              "club": "svwerderbremen"
+            },
+            {
+              "name": "Dejan Ljubičić",
+              "pos": "MF",
+              "club": "schalke"
+            },
+            {
+              "name": "Konrad Laimer",
+              "pos": "MF",
+              "club": "bayern"
+            },
+            {
+              "name": "Patrick Wimmer",
+              "pos": "FW",
+              "club": "vflwolfsburg"
+            },
+            {
+              "name": "Alexander Prass",
+              "pos": "MF",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "Marco Friedl",
+              "pos": "DF",
+              "club": "svwerderbremen"
+            },
+            {
+              "name": "Paul Wanner",
+              "pos": "MF",
+              "club": "psv"
+            },
+            {
+              "name": "Michael Svoboda",
+              "pos": "DF",
+              "club": "venezi"
+            },
+            {
+              "name": "Alessandro Schöpf",
+              "pos": "MF",
+              "club": "wolfsberger"
+            }
+          ]
+        },
+        {
+          "country": "Belgique",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Thibaut Courtois",
+              "pos": "GK",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Zeno Debast",
+              "pos": "DF",
+              "club": "sportingcp"
+            },
+            {
+              "name": "Arthur Theate",
+              "pos": "DF",
+              "club": "eintracht"
+            },
+            {
+              "name": "Brandon Mechele",
+              "pos": "DF",
+              "club": "clubbruggekv"
+            },
+            {
+              "name": "Maxim De Cuyper",
+              "pos": "DF",
+              "club": "brighton"
+            },
+            {
+              "name": "Axel Witsel",
+              "pos": "MF",
+              "club": "giron"
+            },
+            {
+              "name": "Kevin De Bruyne",
+              "pos": "MF",
+              "club": "sscnapoli"
+            },
+            {
+              "name": "Youri Tielemans",
+              "pos": "MF",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Romelu Lukaku",
+              "pos": "FW",
+              "club": "sscnapoli"
+            },
+            {
+              "name": "Leandro Trossard",
+              "pos": "FW",
+              "club": "arsenal"
+            },
+            {
+              "name": "Jérémy Doku",
+              "pos": "FW",
+              "club": "man-city"
+            },
+            {
+              "name": "Senne Lammens",
+              "pos": "GK",
+              "club": "man-utd"
+            },
+            {
+              "name": "Mike Penders",
+              "pos": "GK",
+              "club": "rcstrasbourgalsace"
+            },
+            {
+              "name": "Dodi Lukébakio",
+              "pos": "FW",
+              "club": "benfica"
+            },
+            {
+              "name": "Thomas Meunier",
+              "pos": "DF",
+              "club": "lilleo"
+            },
+            {
+              "name": "Koni De Winter",
+              "pos": "DF",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Charles De Ketelaere",
+              "pos": "FW",
+              "club": "atalanta"
+            },
+            {
+              "name": "Joaquin Seys",
+              "pos": "DF",
+              "club": "clubbruggekv"
+            },
+            {
+              "name": "Diego Moreira",
+              "pos": "MF",
+              "club": "rcstrasbourgalsace"
+            },
+            {
+              "name": "Hans Vanaken",
+              "pos": "MF",
+              "club": "clubbruggekv"
+            },
+            {
+              "name": "Timothy Castagne",
+              "pos": "DF",
+              "club": "fulham"
+            },
+            {
+              "name": "Alexis Saelemaekers",
+              "pos": "MF",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Nicolas Raskin",
+              "pos": "MF",
+              "club": "rangers"
+            },
+            {
+              "name": "Amadou Onana",
+              "pos": "MF",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Nathan Ngoy",
+              "pos": "DF",
+              "club": "lilleo"
+            },
+            {
+              "name": "Matias Fernandez-Pardo",
+              "pos": "FW",
+              "club": "lilleo"
+            }
+          ]
+        },
+        {
+          "country": "Bosnie-Herzégovine",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Nikola Vasilj",
+              "pos": "GK",
+              "club": "fcstpauli"
+            },
+            {
+              "name": "Nihad Mujakić",
+              "pos": "DF",
+              "club": "gaziantepfk"
+            },
+            {
+              "name": "Dennis Hadžikadunić",
+              "pos": "DF",
+              "club": "sampdoria"
+            },
+            {
+              "name": "Tarik Muharemović",
+              "pos": "DF",
+              "club": "ussassuolocalcio"
+            },
+            {
+              "name": "Sead Kolašinac",
+              "pos": "DF",
+              "club": "atalanta"
+            },
+            {
+              "name": "Benjamin Tahirović",
+              "pos": "MF",
+              "club": "brøndbyif"
+            },
+            {
+              "name": "Amar Dedić",
+              "pos": "DF",
+              "club": "benfica"
+            },
+            {
+              "name": "Armin Gigović",
+              "pos": "MF",
+              "club": "bscyoungboys"
+            },
+            {
+              "name": "Samed Baždar",
+              "pos": "FW",
+              "club": "jagielloniabiałystok"
+            },
+            {
+              "name": "Ermedin Demirović",
+              "pos": "FW",
+              "club": "stuttgart"
+            },
+            {
+              "name": "Edin Džeko",
+              "pos": "FW",
+              "club": "schalke"
+            },
+            {
+              "name": "Mladen Jurkas",
+              "pos": "GK",
+              "club": "fkboracbanjaluka"
+            },
+            {
+              "name": "Ivan Bašić",
+              "pos": "MF",
+              "club": "fcastana"
+            },
+            {
+              "name": "Ivan Šunjić",
+              "pos": "MF",
+              "club": "pafos"
+            },
+            {
+              "name": "Amar Memić",
+              "pos": "MF",
+              "club": "fcviktoriaplzen"
+            },
+            {
+              "name": "Amir Hadžiahmetović",
+              "pos": "MF",
+              "club": "hullcity"
+            },
+            {
+              "name": "Dženis Burnić",
+              "pos": "MF",
+              "club": "karlsruher"
+            },
+            {
+              "name": "Nikola Katić",
+              "pos": "DF",
+              "club": "schalke"
+            },
+            {
+              "name": "Kerim Alajbegović",
+              "pos": "FW",
+              "club": "fcredbullsalzburg"
+            },
+            {
+              "name": "Esmir Bajraktarević",
+              "pos": "FW",
+              "club": "psv"
+            },
+            {
+              "name": "Stjepan Radeljić",
+              "pos": "DF",
+              "club": "hnkrijeka"
+            },
+            {
+              "name": "Martin Zlomislić",
+              "pos": "GK",
+              "club": "hnkrijeka"
+            },
+            {
+              "name": "Haris Tabaković",
+              "pos": "FW",
+              "club": "gladbach"
+            },
+            {
+              "name": "Arjan Malić",
+              "pos": "DF",
+              "club": "sksturmgraz"
+            },
+            {
+              "name": "Jovo Lukić",
+              "pos": "FW",
+              "club": "fcuniversitateacluj"
+            },
+            {
+              "name": "Ermin Mahmić",
+              "pos": "MF",
+              "club": "fcslovanliberec"
+            }
+          ]
+        },
+        {
+          "country": "Brésil",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Alisson",
+              "pos": "GK",
+              "club": "liverpool"
+            },
+            {
+              "name": "Éderson Silva",
+              "pos": "MF",
+              "club": "atalanta"
+            },
+            {
+              "name": "Gabriel Magalhães",
+              "pos": "DF",
+              "club": "arsenal"
+            },
+            {
+              "name": "Marquinhos",
+              "pos": "DF",
+              "club": "psg"
+            },
+            {
+              "name": "Casemiro",
+              "pos": "MF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Alex Sandro",
+              "pos": "DF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Vinícius Júnior",
+              "pos": "FW",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Bruno Guimarães",
+              "pos": "MF",
+              "club": "newcastleunited"
+            },
+            {
+              "name": "Matheus Cunha",
+              "pos": "FW",
+              "club": "man-utd"
+            },
+            {
+              "name": "Neymar",
+              "pos": "FW",
+              "club": "santos"
+            },
+            {
+              "name": "Raphinha",
+              "pos": "FW",
+              "club": "barcelona"
+            },
+            {
+              "name": "Weverton",
+              "pos": "GK",
+              "club": "gremiofbpa"
+            },
+            {
+              "name": "Danilo Luiz",
+              "pos": "DF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Bremer",
+              "pos": "DF",
+              "club": "juventus"
+            },
+            {
+              "name": "Léo Pereira",
+              "pos": "DF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Douglas Santos",
+              "pos": "DF",
+              "club": "zenit"
+            },
+            {
+              "name": "Fabinho",
+              "pos": "MF",
+              "club": "alittihadclub(jeddah)"
+            },
+            {
+              "name": "Danilo Santos",
+              "pos": "MF",
+              "club": "botafogofr"
+            },
+            {
+              "name": "Endrick",
+              "pos": "FW",
+              "club": "lyon"
+            },
+            {
+              "name": "Lucas Paquetá",
+              "pos": "MF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Luiz Henrique",
+              "pos": "FW",
+              "club": "zenit"
+            },
+            {
+              "name": "Gabriel Martinelli",
+              "pos": "FW",
+              "club": "arsenal"
+            },
+            {
+              "name": "Ederson Moraes",
+              "pos": "GK",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Roger Ibañez",
+              "pos": "DF",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Igor Thiago",
+              "pos": "FW",
+              "club": "brentford"
+            },
+            {
+              "name": "Rayan",
+              "pos": "FW",
+              "club": "afcbournemouth"
+            }
+          ]
+        },
+        {
+          "country": "Canada",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Dayne St. Clair",
+              "pos": "GK",
+              "club": "intermiami"
+            },
+            {
+              "name": "Alistair Johnston",
+              "pos": "DF",
+              "club": "celtic"
+            },
+            {
+              "name": "Alfie Jones",
+              "pos": "DF",
+              "club": "middlesbrough"
+            },
+            {
+              "name": "Luc de Fougerolles",
+              "pos": "DF",
+              "club": "fcvdendereh"
+            },
+            {
+              "name": "Joel Waterman",
+              "pos": "DF",
+              "club": "chicagofire"
+            },
+            {
+              "name": "Mathieu Choinière",
+              "pos": "MF",
+              "club": "losangeles"
+            },
+            {
+              "name": "Stephen Eustáquio",
+              "pos": "MF",
+              "club": "losangeles"
+            },
+            {
+              "name": "Ismaël Koné",
+              "pos": "MF",
+              "club": "ussassuolocalcio"
+            },
+            {
+              "name": "Cyle Larin",
+              "pos": "FW",
+              "club": "southampton"
+            },
+            {
+              "name": "Jonathan David",
+              "pos": "FW",
+              "club": "juventus"
+            },
+            {
+              "name": "Liam Millar",
+              "pos": "MF",
+              "club": "hullcity"
+            },
+            {
+              "name": "Tani Oluwaseyi",
+              "pos": "FW",
+              "club": "villarreal"
+            },
+            {
+              "name": "Derek Cornelius",
+              "pos": "DF",
+              "club": "rangers"
+            },
+            {
+              "name": "Jacob Shaffelburg",
+              "pos": "MF",
+              "club": "losangeles"
+            },
+            {
+              "name": "Moïse Bombito",
+              "pos": "DF",
+              "club": "ogcnice"
+            },
+            {
+              "name": "Maxime Crépeau",
+              "pos": "GK",
+              "club": "orlandocity"
+            },
+            {
+              "name": "Tajon Buchanan",
+              "pos": "FW",
+              "club": "villarreal"
+            },
+            {
+              "name": "Owen Goodman",
+              "pos": "GK",
+              "club": "barnsley"
+            },
+            {
+              "name": "Alphonso Davies",
+              "pos": "DF",
+              "club": "bayern"
+            },
+            {
+              "name": "Ali Ahmed",
+              "pos": "FW",
+              "club": "norwichcity"
+            },
+            {
+              "name": "Jonathan Osorio",
+              "pos": "MF",
+              "club": "toronto"
+            },
+            {
+              "name": "Richie Laryea",
+              "pos": "DF",
+              "club": "toronto"
+            },
+            {
+              "name": "Niko Sigur",
+              "pos": "DF",
+              "club": "hnkhajduksplit"
+            },
+            {
+              "name": "Promise David",
+              "pos": "FW",
+              "club": "royaleunionsaintgilloise"
+            },
+            {
+              "name": "Nathan Saliba",
+              "pos": "MF",
+              "club": "rscanderlecht"
+            },
+            {
+              "name": "Jayden Nelson",
+              "pos": "FW",
+              "club": "austin"
+            }
+          ]
+        },
+        {
+          "country": "Cap-Vert",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Vozinha",
+              "pos": "GK",
+              "club": "gdchaves"
+            },
+            {
+              "name": "Stopira",
+              "pos": "DF",
+              "club": "scutorreense"
+            },
+            {
+              "name": "Diney",
+              "pos": "DF",
+              "club": "albataehclub"
+            },
+            {
+              "name": "Pico",
+              "pos": "DF",
+              "club": "shamrockrovers"
+            },
+            {
+              "name": "Logan Costa",
+              "pos": "DF",
+              "club": "villarreal"
+            },
+            {
+              "name": "Kevin Pina",
+              "pos": "MF",
+              "club": "fckrasnodar"
+            },
+            {
+              "name": "Jovane Cabral",
+              "pos": "MF",
+              "club": "cfestreladaamadora"
+            },
+            {
+              "name": "João Paulo",
+              "pos": "MF",
+              "club": "fcsb"
+            },
+            {
+              "name": "Gilson Benchimol",
+              "pos": "FW",
+              "club": "fcakrontolyatti"
+            },
+            {
+              "name": "Jamiro Monteiro",
+              "pos": "MF",
+              "club": "peczwolle"
+            },
+            {
+              "name": "Garry Rodrigues",
+              "pos": "MF",
+              "club": "apollonlimassol"
+            },
+            {
+              "name": "Márcio Rosa",
+              "pos": "GK",
+              "club": "pfcmontana"
+            },
+            {
+              "name": "Sidny Lopes Cabral",
+              "pos": "DF",
+              "club": "benfica"
+            },
+            {
+              "name": "Deroy Duarte",
+              "pos": "MF",
+              "club": "pfcludogoretsrazgrad"
+            },
+            {
+              "name": "Laros Duarte",
+              "pos": "MF",
+              "club": "puskasakademi"
+            },
+            {
+              "name": "Yannick Semedo",
+              "pos": "MF",
+              "club": "scfarense"
+            },
+            {
+              "name": "Willy Semedo",
+              "pos": "MF",
+              "club": "acomonia"
+            },
+            {
+              "name": "Telmo Arcanjo",
+              "pos": "MF",
+              "club": "vitoria"
+            },
+            {
+              "name": "Dailon Livramento",
+              "pos": "FW",
+              "club": "casapia"
+            },
+            {
+              "name": "Ryan Mendes",
+              "pos": "FW",
+              "club": "igdırfk"
+            },
+            {
+              "name": "Nuno da Costa",
+              "pos": "MF",
+              "club": "istanbulbasaksehirfk"
+            },
+            {
+              "name": "Steven Moreira",
+              "pos": "DF",
+              "club": "columbuscrew"
+            },
+            {
+              "name": "CJ dos Santos",
+              "pos": "GK",
+              "club": "sandiego"
+            },
+            {
+              "name": "Wagner Pina",
+              "pos": "DF",
+              "club": "trabzonspor"
+            },
+            {
+              "name": "Kelvin Pires",
+              "pos": "DF",
+              "club": "seinajoenjalkapallokerho"
+            },
+            {
+              "name": "Hélio Varela",
+              "pos": "MF",
+              "club": "maccabitelaviv"
+            }
+          ]
+        },
+        {
+          "country": "Colombie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "David Ospina",
+              "pos": "GK",
+              "club": "atleticonacional"
+            },
+            {
+              "name": "Daniel Muñoz",
+              "pos": "DF",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Jhon Lucumí",
+              "pos": "DF",
+              "club": "bolognafc1909"
+            },
+            {
+              "name": "Santiago Arias",
+              "pos": "DF",
+              "club": "clubatleticoindependiente"
+            },
+            {
+              "name": "Kevin Castaño",
+              "pos": "MF",
+              "club": "clubatleticoriverplate"
+            },
+            {
+              "name": "Richard Ríos",
+              "pos": "MF",
+              "club": "benfica"
+            },
+            {
+              "name": "Luis Díaz",
+              "pos": "FW",
+              "club": "bayern"
+            },
+            {
+              "name": "Jorge Carrascal",
+              "pos": "MF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Jhon Córdoba",
+              "pos": "FW",
+              "club": "fckrasnodar"
+            },
+            {
+              "name": "James Rodríguez",
+              "pos": "MF",
+              "club": "minnesotaunited"
+            },
+            {
+              "name": "Jhon Arias",
+              "pos": "MF",
+              "club": "sepalmeiras"
+            },
+            {
+              "name": "Camilo Vargas",
+              "pos": "GK",
+              "club": "atlas"
+            },
+            {
+              "name": "Yerry Mina",
+              "pos": "DF",
+              "club": "cagliaricalcio"
+            },
+            {
+              "name": "Gustavo Puerta",
+              "pos": "DF",
+              "club": "racingdesantander"
+            },
+            {
+              "name": "Juan Portilla",
+              "pos": "MF",
+              "club": "clubathleticoparanaense"
+            },
+            {
+              "name": "Jefferson Lerma",
+              "pos": "MF",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Johan Mojica",
+              "pos": "DF",
+              "club": "rcdmallorca"
+            },
+            {
+              "name": "Willer Ditta",
+              "pos": "DF",
+              "club": "cruzazul"
+            },
+            {
+              "name": "Cucho Hernández",
+              "pos": "FW",
+              "club": "real-betis"
+            },
+            {
+              "name": "Juan Fernando Quintero",
+              "pos": "MF",
+              "club": "clubatleticoriverplate"
+            },
+            {
+              "name": "Jaminton Campaz",
+              "pos": "FW",
+              "club": "rosariocentral"
+            },
+            {
+              "name": "Deiver Machado",
+              "pos": "DF",
+              "club": "fcnantes"
+            },
+            {
+              "name": "Davinson Sánchez",
+              "pos": "DF",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Álvaro Montero",
+              "pos": "GK",
+              "club": "clubatleticovelezsarsfield"
+            },
+            {
+              "name": "Luis Suárez",
+              "pos": "FW",
+              "club": "sportingcp"
+            },
+            {
+              "name": "Andrés Gómez",
+              "pos": "FW",
+              "club": "crvascodagama"
+            }
+          ]
+        },
+        {
+          "country": "Corée du Sud",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Kim Seung-gyu",
+              "pos": "GK",
+              "club": "fctokyo"
+            },
+            {
+              "name": "Lee Han-beom",
+              "pos": "DF",
+              "club": "fcmidtjylland"
+            },
+            {
+              "name": "Lee Gi-hyuk",
+              "pos": "MF",
+              "club": "gangwon"
+            },
+            {
+              "name": "Kim Min-jae",
+              "pos": "DF",
+              "club": "bayern"
+            },
+            {
+              "name": "Kim Tae-hyeon",
+              "pos": "DF",
+              "club": "kashimaantlers"
+            },
+            {
+              "name": "Hwang In-beom",
+              "pos": "MF",
+              "club": "feyenoord"
+            },
+            {
+              "name": "Son Heung-min",
+              "pos": "FW",
+              "club": "losangeles"
+            },
+            {
+              "name": "Paik Seung-ho",
+              "pos": "MF",
+              "club": "birminghamcity"
+            },
+            {
+              "name": "Cho Gue-sung",
+              "pos": "FW",
+              "club": "fcmidtjylland"
+            },
+            {
+              "name": "Lee Jae-sung",
+              "pos": "MF",
+              "club": "1fsvmainz05"
+            },
+            {
+              "name": "Hwang Hee-chan",
+              "pos": "MF",
+              "club": "wolves"
+            },
+            {
+              "name": "Song Bum-keun",
+              "pos": "GK",
+              "club": "jeonbukhyundaimotors"
+            },
+            {
+              "name": "Lee Tae-seok",
+              "pos": "DF",
+              "club": "fkaustriawien"
+            },
+            {
+              "name": "Cho Wi-je",
+              "pos": "DF",
+              "club": "jeonbukhyundaimotors"
+            },
+            {
+              "name": "Kim Moon-hwan",
+              "pos": "DF",
+              "club": "daejeonhanacitizen"
+            },
+            {
+              "name": "Park Jin-seob",
+              "pos": "DF",
+              "club": "zhejiangprofessional"
+            },
+            {
+              "name": "Bae Jun-ho",
+              "pos": "MF",
+              "club": "stokecity"
+            },
+            {
+              "name": "Oh Hyeon-gyu",
+              "pos": "FW",
+              "club": "besiktas"
+            },
+            {
+              "name": "Lee Kang-in",
+              "pos": "MF",
+              "club": "psg"
+            },
+            {
+              "name": "Yang Hyun-jun",
+              "pos": "MF",
+              "club": "celtic"
+            },
+            {
+              "name": "Jo Hyeon-woo",
+              "pos": "GK",
+              "club": "ulsanhd"
+            },
+            {
+              "name": "Seol Young-woo",
+              "pos": "DF",
+              "club": "redstarbelgrade"
+            },
+            {
+              "name": "Jens Castrop",
+              "pos": "DF",
+              "club": "gladbach"
+            },
+            {
+              "name": "Kim Jin-gyu",
+              "pos": "MF",
+              "club": "jeonbukhyundaimotors"
+            },
+            {
+              "name": "Eom Ji-sung",
+              "pos": "MF",
+              "club": "swanseacity"
+            },
+            {
+              "name": "Lee Dong-gyeong",
+              "pos": "MF",
+              "club": "ulsanhd"
+            }
+          ]
+        },
+        {
+          "country": "Côte d'Ivoire",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Yahia Fofana",
+              "pos": "GK",
+              "club": "caykurrizespor"
+            },
+            {
+              "name": "Ousmane Diomande",
+              "pos": "DF",
+              "club": "sportingcp"
+            },
+            {
+              "name": "Ghislain Konan",
+              "pos": "DF",
+              "club": "gilvicente"
+            },
+            {
+              "name": "Jean Michaël Seri",
+              "pos": "MF",
+              "club": "nkmaribor"
+            },
+            {
+              "name": "Wilfried Singo",
+              "pos": "DF",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Seko Fofana",
+              "pos": "MF",
+              "club": "porto"
+            },
+            {
+              "name": "Odilon Kossounou",
+              "pos": "DF",
+              "club": "atalanta"
+            },
+            {
+              "name": "Franck Kessié",
+              "pos": "MF",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Ange-Yoan Bonny",
+              "pos": "FW",
+              "club": "inter"
+            },
+            {
+              "name": "Simon Adingra",
+              "pos": "FW",
+              "club": "monaco"
+            },
+            {
+              "name": "Yan Diomande",
+              "pos": "FW",
+              "club": "leipzig"
+            },
+            {
+              "name": "Elye Wahi",
+              "pos": "FW",
+              "club": "ogcnice"
+            },
+            {
+              "name": "Christopher Opéri",
+              "pos": "DF",
+              "club": "istanbulbasaksehirfk"
+            },
+            {
+              "name": "Oumar Diakité",
+              "pos": "FW",
+              "club": "cerclebruggeksv"
+            },
+            {
+              "name": "Amad Diallo",
+              "pos": "FW",
+              "club": "man-utd"
+            },
+            {
+              "name": "Mohamed Koné",
+              "pos": "GK",
+              "club": "royalcharleroi"
+            },
+            {
+              "name": "Guéla Doué",
+              "pos": "DF",
+              "club": "rcstrasbourgalsace"
+            },
+            {
+              "name": "Ibrahim Sangaré",
+              "pos": "MF",
+              "club": "nottinghamforest"
+            },
+            {
+              "name": "Nicolas Pépé",
+              "pos": "FW",
+              "club": "villarreal"
+            },
+            {
+              "name": "Emmanuel Agbadou",
+              "pos": "DF",
+              "club": "besiktas"
+            },
+            {
+              "name": "Evan Ndicka",
+              "pos": "DF",
+              "club": "asroma"
+            },
+            {
+              "name": "Evann Guessand",
+              "pos": "FW",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Alban Lafont",
+              "pos": "GK",
+              "club": "panathinaikos"
+            },
+            {
+              "name": "Bazoumana Touré",
+              "pos": "FW",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "Parfait Guiagon",
+              "pos": "MF",
+              "club": "royalcharleroi"
+            },
+            {
+              "name": "Christ Inao Oulaï",
+              "pos": "MF",
+              "club": "trabzonspor"
+            }
+          ]
+        },
+        {
+          "country": "Croatie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Dominik Livaković",
+              "pos": "GK",
+              "club": "dinamo-zagreb"
+            },
+            {
+              "name": "Josip Stanišić",
+              "pos": "DF",
+              "club": "bayern"
+            },
+            {
+              "name": "Marin Pongračić",
+              "pos": "DF",
+              "club": "fiorentina"
+            },
+            {
+              "name": "Joško Gvardiol",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Duje Ćaleta-Car",
+              "pos": "DF",
+              "club": "real-sociedad"
+            },
+            {
+              "name": "Josip Šutalo",
+              "pos": "DF",
+              "club": "afcajax"
+            },
+            {
+              "name": "Nikola Moro",
+              "pos": "MF",
+              "club": "bolognafc1909"
+            },
+            {
+              "name": "Mateo Kovačić",
+              "pos": "MF",
+              "club": "man-city"
+            },
+            {
+              "name": "Andrej Kramarić",
+              "pos": "FW",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "Luka Modrić",
+              "pos": "MF",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Ante Budimir",
+              "pos": "FW",
+              "club": "caosasuna"
+            },
+            {
+              "name": "Ivor Pandur",
+              "pos": "GK",
+              "club": "hullcity"
+            },
+            {
+              "name": "Nikola Vlašić",
+              "pos": "MF",
+              "club": "torino"
+            },
+            {
+              "name": "Ivan Perišić",
+              "pos": "FW",
+              "club": "psv"
+            },
+            {
+              "name": "Mario Pašalić",
+              "pos": "MF",
+              "club": "atalanta"
+            },
+            {
+              "name": "Martin Baturina",
+              "pos": "MF",
+              "club": "como1907"
+            },
+            {
+              "name": "Petar Sučić",
+              "pos": "MF",
+              "club": "inter"
+            },
+            {
+              "name": "Kristijan Jakić",
+              "pos": "DF",
+              "club": "fcaugsburg"
+            },
+            {
+              "name": "Toni Fruk",
+              "pos": "MF",
+              "club": "hnkrijeka"
+            },
+            {
+              "name": "Igor Matanović",
+              "pos": "FW",
+              "club": "scfreiburg"
+            },
+            {
+              "name": "Luka Sučić",
+              "pos": "MF",
+              "club": "real-sociedad"
+            },
+            {
+              "name": "Luka Vušković",
+              "pos": "DF",
+              "club": "hamburgersv"
+            },
+            {
+              "name": "Dominik Kotarski",
+              "pos": "GK",
+              "club": "fccopenhagen"
+            },
+            {
+              "name": "Marco Pašalić",
+              "pos": "FW",
+              "club": "orlandocity"
+            },
+            {
+              "name": "Martin Erlić",
+              "pos": "DF",
+              "club": "fcmidtjylland"
+            },
+            {
+              "name": "Petar Musa",
+              "pos": "FW",
+              "club": "fcdallas"
+            }
+          ]
+        },
+        {
+          "country": "Curaçao",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Eloy Room",
+              "pos": "GK",
+              "club": "miami"
+            },
+            {
+              "name": "Shurandy Sambo",
+              "pos": "DF",
+              "club": "spartarotterdam"
+            },
+            {
+              "name": "Juriën Gaari",
+              "pos": "DF",
+              "club": "abhaclub"
+            },
+            {
+              "name": "Roshon van Eijma",
+              "pos": "DF",
+              "club": "rkcwaalwi"
+            },
+            {
+              "name": "Sherel Floranus",
+              "pos": "DF",
+              "club": "peczwolle"
+            },
+            {
+              "name": "Godfried Roemeratoe",
+              "pos": "MF",
+              "club": "rkcwaalwi"
+            },
+            {
+              "name": "Juninho Bacuna",
+              "pos": "MF",
+              "club": "fcvolendam"
+            },
+            {
+              "name": "Livano Comenencia",
+              "pos": "MF",
+              "club": "fczurich"
+            },
+            {
+              "name": "Jürgen Locadia",
+              "pos": "FW",
+              "club": "miami"
+            },
+            {
+              "name": "Leandro Bacuna",
+              "pos": "MF",
+              "club": "igdırfk"
+            },
+            {
+              "name": "Jeremy Antonisse",
+              "pos": "FW",
+              "club": "aekifisi"
+            },
+            {
+              "name": "Sontje Hansen",
+              "pos": "FW",
+              "club": "middlesbrough"
+            },
+            {
+              "name": "Tyrese Noslin",
+              "pos": "FW",
+              "club": "sctelstar"
+            },
+            {
+              "name": "Kenji Gorré",
+              "pos": "FW",
+              "club": "maccabihaif"
+            },
+            {
+              "name": "Ar'jany Martha",
+              "pos": "MF",
+              "club": "rotherhamunited"
+            },
+            {
+              "name": "Jearl Margaritha",
+              "pos": "FW",
+              "club": "skbeveren"
+            },
+            {
+              "name": "Brandley Kuwas",
+              "pos": "FW",
+              "club": "fcvolendam"
+            },
+            {
+              "name": "Armando Obispo",
+              "pos": "DF",
+              "club": "psv"
+            },
+            {
+              "name": "Gervane Kastaneer",
+              "pos": "FW",
+              "club": "terengganu"
+            },
+            {
+              "name": "Joshua Brenet",
+              "pos": "DF",
+              "club": "kayserispor"
+            },
+            {
+              "name": "Tahith Chong",
+              "pos": "MF",
+              "club": "sheffieldunited"
+            },
+            {
+              "name": "Kevin Felida",
+              "pos": "MF",
+              "club": "fcdenbosch"
+            },
+            {
+              "name": "Riechedly Bazoer",
+              "pos": "DF",
+              "club": "konyaspor"
+            },
+            {
+              "name": "Deveron Fonville",
+              "pos": "DF",
+              "club": "necnijmegen"
+            },
+            {
+              "name": "Tyrick Bodak",
+              "pos": "GK",
+              "club": "sctelstar"
+            },
+            {
+              "name": "Trevor Doornbusch",
+              "pos": "GK",
+              "club": "vvvvenlo"
+            }
+          ]
+        },
+        {
+          "country": "Écosse",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Angus Gunn",
+              "pos": "GK",
+              "club": "nottinghamforest"
+            },
+            {
+              "name": "Aaron Hickey",
+              "pos": "DF",
+              "club": "brentford"
+            },
+            {
+              "name": "Andy Robertson",
+              "pos": "DF",
+              "club": "liverpool"
+            },
+            {
+              "name": "Scott McTominay",
+              "pos": "MF",
+              "club": "sscnapoli"
+            },
+            {
+              "name": "Grant Hanley",
+              "pos": "DF",
+              "club": "hibernian"
+            },
+            {
+              "name": "Kieran Tierney",
+              "pos": "DF",
+              "club": "celtic"
+            },
+            {
+              "name": "John McGinn",
+              "pos": "MF",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Tyler Fletcher",
+              "pos": "MF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Lyndon Dykes",
+              "pos": "FW",
+              "club": "charltonathletic"
+            },
+            {
+              "name": "Ché Adams",
+              "pos": "FW",
+              "club": "torino"
+            },
+            {
+              "name": "Ryan Christie",
+              "pos": "MF",
+              "club": "afcbournemouth"
+            },
+            {
+              "name": "Liam Kelly",
+              "pos": "GK",
+              "club": "rangers"
+            },
+            {
+              "name": "Jack Hendry",
+              "pos": "DF",
+              "club": "alettifaqclub"
+            },
+            {
+              "name": "Ross Stewart",
+              "pos": "FW",
+              "club": "southampton"
+            },
+            {
+              "name": "John Souttar",
+              "pos": "DF",
+              "club": "rangers"
+            },
+            {
+              "name": "Dominic Hyam",
+              "pos": "DF",
+              "club": "wrexham"
+            },
+            {
+              "name": "Ben Gannon-Doak",
+              "pos": "FW",
+              "club": "afcbournemouth"
+            },
+            {
+              "name": "George Hirst",
+              "pos": "FW",
+              "club": "ipswichtown"
+            },
+            {
+              "name": "Lewis Ferguson",
+              "pos": "MF",
+              "club": "bolognafc1909"
+            },
+            {
+              "name": "Lawrence Shankland",
+              "pos": "FW",
+              "club": "heartofmidlothian"
+            },
+            {
+              "name": "Craig Gordon",
+              "pos": "GK",
+              "club": "heartofmidlothian"
+            },
+            {
+              "name": "Nathan Patterson",
+              "pos": "DF",
+              "club": "everton"
+            },
+            {
+              "name": "Kenny McLean",
+              "pos": "MF",
+              "club": "norwichcity"
+            },
+            {
+              "name": "Anthony Ralston",
+              "pos": "DF",
+              "club": "celtic"
+            },
+            {
+              "name": "Findlay Curtis",
+              "pos": "FW",
+              "club": "kilmarnock"
+            },
+            {
+              "name": "Scott McKenna",
+              "pos": "DF",
+              "club": "dinamo-zagreb"
+            }
+          ]
+        },
+        {
+          "country": "Égypte",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Mohamed El Shenawy",
+              "pos": "GK",
+              "club": "alahly"
+            },
+            {
+              "name": "Yasser Ibrahim",
+              "pos": "DF",
+              "club": "alahly"
+            },
+            {
+              "name": "Mohamed Hany",
+              "pos": "DF",
+              "club": "alahly"
+            },
+            {
+              "name": "Hossam Abdelmaguid",
+              "pos": "DF",
+              "club": "zamalek"
+            },
+            {
+              "name": "Ramy Rabia",
+              "pos": "DF",
+              "club": "alain"
+            },
+            {
+              "name": "Mohamed Abdelmonem",
+              "pos": "DF",
+              "club": "ogcnice"
+            },
+            {
+              "name": "Trézéguet",
+              "pos": "FW",
+              "club": "alahly"
+            },
+            {
+              "name": "Emam Ashour",
+              "pos": "MF",
+              "club": "alahly"
+            },
+            {
+              "name": "Hamza Abdelkarim",
+              "pos": "FW",
+              "club": "fcbarcelonaatletic"
+            },
+            {
+              "name": "Mohamed Salah",
+              "pos": "FW",
+              "club": "liverpool"
+            },
+            {
+              "name": "Mostafa Ziko",
+              "pos": "MF",
+              "club": "pyramids"
+            },
+            {
+              "name": "Haissem Hassan",
+              "pos": "FW",
+              "club": "realoviedo"
+            },
+            {
+              "name": "Ahmed Fatouh",
+              "pos": "DF",
+              "club": "zamalek"
+            },
+            {
+              "name": "Hamdy Fathy",
+              "pos": "MF",
+              "club": "alwakrah"
+            },
+            {
+              "name": "Karim Hafez",
+              "pos": "DF",
+              "club": "pyramids"
+            },
+            {
+              "name": "El Mahdy Soliman",
+              "pos": "GK",
+              "club": "zamalek"
+            },
+            {
+              "name": "Mohanad Lasheen",
+              "pos": "MF",
+              "club": "pyramids"
+            },
+            {
+              "name": "Nabil Emad",
+              "pos": "MF",
+              "club": "alnajmasc(saudiarabia)"
+            },
+            {
+              "name": "Marwan Attia",
+              "pos": "MF",
+              "club": "alahly"
+            },
+            {
+              "name": "Ibrahim Adel",
+              "pos": "FW",
+              "club": "fcnordsjælland"
+            },
+            {
+              "name": "Mahmoud Saber",
+              "pos": "MF",
+              "club": "zed"
+            },
+            {
+              "name": "Omar Marmoush",
+              "pos": "FW",
+              "club": "man-city"
+            },
+            {
+              "name": "Mostafa Shobeir",
+              "pos": "GK",
+              "club": "alahly"
+            },
+            {
+              "name": "Tarek Alaa",
+              "pos": "DF",
+              "club": "zed"
+            },
+            {
+              "name": "Zizo",
+              "pos": "FW",
+              "club": "alahly"
+            },
+            {
+              "name": "Mohamed Alaa",
+              "pos": "GK",
+              "club": "elgoun"
+            }
+          ]
+        },
+        {
+          "country": "Équateur",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Hernán Galíndez",
+              "pos": "GK",
+              "club": "clubatleticohuracan"
+            },
+            {
+              "name": "Félix Torres",
+              "pos": "DF",
+              "club": "scinternacional"
+            },
+            {
+              "name": "Piero Hincapié",
+              "pos": "DF",
+              "club": "arsenal"
+            },
+            {
+              "name": "Joel Ordóñez",
+              "pos": "DF",
+              "club": "clubbruggekv"
+            },
+            {
+              "name": "Jordy Alcívar",
+              "pos": "MF",
+              "club": "independientedelvalle"
+            },
+            {
+              "name": "Willian Pacho",
+              "pos": "DF",
+              "club": "psg"
+            },
+            {
+              "name": "Pervis Estupiñán",
+              "pos": "DF",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Anthony Valencia",
+              "pos": "MF",
+              "club": "royalantwerp"
+            },
+            {
+              "name": "John Yeboah",
+              "pos": "FW",
+              "club": "venezi"
+            },
+            {
+              "name": "Kendry Páez",
+              "pos": "MF",
+              "club": "clubatleticoriverplate"
+            },
+            {
+              "name": "Kevin Rodríguez",
+              "pos": "FW",
+              "club": "royaleunionsaintgilloise"
+            },
+            {
+              "name": "Moisés Ramírez",
+              "pos": "GK",
+              "club": "aekifisi"
+            },
+            {
+              "name": "Enner Valencia",
+              "pos": "FW",
+              "club": "cfpachuca"
+            },
+            {
+              "name": "Alan Minda",
+              "pos": "MF",
+              "club": "clubeatleticomineiro"
+            },
+            {
+              "name": "Pedro Vite",
+              "pos": "MF",
+              "club": "pumasunam"
+            },
+            {
+              "name": "Jordy Caicedo",
+              "pos": "FW",
+              "club": "clubatleticohuracan"
+            },
+            {
+              "name": "Ángelo Preciado",
+              "pos": "DF",
+              "club": "clubeatleticomineiro"
+            },
+            {
+              "name": "Denil Castillo",
+              "pos": "MF",
+              "club": "fcmidtjylland"
+            },
+            {
+              "name": "Gonzalo Plata",
+              "pos": "FW",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Nilson Angulo",
+              "pos": "FW",
+              "club": "sunderland"
+            },
+            {
+              "name": "Alan Franco",
+              "pos": "MF",
+              "club": "clubeatleticomineiro"
+            },
+            {
+              "name": "Gonzalo Valle",
+              "pos": "GK",
+              "club": "lduquito"
+            },
+            {
+              "name": "Moisés Caicedo",
+              "pos": "MF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Jeremy Arévalo",
+              "pos": "FW",
+              "club": "stuttgart"
+            },
+            {
+              "name": "Jackson Porozo",
+              "pos": "DF",
+              "club": "clubtijuana"
+            },
+            {
+              "name": "Yaimar Medina",
+              "pos": "DF",
+              "club": "krcgenk"
+            }
+          ]
+        },
+        {
+          "country": "Espagne",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "David Raya",
+              "pos": "GK",
+              "club": "arsenal"
+            },
+            {
+              "name": "Marc Pubill",
+              "pos": "DF",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Álex Grimaldo",
+              "pos": "DF",
+              "club": "bayer04leverkusen"
+            },
+            {
+              "name": "Eric García",
+              "pos": "DF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Marcos Llorente",
+              "pos": "DF",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Mikel Merino",
+              "pos": "MF",
+              "club": "arsenal"
+            },
+            {
+              "name": "Ferran Torres",
+              "pos": "FW",
+              "club": "barcelona"
+            },
+            {
+              "name": "Fabián Ruiz",
+              "pos": "MF",
+              "club": "psg"
+            },
+            {
+              "name": "Gavi",
+              "pos": "MF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Dani Olmo",
+              "pos": "FW",
+              "club": "barcelona"
+            },
+            {
+              "name": "Yéremy Pino",
+              "pos": "FW",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Pedro Porro",
+              "pos": "DF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Joan Garcia",
+              "pos": "GK",
+              "club": "barcelona"
+            },
+            {
+              "name": "Aymeric Laporte",
+              "pos": "DF",
+              "club": "athletic-club"
+            },
+            {
+              "name": "Álex Baena",
+              "pos": "MF",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Rodri",
+              "pos": "MF",
+              "club": "man-city"
+            },
+            {
+              "name": "Nico Williams",
+              "pos": "FW",
+              "club": "athletic-club"
+            },
+            {
+              "name": "Martín Zubimendi",
+              "pos": "MF",
+              "club": "arsenal"
+            },
+            {
+              "name": "Lamine Yamal",
+              "pos": "FW",
+              "club": "barcelona"
+            },
+            {
+              "name": "Pedri",
+              "pos": "MF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Mikel Oyarzabal",
+              "pos": "FW",
+              "club": "real-sociedad"
+            },
+            {
+              "name": "Pau Cubarsí",
+              "pos": "DF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Unai Simón",
+              "pos": "GK",
+              "club": "athletic-club"
+            },
+            {
+              "name": "Marc Cucurella",
+              "pos": "DF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Víctor Muñoz",
+              "pos": "FW",
+              "club": "caosasuna"
+            },
+            {
+              "name": "Borja Iglesias",
+              "pos": "FW",
+              "club": "rcceltadevigo"
+            }
+          ]
+        },
+        {
+          "country": "États-Unis",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Matt Turner",
+              "pos": "GK",
+              "club": "newenglandrevolution"
+            },
+            {
+              "name": "Sergiño Dest",
+              "pos": "DF",
+              "club": "psv"
+            },
+            {
+              "name": "Chris Richards",
+              "pos": "DF",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Tyler Adams",
+              "pos": "MF",
+              "club": "afcbournemouth"
+            },
+            {
+              "name": "Antonee Robinson",
+              "pos": "DF",
+              "club": "fulham"
+            },
+            {
+              "name": "Auston Trusty",
+              "pos": "DF",
+              "club": "celtic"
+            },
+            {
+              "name": "Giovanni Reyna",
+              "pos": "MF",
+              "club": "gladbach"
+            },
+            {
+              "name": "Weston McKennie",
+              "pos": "MF",
+              "club": "juventus"
+            },
+            {
+              "name": "Ricardo Pepi",
+              "pos": "FW",
+              "club": "psv"
+            },
+            {
+              "name": "Christian Pulisic",
+              "pos": "FW",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Brenden Aaronson",
+              "pos": "FW",
+              "club": "leedsunited"
+            },
+            {
+              "name": "Miles Robinson",
+              "pos": "DF",
+              "club": "fccincinnati"
+            },
+            {
+              "name": "Tim Ream",
+              "pos": "DF",
+              "club": "charlotte"
+            },
+            {
+              "name": "Sebastian Berhalter",
+              "pos": "MF",
+              "club": "vancouverwhitecaps"
+            },
+            {
+              "name": "Cristian Roldan",
+              "pos": "MF",
+              "club": "seattlesounders"
+            },
+            {
+              "name": "Alex Freeman",
+              "pos": "DF",
+              "club": "villarreal"
+            },
+            {
+              "name": "Malik Tillman",
+              "pos": "MF",
+              "club": "bayer04leverkusen"
+            },
+            {
+              "name": "Max Arfsten",
+              "pos": "DF",
+              "club": "columbuscrew"
+            },
+            {
+              "name": "Haji Wright",
+              "pos": "FW",
+              "club": "coventrycity"
+            },
+            {
+              "name": "Folarin Balogun",
+              "pos": "FW",
+              "club": "monaco"
+            },
+            {
+              "name": "Timothy Weah",
+              "pos": "FW",
+              "club": "olympiquedemarseille"
+            },
+            {
+              "name": "Mark McKenzie",
+              "pos": "DF",
+              "club": "toulouse"
+            },
+            {
+              "name": "Joe Scally",
+              "pos": "DF",
+              "club": "gladbach"
+            },
+            {
+              "name": "Matt Freese",
+              "pos": "GK",
+              "club": "newyorkcity"
+            },
+            {
+              "name": "Chris Brady",
+              "pos": "GK",
+              "club": "chicagofire"
+            },
+            {
+              "name": "Alejandro Zendejas",
+              "pos": "FW",
+              "club": "club-america"
+            }
+          ]
+        },
+        {
+          "country": "France",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Brice Samba",
+              "pos": "GK",
+              "club": "staderennais"
+            },
+            {
+              "name": "Malo Gusto",
+              "pos": "DF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Lucas Digne",
+              "pos": "DF",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Dayot Upamecano",
+              "pos": "DF",
+              "club": "bayern"
+            },
+            {
+              "name": "Jules Koundé",
+              "pos": "DF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Manu Koné",
+              "pos": "MF",
+              "club": "asroma"
+            },
+            {
+              "name": "Ousmane Dembélé",
+              "pos": "FW",
+              "club": "psg"
+            },
+            {
+              "name": "Aurélien Tchouaméni",
+              "pos": "MF",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Marcus Thuram",
+              "pos": "FW",
+              "club": "inter"
+            },
+            {
+              "name": "Kylian Mbappé",
+              "pos": "FW",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Michael Olise",
+              "pos": "FW",
+              "club": "bayern"
+            },
+            {
+              "name": "Bradley Barcola",
+              "pos": "FW",
+              "club": "psg"
+            },
+            {
+              "name": "N'Golo Kanté",
+              "pos": "MF",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Adrien Rabiot",
+              "pos": "MF",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Ibrahima Konaté",
+              "pos": "DF",
+              "club": "liverpool"
+            },
+            {
+              "name": "Mike Maignan",
+              "pos": "GK",
+              "club": "ac-milan"
+            },
+            {
+              "name": "William Saliba",
+              "pos": "DF",
+              "club": "arsenal"
+            },
+            {
+              "name": "Warren Zaïre-Emery",
+              "pos": "MF",
+              "club": "psg"
+            },
+            {
+              "name": "Théo Hernandez",
+              "pos": "DF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Désiré Doué",
+              "pos": "FW",
+              "club": "psg"
+            },
+            {
+              "name": "Lucas Hernandez",
+              "pos": "DF",
+              "club": "psg"
+            },
+            {
+              "name": "Jean-Philippe Mateta",
+              "pos": "FW",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Robin Risser",
+              "pos": "GK",
+              "club": "rclens"
+            },
+            {
+              "name": "Rayan Cherki",
+              "pos": "MF",
+              "club": "man-city"
+            },
+            {
+              "name": "Maghnes Akliouche",
+              "pos": "MF",
+              "club": "monaco"
+            },
+            {
+              "name": "Maxence Lacroix",
+              "pos": "DF",
+              "club": "crystalpalace"
+            }
+          ]
+        },
+        {
+          "country": "Ghana",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Lawrence Ati-Zigi",
+              "pos": "GK",
+              "club": "fcstgallen"
+            },
+            {
+              "name": "Alidu Seidu",
+              "pos": "DF",
+              "club": "staderennais"
+            },
+            {
+              "name": "Caleb Yirenkyi",
+              "pos": "MF",
+              "club": "fcnordsjælland"
+            },
+            {
+              "name": "Jonas Adjetey",
+              "pos": "DF",
+              "club": "vflwolfsburg"
+            },
+            {
+              "name": "Thomas Partey",
+              "pos": "MF",
+              "club": "villarreal"
+            },
+            {
+              "name": "Abdul Mumin",
+              "pos": "DF",
+              "club": "rayovallecano"
+            },
+            {
+              "name": "Abdul Fatawu",
+              "pos": "FW",
+              "club": "leicestercity"
+            },
+            {
+              "name": "Kwasi Sibo",
+              "pos": "MF",
+              "club": "realoviedo"
+            },
+            {
+              "name": "Jordan Ayew",
+              "pos": "FW",
+              "club": "leicestercity"
+            },
+            {
+              "name": "Brandon Thomas-Asante",
+              "pos": "FW",
+              "club": "coventrycity"
+            },
+            {
+              "name": "Antoine Semenyo",
+              "pos": "MF",
+              "club": "man-city"
+            },
+            {
+              "name": "Joseph Anang",
+              "pos": "GK",
+              "club": "stpatricksathletic"
+            },
+            {
+              "name": "Christopher Bonsu Baah",
+              "pos": "FW",
+              "club": "al-qadsiah"
+            },
+            {
+              "name": "Gideon Mensah",
+              "pos": "DF",
+              "club": "ajauxerre"
+            },
+            {
+              "name": "Elisha Owusu",
+              "pos": "MF",
+              "club": "ajauxerre"
+            },
+            {
+              "name": "Benjamin Asare",
+              "pos": "GK",
+              "club": "accraheartsofoak"
+            },
+            {
+              "name": "Abdul Rahman Baba",
+              "pos": "DF",
+              "club": "paok"
+            },
+            {
+              "name": "Jerome Opoku",
+              "pos": "DF",
+              "club": "istanbulbasaksehirfk"
+            },
+            {
+              "name": "Iñaki Williams",
+              "pos": "FW",
+              "club": "athletic-club"
+            },
+            {
+              "name": "Augustine Boakye",
+              "pos": "MF",
+              "club": "assaintetienne"
+            },
+            {
+              "name": "Kojo Peprah Oppong",
+              "pos": "DF",
+              "club": "ogcnice"
+            },
+            {
+              "name": "Kamaldeen Sulemana",
+              "pos": "FW",
+              "club": "atalanta"
+            },
+            {
+              "name": "Derrick Luckassen",
+              "pos": "DF",
+              "club": "pafos"
+            },
+            {
+              "name": "Ernest Nuamah",
+              "pos": "FW",
+              "club": "lyon"
+            },
+            {
+              "name": "Prince Kwabena Adu",
+              "pos": "FW",
+              "club": "fcviktoriaplzen"
+            },
+            {
+              "name": "Marvin Senaya",
+              "pos": "DF",
+              "club": "ajauxerre"
+            }
+          ]
+        },
+        {
+          "country": "Haïti",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Johny Placide",
+              "pos": "GK",
+              "club": "scbastia"
+            },
+            {
+              "name": "Carlens Arcus",
+              "pos": "DF",
+              "club": "angers"
+            },
+            {
+              "name": "Keeto Thermoncy",
+              "pos": "DF",
+              "club": "bscyoungboys"
+            },
+            {
+              "name": "Ricardo Adé",
+              "pos": "DF",
+              "club": "lduquito"
+            },
+            {
+              "name": "Hannes Delcroix",
+              "pos": "DF",
+              "club": "fclugano"
+            },
+            {
+              "name": "Carl Sainté",
+              "pos": "MF",
+              "club": "elpasolocomotive"
+            },
+            {
+              "name": "Derrick Etienne Jr.",
+              "pos": "FW",
+              "club": "toronto"
+            },
+            {
+              "name": "Martin Expérience",
+              "pos": "DF",
+              "club": "asnancylorraine"
+            },
+            {
+              "name": "Duckens Nazon",
+              "pos": "FW",
+              "club": "esteghlal"
+            },
+            {
+              "name": "Jean-Ricner Bellegarde",
+              "pos": "MF",
+              "club": "wolves"
+            },
+            {
+              "name": "Louicius Deedson",
+              "pos": "FW",
+              "club": "fcdallas"
+            },
+            {
+              "name": "Alexandre Pierre",
+              "pos": "GK",
+              "club": "fcsochauxmontbeliard"
+            },
+            {
+              "name": "Duke Lacroix",
+              "pos": "DF",
+              "club": "coloradospringsswitchbacks"
+            },
+            {
+              "name": "Garven Metusala",
+              "pos": "DF",
+              "club": "coloradospringsswitchbacks"
+            },
+            {
+              "name": "Ruben Providence",
+              "pos": "FW",
+              "club": "almerecity"
+            },
+            {
+              "name": "Lenny Joseph",
+              "pos": "FW",
+              "club": "ferencvarositc"
+            },
+            {
+              "name": "Danley Jean Jacques",
+              "pos": "MF",
+              "club": "philadelphiaunion"
+            },
+            {
+              "name": "Wilson Isidor",
+              "pos": "FW",
+              "club": "sunderland"
+            },
+            {
+              "name": "Yassin Fortuné",
+              "pos": "FW",
+              "club": "fcvizela"
+            },
+            {
+              "name": "Frantzdy Pierrot",
+              "pos": "FW",
+              "club": "caykurrizespor"
+            },
+            {
+              "name": "Josué Casimir",
+              "pos": "FW",
+              "club": "ajauxerre"
+            },
+            {
+              "name": "Jean-Kévin Duverne",
+              "pos": "DF",
+              "club": "kaagent"
+            },
+            {
+              "name": "Josué Duverger",
+              "pos": "GK",
+              "club": "fccosmoskoblenz"
+            },
+            {
+              "name": "Wilguens Paugain",
+              "pos": "DF",
+              "club": "svzultewaregem"
+            },
+            {
+              "name": "Dominique Simon",
+              "pos": "MF",
+              "club": "1fctatranpresov"
+            },
+            {
+              "name": "Woodensky Pierre",
+              "pos": "MF",
+              "club": "violette"
+            }
+          ]
+        },
+        {
+          "country": "Irak",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Fahad Talib",
+              "pos": "GK",
+              "club": "altalaba"
+            },
+            {
+              "name": "Rebin Sulaka",
+              "pos": "DF",
+              "club": "port"
+            },
+            {
+              "name": "Hussein Ali",
+              "pos": "DF",
+              "club": "pogonszczecin"
+            },
+            {
+              "name": "Zaid Tahseen",
+              "pos": "DF",
+              "club": "pakhtakor"
+            },
+            {
+              "name": "Akam Hashim",
+              "pos": "DF",
+              "club": "alzawraa"
+            },
+            {
+              "name": "Manaf Younis",
+              "pos": "DF",
+              "club": "alshorta"
+            },
+            {
+              "name": "Youssef Amyn",
+              "pos": "MF",
+              "club": "aeklarnac"
+            },
+            {
+              "name": "Ibrahim Bayesh",
+              "pos": "MF",
+              "club": "aldhafr"
+            },
+            {
+              "name": "Ali Al-Hamadi",
+              "pos": "FW",
+              "club": "lutontown"
+            },
+            {
+              "name": "Mohanad Ali",
+              "pos": "FW",
+              "club": "dibb"
+            },
+            {
+              "name": "Ahmed Qasem",
+              "pos": "FW",
+              "club": "nashville"
+            },
+            {
+              "name": "Jalal Hassan",
+              "pos": "GK",
+              "club": "alzawraa"
+            },
+            {
+              "name": "Ali Yousif",
+              "pos": "FW",
+              "club": "altalaba"
+            },
+            {
+              "name": "Zidane Iqbal",
+              "pos": "MF",
+              "club": "fcutrecht"
+            },
+            {
+              "name": "Ahmed Maknzi",
+              "pos": "DF",
+              "club": "alkarma"
+            },
+            {
+              "name": "Amir Al-Ammari",
+              "pos": "MF",
+              "club": "kscracovia"
+            },
+            {
+              "name": "Ali Jasim",
+              "pos": "FW",
+              "club": "alnajmasc(saudiarabia)"
+            },
+            {
+              "name": "Aymen Hussein",
+              "pos": "FW",
+              "club": "alkarma"
+            },
+            {
+              "name": "Kevin Yakob",
+              "pos": "MF",
+              "club": "aarhusgymnastikforening"
+            },
+            {
+              "name": "Aimar Sher",
+              "pos": "MF",
+              "club": "sarpsborg08ff"
+            },
+            {
+              "name": "Marko Farji",
+              "pos": "FW",
+              "club": "venezi"
+            },
+            {
+              "name": "Ahmed Basil",
+              "pos": "GK",
+              "club": "alshorta"
+            },
+            {
+              "name": "Merchas Doski",
+              "pos": "DF",
+              "club": "fcviktoriaplzen"
+            },
+            {
+              "name": "Zaid Ismail",
+              "pos": "MF",
+              "club": "altalaba"
+            },
+            {
+              "name": "Mustafa Saadoon",
+              "pos": "DF",
+              "club": "alshorta"
+            },
+            {
+              "name": "Frans Putros",
+              "pos": "DF",
+              "club": "persibbandung"
+            }
+          ]
+        },
+        {
+          "country": "Iran",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Alireza Beiranvand",
+              "pos": "GK",
+              "club": "tractor"
+            },
+            {
+              "name": "Saleh Hardani",
+              "pos": "DF",
+              "club": "esteghlal"
+            },
+            {
+              "name": "Ehsan Hajsafi",
+              "pos": "DF",
+              "club": "sepahan"
+            },
+            {
+              "name": "Shojae Khalilzadeh",
+              "pos": "DF",
+              "club": "tractor"
+            },
+            {
+              "name": "Milad Mohammadi",
+              "pos": "DF",
+              "club": "persepolis"
+            },
+            {
+              "name": "Saeid Ezatolahi",
+              "pos": "MF",
+              "club": "shababalahliclub"
+            },
+            {
+              "name": "Alireza Jahanbakhsh",
+              "pos": "MF",
+              "club": "fcvdendereh"
+            },
+            {
+              "name": "Mohammad Mohebi",
+              "pos": "MF",
+              "club": "fcrostov"
+            },
+            {
+              "name": "Mehdi Taremi",
+              "pos": "FW",
+              "club": "olympiacos"
+            },
+            {
+              "name": "Mehdi Ghayedi",
+              "pos": "FW",
+              "club": "alnasrsc(dubai)"
+            },
+            {
+              "name": "Ali Alipour",
+              "pos": "FW",
+              "club": "persepolis"
+            },
+            {
+              "name": "Payam Niazmand",
+              "pos": "GK",
+              "club": "persepolis"
+            },
+            {
+              "name": "Hossein Kanaanizadegan",
+              "pos": "DF",
+              "club": "persepolis"
+            },
+            {
+              "name": "Saman Ghoddos",
+              "pos": "MF",
+              "club": "kalb"
+            },
+            {
+              "name": "Rouzbeh Cheshmi",
+              "pos": "MF",
+              "club": "esteghlal"
+            },
+            {
+              "name": "Mahdi Torabi",
+              "pos": "MF",
+              "club": "tractor"
+            },
+            {
+              "name": "Arya Yousefi",
+              "pos": "DF",
+              "club": "sepahan"
+            },
+            {
+              "name": "Amirhossein Hosseinzadeh",
+              "pos": "FW",
+              "club": "tractor"
+            },
+            {
+              "name": "Ali Nemati",
+              "pos": "DF",
+              "club": "foolad"
+            },
+            {
+              "name": "Shahriyar Moghanlou",
+              "pos": "FW",
+              "club": "kalb"
+            },
+            {
+              "name": "Mohammad Ghorbani",
+              "pos": "MF",
+              "club": "alwahd"
+            },
+            {
+              "name": "Hossein Hosseini",
+              "pos": "GK",
+              "club": "sepahan"
+            },
+            {
+              "name": "Ramin Rezaeian",
+              "pos": "DF",
+              "club": "foolad"
+            },
+            {
+              "name": "Dennis Eckert",
+              "pos": "FW",
+              "club": "standard-liege"
+            },
+            {
+              "name": "Danial Eiri",
+              "pos": "DF",
+              "club": "malavan"
+            },
+            {
+              "name": "Amirmohammad Razzaghinia",
+              "pos": "MF",
+              "club": "esteghlal"
+            }
+          ]
+        },
+        {
+          "country": "Japon",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Zion Suzuki",
+              "pos": "GK",
+              "club": "parmacalcio1913"
+            },
+            {
+              "name": "Yukinari Sugawara",
+              "pos": "DF",
+              "club": "svwerderbremen"
+            },
+            {
+              "name": "Shōgo Taniguchi",
+              "pos": "DF",
+              "club": "sinttruidensevv"
+            },
+            {
+              "name": "Kō Itakura",
+              "pos": "DF",
+              "club": "afcajax"
+            },
+            {
+              "name": "Yūto Nagatomo",
+              "pos": "DF",
+              "club": "fctokyo"
+            },
+            {
+              "name": "Shūto Machino",
+              "pos": "FW",
+              "club": "gladbach"
+            },
+            {
+              "name": "Ao Tanaka",
+              "pos": "MF",
+              "club": "leedsunited"
+            },
+            {
+              "name": "Takefusa Kubo",
+              "pos": "MF",
+              "club": "real-sociedad"
+            },
+            {
+              "name": "Keisuke Gotō",
+              "pos": "FW",
+              "club": "sinttruidensevv"
+            },
+            {
+              "name": "Ritsu Dōan",
+              "pos": "MF",
+              "club": "eintracht"
+            },
+            {
+              "name": "Daizen Maeda",
+              "pos": "MF",
+              "club": "celtic"
+            },
+            {
+              "name": "Keisuke Ōsako",
+              "pos": "GK",
+              "club": "sanfreccehiroshima"
+            },
+            {
+              "name": "Keito Nakamura",
+              "pos": "MF",
+              "club": "stadedereims"
+            },
+            {
+              "name": "Junya Itō",
+              "pos": "MF",
+              "club": "krcgenk"
+            },
+            {
+              "name": "Daichi Kamada",
+              "pos": "MF",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Tsuyoshi Watanabe",
+              "pos": "DF",
+              "club": "feyenoord"
+            },
+            {
+              "name": "Yuito Suzuki",
+              "pos": "MF",
+              "club": "scfreiburg"
+            },
+            {
+              "name": "Ayase Ueda",
+              "pos": "FW",
+              "club": "feyenoord"
+            },
+            {
+              "name": "Kōki Ogawa",
+              "pos": "FW",
+              "club": "necnijmegen"
+            },
+            {
+              "name": "Ayumu Seko",
+              "pos": "DF",
+              "club": "lehavre"
+            },
+            {
+              "name": "Hiroki Itō",
+              "pos": "DF",
+              "club": "bayern"
+            },
+            {
+              "name": "Takehiro Tomiyasu",
+              "pos": "DF",
+              "club": "afcajax"
+            },
+            {
+              "name": "Tomoki Hayakawa",
+              "pos": "GK",
+              "club": "kashimaantlers"
+            },
+            {
+              "name": "Kaishū Sano",
+              "pos": "MF",
+              "club": "1fsvmainz05"
+            },
+            {
+              "name": "Junnosuke Suzuki",
+              "pos": "DF",
+              "club": "fccopenhagen"
+            },
+            {
+              "name": "Kento Shiogai",
+              "pos": "FW",
+              "club": "vflwolfsburg"
+            }
+          ]
+        },
+        {
+          "country": "Jordanie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Yazeed Abulaila",
+              "pos": "GK",
+              "club": "alhusseinsc(irbid)"
+            },
+            {
+              "name": "Mohammad Abu Hashish",
+              "pos": "DF",
+              "club": "alkarma"
+            },
+            {
+              "name": "Abdallah Nasib",
+              "pos": "DF",
+              "club": "alzawraa"
+            },
+            {
+              "name": "Husam Abu Dahab",
+              "pos": "DF",
+              "club": "alfaisaly"
+            },
+            {
+              "name": "Yazan Al-Arab",
+              "pos": "DF",
+              "club": "fcseoul"
+            },
+            {
+              "name": "Amer Jamous",
+              "pos": "MF",
+              "club": "alzawraa"
+            },
+            {
+              "name": "Mohammad Abu Zrayq",
+              "pos": "FW",
+              "club": "rajaca"
+            },
+            {
+              "name": "Noor Al-Rawabdeh",
+              "pos": "MF",
+              "club": "selangor"
+            },
+            {
+              "name": "Ali Olwan",
+              "pos": "FW",
+              "club": "alsailiya"
+            },
+            {
+              "name": "Musa Al-Taamari",
+              "pos": "FW",
+              "club": "staderennais"
+            },
+            {
+              "name": "Odeh Al-Fakhouri",
+              "pos": "FW",
+              "club": "pyramids"
+            },
+            {
+              "name": "Nour Bani Attiah",
+              "pos": "GK",
+              "club": "alfaisaly"
+            },
+            {
+              "name": "Mahmoud Al-Mardi",
+              "pos": "FW",
+              "club": "alhusseinsc(irbid)"
+            },
+            {
+              "name": "Rajaei Ayed",
+              "pos": "MF",
+              "club": "alhusseinsc(irbid)"
+            },
+            {
+              "name": "Ibrahim Sadeh",
+              "pos": "MF",
+              "club": "alkarma"
+            },
+            {
+              "name": "Mo Abualnadi",
+              "pos": "DF",
+              "club": "selangor"
+            },
+            {
+              "name": "Salim Obaid",
+              "pos": "DF",
+              "club": "alhusseinsc(irbid)"
+            },
+            {
+              "name": "Mohammad Taha",
+              "pos": "MF",
+              "club": "alhusseinsc(irbid)"
+            },
+            {
+              "name": "Saed Al-Rosan",
+              "pos": "DF",
+              "club": "alhusseinsc(irbid)"
+            },
+            {
+              "name": "Mohannad Abu Taha",
+              "pos": "MF",
+              "club": "alquwaaljawiya"
+            },
+            {
+              "name": "Nizar Al-Rashdan",
+              "pos": "MF",
+              "club": "qatar"
+            },
+            {
+              "name": "Abdallah Al-Fakhouri",
+              "pos": "GK",
+              "club": "alwehdat"
+            },
+            {
+              "name": "Ihsan Haddad",
+              "pos": "DF",
+              "club": "alhusseinsc(irbid)"
+            },
+            {
+              "name": "Ali Azaizeh",
+              "pos": "FW",
+              "club": "alshababclub"
+            },
+            {
+              "name": "Mohammad Al-Dawoud",
+              "pos": "MF",
+              "club": "alwehdat"
+            },
+            {
+              "name": "Anas Badawi",
+              "pos": "DF",
+              "club": "alfaisaly"
+            }
+          ]
+        },
+        {
+          "country": "Maroc",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Yassine Bounou",
+              "pos": "GK",
+              "club": "alhilals"
+            },
+            {
+              "name": "Achraf Hakimi",
+              "pos": "DF",
+              "club": "psg"
+            },
+            {
+              "name": "Noussair Mazraoui",
+              "pos": "DF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Sofyan Amrabat",
+              "pos": "MF",
+              "club": "real-betis"
+            },
+            {
+              "name": "Marwane Saâdane",
+              "pos": "DF",
+              "club": "alfateh"
+            },
+            {
+              "name": "Ayyoub Bouaddi",
+              "pos": "MF",
+              "club": "lilleo"
+            },
+            {
+              "name": "Chemsdine Talbi",
+              "pos": "MF",
+              "club": "sunderland"
+            },
+            {
+              "name": "Azzedine Ounahi",
+              "pos": "MF",
+              "club": "giron"
+            },
+            {
+              "name": "Soufiane Rahimi",
+              "pos": "FW",
+              "club": "alain"
+            },
+            {
+              "name": "Brahim Díaz",
+              "pos": "FW",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Ismael Saibari",
+              "pos": "MF",
+              "club": "psv"
+            },
+            {
+              "name": "Munir Mohamedi",
+              "pos": "GK",
+              "club": "rsberkane"
+            },
+            {
+              "name": "Zakaria El Ouahdi",
+              "pos": "DF",
+              "club": "krcgenk"
+            },
+            {
+              "name": "Issa Diop",
+              "pos": "DF",
+              "club": "fulham"
+            },
+            {
+              "name": "Samir El Mourabet",
+              "pos": "MF",
+              "club": "rcstrasbourgalsace"
+            },
+            {
+              "name": "Gessime Yassine",
+              "pos": "MF",
+              "club": "rcstrasbourgalsace"
+            },
+            {
+              "name": "Amine Sbaï",
+              "pos": "FW",
+              "club": "angers"
+            },
+            {
+              "name": "Chadi Riad",
+              "pos": "DF",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Youssef Belammari",
+              "pos": "DF",
+              "club": "alahly"
+            },
+            {
+              "name": "Ayoub El Kaabi",
+              "pos": "FW",
+              "club": "olympiacos"
+            },
+            {
+              "name": "Ayoube Amaimouni",
+              "pos": "FW",
+              "club": "eintracht"
+            },
+            {
+              "name": "Ahmed Reda Tagnaouti",
+              "pos": "GK",
+              "club": "asfar"
+            },
+            {
+              "name": "Bilal El Khannouss",
+              "pos": "MF",
+              "club": "stuttgart"
+            },
+            {
+              "name": "Neil El Aynaoui",
+              "pos": "MF",
+              "club": "asroma"
+            },
+            {
+              "name": "Redouane Halhal",
+              "pos": "DF",
+              "club": "kvmechelen"
+            },
+            {
+              "name": "Anass Salah-Eddine",
+              "pos": "DF",
+              "club": "psv"
+            }
+          ]
+        },
         {
           "country": "Mexique",
           "formation": "4-4-2",
@@ -76,6 +4373,2198 @@
               "first": "Raúl",
               "club": "fulham",
               "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Norvège",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Ørjan Nyland",
+              "pos": "GK",
+              "club": "sevilla"
+            },
+            {
+              "name": "Morten Thorsby",
+              "pos": "MF",
+              "club": "uscremonese"
+            },
+            {
+              "name": "Kristoffer Ajer",
+              "pos": "DF",
+              "club": "brentford"
+            },
+            {
+              "name": "Leo Østigård",
+              "pos": "DF",
+              "club": "genoa"
+            },
+            {
+              "name": "David Møller Wolfe",
+              "pos": "DF",
+              "club": "wolves"
+            },
+            {
+              "name": "Patrick Berg",
+              "pos": "MF",
+              "club": "fkbodø/glimt"
+            },
+            {
+              "name": "Alexander Sørloth",
+              "pos": "FW",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Sander Berge",
+              "pos": "MF",
+              "club": "fulham"
+            },
+            {
+              "name": "Erling Haaland",
+              "pos": "FW",
+              "club": "man-city"
+            },
+            {
+              "name": "Martin Ødegaard",
+              "pos": "MF",
+              "club": "arsenal"
+            },
+            {
+              "name": "Jørgen Strand Larsen",
+              "pos": "FW",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Sander Tangvik",
+              "pos": "GK",
+              "club": "hamburgersv"
+            },
+            {
+              "name": "Egil Selvik",
+              "pos": "GK",
+              "club": "watford"
+            },
+            {
+              "name": "Fredrik Aursnes",
+              "pos": "MF",
+              "club": "benfica"
+            },
+            {
+              "name": "Fredrik André Bjørkan",
+              "pos": "DF",
+              "club": "fkbodø/glimt"
+            },
+            {
+              "name": "Marcus Holmgren Pedersen",
+              "pos": "DF",
+              "club": "torino"
+            },
+            {
+              "name": "Torbjørn Heggem",
+              "pos": "DF",
+              "club": "bolognafc1909"
+            },
+            {
+              "name": "Kristian Thorstvedt",
+              "pos": "MF",
+              "club": "ussassuolocalcio"
+            },
+            {
+              "name": "Thelo Aasgaard",
+              "pos": "MF",
+              "club": "rangers"
+            },
+            {
+              "name": "Antonio Nusa",
+              "pos": "MF",
+              "club": "leipzig"
+            },
+            {
+              "name": "Andreas Schjelderup",
+              "pos": "MF",
+              "club": "benfica"
+            },
+            {
+              "name": "Oscar Bobb",
+              "pos": "MF",
+              "club": "fulham"
+            },
+            {
+              "name": "Jens Petter Hauge",
+              "pos": "MF",
+              "club": "fkbodø/glimt"
+            },
+            {
+              "name": "Sondre Langås",
+              "pos": "DF",
+              "club": "derbycounty"
+            },
+            {
+              "name": "Henrik Falchener",
+              "pos": "DF",
+              "club": "vikingfk"
+            },
+            {
+              "name": "Julian Ryerson",
+              "pos": "DF",
+              "club": "dortmund"
+            }
+          ]
+        },
+        {
+          "country": "Nouvelle-Zélande",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Max Crocombe",
+              "pos": "GK",
+              "club": "millwall"
+            },
+            {
+              "name": "Tim Payne",
+              "pos": "DF",
+              "club": "wellingtonphoenix"
+            },
+            {
+              "name": "Francis de Vries",
+              "pos": "DF",
+              "club": "auckland"
+            },
+            {
+              "name": "Tyler Bindon",
+              "pos": "DF",
+              "club": "sheffieldunited"
+            },
+            {
+              "name": "Michael Boxall",
+              "pos": "DF",
+              "club": "minnesotaunited"
+            },
+            {
+              "name": "Joe Bell",
+              "pos": "MF",
+              "club": "vikingfk"
+            },
+            {
+              "name": "Logan Rogerson",
+              "pos": "FW",
+              "club": "auckland"
+            },
+            {
+              "name": "Marko Stamenić",
+              "pos": "MF",
+              "club": "swanseacity"
+            },
+            {
+              "name": "Chris Wood",
+              "pos": "FW",
+              "club": "nottinghamforest"
+            },
+            {
+              "name": "Sarpreet Singh",
+              "pos": "MF",
+              "club": "wellingtonphoenix"
+            },
+            {
+              "name": "Elijah Just",
+              "pos": "MF",
+              "club": "motherwell"
+            },
+            {
+              "name": "Alex Paulsen",
+              "pos": "GK",
+              "club": "lechiagdan"
+            },
+            {
+              "name": "Liberato Cacace",
+              "pos": "DF",
+              "club": "wrexham"
+            },
+            {
+              "name": "Alex Rufer",
+              "pos": "MF",
+              "club": "wellingtonphoenix"
+            },
+            {
+              "name": "Nando Pijnaker",
+              "pos": "DF",
+              "club": "auckland"
+            },
+            {
+              "name": "Finn Surman",
+              "pos": "DF",
+              "club": "portlandtimbers"
+            },
+            {
+              "name": "Kosta Barbarouses",
+              "pos": "FW",
+              "club": "westernsydneywanderers"
+            },
+            {
+              "name": "Ben Waine",
+              "pos": "FW",
+              "club": "portvale"
+            },
+            {
+              "name": "Ben Old",
+              "pos": "MF",
+              "club": "assaintetienne"
+            },
+            {
+              "name": "Callum McCowatt",
+              "pos": "MF",
+              "club": "silkeborgif"
+            },
+            {
+              "name": "Jesse Randall",
+              "pos": "FW",
+              "club": "auckland"
+            },
+            {
+              "name": "Michael Woud",
+              "pos": "GK",
+              "club": "auckland"
+            },
+            {
+              "name": "Ryan Thomas",
+              "pos": "MF",
+              "club": "peczwolle"
+            },
+            {
+              "name": "Callan Elliot",
+              "pos": "DF",
+              "club": "auckland"
+            },
+            {
+              "name": "Lachlan Bayliss",
+              "pos": "MF",
+              "club": "newcastlejets"
+            },
+            {
+              "name": "Tommy Smith",
+              "pos": "DF",
+              "club": "braintreetown"
+            }
+          ]
+        },
+        {
+          "country": "Ouzbékistan",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Utkir Yusupov",
+              "pos": "GK",
+              "club": "pfcnavbahornamangan"
+            },
+            {
+              "name": "Abdukodir Khusanov",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Khojiakbar Alijonov",
+              "pos": "DF",
+              "club": "pakhtakor"
+            },
+            {
+              "name": "Farrukh Sayfiev",
+              "pos": "DF",
+              "club": "fcneftchifergana"
+            },
+            {
+              "name": "Rustam Ashurmatov",
+              "pos": "DF",
+              "club": "esteghlal"
+            },
+            {
+              "name": "Akmal Mozgovoy",
+              "pos": "MF",
+              "club": "pakhtakor"
+            },
+            {
+              "name": "Otabek Shukurov",
+              "pos": "MF",
+              "club": "baniyasclub"
+            },
+            {
+              "name": "Jamshid Iskanderov",
+              "pos": "MF",
+              "club": "fcneftchifergana"
+            },
+            {
+              "name": "Odiljon Hamrobekov",
+              "pos": "MF",
+              "club": "tractor"
+            },
+            {
+              "name": "Ruslanbek Jiyanov",
+              "pos": "MF",
+              "club": "pfcnavbahornamangan"
+            },
+            {
+              "name": "Oston Urunov",
+              "pos": "MF",
+              "club": "persepolis"
+            },
+            {
+              "name": "Abduvohid Nematov",
+              "pos": "GK",
+              "club": "fcnasaf"
+            },
+            {
+              "name": "Sherzod Nasrullaev",
+              "pos": "DF",
+              "club": "fcnasaf"
+            },
+            {
+              "name": "Eldor Shomurodov",
+              "pos": "FW",
+              "club": "istanbulbasaksehirfk"
+            },
+            {
+              "name": "Umar Eshmurodov",
+              "pos": "DF",
+              "club": "fcnasaf"
+            },
+            {
+              "name": "Botirali Ergashev",
+              "pos": "GK",
+              "club": "fcneftchifergana"
+            },
+            {
+              "name": "Dostonbek Khamdamov",
+              "pos": "MF",
+              "club": "pakhtakor"
+            },
+            {
+              "name": "Abdulla Abdullaev",
+              "pos": "DF",
+              "club": "dibb"
+            },
+            {
+              "name": "Azizjon Ganiev",
+              "pos": "MF",
+              "club": "albataehclub"
+            },
+            {
+              "name": "Azizbek Amonov",
+              "pos": "FW",
+              "club": "fcdinamosamarqand"
+            },
+            {
+              "name": "Igor Sergeev",
+              "pos": "FW",
+              "club": "persepolis"
+            },
+            {
+              "name": "Abbosbek Fayzullaev",
+              "pos": "MF",
+              "club": "istanbulbasaksehirfk"
+            },
+            {
+              "name": "Sherzod Esanov",
+              "pos": "MF",
+              "club": "fcbukhara"
+            },
+            {
+              "name": "Bekhruz Karimov",
+              "pos": "DF",
+              "club": "fcsurkhon"
+            },
+            {
+              "name": "Avazbek Ulmasaliev",
+              "pos": "DF",
+              "club": "fcagmk"
+            },
+            {
+              "name": "Jakhongir Urozov",
+              "pos": "DF",
+              "club": "fcdinamosamarqand"
+            }
+          ]
+        },
+        {
+          "country": "Panama",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Luis Mejía",
+              "pos": "GK",
+              "club": "clubnacionaldefootball"
+            },
+            {
+              "name": "César Blackman",
+              "pos": "DF",
+              "club": "skslovanbratislava"
+            },
+            {
+              "name": "José Córdoba",
+              "pos": "DF",
+              "club": "norwichcity"
+            },
+            {
+              "name": "Fidel Escobar",
+              "pos": "DF",
+              "club": "deportivosaprissa"
+            },
+            {
+              "name": "Edgardo Fariña",
+              "pos": "DF",
+              "club": "fcparinizhnynovgorod"
+            },
+            {
+              "name": "Cristian Martínez",
+              "pos": "MF",
+              "club": "hapoelironikiryatshmon"
+            },
+            {
+              "name": "José Luis Rodríguez",
+              "pos": "MF",
+              "club": "fcjuarez"
+            },
+            {
+              "name": "Adalberto Carrasquilla",
+              "pos": "MF",
+              "club": "pumasunam"
+            },
+            {
+              "name": "Tomás Rodríguez",
+              "pos": "FW",
+              "club": "deportivosaprissa"
+            },
+            {
+              "name": "Ismael Díaz",
+              "pos": "MF",
+              "club": "clubleon"
+            },
+            {
+              "name": "Yoel Bárcenas",
+              "pos": "MF",
+              "club": "mazatlan"
+            },
+            {
+              "name": "César Samudio",
+              "pos": "GK",
+              "club": "cdmarathon"
+            },
+            {
+              "name": "Jiovany Ramos",
+              "pos": "DF",
+              "club": "academiapuertocabello"
+            },
+            {
+              "name": "Carlos Harvey",
+              "pos": "DF",
+              "club": "minnesotaunited"
+            },
+            {
+              "name": "Eric Davis",
+              "pos": "DF",
+              "club": "cdplazaamador"
+            },
+            {
+              "name": "Andrés Andrade",
+              "pos": "DF",
+              "club": "la"
+            },
+            {
+              "name": "José Fajardo",
+              "pos": "FW",
+              "club": "cduniversidadcatolica(ecuador)"
+            },
+            {
+              "name": "Cecilio Waterman",
+              "pos": "FW",
+              "club": "cduniversidaddeconcepcion"
+            },
+            {
+              "name": "Alberto Quintero",
+              "pos": "MF",
+              "club": "cdplazaamador"
+            },
+            {
+              "name": "Aníbal Godoy",
+              "pos": "MF",
+              "club": "sandiego"
+            },
+            {
+              "name": "César Yanis",
+              "pos": "MF",
+              "club": "cobresal"
+            },
+            {
+              "name": "Orlando Mosquera",
+              "pos": "GK",
+              "club": "alfayhaclub"
+            },
+            {
+              "name": "Michael Amir Murillo",
+              "pos": "DF",
+              "club": "besiktas"
+            },
+            {
+              "name": "Azarias Londoño",
+              "pos": "FW",
+              "club": "cduniversidadcatolica(ecuador)"
+            },
+            {
+              "name": "Roderick Miller",
+              "pos": "DF",
+              "club": "turantovuz"
+            },
+            {
+              "name": "Jorge Gutiérrez",
+              "pos": "DF",
+              "club": "deportivolaguair"
+            }
+          ]
+        },
+        {
+          "country": "Paraguay",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Gatito Fernández",
+              "pos": "GK",
+              "club": "cerroporteno"
+            },
+            {
+              "name": "Gustavo Velázquez",
+              "pos": "DF",
+              "club": "cerroporteno"
+            },
+            {
+              "name": "Omar Alderete",
+              "pos": "DF",
+              "club": "sunderland"
+            },
+            {
+              "name": "Juan José Cáceres",
+              "pos": "DF",
+              "club": "fcdynamomoscow"
+            },
+            {
+              "name": "Fabián Balbuena",
+              "pos": "DF",
+              "club": "gremiofbpa"
+            },
+            {
+              "name": "Júnior Alonso",
+              "pos": "DF",
+              "club": "clubeatleticomineiro"
+            },
+            {
+              "name": "Ramón Sosa",
+              "pos": "MF",
+              "club": "sepalmeiras"
+            },
+            {
+              "name": "Diego Gómez",
+              "pos": "MF",
+              "club": "brighton"
+            },
+            {
+              "name": "Antonio Sanabria",
+              "pos": "FW",
+              "club": "uscremonese"
+            },
+            {
+              "name": "Miguel Almirón",
+              "pos": "MF",
+              "club": "atlantaunited"
+            },
+            {
+              "name": "Maurício",
+              "pos": "MF",
+              "club": "sepalmeiras"
+            },
+            {
+              "name": "Orlando Gill",
+              "pos": "GK",
+              "club": "sanlorenzodealmagro"
+            },
+            {
+              "name": "José Canale",
+              "pos": "DF",
+              "club": "clubatleticolanus"
+            },
+            {
+              "name": "Andrés Cubas",
+              "pos": "MF",
+              "club": "vancouverwhitecaps"
+            },
+            {
+              "name": "Gustavo Gómez",
+              "pos": "DF",
+              "club": "sepalmeiras"
+            },
+            {
+              "name": "Damián Bobadilla",
+              "pos": "MF",
+              "club": "saopaulo"
+            },
+            {
+              "name": "Kaku",
+              "pos": "FW",
+              "club": "alain"
+            },
+            {
+              "name": "Álex Arce",
+              "pos": "FW",
+              "club": "independienterivadavia"
+            },
+            {
+              "name": "Julio Enciso",
+              "pos": "FW",
+              "club": "rcstrasbourgalsace"
+            },
+            {
+              "name": "Braian Ojeda",
+              "pos": "MF",
+              "club": "orlandocity"
+            },
+            {
+              "name": "Gabriel Ávalos",
+              "pos": "FW",
+              "club": "clubatleticoindependiente"
+            },
+            {
+              "name": "Gastón Olveira",
+              "pos": "GK",
+              "club": "clubolimpia"
+            },
+            {
+              "name": "Matías Galarza",
+              "pos": "MF",
+              "club": "atlantaunited"
+            },
+            {
+              "name": "Gustavo Caballero",
+              "pos": "MF",
+              "club": "portsmouth"
+            },
+            {
+              "name": "Isidro Pitta",
+              "pos": "FW",
+              "club": "redbullbragantino"
+            },
+            {
+              "name": "Alexandro Maidana",
+              "pos": "DF",
+              "club": "talleresdecordoba"
+            }
+          ]
+        },
+        {
+          "country": "Pays-Bas",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Bart Verbruggen",
+              "pos": "GK",
+              "club": "brighton"
+            },
+            {
+              "name": "Lutsharel Geertruida",
+              "pos": "DF",
+              "club": "sunderland"
+            },
+            {
+              "name": "Marten de Roon",
+              "pos": "MF",
+              "club": "atalanta"
+            },
+            {
+              "name": "Virgil van Dijk",
+              "pos": "DF",
+              "club": "liverpool"
+            },
+            {
+              "name": "Nathan Aké",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Jan Paul van Hecke",
+              "pos": "DF",
+              "club": "brighton"
+            },
+            {
+              "name": "Justin Kluivert",
+              "pos": "MF",
+              "club": "afcbournemouth"
+            },
+            {
+              "name": "Ryan Gravenberch",
+              "pos": "MF",
+              "club": "liverpool"
+            },
+            {
+              "name": "Wout Weghorst",
+              "pos": "FW",
+              "club": "afcajax"
+            },
+            {
+              "name": "Memphis Depay",
+              "pos": "FW",
+              "club": "sccorinthianspaulista"
+            },
+            {
+              "name": "Cody Gakpo",
+              "pos": "FW",
+              "club": "liverpool"
+            },
+            {
+              "name": "Mats Wieffer",
+              "pos": "DF",
+              "club": "brighton"
+            },
+            {
+              "name": "Robin Roefs",
+              "pos": "GK",
+              "club": "sunderland"
+            },
+            {
+              "name": "Tijjani Reijnders",
+              "pos": "MF",
+              "club": "man-city"
+            },
+            {
+              "name": "Micky van de Ven",
+              "pos": "DF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Guus Til",
+              "pos": "MF",
+              "club": "psv"
+            },
+            {
+              "name": "Noa Lang",
+              "pos": "FW",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Donyell Malen",
+              "pos": "FW",
+              "club": "asroma"
+            },
+            {
+              "name": "Brian Brobbey",
+              "pos": "FW",
+              "club": "sunderland"
+            },
+            {
+              "name": "Teun Koopmeiners",
+              "pos": "MF",
+              "club": "juventus"
+            },
+            {
+              "name": "Frenkie de Jong",
+              "pos": "MF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Denzel Dumfries",
+              "pos": "DF",
+              "club": "inter"
+            },
+            {
+              "name": "Mark Flekken",
+              "pos": "GK",
+              "club": "bayer04leverkusen"
+            },
+            {
+              "name": "Crysencio Summerville",
+              "pos": "FW",
+              "club": "west-ham"
+            },
+            {
+              "name": "Jorrel Hato",
+              "pos": "DF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Quinten Timber",
+              "pos": "MF",
+              "club": "olympiquedemarseille"
+            }
+          ]
+        },
+        {
+          "country": "Portugal",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Diogo Costa",
+              "pos": "GK",
+              "club": "porto"
+            },
+            {
+              "name": "Nélson Semedo",
+              "pos": "DF",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Rúben Dias",
+              "pos": "DF",
+              "club": "man-city"
+            },
+            {
+              "name": "Tomás Araújo",
+              "pos": "DF",
+              "club": "benfica"
+            },
+            {
+              "name": "Diogo Dalot",
+              "pos": "DF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Matheus Nunes",
+              "pos": "MF",
+              "club": "man-city"
+            },
+            {
+              "name": "Cristiano Ronaldo",
+              "pos": "FW",
+              "club": "alnassr"
+            },
+            {
+              "name": "Bruno Fernandes",
+              "pos": "MF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Gonçalo Ramos",
+              "pos": "FW",
+              "club": "psg"
+            },
+            {
+              "name": "Bernardo Silva",
+              "pos": "MF",
+              "club": "man-city"
+            },
+            {
+              "name": "João Félix",
+              "pos": "FW",
+              "club": "alnassr"
+            },
+            {
+              "name": "José Sá",
+              "pos": "GK",
+              "club": "wolves"
+            },
+            {
+              "name": "Renato Veiga",
+              "pos": "DF",
+              "club": "villarreal"
+            },
+            {
+              "name": "Gonçalo Inácio",
+              "pos": "DF",
+              "club": "sportingcp"
+            },
+            {
+              "name": "João Neves",
+              "pos": "MF",
+              "club": "psg"
+            },
+            {
+              "name": "Francisco Trincão",
+              "pos": "FW",
+              "club": "sportingcp"
+            },
+            {
+              "name": "Rafael Leão",
+              "pos": "FW",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Pedro Neto",
+              "pos": "FW",
+              "club": "chelsea"
+            },
+            {
+              "name": "Gonçalo Guedes",
+              "pos": "FW",
+              "club": "real-sociedad"
+            },
+            {
+              "name": "João Cancelo",
+              "pos": "DF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Rúben Neves",
+              "pos": "MF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Rui Silva",
+              "pos": "GK",
+              "club": "sportingcp"
+            },
+            {
+              "name": "Vitinha",
+              "pos": "MF",
+              "club": "psg"
+            },
+            {
+              "name": "Samú Costa",
+              "pos": "DF",
+              "club": "rcdmallorca"
+            },
+            {
+              "name": "Nuno Mendes",
+              "pos": "DF",
+              "club": "psg"
+            },
+            {
+              "name": "Francisco Conceição",
+              "pos": "FW",
+              "club": "juventus"
+            }
+          ]
+        },
+        {
+          "country": "Qatar",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Mahmud Abunada",
+              "pos": "GK",
+              "club": "alrayyan"
+            },
+            {
+              "name": "Pedro Miguel",
+              "pos": "DF",
+              "club": "alsadd"
+            },
+            {
+              "name": "Lucas Mendes",
+              "pos": "DF",
+              "club": "alwakrah"
+            },
+            {
+              "name": "Issa Laye",
+              "pos": "DF",
+              "club": "alarabisc(qatar)"
+            },
+            {
+              "name": "Jassem Gaber",
+              "pos": "DF",
+              "club": "alrayyan"
+            },
+            {
+              "name": "Abdulaziz Hatem",
+              "pos": "MF",
+              "club": "alrayyan"
+            },
+            {
+              "name": "Ahmed Alaaeldin",
+              "pos": "FW",
+              "club": "alrayyan"
+            },
+            {
+              "name": "Edmilson Junior",
+              "pos": "FW",
+              "club": "alduhail"
+            },
+            {
+              "name": "Mohammed Muntari",
+              "pos": "FW",
+              "club": "algharafa"
+            },
+            {
+              "name": "Hassan Al-Haydos",
+              "pos": "FW",
+              "club": "alsadd"
+            },
+            {
+              "name": "Akram Afif",
+              "pos": "FW",
+              "club": "alsadd"
+            },
+            {
+              "name": "Karim Boudiaf",
+              "pos": "MF",
+              "club": "alduhail"
+            },
+            {
+              "name": "Ayoub Al-Oui",
+              "pos": "DF",
+              "club": "algharafa"
+            },
+            {
+              "name": "Homam Ahmed",
+              "pos": "DF",
+              "club": "culturalydeportivaleonesa"
+            },
+            {
+              "name": "Yusuf Abdurisag",
+              "pos": "FW",
+              "club": "alwakrah"
+            },
+            {
+              "name": "Boualem Khoukhi",
+              "pos": "DF",
+              "club": "alsadd"
+            },
+            {
+              "name": "Ahmed Al-Ganehi",
+              "pos": "MF",
+              "club": "algharafa"
+            },
+            {
+              "name": "Sultan Al-Brake",
+              "pos": "DF",
+              "club": "alduhail"
+            },
+            {
+              "name": "Almoez Ali",
+              "pos": "FW",
+              "club": "alduhail"
+            },
+            {
+              "name": "Ahmed Fathy",
+              "pos": "MF",
+              "club": "alarabisc(qatar)"
+            },
+            {
+              "name": "Salah Zakaria",
+              "pos": "GK",
+              "club": "alduhail"
+            },
+            {
+              "name": "Meshaal Barsham",
+              "pos": "GK",
+              "club": "alsadd"
+            },
+            {
+              "name": "Assim Madibo",
+              "pos": "MF",
+              "club": "alwakrah"
+            },
+            {
+              "name": "Tahsin Jamshid",
+              "pos": "FW",
+              "club": "alduhail"
+            },
+            {
+              "name": "Al-Hashmi Al-Hussain",
+              "pos": "DF",
+              "club": "alarabisc(qatar)"
+            },
+            {
+              "name": "Mohamed Manai",
+              "pos": "FW",
+              "club": "alshamal"
+            }
+          ]
+        },
+        {
+          "country": "RD Congo",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Lionel Mpasi",
+              "pos": "GK",
+              "club": "lehavre"
+            },
+            {
+              "name": "Aaron Wan-Bissaka",
+              "pos": "DF",
+              "club": "west-ham"
+            },
+            {
+              "name": "Steve Kapuadi",
+              "pos": "DF",
+              "club": "widzewłodz"
+            },
+            {
+              "name": "Axel Tuanzebe",
+              "pos": "DF",
+              "club": "burnley"
+            },
+            {
+              "name": "Dylan Batubinsika",
+              "pos": "DF",
+              "club": "athlitikienosilariss"
+            },
+            {
+              "name": "Ngal'ayel Mukau",
+              "pos": "MF",
+              "club": "lilleo"
+            },
+            {
+              "name": "Nathanaël Mbuku",
+              "pos": "MF",
+              "club": "montpellierh"
+            },
+            {
+              "name": "Samuel Moutoussamy",
+              "pos": "MF",
+              "club": "atromitos"
+            },
+            {
+              "name": "Brian Cipenga",
+              "pos": "FW",
+              "club": "cdcastellon"
+            },
+            {
+              "name": "Théo Bongonda",
+              "pos": "MF",
+              "club": "fcspartakmoscow"
+            },
+            {
+              "name": "Gaël Kakuta",
+              "pos": "FW",
+              "club": "athlitikienosilariss"
+            },
+            {
+              "name": "Joris Kayembe",
+              "pos": "DF",
+              "club": "krcgenk"
+            },
+            {
+              "name": "Meschak Elia",
+              "pos": "FW",
+              "club": "alanyaspor"
+            },
+            {
+              "name": "Noah Sadiki",
+              "pos": "MF",
+              "club": "sunderland"
+            },
+            {
+              "name": "Aaron Tshibola",
+              "pos": "MF",
+              "club": "kilmarnock"
+            },
+            {
+              "name": "Timothy Fayulu",
+              "pos": "GK",
+              "club": "fcnoah"
+            },
+            {
+              "name": "Cédric Bakambu",
+              "pos": "FW",
+              "club": "real-betis"
+            },
+            {
+              "name": "Charles Pickel",
+              "pos": "MF",
+              "club": "rcdespanyol"
+            },
+            {
+              "name": "Fiston Mayele",
+              "pos": "FW",
+              "club": "pyramids"
+            },
+            {
+              "name": "Yoane Wissa",
+              "pos": "FW",
+              "club": "newcastleunited"
+            },
+            {
+              "name": "Matthieu Epolo",
+              "pos": "GK",
+              "club": "standard-liege"
+            },
+            {
+              "name": "Chancel Mbemba",
+              "pos": "DF",
+              "club": "lilleo"
+            },
+            {
+              "name": "Simon Banza",
+              "pos": "FW",
+              "club": "aljaziraclub"
+            },
+            {
+              "name": "Gédéon Kalulu",
+              "pos": "DF",
+              "club": "arislimassol"
+            },
+            {
+              "name": "Edo Kayembe",
+              "pos": "MF",
+              "club": "watford"
+            },
+            {
+              "name": "Arthur Masuaku",
+              "pos": "DF",
+              "club": "rclens"
+            }
+          ]
+        },
+        {
+          "country": "Sénégal",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Yehvann Diouf",
+              "pos": "GK",
+              "club": "ogcnice"
+            },
+            {
+              "name": "Mamadou Sarr",
+              "pos": "DF",
+              "club": "chelsea"
+            },
+            {
+              "name": "Kalidou Koulibaly",
+              "pos": "DF",
+              "club": "alhilals"
+            },
+            {
+              "name": "Abdoulaye Seck",
+              "pos": "DF",
+              "club": "maccabihaif"
+            },
+            {
+              "name": "Idrissa Gueye",
+              "pos": "MF",
+              "club": "everton"
+            },
+            {
+              "name": "Pathé Ciss",
+              "pos": "MF",
+              "club": "rayovallecano"
+            },
+            {
+              "name": "Assane Diao",
+              "pos": "FW",
+              "club": "como1907"
+            },
+            {
+              "name": "Lamine Camara",
+              "pos": "MF",
+              "club": "monaco"
+            },
+            {
+              "name": "Bamba Dieng",
+              "pos": "FW",
+              "club": "fclorient"
+            },
+            {
+              "name": "Sadio Mané",
+              "pos": "FW",
+              "club": "alnassr"
+            },
+            {
+              "name": "Nicolas Jackson",
+              "pos": "FW",
+              "club": "bayern"
+            },
+            {
+              "name": "Cherif Ndiaye",
+              "pos": "FW",
+              "club": "samsunspor"
+            },
+            {
+              "name": "Iliman Ndiaye",
+              "pos": "FW",
+              "club": "everton"
+            },
+            {
+              "name": "Ismail Jakobs",
+              "pos": "DF",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Krépin Diatta",
+              "pos": "DF",
+              "club": "monaco"
+            },
+            {
+              "name": "Édouard Mendy",
+              "pos": "GK",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Pape Matar Sarr",
+              "pos": "MF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Ismaïla Sarr",
+              "pos": "FW",
+              "club": "crystalpalace"
+            },
+            {
+              "name": "Moussa Niakhaté",
+              "pos": "DF",
+              "club": "lyon"
+            },
+            {
+              "name": "Ibrahim Mbaye",
+              "pos": "FW",
+              "club": "psg"
+            },
+            {
+              "name": "Habib Diarra",
+              "pos": "MF",
+              "club": "sunderland"
+            },
+            {
+              "name": "Bara Sapoko Ndiaye",
+              "pos": "MF",
+              "club": "bayern"
+            },
+            {
+              "name": "Mory Diaw",
+              "pos": "GK",
+              "club": "lehavre"
+            },
+            {
+              "name": "Antoine Mendy",
+              "pos": "DF",
+              "club": "ogcnice"
+            },
+            {
+              "name": "El Hadji Malick Diouf",
+              "pos": "DF",
+              "club": "west-ham"
+            },
+            {
+              "name": "Pape Gueye",
+              "pos": "MF",
+              "club": "villarreal"
+            }
+          ]
+        },
+        {
+          "country": "Suède",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Jacob Widell Zetterström",
+              "pos": "GK",
+              "club": "derbycounty"
+            },
+            {
+              "name": "Gustaf Lagerbielke",
+              "pos": "DF",
+              "club": "scbraga"
+            },
+            {
+              "name": "Victor Lindelöf",
+              "pos": "DF",
+              "club": "aston-villa"
+            },
+            {
+              "name": "Isak Hien",
+              "pos": "DF",
+              "club": "atalanta"
+            },
+            {
+              "name": "Gabriel Gudmundsson",
+              "pos": "DF",
+              "club": "leedsunited"
+            },
+            {
+              "name": "Herman Johansson",
+              "pos": "DF",
+              "club": "fcdallas"
+            },
+            {
+              "name": "Lucas Bergvall",
+              "pos": "MF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Daniel Svensson",
+              "pos": "DF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Alexander Isak",
+              "pos": "FW",
+              "club": "liverpool"
+            },
+            {
+              "name": "Benjamin Nygren",
+              "pos": "MF",
+              "club": "celtic"
+            },
+            {
+              "name": "Anthony Elanga",
+              "pos": "FW",
+              "club": "newcastleunited"
+            },
+            {
+              "name": "Viktor Johansson",
+              "pos": "GK",
+              "club": "stokecity"
+            },
+            {
+              "name": "Ken Sema",
+              "pos": "MF",
+              "club": "pafos"
+            },
+            {
+              "name": "Hjalmar Ekdal",
+              "pos": "DF",
+              "club": "burnley"
+            },
+            {
+              "name": "Carl Starfelt",
+              "pos": "DF",
+              "club": "rcceltadevigo"
+            },
+            {
+              "name": "Jesper Karlström",
+              "pos": "MF",
+              "club": "udinesecalcio"
+            },
+            {
+              "name": "Viktor Gyökeres",
+              "pos": "FW",
+              "club": "arsenal"
+            },
+            {
+              "name": "Yasin Ayari",
+              "pos": "MF",
+              "club": "brighton"
+            },
+            {
+              "name": "Mattias Svanberg",
+              "pos": "MF",
+              "club": "vflwolfsburg"
+            },
+            {
+              "name": "Eric Smith",
+              "pos": "DF",
+              "club": "fcstpauli"
+            },
+            {
+              "name": "Alexander Bernhardsson",
+              "pos": "DF",
+              "club": "holsteinkiel"
+            },
+            {
+              "name": "Besfort Zeneli",
+              "pos": "MF",
+              "club": "royaleunionsaintgilloise"
+            },
+            {
+              "name": "Kristoffer Nordfeldt",
+              "pos": "GK",
+              "club": "aikfotboll"
+            },
+            {
+              "name": "Elliot Stroud",
+              "pos": "DF",
+              "club": "mjallbyaif"
+            },
+            {
+              "name": "Gustaf Nilsson",
+              "pos": "FW",
+              "club": "clubbruggekv"
+            },
+            {
+              "name": "Taha Ali",
+              "pos": "FW",
+              "club": "malmoff"
+            }
+          ]
+        },
+        {
+          "country": "Suisse",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Gregor Kobel",
+              "pos": "GK",
+              "club": "dortmund"
+            },
+            {
+              "name": "Miro Muheim",
+              "pos": "DF",
+              "club": "hamburgersv"
+            },
+            {
+              "name": "Silvan Widmer",
+              "pos": "DF",
+              "club": "1fsvmainz05"
+            },
+            {
+              "name": "Nico Elvedi",
+              "pos": "DF",
+              "club": "gladbach"
+            },
+            {
+              "name": "Manuel Akanji",
+              "pos": "DF",
+              "club": "inter"
+            },
+            {
+              "name": "Denis Zakaria",
+              "pos": "MF",
+              "club": "monaco"
+            },
+            {
+              "name": "Breel Embolo",
+              "pos": "FW",
+              "club": "staderennais"
+            },
+            {
+              "name": "Remo Freuler",
+              "pos": "MF",
+              "club": "bolognafc1909"
+            },
+            {
+              "name": "Johan Manzambi",
+              "pos": "MF",
+              "club": "scfreiburg"
+            },
+            {
+              "name": "Granit Xhaka",
+              "pos": "MF",
+              "club": "sunderland"
+            },
+            {
+              "name": "Dan Ndoye",
+              "pos": "FW",
+              "club": "nottinghamforest"
+            },
+            {
+              "name": "Yvon Mvogo",
+              "pos": "GK",
+              "club": "fclorient"
+            },
+            {
+              "name": "Ricardo Rodriguez",
+              "pos": "DF",
+              "club": "real-betis"
+            },
+            {
+              "name": "Ardon Jashari",
+              "pos": "MF",
+              "club": "ac-milan"
+            },
+            {
+              "name": "Djibril Sow",
+              "pos": "MF",
+              "club": "sevilla"
+            },
+            {
+              "name": "Christian Fassnacht",
+              "pos": "FW",
+              "club": "bscyoungboys"
+            },
+            {
+              "name": "Rubén Vargas",
+              "pos": "FW",
+              "club": "sevilla"
+            },
+            {
+              "name": "Eray Cömert",
+              "pos": "DF",
+              "club": "valencia"
+            },
+            {
+              "name": "Noah Okafor",
+              "pos": "FW",
+              "club": "leedsunited"
+            },
+            {
+              "name": "Michel Aebischer",
+              "pos": "MF",
+              "club": "pisa"
+            },
+            {
+              "name": "Marvin Keller",
+              "pos": "GK",
+              "club": "bscyoungboys"
+            },
+            {
+              "name": "Fabian Rieder",
+              "pos": "MF",
+              "club": "fcaugsburg"
+            },
+            {
+              "name": "Zeki Amdouni",
+              "pos": "FW",
+              "club": "burnley"
+            },
+            {
+              "name": "Aurèle Amenda",
+              "pos": "DF",
+              "club": "eintracht"
+            },
+            {
+              "name": "Luca Jaquez",
+              "pos": "DF",
+              "club": "stuttgart"
+            },
+            {
+              "name": "Cedric Itten",
+              "pos": "FW",
+              "club": "fortunadusseldorf"
+            }
+          ]
+        },
+        {
+          "country": "Tchéquie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Matěj Kovář",
+              "pos": "GK",
+              "club": "psv"
+            },
+            {
+              "name": "David Zima",
+              "pos": "DF",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Tomáš Holeš",
+              "pos": "DF",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Robin Hranáč",
+              "pos": "DF",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "Vladimír Coufal",
+              "pos": "DF",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "Štěpán Chaloupek",
+              "pos": "DF",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Ladislav Krejčí",
+              "pos": "DF",
+              "club": "wolves"
+            },
+            {
+              "name": "Vladimír Darida",
+              "pos": "MF",
+              "club": "fchradeckralove"
+            },
+            {
+              "name": "Adam Hložek",
+              "pos": "FW",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "Patrik Schick",
+              "pos": "FW",
+              "club": "bayer04leverkusen"
+            },
+            {
+              "name": "Jan Kuchta",
+              "pos": "FW",
+              "club": "acspartaprague"
+            },
+            {
+              "name": "Lukáš Červ",
+              "pos": "MF",
+              "club": "fcviktoriaplzen"
+            },
+            {
+              "name": "Mojmír Chytil",
+              "pos": "FW",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "David Jurásek",
+              "pos": "DF",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Pavel Šulc",
+              "pos": "FW",
+              "club": "lyon"
+            },
+            {
+              "name": "Jindřich Staněk",
+              "pos": "GK",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Lukáš Provod",
+              "pos": "MF",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Michal Sadílek",
+              "pos": "MF",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Tomáš Chorý",
+              "pos": "FW",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Jaroslav Zelený",
+              "pos": "DF",
+              "club": "acspartaprague"
+            },
+            {
+              "name": "David Douděra",
+              "pos": "DF",
+              "club": "skslaviaprague"
+            },
+            {
+              "name": "Tomáš Souček",
+              "pos": "MF",
+              "club": "west-ham"
+            },
+            {
+              "name": "Lukáš Horníček",
+              "pos": "GK",
+              "club": "scbraga"
+            },
+            {
+              "name": "Alexandr Sojka",
+              "pos": "MF",
+              "club": "fcviktoriaplzen"
+            },
+            {
+              "name": "Hugo Sochůrek",
+              "pos": "MF",
+              "club": "acspartaprague"
+            },
+            {
+              "name": "Denis Višinský",
+              "pos": "FW",
+              "club": "fcviktoriaplzen"
+            }
+          ]
+        },
+        {
+          "country": "Tunisie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Mouhib Chamakh",
+              "pos": "GK",
+              "club": "clubafricain"
+            },
+            {
+              "name": "Ali Abdi",
+              "pos": "DF",
+              "club": "ogcnice"
+            },
+            {
+              "name": "Montassar Talbi",
+              "pos": "DF",
+              "club": "fclorient"
+            },
+            {
+              "name": "Omar Rekik",
+              "pos": "DF",
+              "club": "nkmaribor"
+            },
+            {
+              "name": "Adem Arous",
+              "pos": "DF",
+              "club": "kasımpasa"
+            },
+            {
+              "name": "Dylan Bronn",
+              "pos": "DF",
+              "club": "servette"
+            },
+            {
+              "name": "Elias Achouri",
+              "pos": "FW",
+              "club": "fccopenhagen"
+            },
+            {
+              "name": "Elias Saad",
+              "pos": "FW",
+              "club": "hannover96"
+            },
+            {
+              "name": "Hazem Mastouri",
+              "pos": "FW",
+              "club": "fcdynamomakhachkala"
+            },
+            {
+              "name": "Hannibal Mejbri",
+              "pos": "MF",
+              "club": "burnley"
+            },
+            {
+              "name": "Ismaël Gharbi",
+              "pos": "MF",
+              "club": "fcaugsburg"
+            },
+            {
+              "name": "Mortadha Ben Ouanes",
+              "pos": "DF",
+              "club": "kasımpasa"
+            },
+            {
+              "name": "Rani Khedira",
+              "pos": "MF",
+              "club": "1fcunionberlin"
+            },
+            {
+              "name": "Khalil Ayari",
+              "pos": "MF",
+              "club": "psg"
+            },
+            {
+              "name": "Mohamed Belhadj Mahmoud",
+              "pos": "MF",
+              "club": "fclugano"
+            },
+            {
+              "name": "Aymen Dahmen",
+              "pos": "GK",
+              "club": "cssfaxien"
+            },
+            {
+              "name": "Ellyes Skhiri",
+              "pos": "MF",
+              "club": "eintracht"
+            },
+            {
+              "name": "Rayan Elloumi",
+              "pos": "FW",
+              "club": "vancouverwhitecaps"
+            },
+            {
+              "name": "Firas Chaouat",
+              "pos": "FW",
+              "club": "clubafricain"
+            },
+            {
+              "name": "Yan Valery",
+              "pos": "DF",
+              "club": "bscyoungboys"
+            },
+            {
+              "name": "Mohamed Amine Ben Hamida",
+              "pos": "DF",
+              "club": "esperancesportivedetunis"
+            },
+            {
+              "name": "Sabri Ben Hessen",
+              "pos": "GK",
+              "club": "etoilesportivedusahel"
+            },
+            {
+              "name": "Moutaz Neffati",
+              "pos": "DF",
+              "club": "ifknorrkoping"
+            },
+            {
+              "name": "Raed Chikhaoui",
+              "pos": "DF",
+              "club": "usmonastir(football)"
+            },
+            {
+              "name": "Anis Ben Slimane",
+              "pos": "MF",
+              "club": "norwichcity"
+            },
+            {
+              "name": "Sebastian Tounekti",
+              "pos": "MF",
+              "club": "celtic"
+            }
+          ]
+        },
+        {
+          "country": "Turquie",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Mert Günok",
+              "pos": "GK",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Zeki Çelik",
+              "pos": "DF",
+              "club": "asroma"
+            },
+            {
+              "name": "Merih Demiral",
+              "pos": "DF",
+              "club": "alahlisaudi"
+            },
+            {
+              "name": "Çağlar Söyüncü",
+              "pos": "DF",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Salih Özcan",
+              "pos": "MF",
+              "club": "dortmund"
+            },
+            {
+              "name": "Orkun Kökçü",
+              "pos": "MF",
+              "club": "besiktas"
+            },
+            {
+              "name": "Kerem Aktürkoğlu",
+              "pos": "FW",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Arda Güler",
+              "pos": "FW",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Deniz Gül",
+              "pos": "FW",
+              "club": "porto"
+            },
+            {
+              "name": "Hakan Çalhanoğlu",
+              "pos": "MF",
+              "club": "inter"
+            },
+            {
+              "name": "Kenan Yıldız",
+              "pos": "FW",
+              "club": "juventus"
+            },
+            {
+              "name": "Altay Bayındır",
+              "pos": "GK",
+              "club": "man-utd"
+            },
+            {
+              "name": "Eren Elmalı",
+              "pos": "DF",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Abdülkerim Bardakcı",
+              "pos": "DF",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Ozan Kabak",
+              "pos": "DF",
+              "club": "hoffenheim"
+            },
+            {
+              "name": "İsmail Yüksek",
+              "pos": "MF",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "İrfan Can Kahveci",
+              "pos": "FW",
+              "club": "kasımpasa"
+            },
+            {
+              "name": "Mert Müldür",
+              "pos": "DF",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Yunus Akgün",
+              "pos": "FW",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Ferdi Kadıoğlu",
+              "pos": "DF",
+              "club": "brighton"
+            },
+            {
+              "name": "Barış Alper Yılmaz",
+              "pos": "FW",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Kaan Ayhan",
+              "pos": "MF",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Uğurcan Çakır",
+              "pos": "GK",
+              "club": "galatasaraysk(football)"
+            },
+            {
+              "name": "Oğuz Aydın",
+              "pos": "FW",
+              "club": "fenerbahce"
+            },
+            {
+              "name": "Samet Akaydin",
+              "pos": "DF",
+              "club": "caykurrizespor"
+            },
+            {
+              "name": "Can Uzun",
+              "pos": "FW",
+              "club": "eintracht"
+            }
+          ]
+        },
+        {
+          "country": "Uruguay",
+          "source": "Wikipédia, 2026 FIFA World Cup squads",
+          "confidence": "high",
+          "squad": [
+            {
+              "name": "Sergio Rochet",
+              "pos": "GK",
+              "club": "scinternacional"
+            },
+            {
+              "name": "José María Giménez",
+              "pos": "DF",
+              "club": "atletico-madrid"
+            },
+            {
+              "name": "Sebastián Cáceres",
+              "pos": "DF",
+              "club": "club-america"
+            },
+            {
+              "name": "Ronald Araújo",
+              "pos": "DF",
+              "club": "barcelona"
+            },
+            {
+              "name": "Manuel Ugarte",
+              "pos": "MF",
+              "club": "man-utd"
+            },
+            {
+              "name": "Rodrigo Bentancur",
+              "pos": "MF",
+              "club": "tottenham"
+            },
+            {
+              "name": "Nicolás de la Cruz",
+              "pos": "MF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Federico Valverde",
+              "pos": "MF",
+              "club": "real-madrid"
+            },
+            {
+              "name": "Darwin Núñez",
+              "pos": "FW",
+              "club": "alhilals"
+            },
+            {
+              "name": "Giorgian de Arrascaeta",
+              "pos": "MF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Facundo Pellistri",
+              "pos": "FW",
+              "club": "panathinaikos"
+            },
+            {
+              "name": "Santiago Mele",
+              "pos": "GK",
+              "club": "cfmonterrey"
+            },
+            {
+              "name": "Guillermo Varela",
+              "pos": "DF",
+              "club": "crflamengo"
+            },
+            {
+              "name": "Agustín Canobbio",
+              "pos": "MF",
+              "club": "fluminense"
+            },
+            {
+              "name": "Emiliano Martínez",
+              "pos": "MF",
+              "club": "sepalmeiras"
+            },
+            {
+              "name": "Mathías Olivera",
+              "pos": "DF",
+              "club": "sscnapoli"
+            },
+            {
+              "name": "Matías Viña",
+              "pos": "DF",
+              "club": "clubatleticoriverplate"
+            },
+            {
+              "name": "Brian Rodríguez",
+              "pos": "FW",
+              "club": "club-america"
+            },
+            {
+              "name": "Rodrigo Aguirre",
+              "pos": "FW",
+              "club": "tigresuanl"
+            },
+            {
+              "name": "Maximiliano Araújo",
+              "pos": "MF",
+              "club": "sportingcp"
+            },
+            {
+              "name": "Federico Viñas",
+              "pos": "FW",
+              "club": "realoviedo"
+            },
+            {
+              "name": "Joaquín Piquerez",
+              "pos": "MF",
+              "club": "sepalmeiras"
+            },
+            {
+              "name": "Fernando Muslera",
+              "pos": "GK",
+              "club": "estudiantesdelaplata"
+            },
+            {
+              "name": "Santiago Bueno",
+              "pos": "DF",
+              "club": "wolves"
+            },
+            {
+              "name": "Juan Manuel Sanabria",
+              "pos": "MF",
+              "club": "realsaltlake"
+            },
+            {
+              "name": "Rodrigo Zalazar",
+              "pos": "MF",
+              "club": "scbraga"
             }
           ]
         }
