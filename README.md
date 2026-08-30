@@ -54,9 +54,24 @@ Trois fichiers dans `data/` :
   `lineup` est ordonné : gardien d'abord, puis chaque ligne de la formation de
   gauche à droite. Le terrain est calculé à partir du champ `formation`, il n'y
   a aucune coordonnée à saisir.
-- **`countries.json`** — les sélections proposées à l'autocomplétion, plus la
-  liste des années de Coupe du monde. Cette liste doit rester **bien plus large
-  que le jeu de questions**, sinon elle révèle les réponses.
+- **`countries.json`** — le référentiel des sélections et la liste des années de
+  Coupe du monde. Sert de repli quand une édition n'a pas de `participants`.
+
+### La liste de réponses
+
+Le joueur choisit dans une liste déroulante, alimentée par le champ
+**`participants`** de l'édition : les sélections réellement engagées cette
+année-là, pas celles dont on a une question.
+
+C'est la distinction qui fait tenir le jeu. Aujourd'hui l'édition 2026 ne
+contient qu'une équipe : une liste bâtie sur les questions disponibles
+n'offrirait qu'un seul choix. `validate.py` refuse d'ailleurs une équipe absente
+des participants de son édition — sa bonne réponse serait introuvable.
+
+En mode expert, tant qu'aucune année n'est choisie la liste couvre l'union des
+éditions retenues ; choisir une année la réduit à ses participants, et efface
+une réponse devenue impossible. Une édition sans `participants` fait retomber
+sur le référentiel complet.
 
 ### Importer une édition entière depuis Wikipédia
 

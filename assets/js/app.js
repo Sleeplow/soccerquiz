@@ -52,6 +52,7 @@
     index: 0,
     score: 0,
     results: [],
+    years: [],
     hintUsed: false,
     deadline: 0,
     tick: null
@@ -131,6 +132,7 @@
     state.mode = dom.setup.querySelector('input[name="mode"]:checked').value;
     state.duration = Number(dom.timerSeconds.value);
     state.queue = wanted > 0 ? all.slice(0, wanted) : all;
+    state.years = selectedYears();
     state.index = 0;
     state.score = 0;
     state.results = [];
@@ -298,14 +300,48 @@
     show('screen-end');
   }
 
-  /* ── Autocomplétion des sélections ──────── */
+  /* ── Liste des sélections ───────────────── */
 
   let listItems = [];
   let listCursor = -1;
 
+  /**
+   * Les sélections proposées pour la question en cours.
+   *
+   * En mode normal l'année est connue : on ne propose que les participants de
+   * cette Coupe du monde. En expert elle est cherchée, donc on couvre les
+   * éditions retenues au départ — et dès que le joueur choisit une année, la
+   * liste se réduit à ses participants.
+   *
+   * Ce sont les participants réels de l'édition, pas les équipes dont on a une
+   * question : les seconds révéleraient la réponse.
+   */
+  function answerChoices() {
+    const forYear = (year) => data.participants[year];
+
+    if (state.mode !== 'expert') {
+      return forYear(current().year) || data.countries;
+    }
+
+    const picked = Number(dom.yearInput.value);
+    if (picked) return forYear(picked) || data.countries;
+
+    const union = new Set();
+    let complete = true;
+    for (const year of state.years) {
+      const list = forYear(year);
+      if (list) list.forEach((c) => union.add(c));
+      else complete = false;   // édition sans participants connus
+    }
+    // Une édition non couverte ferait disparaître ses équipes de la liste :
+    // on retombe alors sur le référentiel complet.
+    return complete && union.size ? [...union].sort((a, b) => a.localeCompare(b, 'fr'))
+                                  : data.countries;
+  }
+
   function openList(matches) {
     dom.countryList.innerHTML = '';
-    listItems = matches.slice(0, 8);
+    listItems = matches;
     listCursor = -1;
 
     if (!listItems.length) return closeList();
@@ -344,13 +380,31 @@
       li.setAttribute('aria-selected', String(i === listCursor)));
   }
 
-  dom.countryInput.addEventListener('input', () => {
+  function refreshList() {
+    const choices = answerChoices();
     const q = Data.normalize(dom.countryInput.value);
-    if (!q) return closeList();
-    const starts = data.countries.filter((c) => Data.normalize(c).startsWith(q));
-    const contains = data.countries.filter(
+    if (!q) return openList(choices);
+
+    const starts = choices.filter((c) => Data.normalize(c).startsWith(q));
+    const contains = choices.filter(
       (c) => !starts.includes(c) && Data.normalize(c).includes(q));
     openList([...starts, ...contains]);
+  }
+
+  dom.countryInput.addEventListener('input', refreshList);
+  // La liste s'ouvre entière au clic : c'est un menu déroulant, la saisie ne
+  // sert qu'à le réduire quand il est long.
+  dom.countryInput.addEventListener('focus', refreshList);
+  dom.countryInput.addEventListener('click', refreshList);
+
+  // En expert, choisir l'année restreint les sélections proposées.
+  dom.yearInput.addEventListener('change', () => {
+    const choices = answerChoices();
+    if (dom.countryInput.value &&
+        !choices.some((c) => Data.normalize(c) === Data.normalize(dom.countryInput.value))) {
+      dom.countryInput.value = '';
+    }
+    if (!dom.countryList.hidden) refreshList();
   });
 
   dom.countryInput.addEventListener('keydown', (e) => {
