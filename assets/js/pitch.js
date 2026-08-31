@@ -58,24 +58,96 @@ const Pitch = (() => {
   // sur la répartition par lignes.
 
   /* Proportions du cadre, nécessaires pour convertir une largeur en hauteur :
-     le créneau est carré, or les coordonnées sont en pourcentage de chaque axe. */
+     la pastille est ronde, or les coordonnées sont en pourcentage de chaque axe. */
   const FRAME_RATIO = 68 / 79;
-  // Place occupée sous la pastille par le nom, puis par le club, en % de hauteur.
-  const LABEL_H = 7;
+
+  /* Part du créneau occupée par le disque. Doit rester égale à la largeur
+     donnée à `.slot-badge` dans la feuille de style : c'est elle qui fait le
+     lien entre la taille calculée ici et celle réellement affichée. */
+  const BADGE_FILL = 0.78;
+
+  /* Bornes du disque, en % de la largeur du terrain. Le plancher garde un
+     blason identifiable dans les compositions les plus denses ; le plafond
+     l'empêche d'avaler les marquages dans les plus aérées. */
+  const MIN_DISC = 7;
+  const MAX_DISC = 16;
+
+  /* Ce que deux disques voisins d'une même ligne se laissent : le diamètre ne
+     dépasse pas 82 % de la distance entre leurs centres. */
+  const DISC_GAP = 0.82;
+
+  /* Mêmes marges pour le libellé, qui est bien plus large que son disque : il
+     prend 92 % de l'écart avec son voisin, et un latéral 96 % de ce qui reste
+     jusqu'à la touche. Le reste est le blanc qui les sépare. */
+  const LABEL_GAP = 0.92;
+  const LABEL_EDGE = 0.96;
+
+  /* Hauteur réclamée par un libellé d'une seule ligne, en % de la hauteur du
+     terrain. La révélation en empile deux — sauf sur petit écran, où le club
+     n'est plus affiché : c'est la feuille de style qui tranche, via
+     `--label-h`, puisque c'est elle qui décide de le masquer. */
+  const ONE_LABEL_H = 4.5;
+
+  /**
+   * Hauteur à réserver sous les pastilles pour cet affichage, estimée avant
+   * tout rendu.
+   *
+   * Zéro pendant la question : il n'y a alors aucun libellé, et leur réserver
+   * la place revenait à rétrécir les blasons pour rien — c'est ce qui les
+   * rendait minuscules sur téléphone, où le terrain est déjà petit.
+   */
+  function estimatedLabelHeight(host, labels) {
+    if (labels === 'none') return 0;
+    if (labels === 'clubs') return ONE_LABEL_H;
+    const declared = parseFloat(getComputedStyle(host).getPropertyValue('--label-h'));
+    return Number.isFinite(declared) ? declared : 2 * ONE_LABEL_H;
+  }
+
+  /**
+   * Hauteur réellement occupée par les libellés, mesurée sur la page.
+   *
+   * L'estimation ci-dessus est une proportion, or les libellés se dessinent en
+   * pixels : sur un terrain rendu court — un téléphone couché, une fenêtre
+   * large et basse — ils en mangent une part bien plus grande que prévu, et
+   * deux lignes voisines finissent par se toucher. On mesure donc dès que le
+   * terrain a une taille, l'estimation ne servant plus que d'amorce.
+   *
+   * @returns {number|null} part de la hauteur du terrain, en %, ou null tant
+   *          que rien n'est affiché — un écran masqué n'a aucune boîte.
+   */
+  function measuredLabelHeight(host) {
+    const height = host.getBoundingClientRect().height;
+    if (!height) return null;
+
+    /* Le créneau, c'est la pastille puis ce qui la suit : leur différence de
+       hauteur est exactement la place que les libellés réclament, marges
+       comprises. Elle ne dépend pas de la taille du disque — les libellés se
+       dimensionnent sur la fenêtre — donc mesurer ne relance pas le calcul. */
+    let tallest = 0;
+    for (const slot of host.querySelectorAll('.slot')) {
+      const badge = slot.querySelector('.slot-badge');
+      if (badge) tallest = Math.max(tallest, slot.offsetHeight - badge.offsetHeight);
+    }
+    return (tallest / height) * 100;
+  }
 
   /**
    * Dimensions à donner aux créneaux pour cette composition.
    *
-   * Deux contraintes distinctes, longtemps confondues : la pastille est carrée,
-   * c'est donc la hauteur disponible entre deux lignes qui la borne ; le
+   * Deux contraintes distinctes, longtemps confondues : le disque est rond,
+   * c'est donc la hauteur disponible entre deux lignes qui le borne ; le
    * libellé, lui, ne s'étale qu'horizontalement et peut déborder largement du
    * disque. Les lier revenait à tronquer « Griezmann » parce que la ligne
    * au-dessus était proche.
    *
-   * @returns {{badge: number, label: number}} largeur de la pastille en % de
-   *          la largeur du terrain, et largeur du libellé en % de la pastille.
+   * Tout est ici en proportion du terrain : la taille en pixels dépend de
+   * l'appareil, et c'est la feuille de style qui la borne (`--slot-cap`).
+   *
+   * @param {number} labelH hauteur réservée aux libellés, en % de la hauteur.
+   * @returns {{badge: number, label: number}} largeur du créneau en % de la
+   *          largeur du terrain, et largeur du libellé en % du créneau.
    */
-  function slotMetrics(coords) {
+  function slotMetrics(coords, labelH) {
     let gapX = 100;
     let gapY = 100;
     for (let i = 0; i < coords.length; i++) {
@@ -89,17 +161,16 @@ const Pitch = (() => {
       }
     }
 
-    const byWidth = gapX / 1.15;
-    const byHeight = Math.max(0, gapY - LABEL_H) / FRAME_RATIO;
-    const badge = Math.max(8.5, Math.min(19, byWidth, byHeight));
+    const byWidth = gapX * DISC_GAP;
+    const byHeight = Math.max(0, gapY - labelH) / FRAME_RATIO;
+    const disc = Math.max(MIN_DISC, Math.min(MAX_DISC, byWidth, byHeight));
+    const badge = disc / BADGE_FILL;
 
     /* Le libellé prend tout l'écart horizontal — moins une marge, pour que deux
        voisins ne se touchent pas — mais un latéral est collé à sa touche : sa
        place vers l'extérieur est ce qui reste jusqu'au bord du terrain. */
     const toEdge = Math.min(...coords.map((c) => Math.min(c.x, 100 - c.x)));
-    const byGap = (gapX * 0.92 / badge) * 100;
-    const byEdge = (2 * toEdge * 0.96 / badge) * 100;
-    const label = Math.min(230, Math.max(100, Math.min(byGap, byEdge)));
+    const label = Math.min(gapX * LABEL_GAP, 2 * toEdge * LABEL_EDGE);
     return { badge, label };
   }
 
@@ -247,6 +318,30 @@ const Pitch = (() => {
     return span;
   }
 
+  // Position de repli d'un joueur qu'aucun calcul n'a su placer : le centre du
+  // terrain, où il se voit — plutôt qu'un coin, où il passerait pour un choix.
+  const CENTRE = { x: 50, y: 50 };
+
+  /** Un joueur : sa pastille, et selon l'affichage ce qui s'écrit dessous. */
+  function slotFor(player, { x, y }, labels) {
+    const slot = document.createElement('div');
+    slot.className = 'slot';
+    slot.style.left = x + '%';
+    slot.style.top = y + '%';
+    slot.appendChild(badgeFor(player.club));
+
+    if (labels === 'players') {
+      slot.appendChild(tag('slot-label', player.name,
+        `${player.first} ${player.name} — ${player.club.name}`));
+      // Sur la révélation, le club sous le nom : c'est là que le joueur
+      // apprend quelque chose, pas seulement qu'il gagne ou perd.
+      slot.appendChild(tag('slot-sub', player.club.name, player.club.name));
+    } else if (labels === 'clubs') {
+      slot.appendChild(tag('slot-label is-club', player.club.name, player.club.name));
+    }
+    return slot;
+  }
+
   /** Noir ou blanc selon la luminance du fond, pour que le monogramme reste lisible. */
   function readableOn(hex) {
     const m = /^#?([0-9a-f]{6})$/i.exec(hex);
@@ -255,6 +350,39 @@ const Pitch = (() => {
     const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255];
     return (0.299 * r + 0.587 * g + 0.114 * b) > 150 ? '#14163a' : '#fff';
   }
+
+  /* Disposition en cours sur chaque terrain, gardée pour pouvoir redimensionner
+     les pastilles sans tout redessiner. */
+  const layouts = new WeakMap();
+
+  /** Applique à un terrain les tailles que sa disposition et sa place autorisent. */
+  function fit(host) {
+    const layout = layouts.get(host);
+    if (!layout) return;
+
+    const measured = measuredLabelHeight(host);
+    const metrics = slotMetrics(layout.coords,
+      measured === null ? layout.estimate : measured);
+    host.style.setProperty('--slot-w', metrics.badge.toFixed(1) + '%');
+
+    /* La largeur du libellé se mesure sur le terrain, pas sur le créneau : ce
+       dernier peut avoir été rogné par `--slot-cap`, et un pourcentage de
+       créneau ne dirait alors plus rien de la place réellement libre entre
+       deux voisins. Tant que le terrain n'est pas affiché, faute de pixels,
+       on retombe sur cette proportion approchée. */
+    const width = host.getBoundingClientRect().width;
+    host.style.setProperty('--label-w', width
+      ? Math.round(metrics.label * width / 100) + 'px'
+      : Math.round(metrics.label / metrics.badge * 100) + '%');
+  }
+
+  /* Le terrain est dessiné pendant que son écran est encore masqué : il n'a
+     alors aucune dimension, donc rien à mesurer. L'observateur rattrape la
+     mesure dès qu'il en prend une — à l'affichage, puis à chaque rotation ou
+     redimensionnement de la fenêtre. */
+  const watcher = typeof ResizeObserver === 'function'
+    ? new ResizeObserver((entries) => entries.forEach((entry) => fit(entry.target)))
+    : null;
 
   /**
    * @param {HTMLElement} host
@@ -272,33 +400,17 @@ const Pitch = (() => {
     const bands = positional ? null : bandsFor(question.formation, question.lineup.length);
     const coords = positional || coordsFor(bands);
 
-    // Pastilles et libellés s'ajustent à la densité réelle de la composition,
-    // sinon les uns se chevauchent et les autres se tronquent.
-    const metrics = slotMetrics(coords);
-    host.style.setProperty('--slot-w', metrics.badge.toFixed(1) + '%');
-    host.style.setProperty('--label-w', metrics.label.toFixed(0) + '%');
+    layouts.set(host, { coords, estimate: estimatedLabelHeight(host, labels) });
 
     question.lineup.forEach((player, index) => {
-      const { x, y } = coords[index] || { x: 50, y: 50 };
-
-      const slot = document.createElement('div');
-      slot.className = 'slot';
-      slot.style.left = x + '%';
-      slot.style.top = y + '%';
-      slot.appendChild(badgeFor(player.club));
-
-      if (labels === 'players') {
-        slot.appendChild(tag('slot-label', player.name,
-          `${player.first} ${player.name} — ${player.club.name}`));
-        // Sur la révélation, le club sous le nom : c'est là que le joueur
-        // apprend quelque chose, pas seulement qu'il gagne ou perd.
-        slot.appendChild(tag('slot-sub', player.club.name, player.club.name));
-      } else if (labels === 'clubs') {
-        slot.appendChild(tag('slot-label is-club', player.club.name, player.club.name));
-      }
-
-      host.appendChild(slot);
+      host.appendChild(slotFor(player, coords[index] || CENTRE, labels));
     });
+
+    // Les pastilles ne prennent leur taille qu'ici : elle se déduit de la
+    // densité de la composition, mais aussi de la place que les libellés
+    // occupent réellement — et ceux-ci viennent d'être posés.
+    fit(host);
+    if (watcher) watcher.observe(host);
 
     /* Le terrain est une image pour l'arbre d'accessibilité : sans description
        de son contenu, la question est vide pour un lecteur d'écran. Les clubs
