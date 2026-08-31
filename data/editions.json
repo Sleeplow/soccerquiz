@@ -6609,6 +6609,230 @@
       ],
       "teams": [
         {
+          "country": "Allemagne",
+          "formation": "4-2-3-1",
+          "note": "Onze aligné contre le Japon, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Neuer",
+              "first": "Manuel",
+              "club": "bayern",
+              "pos": "GK"
+            },
+            {
+              "name": "Kehrer",
+              "first": "Thilo",
+              "club": "west-ham",
+              "pos": "RB"
+            },
+            {
+              "name": "Rüdiger",
+              "first": "Antonio",
+              "club": "real-madrid",
+              "pos": "CB"
+            },
+            {
+              "name": "Schlotterbeck",
+              "first": "Nico",
+              "club": "dortmund",
+              "pos": "CB"
+            },
+            {
+              "name": "Raum",
+              "first": "David",
+              "club": "leipzig",
+              "pos": "LB"
+            },
+            {
+              "name": "Kimmich",
+              "first": "Joshua",
+              "club": "bayern",
+              "pos": "DM"
+            },
+            {
+              "name": "Gündoğan",
+              "first": "İlkay",
+              "club": "man-city",
+              "pos": "DM"
+            },
+            {
+              "name": "Gnabry",
+              "first": "Serge",
+              "club": "bayern",
+              "pos": "RW"
+            },
+            {
+              "name": "Müller",
+              "first": "Thomas",
+              "club": "bayern",
+              "pos": "AM"
+            },
+            {
+              "name": "Musiala",
+              "first": "Jamal",
+              "club": "bayern",
+              "pos": "LW"
+            },
+            {
+              "name": "Havertz",
+              "first": "Kai",
+              "club": "chelsea",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Angleterre",
+          "formation": "4-3-3",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Pickford",
+              "first": "Jordan",
+              "club": "everton",
+              "pos": "GK"
+            },
+            {
+              "name": "Walker",
+              "first": "Kyle",
+              "club": "man-city",
+              "pos": "RB"
+            },
+            {
+              "name": "Stones",
+              "first": "John",
+              "club": "man-city",
+              "pos": "CB"
+            },
+            {
+              "name": "Maguire",
+              "first": "Harry",
+              "club": "man-utd",
+              "pos": "CB"
+            },
+            {
+              "name": "Shaw",
+              "first": "Luke",
+              "club": "man-utd",
+              "pos": "LB"
+            },
+            {
+              "name": "Henderson",
+              "first": "Jordan",
+              "club": "liverpool",
+              "pos": "CM"
+            },
+            {
+              "name": "Rice",
+              "first": "Declan",
+              "club": "west-ham",
+              "pos": "DM"
+            },
+            {
+              "name": "Bellingham",
+              "first": "Jude",
+              "club": "dortmund",
+              "pos": "CM"
+            },
+            {
+              "name": "Saka",
+              "first": "Bukayo",
+              "club": "arsenal",
+              "pos": "RW"
+            },
+            {
+              "name": "Kane",
+              "first": "Harry",
+              "club": "tottenham",
+              "pos": "ST"
+            },
+            {
+              "name": "Foden",
+              "first": "Phil",
+              "club": "man-city",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Arabie saoudite",
+          "formation": "4-3-3",
+          "note": "Onze aligné contre l'Argentine, la victoire du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Al-Owais",
+              "first": "Mohammed",
+              "club": "alhilals",
+              "pos": "GK"
+            },
+            {
+              "name": "Abdulhamid",
+              "first": "Saud",
+              "club": "alittihadclub(jeddah)",
+              "pos": "RB"
+            },
+            {
+              "name": "Al-Bulaihi",
+              "first": "Ali",
+              "club": "alhilals",
+              "pos": "CB"
+            },
+            {
+              "name": "Tambakti",
+              "first": "Hassan",
+              "club": "alshababclub",
+              "pos": "CB"
+            },
+            {
+              "name": "Al-Shahrani",
+              "first": "Yasser",
+              "club": "alhilals",
+              "pos": "LB"
+            },
+            {
+              "name": "Al-Malki",
+              "first": "Abdulelah",
+              "club": "alhilals",
+              "pos": "CM"
+            },
+            {
+              "name": "Kanno",
+              "first": "Mohamed",
+              "club": "alhilals",
+              "pos": "DM"
+            },
+            {
+              "name": "Al-Faraj",
+              "first": "Salman",
+              "club": "alhilals",
+              "pos": "CM"
+            },
+            {
+              "name": "Al-Dawsari",
+              "first": "Salem",
+              "club": "alhilals",
+              "pos": "LW"
+            },
+            {
+              "name": "Al-Shehri",
+              "first": "Saleh",
+              "club": "alhilals",
+              "pos": "ST"
+            },
+            {
+              "name": "Al-Buraikan",
+              "first": "Firas",
+              "club": "alfateh",
+              "pos": "RW"
+            }
+          ]
+        },
+        {
           "country": "Argentine",
           "formation": "4-3-3",
           "note": "Onze aligné en finale",
@@ -6684,76 +6908,151 @@
           ]
         },
         {
-          "country": "France",
+          "country": "Australie",
           "formation": "4-2-3-1",
-          "note": "Onze aligné en finale",
+          "note": "Onze aligné contre le Danemark, la qualification",
           "source": "Connaissance du modèle",
-          "confidence": "high",
+          "confidence": "medium",
           "lineup": [
             {
-              "name": "Lloris",
-              "first": "Hugo",
-              "club": "tottenham",
+              "name": "Ryan",
+              "first": "Mathew",
+              "club": "fccopenhagen",
               "pos": "GK"
             },
             {
-              "name": "Koundé",
-              "first": "Jules",
-              "club": "barcelona",
+              "name": "Atkinson",
+              "first": "Nathaniel",
+              "club": "heartofmidlothian",
               "pos": "RB"
             },
             {
-              "name": "Varane",
-              "first": "Raphaël",
-              "club": "man-utd",
+              "name": "Souttar",
+              "first": "Harry",
+              "club": "stokecity",
               "pos": "CB"
             },
             {
-              "name": "Upamecano",
-              "first": "Dayot",
-              "club": "bayern",
+              "name": "Rowles",
+              "first": "Kye",
+              "club": "centralcoastmariners",
               "pos": "CB"
             },
             {
-              "name": "T. Hernández",
-              "first": "Theo",
-              "club": "ac-milan",
+              "name": "Behich",
+              "first": "Aziz",
+              "club": "dundeeunited",
               "pos": "LB"
             },
             {
-              "name": "Tchouaméni",
-              "first": "Aurélien",
-              "club": "real-madrid",
+              "name": "Irvine",
+              "first": "Jackson",
+              "club": "fcstpauli",
               "pos": "DM"
             },
             {
-              "name": "Rabiot",
-              "first": "Adrien",
-              "club": "juventus",
+              "name": "Mooy",
+              "first": "Aaron",
+              "club": "celtic",
               "pos": "DM"
             },
             {
-              "name": "Dembélé",
-              "first": "Ousmane",
-              "club": "barcelona",
+              "name": "Leckie",
+              "first": "Mathew",
+              "club": "melbournecity",
               "pos": "RW"
             },
             {
-              "name": "Griezmann",
-              "first": "Antoine",
-              "club": "atletico-madrid",
+              "name": "McGree",
+              "first": "Riley",
+              "club": "middlesbrough",
               "pos": "AM"
             },
             {
-              "name": "Mbappé",
-              "first": "Kylian",
-              "club": "psg",
+              "name": "Goodwin",
+              "first": "Craig",
+              "club": "adelaideunited",
               "pos": "LW"
             },
             {
-              "name": "Giroud",
-              "first": "Olivier",
-              "club": "ac-milan",
+              "name": "Duke",
+              "first": "Mitchell",
+              "club": "nagoyagrampus",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Belgique",
+          "formation": "3-4-2-1",
+          "note": "Onze aligné contre le Canada, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Courtois",
+              "first": "Thibaut",
+              "club": "real-madrid",
+              "pos": "GK"
+            },
+            {
+              "name": "Alderweireld",
+              "first": "Toby",
+              "club": "royalantwerp",
+              "pos": "CB"
+            },
+            {
+              "name": "Faes",
+              "first": "Wout",
+              "club": "leicestercity",
+              "pos": "CB"
+            },
+            {
+              "name": "Vertonghen",
+              "first": "Jan",
+              "club": "rscanderlecht",
+              "pos": "CB"
+            },
+            {
+              "name": "Castagne",
+              "first": "Timothy",
+              "club": "leicestercity",
+              "pos": "RWB"
+            },
+            {
+              "name": "Tielemans",
+              "first": "Youri",
+              "club": "leicestercity",
+              "pos": "CM"
+            },
+            {
+              "name": "Witsel",
+              "first": "Axel",
+              "club": "atletico-madrid",
+              "pos": "CM"
+            },
+            {
+              "name": "Carrasco",
+              "first": "Yannick",
+              "club": "atletico-madrid",
+              "pos": "LWB"
+            },
+            {
+              "name": "De Bruyne",
+              "first": "Kevin",
+              "club": "man-city",
+              "pos": "AM"
+            },
+            {
+              "name": "Hazard",
+              "first": "Eden",
+              "club": "real-madrid",
+              "pos": "AM"
+            },
+            {
+              "name": "Batshuayi",
+              "first": "Michy",
+              "club": "besiktas",
               "pos": "ST"
             }
           ]
@@ -6833,76 +7132,302 @@
           ]
         },
         {
-          "country": "Angleterre",
-          "formation": "4-3-3",
+          "country": "Cameroun",
+          "formation": "4-2-3-1",
+          "note": "Onze aligné contre la Suisse, premier match",
           "source": "Connaissance du modèle",
           "confidence": "medium",
           "lineup": [
             {
-              "name": "Pickford",
-              "first": "Jordan",
-              "club": "everton",
+              "name": "Onana",
+              "first": "André",
+              "club": "inter",
               "pos": "GK"
             },
             {
-              "name": "Walker",
-              "first": "Kyle",
-              "club": "man-city",
+              "name": "Fai",
+              "first": "Collins",
+              "club": "cerclebruggeksv",
               "pos": "RB"
             },
             {
-              "name": "Stones",
-              "first": "John",
-              "club": "man-city",
+              "name": "Castelletto",
+              "first": "Jean-Charles",
+              "club": "fcnantes",
               "pos": "CB"
             },
             {
-              "name": "Maguire",
-              "first": "Harry",
-              "club": "man-utd",
+              "name": "Ebosse",
+              "first": "Enzo",
+              "club": "udinesecalcio",
               "pos": "CB"
             },
             {
-              "name": "Shaw",
-              "first": "Luke",
-              "club": "man-utd",
+              "name": "Nouhou",
+              "first": "Tolo",
+              "club": "seattlesounders",
               "pos": "LB"
             },
             {
-              "name": "Henderson",
-              "first": "Jordan",
-              "club": "liverpool",
-              "pos": "CM"
-            },
-            {
-              "name": "Rice",
-              "first": "Declan",
-              "club": "west-ham",
+              "name": "Anguissa",
+              "first": "André-Frank Zambo",
+              "club": "sscnapoli",
               "pos": "DM"
             },
             {
-              "name": "Bellingham",
-              "first": "Jude",
-              "club": "dortmund",
-              "pos": "CM"
+              "name": "Hongla",
+              "first": "Martin",
+              "club": "hellasveron",
+              "pos": "DM"
             },
             {
-              "name": "Saka",
-              "first": "Bukayo",
-              "club": "arsenal",
+              "name": "Mbeumo",
+              "first": "Bryan",
+              "club": "brentford",
               "pos": "RW"
             },
             {
-              "name": "Kane",
-              "first": "Harry",
-              "club": "tottenham",
+              "name": "Ngamaleu",
+              "first": "Nicolas",
+              "club": "bscyoungboys",
+              "pos": "AM"
+            },
+            {
+              "name": "Toko Ekambi",
+              "first": "Karl",
+              "club": "lyon",
+              "pos": "LW"
+            },
+            {
+              "name": "Choupo-Moting",
+              "first": "Eric Maxim",
+              "club": "bayern",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Canada",
+          "formation": "3-4-3",
+          "note": "Onze aligné contre la Belgique, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Borjan",
+              "first": "Milan",
+              "club": "redstarbelgrade",
+              "pos": "GK"
+            },
+            {
+              "name": "Johnston",
+              "first": "Alistair",
+              "club": "cfmontreal",
+              "pos": "CB"
+            },
+            {
+              "name": "Vitória",
+              "first": "Steven",
+              "club": "gdchaves",
+              "pos": "CB"
+            },
+            {
+              "name": "Miller",
+              "first": "Kamal",
+              "club": "cfmontreal",
+              "pos": "CB"
+            },
+            {
+              "name": "Laryea",
+              "first": "Richie",
+              "club": "nottinghamforest",
+              "pos": "RWB"
+            },
+            {
+              "name": "Hutchinson",
+              "first": "Atiba",
+              "club": "besiktas",
+              "pos": "CM"
+            },
+            {
+              "name": "Eustáquio",
+              "first": "Stephen",
+              "club": "porto",
+              "pos": "CM"
+            },
+            {
+              "name": "Davies",
+              "first": "Alphonso",
+              "club": "bayern",
+              "pos": "LWB"
+            },
+            {
+              "name": "Buchanan",
+              "first": "Tajon",
+              "club": "clubbruggekv",
+              "pos": "RW"
+            },
+            {
+              "name": "David",
+              "first": "Jonathan",
+              "club": "lilleo",
               "pos": "ST"
             },
             {
-              "name": "Foden",
-              "first": "Phil",
-              "club": "man-city",
+              "name": "Larin",
+              "first": "Cyle",
+              "club": "clubbruggekv",
               "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Corée du Sud",
+          "formation": "4-2-3-1",
+          "note": "Onze type du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Kim Seung-gyu",
+              "first": "Kim",
+              "club": "alshababclub",
+              "pos": "GK"
+            },
+            {
+              "name": "Kim Moon-hwan",
+              "first": "Kim",
+              "club": "jeonbukhyundaimotors",
+              "pos": "RB"
+            },
+            {
+              "name": "Kim Min-jae",
+              "first": "Kim",
+              "club": "sscnapoli",
+              "pos": "CB"
+            },
+            {
+              "name": "Kwon Kyung-won",
+              "first": "Kwon",
+              "club": "gambaosaka",
+              "pos": "CB"
+            },
+            {
+              "name": "Kim Jin-su",
+              "first": "Kim",
+              "club": "jeonbukhyundaimotors",
+              "pos": "LB"
+            },
+            {
+              "name": "Jung Woo-young",
+              "first": "Jung",
+              "club": "alsadd",
+              "pos": "DM"
+            },
+            {
+              "name": "Hwang In-beom",
+              "first": "Hwang",
+              "club": "olympiacos",
+              "pos": "DM"
+            },
+            {
+              "name": "Lee Jae-sung",
+              "first": "Lee",
+              "club": "1fsvmainz05",
+              "pos": "RW"
+            },
+            {
+              "name": "Son Heung-min",
+              "first": "Son",
+              "club": "tottenham",
+              "pos": "AM"
+            },
+            {
+              "name": "Na Sang-ho",
+              "first": "Na",
+              "club": "fcseoul",
+              "pos": "LW"
+            },
+            {
+              "name": "Cho Gue-sung",
+              "first": "Cho",
+              "club": "jeonbukhyundaimotors",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Costa Rica",
+          "formation": "5-4-1",
+          "note": "Onze aligné contre le Japon, la victoire du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Navas",
+              "first": "Keylor",
+              "club": "psg",
+              "pos": "GK"
+            },
+            {
+              "name": "Fuller",
+              "first": "Keysher",
+              "club": "csherediano",
+              "pos": "RWB"
+            },
+            {
+              "name": "Duarte",
+              "first": "Óscar",
+              "club": "alwehdamecca",
+              "pos": "CB"
+            },
+            {
+              "name": "Vargas",
+              "first": "Juan Pablo",
+              "club": "millonarios",
+              "pos": "CB"
+            },
+            {
+              "name": "Calvo",
+              "first": "Francisco",
+              "club": "sanjoseearthquakes",
+              "pos": "CB"
+            },
+            {
+              "name": "Oviedo",
+              "first": "Bryan",
+              "club": "realsaltlake",
+              "pos": "LWB"
+            },
+            {
+              "name": "Bennette",
+              "first": "Jewison",
+              "club": "sunderland",
+              "pos": "RM"
+            },
+            {
+              "name": "Tejeda",
+              "first": "Yeltsin",
+              "club": "csherediano",
+              "pos": "CM"
+            },
+            {
+              "name": "Borges",
+              "first": "Celso",
+              "club": "ldalajuelense",
+              "pos": "CM"
+            },
+            {
+              "name": "Campbell",
+              "first": "Joel",
+              "club": "clubleon",
+              "pos": "LM"
+            },
+            {
+              "name": "Contreras",
+              "first": "Anthony",
+              "club": "csherediano",
+              "pos": "ST"
             }
           ]
         },
@@ -6981,75 +7506,151 @@
           ]
         },
         {
-          "country": "Maroc",
-          "formation": "4-3-3",
+          "country": "Danemark",
+          "formation": "3-4-3",
+          "note": "Onze aligné contre la Tunisie, premier match",
           "source": "Connaissance du modèle",
           "confidence": "medium",
           "lineup": [
             {
-              "name": "Bounou",
-              "first": "Yassine",
-              "club": "sevilla",
+              "name": "Schmeichel",
+              "first": "Kasper",
+              "club": "ogcnice",
               "pos": "GK"
             },
             {
-              "name": "Hakimi",
-              "first": "Achraf",
-              "club": "psg",
-              "pos": "RB"
-            },
-            {
-              "name": "Saïss",
-              "first": "Romain",
-              "club": "besiktas",
+              "name": "Christensen",
+              "first": "Andreas",
+              "club": "barcelona",
               "pos": "CB"
             },
             {
-              "name": "Aguerd",
-              "first": "Nayef",
-              "club": "west-ham",
+              "name": "Kjær",
+              "first": "Simon",
+              "club": "ac-milan",
               "pos": "CB"
             },
             {
-              "name": "Mazraoui",
-              "first": "Noussair",
-              "club": "bayern",
-              "pos": "LB"
+              "name": "Andersen",
+              "first": "Joachim",
+              "club": "crystalpalace",
+              "pos": "CB"
             },
             {
-              "name": "Amrabat",
-              "first": "Sofyan",
-              "club": "fiorentina",
-              "pos": "DM"
+              "name": "Kristensen",
+              "first": "Rasmus",
+              "club": "leedsunited",
+              "pos": "RWB"
             },
             {
-              "name": "Ounahi",
-              "first": "Azzedine",
-              "club": "angers",
+              "name": "Delaney",
+              "first": "Thomas",
+              "club": "sevilla",
               "pos": "CM"
             },
             {
-              "name": "Amallah",
-              "first": "Selim",
-              "club": "standard-liege",
+              "name": "Højbjerg",
+              "first": "Pierre-Emile",
+              "club": "tottenham",
               "pos": "CM"
             },
             {
-              "name": "Ziyech",
-              "first": "Hakim",
-              "club": "chelsea",
+              "name": "Mæhle",
+              "first": "Joakim",
+              "club": "atalanta",
+              "pos": "LWB"
+            },
+            {
+              "name": "Skov Olsen",
+              "first": "Andreas",
+              "club": "clubbruggekv",
               "pos": "RW"
             },
             {
-              "name": "En-Nesyri",
-              "first": "Youssef",
-              "club": "sevilla",
+              "name": "Cornelius",
+              "first": "Andreas",
+              "club": "trabzonspor",
               "pos": "ST"
             },
             {
-              "name": "Boufal",
-              "first": "Sofiane",
-              "club": "angers",
+              "name": "Eriksen",
+              "first": "Christian",
+              "club": "man-utd",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Équateur",
+          "formation": "4-3-3",
+          "note": "Onze aligné contre le Qatar, match d'ouverture",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Galíndez",
+              "first": "Hernán",
+              "club": "sdaucas",
+              "pos": "GK"
+            },
+            {
+              "name": "Preciado",
+              "first": "Ángelo",
+              "club": "krcgenk",
+              "pos": "RB"
+            },
+            {
+              "name": "Torres",
+              "first": "Félix",
+              "club": "santoslaguna",
+              "pos": "CB"
+            },
+            {
+              "name": "Hincapié",
+              "first": "Piero",
+              "club": "bayer04leverkusen",
+              "pos": "CB"
+            },
+            {
+              "name": "Estupiñán",
+              "first": "Pervis",
+              "club": "brighton",
+              "pos": "LB"
+            },
+            {
+              "name": "Caicedo",
+              "first": "Moisés",
+              "club": "brighton",
+              "pos": "CM"
+            },
+            {
+              "name": "Gruezo",
+              "first": "Carlos",
+              "club": "fcaugsburg",
+              "pos": "DM"
+            },
+            {
+              "name": "Méndez",
+              "first": "Jhegson",
+              "club": "deportivoalaves",
+              "pos": "CM"
+            },
+            {
+              "name": "Plata",
+              "first": "Gonzalo",
+              "club": "alsadd",
+              "pos": "RW"
+            },
+            {
+              "name": "Valencia",
+              "first": "Enner",
+              "club": "fenerbahce",
+              "pos": "ST"
+            },
+            {
+              "name": "Estrada",
+              "first": "Michael",
+              "club": "cruzazul",
               "pos": "LW"
             }
           ]
@@ -7124,6 +7725,1280 @@
               "name": "Dani Olmo",
               "first": "Dani",
               "club": "leipzig",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "États-Unis",
+          "formation": "4-3-3",
+          "note": "Onze type du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Turner",
+              "first": "Matt",
+              "club": "arsenal",
+              "pos": "GK"
+            },
+            {
+              "name": "Dest",
+              "first": "Sergiño",
+              "club": "ac-milan",
+              "pos": "RB"
+            },
+            {
+              "name": "Zimmerman",
+              "first": "Walker",
+              "club": "nashville",
+              "pos": "CB"
+            },
+            {
+              "name": "Ream",
+              "first": "Tim",
+              "club": "fulham",
+              "pos": "CB"
+            },
+            {
+              "name": "Robinson",
+              "first": "Antonee",
+              "club": "fulham",
+              "pos": "LB"
+            },
+            {
+              "name": "Adams",
+              "first": "Tyler",
+              "club": "leedsunited",
+              "pos": "DM"
+            },
+            {
+              "name": "McKennie",
+              "first": "Weston",
+              "club": "juventus",
+              "pos": "CM"
+            },
+            {
+              "name": "Musah",
+              "first": "Yunus",
+              "club": "valencia",
+              "pos": "CM"
+            },
+            {
+              "name": "Weah",
+              "first": "Timothy",
+              "club": "lilleo",
+              "pos": "RW"
+            },
+            {
+              "name": "Sargent",
+              "first": "Josh",
+              "club": "norwichcity",
+              "pos": "ST"
+            },
+            {
+              "name": "Pulisic",
+              "first": "Christian",
+              "club": "chelsea",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "France",
+          "formation": "4-2-3-1",
+          "note": "Onze aligné en finale",
+          "source": "Connaissance du modèle",
+          "confidence": "high",
+          "lineup": [
+            {
+              "name": "Lloris",
+              "first": "Hugo",
+              "club": "tottenham",
+              "pos": "GK"
+            },
+            {
+              "name": "Koundé",
+              "first": "Jules",
+              "club": "barcelona",
+              "pos": "RB"
+            },
+            {
+              "name": "Varane",
+              "first": "Raphaël",
+              "club": "man-utd",
+              "pos": "CB"
+            },
+            {
+              "name": "Upamecano",
+              "first": "Dayot",
+              "club": "bayern",
+              "pos": "CB"
+            },
+            {
+              "name": "T. Hernández",
+              "first": "Theo",
+              "club": "ac-milan",
+              "pos": "LB"
+            },
+            {
+              "name": "Tchouaméni",
+              "first": "Aurélien",
+              "club": "real-madrid",
+              "pos": "DM"
+            },
+            {
+              "name": "Rabiot",
+              "first": "Adrien",
+              "club": "juventus",
+              "pos": "DM"
+            },
+            {
+              "name": "Dembélé",
+              "first": "Ousmane",
+              "club": "barcelona",
+              "pos": "RW"
+            },
+            {
+              "name": "Griezmann",
+              "first": "Antoine",
+              "club": "atletico-madrid",
+              "pos": "AM"
+            },
+            {
+              "name": "Mbappé",
+              "first": "Kylian",
+              "club": "psg",
+              "pos": "LW"
+            },
+            {
+              "name": "Giroud",
+              "first": "Olivier",
+              "club": "ac-milan",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Ghana",
+          "formation": "4-2-3-1",
+          "note": "Onze type du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Ati-Zigi",
+              "first": "Lawrence",
+              "club": "fcstgallen",
+              "pos": "GK"
+            },
+            {
+              "name": "Lamptey",
+              "first": "Tariq",
+              "club": "brighton",
+              "pos": "RB"
+            },
+            {
+              "name": "Amartey",
+              "first": "Daniel",
+              "club": "leicestercity",
+              "pos": "CB"
+            },
+            {
+              "name": "Salisu",
+              "first": "Mohammed",
+              "club": "southampton",
+              "pos": "CB"
+            },
+            {
+              "name": "Baba",
+              "first": "Abdul Rahman",
+              "club": "reading",
+              "pos": "LB"
+            },
+            {
+              "name": "Partey",
+              "first": "Thomas",
+              "club": "arsenal",
+              "pos": "DM"
+            },
+            {
+              "name": "Abdul Samed",
+              "first": "Salis",
+              "club": "rclens",
+              "pos": "DM"
+            },
+            {
+              "name": "Kudus",
+              "first": "Mohammed",
+              "club": "afcajax",
+              "pos": "RW"
+            },
+            {
+              "name": "A. Ayew",
+              "first": "André",
+              "club": "alsadd",
+              "pos": "AM"
+            },
+            {
+              "name": "J. Ayew",
+              "first": "Jordan",
+              "club": "crystalpalace",
+              "pos": "LW"
+            },
+            {
+              "name": "Williams",
+              "first": "Iñaki",
+              "club": "athletic-club",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Iran",
+          "formation": "4-3-3",
+          "note": "Onze type du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Beiranvand",
+              "first": "Alireza",
+              "club": "persepolis",
+              "pos": "GK"
+            },
+            {
+              "name": "Rezaeian",
+              "first": "Ramin",
+              "club": "sepahan",
+              "pos": "RB"
+            },
+            {
+              "name": "Pouraliganji",
+              "first": "Morteza",
+              "club": "persepolis",
+              "pos": "CB"
+            },
+            {
+              "name": "Hosseini",
+              "first": "Majid",
+              "club": "kayserispor",
+              "pos": "CB"
+            },
+            {
+              "name": "Mohammadi",
+              "first": "Milad",
+              "club": "aekathens",
+              "pos": "LB"
+            },
+            {
+              "name": "Ezatolahi",
+              "first": "Saeid",
+              "club": "vejleboldklub",
+              "pos": "DM"
+            },
+            {
+              "name": "Nourollahi",
+              "first": "Ahmad",
+              "club": "shababalahliclub",
+              "pos": "CM"
+            },
+            {
+              "name": "Hajsafi",
+              "first": "Ehsan",
+              "club": "aekathens",
+              "pos": "CM"
+            },
+            {
+              "name": "Jahanbakhsh",
+              "first": "Alireza",
+              "club": "feyenoord",
+              "pos": "RW"
+            },
+            {
+              "name": "Taremi",
+              "first": "Mehdi",
+              "club": "porto",
+              "pos": "ST"
+            },
+            {
+              "name": "Gholizadeh",
+              "first": "Ali",
+              "club": "royalcharleroi",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Japon",
+          "formation": "4-2-3-1",
+          "note": "Onze aligné contre l'Allemagne, la victoire du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Gonda",
+              "first": "Shūichi",
+              "club": "shimizuspulse",
+              "pos": "GK"
+            },
+            {
+              "name": "Sakai",
+              "first": "Hiroki",
+              "club": "urawareddiamonds",
+              "pos": "RB"
+            },
+            {
+              "name": "Yoshida",
+              "first": "Maya",
+              "club": "schalke",
+              "pos": "CB"
+            },
+            {
+              "name": "Itakura",
+              "first": "Kō",
+              "club": "gladbach",
+              "pos": "CB"
+            },
+            {
+              "name": "Nagatomo",
+              "first": "Yuto",
+              "club": "fctokyo",
+              "pos": "LB"
+            },
+            {
+              "name": "Endō",
+              "first": "Wataru",
+              "club": "stuttgart",
+              "pos": "DM"
+            },
+            {
+              "name": "Tanaka",
+              "first": "Ao",
+              "club": "fortunadusseldorf",
+              "pos": "DM"
+            },
+            {
+              "name": "Itō",
+              "first": "Junya",
+              "club": "stadedereims",
+              "pos": "RW"
+            },
+            {
+              "name": "Kamada",
+              "first": "Daichi",
+              "club": "eintracht",
+              "pos": "AM"
+            },
+            {
+              "name": "Kubo",
+              "first": "Takefusa",
+              "club": "real-sociedad",
+              "pos": "LW"
+            },
+            {
+              "name": "Maeda",
+              "first": "Daizen",
+              "club": "celtic",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Maroc",
+          "formation": "4-3-3",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Bounou",
+              "first": "Yassine",
+              "club": "sevilla",
+              "pos": "GK"
+            },
+            {
+              "name": "Hakimi",
+              "first": "Achraf",
+              "club": "psg",
+              "pos": "RB"
+            },
+            {
+              "name": "Saïss",
+              "first": "Romain",
+              "club": "besiktas",
+              "pos": "CB"
+            },
+            {
+              "name": "Aguerd",
+              "first": "Nayef",
+              "club": "west-ham",
+              "pos": "CB"
+            },
+            {
+              "name": "Mazraoui",
+              "first": "Noussair",
+              "club": "bayern",
+              "pos": "LB"
+            },
+            {
+              "name": "Amrabat",
+              "first": "Sofyan",
+              "club": "fiorentina",
+              "pos": "DM"
+            },
+            {
+              "name": "Ounahi",
+              "first": "Azzedine",
+              "club": "angers",
+              "pos": "CM"
+            },
+            {
+              "name": "Amallah",
+              "first": "Selim",
+              "club": "standard-liege",
+              "pos": "CM"
+            },
+            {
+              "name": "Ziyech",
+              "first": "Hakim",
+              "club": "chelsea",
+              "pos": "RW"
+            },
+            {
+              "name": "En-Nesyri",
+              "first": "Youssef",
+              "club": "sevilla",
+              "pos": "ST"
+            },
+            {
+              "name": "Boufal",
+              "first": "Sofiane",
+              "club": "angers",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Mexique",
+          "formation": "4-3-3",
+          "note": "Onze aligné contre la Pologne, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Ochoa",
+              "first": "Guillermo",
+              "club": "club-america",
+              "pos": "GK"
+            },
+            {
+              "name": "Sánchez",
+              "first": "Jorge",
+              "club": "afcajax",
+              "pos": "RB"
+            },
+            {
+              "name": "Montes",
+              "first": "César",
+              "club": "clubleon",
+              "pos": "CB"
+            },
+            {
+              "name": "Moreno",
+              "first": "Héctor",
+              "club": "cfmonterrey",
+              "pos": "CB"
+            },
+            {
+              "name": "Gallardo",
+              "first": "Jesús",
+              "club": "cfmonterrey",
+              "pos": "LB"
+            },
+            {
+              "name": "Chávez",
+              "first": "Luis",
+              "club": "cfpachuca",
+              "pos": "CM"
+            },
+            {
+              "name": "Herrera",
+              "first": "Héctor",
+              "club": "houstondynamo",
+              "pos": "DM"
+            },
+            {
+              "name": "Guardado",
+              "first": "Andrés",
+              "club": "real-betis",
+              "pos": "CM"
+            },
+            {
+              "name": "Vega",
+              "first": "Alexis",
+              "club": "chivas",
+              "pos": "LW"
+            },
+            {
+              "name": "Martín",
+              "first": "Henry",
+              "club": "club-america",
+              "pos": "ST"
+            },
+            {
+              "name": "Lozano",
+              "first": "Hirving",
+              "club": "sscnapoli",
+              "pos": "RW"
+            }
+          ]
+        },
+        {
+          "country": "Pays de Galles",
+          "formation": "3-4-3",
+          "note": "Onze type du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Hennessey",
+              "first": "Wayne",
+              "club": "nottinghamforest",
+              "pos": "GK"
+            },
+            {
+              "name": "Mepham",
+              "first": "Chris",
+              "club": "afcbournemouth",
+              "pos": "CB"
+            },
+            {
+              "name": "Rodon",
+              "first": "Joe",
+              "club": "staderennais",
+              "pos": "CB"
+            },
+            {
+              "name": "Davies",
+              "first": "Ben",
+              "club": "tottenham",
+              "pos": "CB"
+            },
+            {
+              "name": "Roberts",
+              "first": "Connor",
+              "club": "burnley",
+              "pos": "RWB"
+            },
+            {
+              "name": "Ampadu",
+              "first": "Ethan",
+              "club": "speziacalcio",
+              "pos": "CM"
+            },
+            {
+              "name": "Ramsey",
+              "first": "Aaron",
+              "club": "ogcnice",
+              "pos": "CM"
+            },
+            {
+              "name": "Williams",
+              "first": "Neco",
+              "club": "nottinghamforest",
+              "pos": "LWB"
+            },
+            {
+              "name": "Wilson",
+              "first": "Harry",
+              "club": "fulham",
+              "pos": "RW"
+            },
+            {
+              "name": "Bale",
+              "first": "Gareth",
+              "club": "losangeles",
+              "pos": "ST"
+            },
+            {
+              "name": "James",
+              "first": "Daniel",
+              "club": "fulham",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Pays-Bas",
+          "formation": "3-4-2-1",
+          "note": "Onze aligné contre le Sénégal, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Noppert",
+              "first": "Andries",
+              "club": "scheerenveen",
+              "pos": "GK"
+            },
+            {
+              "name": "Timber",
+              "first": "Jurriën",
+              "club": "afcajax",
+              "pos": "CB"
+            },
+            {
+              "name": "Van Dijk",
+              "first": "Virgil",
+              "club": "liverpool",
+              "pos": "CB"
+            },
+            {
+              "name": "Aké",
+              "first": "Nathan",
+              "club": "man-city",
+              "pos": "CB"
+            },
+            {
+              "name": "Dumfries",
+              "first": "Denzel",
+              "club": "inter",
+              "pos": "RWB"
+            },
+            {
+              "name": "De Roon",
+              "first": "Marten",
+              "club": "atalanta",
+              "pos": "CM"
+            },
+            {
+              "name": "De Jong",
+              "first": "Frenkie",
+              "club": "barcelona",
+              "pos": "CM"
+            },
+            {
+              "name": "Blind",
+              "first": "Daley",
+              "club": "afcajax",
+              "pos": "LWB"
+            },
+            {
+              "name": "Bergwijn",
+              "first": "Steven",
+              "club": "afcajax",
+              "pos": "AM"
+            },
+            {
+              "name": "Berghuis",
+              "first": "Steven",
+              "club": "afcajax",
+              "pos": "AM"
+            },
+            {
+              "name": "Gakpo",
+              "first": "Cody",
+              "club": "psv",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Pologne",
+          "formation": "4-4-2",
+          "note": "Onze type du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Szczęsny",
+              "first": "Wojciech",
+              "club": "juventus",
+              "pos": "GK"
+            },
+            {
+              "name": "Cash",
+              "first": "Matty",
+              "club": "aston-villa",
+              "pos": "RB"
+            },
+            {
+              "name": "Glik",
+              "first": "Kamil",
+              "club": "beneventocalcio",
+              "pos": "CB"
+            },
+            {
+              "name": "Kiwior",
+              "first": "Jakub",
+              "club": "speziacalcio",
+              "pos": "CB"
+            },
+            {
+              "name": "Bereszyński",
+              "first": "Bartosz",
+              "club": "sampdoria",
+              "pos": "LB"
+            },
+            {
+              "name": "Frankowski",
+              "first": "Przemysław",
+              "club": "rclens",
+              "pos": "RM"
+            },
+            {
+              "name": "Krychowiak",
+              "first": "Grzegorz",
+              "club": "alshababclub",
+              "pos": "CM"
+            },
+            {
+              "name": "Zieliński",
+              "first": "Piotr",
+              "club": "sscnapoli",
+              "pos": "CM"
+            },
+            {
+              "name": "Zalewski",
+              "first": "Nicola",
+              "club": "asroma",
+              "pos": "LM"
+            },
+            {
+              "name": "Lewandowski",
+              "first": "Robert",
+              "club": "barcelona",
+              "pos": "ST"
+            },
+            {
+              "name": "Świderski",
+              "first": "Karol",
+              "club": "charlotte",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Portugal",
+          "formation": "4-3-3",
+          "note": "Onze aligné contre le Ghana, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Diogo Costa",
+              "first": "Diogo",
+              "club": "porto",
+              "pos": "GK"
+            },
+            {
+              "name": "Dalot",
+              "first": "Diogo",
+              "club": "man-utd",
+              "pos": "RB"
+            },
+            {
+              "name": "Rúben Dias",
+              "first": "Rúben",
+              "club": "man-city",
+              "pos": "CB"
+            },
+            {
+              "name": "Danilo Pereira",
+              "first": "Danilo",
+              "club": "psg",
+              "pos": "CB"
+            },
+            {
+              "name": "Guerreiro",
+              "first": "Raphaël",
+              "club": "dortmund",
+              "pos": "LB"
+            },
+            {
+              "name": "Bernardo Silva",
+              "first": "Bernardo",
+              "club": "man-city",
+              "pos": "CM"
+            },
+            {
+              "name": "William Carvalho",
+              "first": "William",
+              "club": "real-betis",
+              "pos": "DM"
+            },
+            {
+              "name": "Bruno Fernandes",
+              "first": "Bruno",
+              "club": "man-utd",
+              "pos": "CM"
+            },
+            {
+              "name": "Otávio",
+              "first": "Otávio",
+              "club": "porto",
+              "pos": "RW"
+            },
+            {
+              "name": "Ronaldo",
+              "first": "Cristiano",
+              "club": "man-utd",
+              "pos": "ST"
+            },
+            {
+              "name": "João Félix",
+              "first": "João",
+              "club": "atletico-madrid",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Qatar",
+          "formation": "5-3-2",
+          "note": "Onze aligné contre l'Équateur, match d'ouverture",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Al-Sheeb",
+              "first": "Saad",
+              "club": "alsadd",
+              "pos": "GK"
+            },
+            {
+              "name": "Homam Ahmed",
+              "first": "Homam",
+              "club": "algharafa",
+              "pos": "RWB"
+            },
+            {
+              "name": "Pedro Miguel",
+              "first": "Pedro",
+              "club": "alsadd",
+              "pos": "CB"
+            },
+            {
+              "name": "Khoukhi",
+              "first": "Boualem",
+              "club": "alsadd",
+              "pos": "CB"
+            },
+            {
+              "name": "Al-Rawi",
+              "first": "Bassam",
+              "club": "alduhail",
+              "pos": "CB"
+            },
+            {
+              "name": "Abdelkarim Hassan",
+              "first": "Abdelkarim",
+              "club": "alsadd",
+              "pos": "LWB"
+            },
+            {
+              "name": "Boudiaf",
+              "first": "Karim",
+              "club": "alduhail",
+              "pos": "CM"
+            },
+            {
+              "name": "Madibo",
+              "first": "Assim",
+              "club": "alduhail",
+              "pos": "CM"
+            },
+            {
+              "name": "Al-Haydos",
+              "first": "Hassan",
+              "club": "alsadd",
+              "pos": "CM"
+            },
+            {
+              "name": "Almoez Ali",
+              "first": "Almoez",
+              "club": "alduhail",
+              "pos": "ST"
+            },
+            {
+              "name": "Afif",
+              "first": "Akram",
+              "club": "alsadd",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Sénégal",
+          "formation": "4-3-3",
+          "note": "Onze type du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Mendy",
+              "first": "Édouard",
+              "club": "chelsea",
+              "pos": "GK"
+            },
+            {
+              "name": "Sabaly",
+              "first": "Youssouf",
+              "club": "real-betis",
+              "pos": "RB"
+            },
+            {
+              "name": "Koulibaly",
+              "first": "Kalidou",
+              "club": "chelsea",
+              "pos": "CB"
+            },
+            {
+              "name": "Diallo",
+              "first": "Abdou",
+              "club": "leipzig",
+              "pos": "CB"
+            },
+            {
+              "name": "Jakobs",
+              "first": "Ismail",
+              "club": "monaco",
+              "pos": "LB"
+            },
+            {
+              "name": "N. Mendy",
+              "first": "Nampalys",
+              "club": "leicestercity",
+              "pos": "DM"
+            },
+            {
+              "name": "Gueye",
+              "first": "Idrissa",
+              "club": "everton",
+              "pos": "CM"
+            },
+            {
+              "name": "P. M. Sarr",
+              "first": "Pape Matar",
+              "club": "tottenham",
+              "pos": "CM"
+            },
+            {
+              "name": "I. Sarr",
+              "first": "Ismaïla",
+              "club": "watford",
+              "pos": "RW"
+            },
+            {
+              "name": "Dia",
+              "first": "Boulaye",
+              "club": "ussalernitana1919",
+              "pos": "ST"
+            },
+            {
+              "name": "Diatta",
+              "first": "Krépin",
+              "club": "monaco",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Serbie",
+          "formation": "3-4-2-1",
+          "note": "Onze aligné contre le Brésil, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "V. Milinković-Savić",
+              "first": "Vanja",
+              "club": "torino",
+              "pos": "GK"
+            },
+            {
+              "name": "Milenković",
+              "first": "Nikola",
+              "club": "fiorentina",
+              "pos": "CB"
+            },
+            {
+              "name": "Pavlović",
+              "first": "Strahinja",
+              "club": "fcredbullsalzburg",
+              "pos": "CB"
+            },
+            {
+              "name": "Veljković",
+              "first": "Miloš",
+              "club": "svwerderbremen",
+              "pos": "CB"
+            },
+            {
+              "name": "Živković",
+              "first": "Andrija",
+              "club": "paok",
+              "pos": "RWB"
+            },
+            {
+              "name": "Gudelj",
+              "first": "Nemanja",
+              "club": "sevilla",
+              "pos": "CM"
+            },
+            {
+              "name": "S. Milinković-Savić",
+              "first": "Sergej",
+              "club": "lazio",
+              "pos": "CM"
+            },
+            {
+              "name": "Kostić",
+              "first": "Filip",
+              "club": "juventus",
+              "pos": "LWB"
+            },
+            {
+              "name": "Tadić",
+              "first": "Dušan",
+              "club": "afcajax",
+              "pos": "AM"
+            },
+            {
+              "name": "Vlahović",
+              "first": "Dušan",
+              "club": "juventus",
+              "pos": "AM"
+            },
+            {
+              "name": "Mitrović",
+              "first": "Aleksandar",
+              "club": "fulham",
+              "pos": "ST"
+            }
+          ]
+        },
+        {
+          "country": "Suisse",
+          "formation": "4-3-3",
+          "note": "Onze aligné contre le Cameroun, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Sommer",
+              "first": "Yann",
+              "club": "gladbach",
+              "pos": "GK"
+            },
+            {
+              "name": "Widmer",
+              "first": "Silvan",
+              "club": "1fsvmainz05",
+              "pos": "RB"
+            },
+            {
+              "name": "Akanji",
+              "first": "Manuel",
+              "club": "man-city",
+              "pos": "CB"
+            },
+            {
+              "name": "Elvedi",
+              "first": "Nico",
+              "club": "gladbach",
+              "pos": "CB"
+            },
+            {
+              "name": "Rodríguez",
+              "first": "Ricardo",
+              "club": "torino",
+              "pos": "LB"
+            },
+            {
+              "name": "Freuler",
+              "first": "Remo",
+              "club": "nottinghamforest",
+              "pos": "CM"
+            },
+            {
+              "name": "Xhaka",
+              "first": "Granit",
+              "club": "arsenal",
+              "pos": "DM"
+            },
+            {
+              "name": "Sow",
+              "first": "Djibril",
+              "club": "eintracht",
+              "pos": "CM"
+            },
+            {
+              "name": "Shaqiri",
+              "first": "Xherdan",
+              "club": "chicagofire",
+              "pos": "RW"
+            },
+            {
+              "name": "Embolo",
+              "first": "Breel",
+              "club": "monaco",
+              "pos": "ST"
+            },
+            {
+              "name": "Vargas",
+              "first": "Rubén",
+              "club": "fcaugsburg",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Tunisie",
+          "formation": "4-3-3",
+          "note": "Onze aligné contre la France, la victoire du tournoi",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Dahmen",
+              "first": "Aymen",
+              "club": "cssfaxien",
+              "pos": "GK"
+            },
+            {
+              "name": "Dräger",
+              "first": "Mohamed",
+              "club": "nottinghamforest",
+              "pos": "RB"
+            },
+            {
+              "name": "Bronn",
+              "first": "Dylan",
+              "club": "ussalernitana1919",
+              "pos": "CB"
+            },
+            {
+              "name": "Talbi",
+              "first": "Montassar",
+              "club": "fclorient",
+              "pos": "CB"
+            },
+            {
+              "name": "Abdi",
+              "first": "Ali",
+              "club": "stademalherbecaen",
+              "pos": "LB"
+            },
+            {
+              "name": "Laïdouni",
+              "first": "Aïssa",
+              "club": "ferencvarositc",
+              "pos": "CM"
+            },
+            {
+              "name": "Skhiri",
+              "first": "Ellyes",
+              "club": "1fckoln",
+              "pos": "DM"
+            },
+            {
+              "name": "Ben Slimane",
+              "first": "Anis",
+              "club": "brøndbyif",
+              "pos": "CM"
+            },
+            {
+              "name": "Msakni",
+              "first": "Youssef",
+              "club": "alarabisc(qatar)",
+              "pos": "RW"
+            },
+            {
+              "name": "Jebali",
+              "first": "Issam",
+              "club": "odenseboldklub",
+              "pos": "ST"
+            },
+            {
+              "name": "Sliti",
+              "first": "Naïm",
+              "club": "alettifaqclub",
+              "pos": "LW"
+            }
+          ]
+        },
+        {
+          "country": "Uruguay",
+          "formation": "4-3-3",
+          "note": "Onze aligné contre la Corée du Sud, premier match",
+          "source": "Connaissance du modèle",
+          "confidence": "medium",
+          "lineup": [
+            {
+              "name": "Rochet",
+              "first": "Sergio",
+              "club": "clubnacionaldefootball",
+              "pos": "GK"
+            },
+            {
+              "name": "Varela",
+              "first": "Guillermo",
+              "club": "crflamengo",
+              "pos": "RB"
+            },
+            {
+              "name": "Giménez",
+              "first": "José María",
+              "club": "atletico-madrid",
+              "pos": "CB"
+            },
+            {
+              "name": "Godín",
+              "first": "Diego",
+              "club": "clubatleticovelezsarsfield",
+              "pos": "CB"
+            },
+            {
+              "name": "Olivera",
+              "first": "Mathías",
+              "club": "sscnapoli",
+              "pos": "LB"
+            },
+            {
+              "name": "Bentancur",
+              "first": "Rodrigo",
+              "club": "tottenham",
+              "pos": "DM"
+            },
+            {
+              "name": "Valverde",
+              "first": "Federico",
+              "club": "real-madrid",
+              "pos": "CM"
+            },
+            {
+              "name": "Vecino",
+              "first": "Matías",
+              "club": "lazio",
+              "pos": "CM"
+            },
+            {
+              "name": "Pellistri",
+              "first": "Facundo",
+              "club": "man-utd",
+              "pos": "RW"
+            },
+            {
+              "name": "Núñez",
+              "first": "Darwin",
+              "club": "liverpool",
+              "pos": "ST"
+            },
+            {
+              "name": "Suárez",
+              "first": "Luis",
+              "club": "clubnacionaldefootball",
               "pos": "LW"
             }
           ]

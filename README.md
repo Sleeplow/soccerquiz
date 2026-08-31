@@ -8,7 +8,7 @@ Le terrain est cadré sur les **trois quarts** de la longueur — but de l'équi
 en bas, ligne médiane vers le haut. Un terrain entier tasse les onze dans le
 bas de l'image et fait passer un défenseur pour un milieu.
 
-Cinq éditions, 59 sélections, 452 clubs. Site statique, sans dépendance ni
+Cinq éditions, 84 sélections, 477 clubs. Site statique, sans dépendance ni
 étape de build.
 
 ## Lancer
@@ -167,6 +167,26 @@ répartition par lignes déduite de `formation` — mieux vaut un terrain cohér
 qu'un terrain à moitié juste. C'est ce qui arrive aux équipes importées en
 `squad`, dont les codes (`DF`, `MF`, `FW`) désignent des rôles, pas des postes.
 
+### Taille des pastilles
+
+Deux étages, et il faut les garder distincts :
+
+- **`pitch.js`** dit ce que la composition autorise, en proportion du terrain :
+  l'écart entre deux voisins d'une même ligne, la hauteur entre deux lignes
+  moins la place que les libellés y occupent. Cette place est **mesurée** sur la
+  page, pas estimée — les libellés se dessinent en pixels, donc sur un terrain
+  rendu court ils en mangent bien plus qu'une proportion fixe ne le prévoirait.
+  Pendant la question il n'y a aucun libellé, donc rien à réserver : c'est là
+  que les blasons sont les plus gros.
+- **`style.css`** dit ce que l'appareil supporte, en pixels, via `--slot-cap` :
+  plus large sur écran tactile, où le terrain est petit et tenu à bout de bras,
+  que sous une souris, où un blason démesuré avalerait les marquages. C'est le
+  seul endroit du rendu qui dépende de l'appareil.
+
+La plus petite des deux valeurs gagne. Un `ResizeObserver` reprend la mesure à
+l'affichage de l'écran et à chaque rotation : le terrain est dessiné pendant que
+son écran est encore masqué, où il n'a aucune dimension à mesurer.
+
 Puis :
 
 ```bash
@@ -277,29 +297,36 @@ exactement ce qui n'a pas résolu.
 
 ## État des données
 
-**12 équipes sur 5 éditions** : 2026, 2022, 2018, 2014, 2010.
+**84 équipes sur 5 éditions** :
 
-Le Mexique 2026 vient de la composition diffusée fournie en référence. Les
-autres équipes viennent de la connaissance du modèle et portent chacune un
-niveau de fiabilité dans `editions.json`, affiché à la révélation.
+| Édition | Équipes | Provenance |
+| --- | --- | --- |
+| 2026 | 48 / 48 | effectifs importés de Wikipédia, plus le Mexique en composition |
+| 2022 | 32 / 32 | compositions saisies, onze de départ |
+| 2018 | 2 / 32 | compositions saisies |
+| 2014 | 1 / 32 | composition saisie |
+| 2010 | 1 / 32 | composition saisie |
 
-**Ce qui manque, et pourquoi.** L'objectif est de couvrir la Coupe du monde 2026
-en entier (48 sélections). Elle n'est pas encore saisie : l'environnement de
-développement n'a pas d'accès réseau vers Wikipédia, et les résumés de recherche
-web se sont révélés périmés — ils plaçaient par exemple Raúl Jiménez à
-Wolverhampton alors qu'il était à Fulham. Une donnée fausse rend le quiz
-inutilisable, donc rien n'a été inventé.
+Le Mexique 2026 vient de la composition diffusée fournie en référence, et les
+effectifs 2026 de `2026 FIFA World Cup squads`. Les compositions saisies
+viennent de la connaissance du modèle et portent chacune un niveau de fiabilité
+dans `editions.json`, affiché à la révélation — `medium` pour l'essentiel de
+2022, où le onze exact d'un match donné se retient moins bien que la liste des
+clubs.
 
-Trois chemins pour combler ça :
+**Ce qui manque.** Les trois éditions d'avant 2022 n'ont qu'une poignée
+d'équipes. Deux chemins pour combler ça :
 
-1. Récupérer le wikitexte de `2026 FIFA World Cup squads` depuis une machine qui
-   a accès au réseau, et le convertir : les modèles `{{nat fs player}}`
-   contiennent déjà le club de chaque joueur.
+1. Récupérer le wikitexte de `2018 FIFA World Cup squads` (ou de l'édition
+   voulue) depuis une machine qui a accès au réseau, et le convertir avec
+   `tools/import-squads.html` : les modèles `{{nat fs player}}` contiennent déjà
+   le club de chaque joueur.
 2. Saisir à la main les équipes qui comptent, en renseignant `source` et
    `confidence`.
-3. Ajouter les éditions plus anciennes. Attention : avant les années 1990, les
-   sélections sont presque entièrement composées de joueurs du championnat
-   national, ce qui rend la question triviale.
+
+Attention en remontant plus loin : avant les années 1990, les sélections sont
+presque entièrement composées de joueurs du championnat national, ce qui rend la
+question triviale.
 
 ## Tests
 

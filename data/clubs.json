@@ -1,6 +1,10 @@
 {
   "_comment": "Référentiel des clubs. Le blason est résolu par `wiki`, le titre de l'article Wikipédia anglophone : l'API pageimages renvoie l'image principale de l'article, soit l'écusson. `crest` est un nom de fichier Wikimedia optionnel qui prend le pas quand il est présent. Sans blason, le jeu affiche une pastille aux couleurs du club.",
   "clubs": {
+    "1fckoln": {
+      "name": "Cologne",
+      "wiki": "1. FC Köln"
+    },
     "1fctatranpresov": {
       "name": "Tatran Prešov",
       "wiki": "1. FC Tatran Prešov"
@@ -46,6 +50,10 @@
     "acspartaprague": {
       "name": "Sparta Prague",
       "wiki": "AC Sparta Prague"
+    },
+    "adelaideunited": {
+      "name": "Adelaide United",
+      "wiki": "Adelaide United FC"
     },
     "aekathens": {
       "name": "AEK Athens",
@@ -225,6 +233,10 @@
       "name": "Al-Wakrah",
       "wiki": "Al-Wakrah SC"
     },
+    "alwehdamecca": {
+      "name": "Al-Wehda",
+      "wiki": "Al-Wehda Club (Mecca)"
+    },
     "alwehdat": {
       "name": "Al-Wehdat",
       "wiki": "Al-Wehdat SC"
@@ -391,6 +403,10 @@
       "mono": "BAY",
       "wiki": "FC Bayern Munich"
     },
+    "beneventocalcio": {
+      "name": "Benevento",
+      "wiki": "Benevento Calcio"
+    },
     "benfica": {
       "name": "Benfica",
       "country": "Portugal",
@@ -508,6 +524,10 @@
       "mono": "CEL",
       "wiki": "Celtic F.C."
     },
+    "centralcoastmariners": {
+      "name": "Central Coast Mariners",
+      "wiki": "Central Coast Mariners FC"
+    },
     "cerclebruggeksv": {
       "name": "Cercle Brugge",
       "wiki": "Cercle Brugge KSV"
@@ -523,6 +543,10 @@
     "cfmonterrey": {
       "name": "Monterrey",
       "wiki": "C.F. Monterrey"
+    },
+    "cfmontreal": {
+      "name": "CF Montréal",
+      "wiki": "CF Montréal"
     },
     "cfpachuca": {
       "name": "Pachuca",
@@ -664,6 +688,10 @@
       "name": "Crystal Palace",
       "wiki": "Crystal Palace F.C."
     },
+    "csherediano": {
+      "name": "Herediano",
+      "wiki": "C.S. Herediano"
+    },
     "cssfaxien": {
       "name": "CS Sfaxien",
       "wiki": "CS Sfaxien"
@@ -675,6 +703,10 @@
     "daejeonhanacitizen": {
       "name": "Daejeon Hana Citizen",
       "wiki": "Daejeon Hana Citizen"
+    },
+    "deportivoalaves": {
+      "name": "Alavés",
+      "wiki": "Deportivo Alavés"
     },
     "deportivolaguair": {
       "name": "Deportivo La Guaira",
@@ -711,6 +743,10 @@
       ],
       "mono": "BVB",
       "wiki": "Borussia Dortmund"
+    },
+    "dundeeunited": {
+      "name": "Dundee United",
+      "wiki": "Dundee United F.C."
     },
     "eintracht": {
       "name": "Eintracht Francfort",
@@ -1024,6 +1060,10 @@
       "name": "Galatasaray",
       "wiki": "Galatasaray S.K. (football)"
     },
+    "gambaosaka": {
+      "name": "Gamba Osaka",
+      "wiki": "Gamba Osaka"
+    },
     "gangwon": {
       "name": "Gangwon FC",
       "wiki": "Gangwon FC"
@@ -1131,6 +1171,10 @@
     "holsteinkiel": {
       "name": "Holstein Kiel",
       "wiki": "Holstein Kiel"
+    },
+    "houstondynamo": {
+      "name": "Houston Dynamo",
+      "wiki": "Houston Dynamo FC"
     },
     "hullcity": {
       "name": "Hull City",
@@ -1260,6 +1304,10 @@
       "mono": "LAZ",
       "wiki": "S.S. Lazio"
     },
+    "ldalajuelense": {
+      "name": "Alajuelense",
+      "wiki": "L.D. Alajuelense"
+    },
     "lduquito": {
       "name": "LDU Quito",
       "wiki": "LDU Quito"
@@ -1386,6 +1434,10 @@
       "name": "Middlesbrough",
       "wiki": "Middlesbrough F.C."
     },
+    "millonarios": {
+      "name": "Millonarios",
+      "wiki": "Millonarios F.C."
+    },
     "millwall": {
       "name": "Millwall",
       "wiki": "Millwall F.C."
@@ -1419,6 +1471,10 @@
     "motherwell": {
       "name": "Motherwell",
       "wiki": "Motherwell F.C."
+    },
+    "nagoyagrampus": {
+      "name": "Nagoya Grampus",
+      "wiki": "Nagoya Grampus"
     },
     "nashville": {
       "name": "Nashville SC",
@@ -1459,6 +1515,10 @@
     "nottinghamforest": {
       "name": "Nottingham Forest",
       "wiki": "Nottingham Forest F.C."
+    },
+    "odenseboldklub": {
+      "name": "Odense",
+      "wiki": "Odense Boldklub"
     },
     "ogcnice": {
       "name": "Nice",
@@ -1646,6 +1706,10 @@
       "name": "Strasbourg",
       "wiki": "RC Strasbourg Alsace"
     },
+    "reading": {
+      "name": "Reading",
+      "wiki": "Reading F.C."
+    },
     "real-betis": {
       "name": "Real Betis",
       "country": "Espagne",
@@ -1747,6 +1811,10 @@
       "name": "Sanfrecce Hiroshima",
       "wiki": "Sanfrecce Hiroshima"
     },
+    "sanjoseearthquakes": {
+      "name": "San Jose Earthquakes",
+      "wiki": "San Jose Earthquakes"
+    },
     "sanlorenzodealmagro": {
       "name": "San Lorenzo",
       "wiki": "San Lorenzo de Almagro"
@@ -1798,6 +1866,10 @@
       "crest": "FC Schalke 04 Logo.svg",
       "wiki": "FC Schalke 04"
     },
+    "scheerenveen": {
+      "name": "Heerenveen",
+      "wiki": "SC Heerenveen"
+    },
     "scinternacional": {
       "name": "Internacional",
       "wiki": "SC Internacional"
@@ -1809,6 +1881,10 @@
     "scutorreense": {
       "name": "Torreense",
       "wiki": "S.C.U. Torreense"
+    },
+    "sdaucas": {
+      "name": "Aucas",
+      "wiki": "S.D. Aucas"
     },
     "seattlesounders": {
       "name": "Seattle Sounders FC",
@@ -1856,6 +1932,10 @@
       "name": "Sheffield United",
       "wiki": "Sheffield United F.C."
     },
+    "shimizuspulse": {
+      "name": "Shimizu S-Pulse",
+      "wiki": "Shimizu S-Pulse"
+    },
     "silkeborgif": {
       "name": "Silkeborg",
       "wiki": "Silkeborg IF"
@@ -1892,6 +1972,10 @@
       "name": "Sparta Rotterdam",
       "wiki": "Sparta Rotterdam"
     },
+    "speziacalcio": {
+      "name": "Spezia",
+      "wiki": "Spezia Calcio"
+    },
     "sportingcp": {
       "name": "Sporting CP",
       "wiki": "Sporting CP"
@@ -1903,6 +1987,10 @@
     "stadedereims": {
       "name": "Reims",
       "wiki": "Stade de Reims"
+    },
+    "stademalherbecaen": {
+      "name": "Caen",
+      "wiki": "Stade Malherbe Caen"
     },
     "staderennais": {
       "name": "Rennes",
@@ -2022,6 +2110,10 @@
       "name": "Ulsan HD",
       "wiki": "Ulsan HD FC"
     },
+    "urawareddiamonds": {
+      "name": "Urawa Red Diamonds",
+      "wiki": "Urawa Red Diamonds"
+    },
     "uscremonese": {
       "name": "Cremonese",
       "wiki": "US Cremonese"
@@ -2033,6 +2125,10 @@
     "usmonastir(football)": {
       "name": "US Monastir",
       "wiki": "US Monastir (football)"
+    },
+    "ussalernitana1919": {
+      "name": "Salernitana",
+      "wiki": "U.S. Salernitana 1919"
     },
     "ussassuolocalcio": {
       "name": "Sassuolo",
@@ -2051,6 +2147,10 @@
     "vancouverwhitecaps": {
       "name": "Vancouver Whitecaps FC",
       "wiki": "Vancouver Whitecaps FC"
+    },
+    "vejleboldklub": {
+      "name": "Vejle",
+      "wiki": "Vejle Boldklub"
     },
     "venezi": {
       "name": "Venezia",
