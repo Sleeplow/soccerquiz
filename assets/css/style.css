@@ -237,6 +237,37 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 /* ── Terrain ───────────────────────────────── */
 
+/* Taille des blasons selon l'appareil.
+
+   Le terrain garde ses proportions quel que soit l'écran : une pastille
+   dimensionnée en pourcentage mesure une soixantaine de pixels sur un
+   moniteur et à peine vingt-cinq sur un iPhone, où le blason n'est plus
+   lisible. `pitch.js` calcule donc la place que la composition laisse — en
+   proportion, elle ne dépend pas de l'appareil — et ces deux variables
+   décident du reste, seul endroit où l'appareil intervient :
+
+   `--slot-cap` borne le créneau en pixels. Sur un écran pointé à la souris,
+   le terrain est grand et une pastille trop large mangerait les marquages ;
+   sur un écran tactile, tenu à bout de bras, on laisse la géométrie donner
+   tout ce qu'elle peut.
+
+   `--label-h` dit au rendu combien de hauteur les libellés réclament sous la
+   pastille : deux lignes normalement, une seule sous 560 px où le nom du club
+   est masqué. Sans cette place, les blasons peuvent grossir d'autant. */
+:root {
+  --slot-cap: 80px;
+  --label-h: 7;
+}
+
+/* Tactile — ou simplement étroit, quand le navigateur ne dit rien de son
+   pointeur : le terrain y est petit, les blasons doivent y prendre toute la
+   place que la composition leur laisse, et le blanc autour du blason coûte
+   alors plus qu'il n'apporte. */
+@media (pointer: coarse), (max-width: 700px) {
+  :root { --slot-cap: 92px; }
+  .slot-badge img { width: 88%; height: 88%; }
+}
+
 .pitch-wrap { margin-bottom: 20px; }
 
 .pitch {
@@ -256,8 +287,10 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 .slot {
   position: absolute;
   transform: translate(-50%, -50%);
-  width: var(--slot-w, 17%);
-  max-width: 104px;
+  /* `--slot-w` est ce que la composition autorise, en % du terrain ;
+     `--slot-cap` ce que l'appareil supporte, en pixels. La plus petite des
+     deux gagne : jamais de chevauchement, jamais de blason démesuré. */
+  width: min(var(--slot-w, 17%), var(--slot-cap, 80px));
   /* En flux normal, un libellé plus large que son créneau ne se centre pas :
      il démarre au bord gauche et déborde entièrement vers la droite, ce qui
      envoyait les latéraux droits hors du terrain. La colonne flex, elle,
@@ -317,6 +350,9 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
   margin-top: 1px;
   font-size: clamp(.44rem, 1.5vw, .58rem);
   color: rgba(255, 255, 255, .72);
+  /* Même bride que le nom au-dessus : sans elle, « Borussia Mönchengladbach »
+     s'étalait jusque sous le joueur voisin — `overflow` seul ne borne rien. */
+  max-width: var(--label-w, 140%);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -463,10 +499,15 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .site-foot p { margin: 0; }
 
-/* Sous cette largeur, le nom du club sous chaque joueur ne tient plus sans
-   chevaucher la ligne voisine. Il reste lisible dans la légende et l'infobulle. */
-@media (max-width: 560px) {
+/* Sous cette largeur — ou sous cette hauteur, un téléphone couché rendant le
+   terrain tout aussi étroit — le nom du club sous chaque joueur ne tient plus
+   sans chevaucher la ligne voisine : les libellés se dessinent en pixels, pas
+   en proportion du terrain. Il reste lisible dans la légende et l'infobulle. */
+@media (max-width: 560px), (max-height: 560px) {
   .slot-sub { display: none; }
+  /* Une ligne de moins sous la pastille, donc autant de hauteur rendue au
+     blason — c'est précisément l'écran où il en manquait. */
+  :root { --label-h: 4; }
 }
 
 @media (max-width: 480px) {
