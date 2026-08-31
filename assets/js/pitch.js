@@ -76,6 +76,12 @@ const Pitch = (() => {
      dépasse pas 82 % de la distance entre leurs centres. */
   const DISC_GAP = 0.82;
 
+  /* Mêmes marges pour le libellé, qui est bien plus large que son disque : il
+     prend 92 % de l'écart avec son voisin, et un latéral 96 % de ce qui reste
+     jusqu'à la touche. Le reste est le blanc qui les sépare. */
+  const LABEL_GAP = 0.92;
+  const LABEL_EDGE = 0.96;
+
   /* Hauteur réclamée par un libellé d'une seule ligne, en % de la hauteur du
      terrain. La révélation en empile deux — sauf sur petit écran, où le club
      n'est plus affiché : c'est la feuille de style qui tranche, via
@@ -164,7 +170,7 @@ const Pitch = (() => {
        voisins ne se touchent pas — mais un latéral est collé à sa touche : sa
        place vers l'extérieur est ce qui reste jusqu'au bord du terrain. */
     const toEdge = Math.min(...coords.map((c) => Math.min(c.x, 100 - c.x)));
-    const label = Math.min(gapX * 0.92, 2 * toEdge * 0.96);
+    const label = Math.min(gapX * LABEL_GAP, 2 * toEdge * LABEL_EDGE);
     return { badge, label };
   }
 
@@ -312,6 +318,30 @@ const Pitch = (() => {
     return span;
   }
 
+  // Position de repli d'un joueur qu'aucun calcul n'a su placer : le centre du
+  // terrain, où il se voit — plutôt qu'un coin, où il passerait pour un choix.
+  const CENTRE = { x: 50, y: 50 };
+
+  /** Un joueur : sa pastille, et selon l'affichage ce qui s'écrit dessous. */
+  function slotFor(player, { x, y }, labels) {
+    const slot = document.createElement('div');
+    slot.className = 'slot';
+    slot.style.left = x + '%';
+    slot.style.top = y + '%';
+    slot.appendChild(badgeFor(player.club));
+
+    if (labels === 'players') {
+      slot.appendChild(tag('slot-label', player.name,
+        `${player.first} ${player.name} — ${player.club.name}`));
+      // Sur la révélation, le club sous le nom : c'est là que le joueur
+      // apprend quelque chose, pas seulement qu'il gagne ou perd.
+      slot.appendChild(tag('slot-sub', player.club.name, player.club.name));
+    } else if (labels === 'clubs') {
+      slot.appendChild(tag('slot-label is-club', player.club.name, player.club.name));
+    }
+    return slot;
+  }
+
   /** Noir ou blanc selon la luminance du fond, pour que le monogramme reste lisible. */
   function readableOn(hex) {
     const m = /^#?([0-9a-f]{6})$/i.exec(hex);
@@ -373,25 +403,7 @@ const Pitch = (() => {
     layouts.set(host, { coords, estimate: estimatedLabelHeight(host, labels) });
 
     question.lineup.forEach((player, index) => {
-      const { x, y } = coords[index] || { x: 50, y: 50 };
-
-      const slot = document.createElement('div');
-      slot.className = 'slot';
-      slot.style.left = x + '%';
-      slot.style.top = y + '%';
-      slot.appendChild(badgeFor(player.club));
-
-      if (labels === 'players') {
-        slot.appendChild(tag('slot-label', player.name,
-          `${player.first} ${player.name} — ${player.club.name}`));
-        // Sur la révélation, le club sous le nom : c'est là que le joueur
-        // apprend quelque chose, pas seulement qu'il gagne ou perd.
-        slot.appendChild(tag('slot-sub', player.club.name, player.club.name));
-      } else if (labels === 'clubs') {
-        slot.appendChild(tag('slot-label is-club', player.club.name, player.club.name));
-      }
-
-      host.appendChild(slot);
+      host.appendChild(slotFor(player, coords[index] || CENTRE, labels));
     });
 
     // Les pastilles ne prennent leur taille qu'ici : elle se déduit de la

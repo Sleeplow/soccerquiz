@@ -331,15 +331,22 @@ question triviale.
 ## Tests
 
 La suite couvre le jeu de bout en bout dans un vrai navigateur : réglages,
-déroulé d'une partie, liste des sélections, placement sur le terrain,
-classement, blasons, accessibilité et chemins de clic.
+déroulé d'une partie, liste des sélections, placement sur le terrain, tailles
+à l'écran, classement, blasons, accessibilité et chemins de clic.
 
 ```
 npm install
 npx playwright install chromium   # une seule fois
-npm test                          # 72 tests, bureau + mobile
+npm test                          # 84 tests, bureau + mobile
 npm run test:ui                   # mode interactif
 ```
+
+`responsive.spec.js` rejoue le terrain à huit largeurs, de l'iPhone SE au
+moniteur 1920, téléphone couché compris. Il tient trois promesses que le reste
+de la suite ne voit pas : un blason jamais sous 34 px ni au-dessus de 80, aucun
+chevauchement quelle que soit la largeur, et aucune page qui défile de travers.
+Vérifié en le rejouant contre le code d'avant le correctif — les trois échouent,
+et le premier rapporte exactement les 26 px signalés.
 
 Playwright lance lui-même `python3 -m http.server` : rien à démarrer à côté.
 Les tests coupent l'accès à Wikipédia et attendent le repli en pastilles — le

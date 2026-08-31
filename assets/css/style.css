@@ -192,7 +192,10 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 /* ── HUD ───────────────────────────────────── */
 
-.hud { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+/* Les quatre éléments passent à la ligne plutôt que de pousser la page hors
+   du cadre : sur un iPhone étroit, « Coupe du monde 2022 » et le chrono ne
+   tiennent pas côte à côte, et c'est toute la page qui défilait de travers. */
+.hud { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 16px; }
 
 .hud-badge {
   display: grid;
@@ -222,7 +225,7 @@ input[type="text"]:focus, select:focus { outline: 2px solid var(--accent); outli
 
 .hud-score { font-weight: 700; font-variant-numeric: tabular-nums; flex: none; }
 
-.timer { flex: 1; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, .12); overflow: hidden; }
+.timer { flex: 1 1 140px; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, .12); overflow: hidden; }
 
 .timer-fill {
   display: block;

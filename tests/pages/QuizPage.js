@@ -148,6 +148,71 @@ class QuizPage {
   pitchBox(container = '#pitch') {
     return this.page.locator(container).boundingBox();
   }
+
+  /**
+   * Passe toutes les compositions sur un même terrain et relève ce qui se
+   * chevauche ou sort du cadre.
+   *
+   * Le parcours se fait dans la page : mesurer quatre-vingts équipes une par
+   * une depuis le test ferait autant d'allers-retours pour la même réponse.
+   * Le compte d'équipes est rendu avec les problèmes — sans lui, une passe
+   * qui n'a rien dessiné se lit exactement comme une passe sans défaut.
+   *
+   * @param {'none'|'clubs'|'players'} labels — `players` est le cas le plus
+   *        dense, c'est là que la géométrie casse en premier.
+   * @returns {Promise<{teams: number, problems: string[]}>}
+   */
+  pitchSweep(labels = 'players') {
+    return this.page.evaluate(async (mode) => {
+      const data = await Data.load();
+      document.querySelectorAll('.screen').forEach((s) => s.classList.remove('is-active'));
+      document.getElementById('screen-reveal').classList.add('is-active');
+      const host = document.getElementById('pitch-reveal');
+      const problems = [];
+
+      for (const question of data.questions) {
+        Pitch.render(host, question, mode);
+        const pitch = host.getBoundingClientRect();
+        const boxes = [...host.querySelectorAll('.slot')].map((slot, i) => {
+          const parts = [...slot.querySelectorAll('.slot-badge, .slot-label, .slot-sub')]
+            .map((el) => el.getBoundingClientRect())
+            .filter((r) => r.width > 0 && r.height > 0);
+          return {
+            who: `${question.lineup[i].name}/${question.lineup[i].pos}`,
+            top: Math.min(...parts.map((r) => r.top)),
+            bottom: Math.max(...parts.map((r) => r.bottom)),
+            left: Math.min(...parts.map((r) => r.left)),
+            right: Math.max(...parts.map((r) => r.right))
+          };
+        });
+
+        const where = `${question.country} ${question.year}`;
+        for (let i = 0; i < boxes.length; i++) {
+          const a = boxes[i];
+          if (a.top < pitch.top - 1 || a.bottom > pitch.bottom + 1 ||
+              a.left < pitch.left - 1 || a.right > pitch.right + 1) {
+            problems.push(`${where} : ${a.who} sort du terrain`);
+          }
+          for (let j = i + 1; j < boxes.length; j++) {
+            const b = boxes[j];
+            const x = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+            const y = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+            if (x > 2 && y > 2) problems.push(`${where} : ${a.who} chevauche ${b.who}`);
+          }
+        }
+      }
+      return { teams: data.questions.length, problems };
+    }, labels);
+  }
+
+  /** Diamètre de la plus petite et de la plus grande pastille du terrain. */
+  badgeSizes(container = '#pitch') {
+    return this.page.evaluate((sel) => {
+      const widths = [...document.querySelectorAll(`${sel} .slot-badge`)]
+        .map((b) => b.getBoundingClientRect().width);
+      return { count: widths.length, min: Math.min(...widths), max: Math.max(...widths) };
+    }, container);
+  }
 }
 
 module.exports = { QuizPage };
